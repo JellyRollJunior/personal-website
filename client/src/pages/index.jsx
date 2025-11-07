@@ -1,5 +1,11 @@
+import { Header } from '../components/Header.jsx';
+
 const Index = () => {
-  return <h1>Hello World!!</h1>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 };
 
 export { Index };
