@@ -1,19 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
-const HeaderHudRingDot = ({ className, skewX }) => {
-  return (
-    <div
-      className={`border-yellow/50 absolute flex size-3.5 items-center justify-center rounded-full border ${className}`}
-      style={{
-        transform: `skew(${-1 * skewX}deg, 0)`,
-      }}
-    >
-      <div className="bg-yellow size-1 rounded-full" />
-    </div>
-  );
-};
-
 const HeaderHudLine = ({
   skewX = -60,
   boxes = 14,
@@ -68,16 +55,34 @@ const HeaderHudLine = ({
                 transform: `skew(${-1 * skewX}deg, 0)`,
               }}
             />
-            <HeaderHudRingDot
-              className="top-0 right-0 translate-x-1/2 -translate-y-1/2"
-              skewX={skewX}
-            />
+            {/* Moving ring dot */}
+            <motion.div
+              className={`border-yellow/50 absolute top-0 left-0 flex size-3.5 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border`}
+              animate={{
+                skewX: [-1 * skewX, -1 * skewX, -1 * skewX],
+                opacity: [100, 100, 0],
+                translateX: [0, 165, 0],
+              }}
+              transition={{
+                ease: 'easeOut',
+                times: [0, 0.9, 1],
+                repeat: Infinity,
+                duration: 7,
+              }}
+            >
+              <div className="bg-yellow size-1 rounded-full" />
+            </motion.div>
           </div>
           <div className="border-r-yellow border-b-yellow/60 relative ml-auto h-3.5 w-8 border-r-3 border-b-2">
-            <HeaderHudRingDot
-              className="right-0 bottom-0 translate-x-1/2 translate-y-1/2"
-              skewX={skewX}
-            />
+            {/* Ring Dot */}
+            <div
+              className="border-yellow/50 absolute right-0 bottom-0 flex size-3.5 translate-x-1/2 translate-y-1/2 items-center justify-center rounded-full border"
+              style={{
+                transform: `skew(${-1 * skewX}deg, 0)`,
+              }}
+            >
+              <div className="bg-yellow size-1 rounded-full" />
+            </div>
           </div>
         </div>
       </div>
@@ -85,4 +90,4 @@ const HeaderHudLine = ({
   );
 };
 
-export { HeaderHudLine}
+export { HeaderHudLine };

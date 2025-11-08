@@ -7,6 +7,7 @@ const ArrowDownLink = ({ className, href = '' }) => {
     <a className={`${className} relative size-10`} href={href}>
       {[...Array(3)].map((item, index) => (
         <motion.img
+          key={index}
           src={arrowDown}
           className="absolute top-0 left-1/2 w-full -translate-x-1/2"
           animate={{
