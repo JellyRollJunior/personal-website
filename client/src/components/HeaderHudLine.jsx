@@ -2,6 +2,7 @@
 import { motion } from 'motion/react';
 
 const HeaderHudLine = ({
+  className,
   skewX = -60,
   boxes = 14,
   duration = 1.1,
@@ -10,7 +11,7 @@ const HeaderHudLine = ({
 }) => {
   return (
     <div
-      className="flex max-w-120"
+      className={`flex w-120 ${className}`}
       style={{
         transform: `skew(${skewX}deg, 0)`,
       }}
@@ -90,4 +91,21 @@ const HeaderHudLine = ({
   );
 };
 
-export { HeaderHudLine };
+const HeaderBackground = () => {
+  return (
+    <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-5 -z-1">
+      <div className="border-yellow size-55 rounded-full border-2">
+        {/* top right */}
+        <HeaderHudLine className="absolute top-0 left-1/2 h-fit shrink-0 translate-x-30 -translate-y-15 -rotate-20" />
+        {/* top left */}
+        <HeaderHudLine className="absolute top-0 right-1/2 h-fit shrink-0 -translate-x-30 -translate-y-15 -scale-x-100 rotate-20" />
+        {/* bottom right */}
+        <HeaderHudLine className="absolute bottom-0 left-1/2 h-fit shrink-0 translate-x-30 translate-y-15 -scale-y-100 rotate-20" />
+        {/* bottom left */}
+        <HeaderHudLine className="absolute right-1/2 bottom-0 h-fit shrink-0 -translate-x-30 translate-y-15 -scale-x-100 -scale-y-100 -rotate-20" />
+      </div>
+    </div>
+  );
+};
+
+export { HeaderBackground };

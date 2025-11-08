@@ -6,3 +6,6 @@ My personal website. Includes my works, profile, and interests
 - color scheme
     -   beige / offwhite instead of white
 - arrow link not working
+
+- hudline
+    -   make it responsive to width instead of static
