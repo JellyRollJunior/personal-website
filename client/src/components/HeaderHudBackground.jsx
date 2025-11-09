@@ -139,7 +139,7 @@ const HeaderBackground = () => {
       <div className="col-span-3" />
       {/* top left */}
       <div className="relative h-full w-full">
-        <HudLine className="absolute top-0 right-0 -translate-y-2/1 -scale-x-100 rotate-20" />
+        <HudLine className="absolute top-0 right-0 -translate-y-3/1 -scale-x-100 rotate-22" />
       </div>
       {/* Center view finder */}
       <div className="relative row-span-2 flex items-center justify-center">
@@ -185,15 +185,15 @@ const HeaderBackground = () => {
       </div>
       {/* top right */}
       <div className="relative h-full w-full">
-        <HudLine className="absolute top-0 left-0 -translate-y-2/1 -rotate-20" />
+        <HudLine className="absolute top-0 left-0 -translate-y-3/1 -rotate-22" />
       </div>
       {/* bottom left */}
       <div className="relative h-full w-full">
-        <HudLine className="absolute right-0 bottom-0 translate-y-2/1 -scale-x-100 -rotate-20" />
+        <HudLine className="absolute right-0 bottom-0 translate-y-3/1 -scale-x-100 -scale-y-100 -rotate-22" />
       </div>
       {/* bottom right */}
       <div className="relative h-full w-full">
-        <HudLine className="absolute bottom-0 left-0 translate-y-2/1 rotate-20" />
+        <HudLine className="absolute bottom-0 left-0 translate-y-3/1 -scale-y-100 rotate-22" />
       </div>
     </div>
   );
