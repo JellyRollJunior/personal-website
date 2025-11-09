@@ -96,7 +96,10 @@ const HudViewFinder = ({
   size,
   markingOffsetDegree = 5,
   markingWidth = 9,
-  children,
+  animate = {
+    rotate: 360,
+  },
+  animateDuration = 30,
 }) => {
   const numRods =
     markingOffsetDegree == 0 || markingOffsetDegree >= 360
@@ -104,10 +107,15 @@ const HudViewFinder = ({
       : Math.floor(360 / markingOffsetDegree);
 
   return (
-    <div
-      style={{ width: size, height: size }}
+    <motion.div
+      style={{ width: size - 2, height: size - 2 }}
       className={`flex items-center justify-center rounded-full ${className} isolate`}
-      
+      animate={animate}
+      transition={{
+        duration: animateDuration,
+        ease: 'linear',
+        repeat: Infinity,
+      }}
     >
       {[...Array(numRods)].map((item, index) => (
         <div
@@ -116,54 +124,65 @@ const HudViewFinder = ({
             transform: `rotate(${index * markingOffsetDegree}deg)`,
             height: size / 2,
           }}
-          className={`absolute top-1/2 left-1/2 origin-top -translate-x-1/2 bg-black`}
-        ></div>
+          className="absolute top-1/2 left-1/2 z-1 h-full origin-top -translate-x-1/2 bg-black"
+        />
       ))}
-      {children}
-    </div>
+    </motion.div>
   );
 };
 
 const HeaderBackground = () => {
   return (
-    <div className="absolute top-1/2 left-1/2 -z-1 flex -translate-x-1/2 -translate-y-1/2 gap-5">
+    <div className="absolute -z-1 grid h-full w-full grid-cols-[1fr_240px_1fr] grid-rows-[1fr_120px_120px_1fr]">
+      <div className='col-span-3' />
+      {/* top left */}
+      <div className="relative h-full w-full">
+        <HudLine className="absolute top-0 right-0 -translate-y-2/1 -scale-x-100 rotate-20" />
+      </div>
       {/* Center view finder */}
-      <HudViewFinder
-        className="border-red size-full border-5"
-        size={240}
-        markingOffsetDegree={45}
-        markingWidth={35}
-      >
+      <div className="relative row-span-2 flex items-center justify-center">
         <HudViewFinder
-          className="border-yellow size-full rotate-2 border-8"
+          className="border-red absolute top-0 right-0 size-full border-5"
+          size={240}
+          markingOffsetDegree={45}
+          markingWidth={35}
+        />
+        <HudViewFinder
+          className="border-yellow absolute size-full rotate-2 border-8"
           size={230}
           markingOffsetDegree={0}
           markingWidth={0}
-        >
+        />
         <HudViewFinder
-          className="border-green rotate-2 border-5"
+          className="border-green absolute rotate-2 border-5"
           size={217}
           markingOffsetDegree={20}
           markingWidth={8}
-        >
-          <HudViewFinder
-            className="border-blue rotate-2 border-20"
-            size={204}
-            markingOffsetDegree={4}
-            markingWidth={5}
-          />
-        </HudViewFinder>
-        </HudViewFinder>
-      </HudViewFinder>
+          animateDuration={100}
+        />
+        <HudViewFinder
+          className="border-red absolute rotate-2 border-20"
+          size={204}
+          markingOffsetDegree={4}
+          markingWidth={5}
+          rotateDuration={50}
+          animate={{
+            rotate: -360,
+          }}
+        />
+      </div>
       {/* top right */}
-      <HudLine className="absolute top-0 left-1/2 h-fit shrink-0 translate-x-30 -translate-y-15 -rotate-20" />
-      {/* top left */}
-      <HudLine className="absolute top-0 right-1/2 h-fit shrink-0 -translate-x-30 -translate-y-15 -scale-x-100 rotate-20" />
-      {/* bottom right */}
-      <HudLine className="absolute bottom-0 left-1/2 h-fit shrink-0 translate-x-30 translate-y-15 -scale-y-100 rotate-20" />
+      <div className="relative h-full w-full">
+        <HudLine className="absolute top-0 left-0 -translate-y-2/1 -rotate-20" />
+      </div>
       {/* bottom left */}
-      <HudLine className="absolute right-1/2 bottom-0 h-fit shrink-0 -translate-x-30 translate-y-15 -scale-x-100 -scale-y-100 -rotate-20" />
-      {/* </div> */}
+      <div className="relative h-full w-full">
+        <HudLine className="absolute right-0 bottom-0 translate-y-2/1 -scale-x-100 -rotate-20" />
+      </div>
+      {/* bottom right */}
+      <div className="relative h-full w-full">
+        <HudLine className="absolute bottom-0 left-0 translate-y-2/1 rotate-20" />
+      </div>
     </div>
   );
 };
