@@ -119,6 +119,7 @@ const HudViewFinder = ({
     >
       {[...Array(numRods)].map((item, index) => (
         <div
+          key={index}
           style={{
             width: markingWidth,
             transform: `rotate(${index * markingOffsetDegree}deg)`,
