@@ -1,4 +1,4 @@
-import { HeaderBackground } from './HeaderHudLine.jsx';
+import { HeaderBackground } from './HeaderHudBackground.jsx';
 
 const Header = () => {
   return (

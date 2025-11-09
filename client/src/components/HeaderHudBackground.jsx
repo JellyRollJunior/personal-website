@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
-const HeaderHudLine = ({
+const HudLine = ({
   className,
   skewX = -60,
   boxes = 14,
@@ -91,19 +91,79 @@ const HeaderHudLine = ({
   );
 };
 
+const HudViewFinder = ({
+  className,
+  size,
+  markingOffsetDegree = 5,
+  markingWidth = 9,
+  children,
+}) => {
+  const numRods =
+    markingOffsetDegree == 0 || markingOffsetDegree >= 360
+      ? 0
+      : Math.floor(360 / markingOffsetDegree);
+
+  return (
+    <div
+      style={{ width: size, height: size }}
+      className={`flex items-center justify-center rounded-full ${className} isolate`}
+      
+    >
+      {[...Array(numRods)].map((item, index) => (
+        <div
+          style={{
+            width: markingWidth,
+            transform: `rotate(${index * markingOffsetDegree}deg)`,
+            height: size / 2,
+          }}
+          className={`absolute top-1/2 left-1/2 origin-top -translate-x-1/2 bg-black`}
+        ></div>
+      ))}
+      {children}
+    </div>
+  );
+};
+
 const HeaderBackground = () => {
   return (
-    <div className="absolute top-1/2 left-1/2 flex -translate-x-1/2 -translate-y-1/2 gap-5 -z-1">
-      <div className="border-yellow size-55 rounded-full border-2">
-        {/* top right */}
-        <HeaderHudLine className="absolute top-0 left-1/2 h-fit shrink-0 translate-x-30 -translate-y-15 -rotate-20" />
-        {/* top left */}
-        <HeaderHudLine className="absolute top-0 right-1/2 h-fit shrink-0 -translate-x-30 -translate-y-15 -scale-x-100 rotate-20" />
-        {/* bottom right */}
-        <HeaderHudLine className="absolute bottom-0 left-1/2 h-fit shrink-0 translate-x-30 translate-y-15 -scale-y-100 rotate-20" />
-        {/* bottom left */}
-        <HeaderHudLine className="absolute right-1/2 bottom-0 h-fit shrink-0 -translate-x-30 translate-y-15 -scale-x-100 -scale-y-100 -rotate-20" />
-      </div>
+    <div className="absolute top-1/2 left-1/2 -z-1 flex -translate-x-1/2 -translate-y-1/2 gap-5">
+      {/* Center view finder */}
+      <HudViewFinder
+        className="border-red size-full border-5"
+        size={240}
+        markingOffsetDegree={45}
+        markingWidth={35}
+      >
+        <HudViewFinder
+          className="border-yellow size-full rotate-2 border-8"
+          size={230}
+          markingOffsetDegree={0}
+          markingWidth={0}
+        >
+        <HudViewFinder
+          className="border-green rotate-2 border-5"
+          size={217}
+          markingOffsetDegree={20}
+          markingWidth={8}
+        >
+          <HudViewFinder
+            className="border-blue rotate-2 border-20"
+            size={204}
+            markingOffsetDegree={4}
+            markingWidth={5}
+          />
+        </HudViewFinder>
+        </HudViewFinder>
+      </HudViewFinder>
+      {/* top right */}
+      <HudLine className="absolute top-0 left-1/2 h-fit shrink-0 translate-x-30 -translate-y-15 -rotate-20" />
+      {/* top left */}
+      <HudLine className="absolute top-0 right-1/2 h-fit shrink-0 -translate-x-30 -translate-y-15 -scale-x-100 rotate-20" />
+      {/* bottom right */}
+      <HudLine className="absolute bottom-0 left-1/2 h-fit shrink-0 translate-x-30 translate-y-15 -scale-y-100 rotate-20" />
+      {/* bottom left */}
+      <HudLine className="absolute right-1/2 bottom-0 h-fit shrink-0 -translate-x-30 translate-y-15 -scale-x-100 -scale-y-100 -rotate-20" />
+      {/* </div> */}
     </div>
   );
 };
