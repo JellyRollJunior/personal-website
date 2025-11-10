@@ -17,9 +17,9 @@ const HudLine = ({
       }}
     >
       {/* Left extended bit */}
-      <div className="border-yellow w-20 border-b-4" />
+      <div className="border-yellow w-20 border-b-4 bg-black/0" />
       {/* Animated health squares */}
-      <div className="border-yellow/60 border-t-yellow/70 flex w-fit gap-1 border-t-2 border-r-4 border-b-2 pt-1 pr-2 pb-1">
+      <div className="border-yellow/60 border-t-yellow/70 flex w-fit gap-1 border-t-2 border-r-4 border-b-2 bg-black pt-1 pr-2 pb-1">
         {[...Array(boxes)].map((item, index) => (
           <motion.div
             key={index}
@@ -210,16 +210,78 @@ const HudViewFinder = () => {
   );
 };
 
+const Marquee = ({
+  className,
+  textArray = [],
+  leftToRight = true,
+  duration = 25,
+}) => {
+  return (
+    <div className={`isolate w-full overflow-hidden ${className}`}>
+      <motion.ul
+        className={`flex gap-5 ${leftToRight ? 'justify-end' : 'justify-start'}`}
+        initial={{
+          translateX: leftToRight ? '-100%' : '100%',
+        }}
+        animate={{
+          translateX: leftToRight ? '50%' : '-50%',
+        }}
+        transition={{
+          duration: duration,
+          repeat: Infinity,
+          ease: 'linear',
+        }}
+      >
+        {textArray.map((text) => (
+          <li className="border-yellow/60 text-yellow/60 rounded-md border-2 px-3 py-1">
+            {text}
+          </li>
+        ))}
+        {textArray.map((text) => (
+          <li className="border-yellow/60 text-yellow/60 rounded-md border-2 px-3 py-1">
+            {text}
+          </li>
+        ))}
+      </motion.ul>
+    </div>
+  );
+};
+
 const HeaderBackground = () => {
   return (
     <div className="absolute -z-1 grid h-full w-full grid-cols-[1fr_240px_1fr] grid-rows-[1fr_120px_120px_1fr]">
-      <div className="col-span-3" />
+      <div className="col-span-3 flex flex-col items-center justify-center">
+        <Marquee
+          className="-z-10 mt-auto"
+          textArray={[
+            'Javascript',
+            'React',
+            'HTML',
+            'JSX',
+            'TailwindCSS',
+            'CSS',
+          ]}
+          leftToRight={true}
+        />
+        <Marquee
+          className="-z-50 mt-auto translate-y-[50%]"
+          textArray={[
+            'Javascript',
+            'React',
+            'HTML',
+            'JSX',
+            'TailwindCSS',
+            'CSS',
+          ]}
+          leftToRight={false}
+        />
+      </div>
       {/* top left */}
       <div className="relative h-full w-full">
         <HudLine className="absolute top-0 right-0 -translate-y-3/1 -scale-x-100 rotate-22" />
       </div>
       {/* Center view finder */}
-      <div className="relative row-span-2 flex items-center justify-center">
+      <div className="relative isolate row-span-2 flex items-center justify-center rounded-full bg-black">
         <HudViewFinder />
       </div>
       {/* top right */}
@@ -233,6 +295,32 @@ const HeaderBackground = () => {
       {/* bottom right */}
       <div className="relative h-full w-full">
         <HudLine className="absolute bottom-0 left-0 translate-y-3/1 -scale-y-100 rotate-22" />
+      </div>
+      <div className="col-span-3 flex flex-col items-center justify-center">
+        <Marquee
+          className="-z-10 mb-auto -translate-y-[50%]"
+          textArray={[
+            'Javascript',
+            'React',
+            'HTML',
+            'JSX',
+            'TailwindCSS',
+            'CSS',
+          ]}
+          leftToRight={true}
+        />
+        <Marquee
+          className="-z-50 mb-auto"
+          textArray={[
+            'Javascript',
+            'React',
+            'HTML',
+            'JSX',
+            'TailwindCSS',
+            'CSS',
+          ]}
+          leftToRight={false}
+        />
       </div>
     </div>
   );
