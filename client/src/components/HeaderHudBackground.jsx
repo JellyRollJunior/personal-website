@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
+import { Fragment } from 'react';
 
 const HudLine = ({
   className,
@@ -214,17 +215,15 @@ const Marquee = ({
   className,
   textArray = [],
   leftToRight = true,
-  duration = 25,
+  duration = 30,
 }) => {
   return (
-    <div className={`isolate w-full overflow-hidden ${className}`}>
+    <div className={`isolate w-max overflow-hidden ${className}`}>
+      {/* translate 25% to reset animation when 1st set of text is translated! */}
       <motion.ul
         className={`flex gap-5 ${leftToRight ? 'justify-end' : 'justify-start'}`}
-        initial={{
-          translateX: leftToRight ? '-100%' : '100%',
-        }}
         animate={{
-          translateX: leftToRight ? '50%' : '-50%',
+          translateX: leftToRight ? '25%' : '-25%',
         }}
         transition={{
           duration: duration,
@@ -232,15 +231,17 @@ const Marquee = ({
           ease: 'linear',
         }}
       >
-        {textArray.map((text) => (
-          <li className="border-yellow/60 text-yellow/60 rounded-md border-2 px-3 py-1">
-            {text}
-          </li>
-        ))}
-        {textArray.map((text) => (
-          <li className="border-yellow/60 text-yellow/60 rounded-md border-2 px-3 py-1">
-            {text}
-          </li>
+        {[...Array(4)].map((item, index) => (
+          <Fragment key={index + Date.now()}>
+            {textArray.map((text, index) => (
+              <li
+                key={index + Date.now()}
+                className="border-red/60 text-red/60 rounded-md border-2 px-3 py-1"
+              >
+                {text}
+              </li>
+            ))}
+          </Fragment>
         ))}
       </motion.ul>
     </div>
@@ -253,26 +254,12 @@ const HeaderBackground = () => {
       <div className="col-span-3 flex flex-col items-center justify-center">
         <Marquee
           className="-z-10 mt-auto"
-          textArray={[
-            'Javascript',
-            'React',
-            'HTML',
-            'JSX',
-            'TailwindCSS',
-            'CSS',
-          ]}
+          textArray={['Javascript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS']}
           leftToRight={true}
         />
         <Marquee
           className="-z-50 mt-auto translate-y-[50%]"
-          textArray={[
-            'Javascript',
-            'React',
-            'HTML',
-            'JSX',
-            'TailwindCSS',
-            'CSS',
-          ]}
+          textArray={['Javascript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS']}
           leftToRight={false}
         />
       </div>
@@ -299,26 +286,12 @@ const HeaderBackground = () => {
       <div className="col-span-3 flex flex-col items-center justify-center">
         <Marquee
           className="-z-10 mb-auto -translate-y-[50%]"
-          textArray={[
-            'Javascript',
-            'React',
-            'HTML',
-            'JSX',
-            'TailwindCSS',
-            'CSS',
-          ]}
+          textArray={['Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'Node', 'Javascript']}
           leftToRight={true}
         />
         <Marquee
           className="-z-50 mb-auto"
-          textArray={[
-            'Javascript',
-            'React',
-            'HTML',
-            'JSX',
-            'TailwindCSS',
-            'CSS',
-          ]}
+          textArray={['Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'Node', 'Javascript']}
           leftToRight={false}
         />
       </div>
