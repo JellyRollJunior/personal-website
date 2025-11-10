@@ -1,13 +1,13 @@
 @import 'tailwindcss';
 
 @font-face {
-  font-family: 'michroma';
-  src: url(../assets/fonts/michroma-regular-webfont.woff2);
+  font-family: 'orbitron';
+  src: url(../assets/fonts/orbitron-variablefont_wght-webfont.woff2);
 }
 
 @theme {
   /* Fonts */
-  --font-michroma: 'michroma';
+  --font-orbitron: 'orbitron', arial;
 
   /* Colors */
   --color-blue: #92b0e0;
