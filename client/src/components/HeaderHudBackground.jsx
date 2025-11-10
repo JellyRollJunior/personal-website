@@ -96,11 +96,15 @@ const HudViewFinder = ({
   size,
   markingOffsetDegree = 5,
   markingWidth = 9,
+  style = {},
   animate = {
     rotate: 360,
   },
-  animateDuration = 30,
-  style = {},
+  transition = {
+    duration: 30,
+    ease: 'linear',
+    repeat: Infinity,
+  },
 }) => {
   const numRods =
     markingOffsetDegree == 0 || markingOffsetDegree >= 360
@@ -109,14 +113,10 @@ const HudViewFinder = ({
 
   return (
     <motion.div
-      style={{ width: size - 2, height: size - 2, ...style }}
-      className={`absolute flex items-center justify-center rounded-full ${className} isolate`}
+      style={{ width: size, height: size, ...style }}
+      className={`absolute isolate flex items-center justify-center rounded-full ${className} `}
       animate={animate}
-      transition={{
-        duration: animateDuration,
-        ease: 'linear',
-        repeat: Infinity,
-      }}
+      transition={transition}
     >
       {[...Array(numRods)].map((item, index) => (
         <div
@@ -162,7 +162,7 @@ const HeaderBackground = () => {
           markingWidth={0}
           style={{
             background:
-              'radial-gradient(circle,  #000000 70px, #ffcc77 140px )',
+              'radial-gradient(circle, #000000 70px, #ffcc77 140px )',
           }}
         />
         <HudViewFinder
@@ -170,16 +170,40 @@ const HeaderBackground = () => {
           size={205}
           markingOffsetDegree={20}
           markingWidth={8}
-          animateDuration={100}
+          transition={{
+            duration: 100,
+            ease: 'linear',
+            repeat: Infinity,
+          }}
         />
         <HudViewFinder
           className="to-red bg-radial from-black"
           size={195}
           markingOffsetDegree={4}
           markingWidth={5}
-          rotateDuration={50}
           animate={{
             rotate: -360,
+          }}
+        />
+        <motion.div
+          className="z-5 rounded-full"
+          style={{
+            width: '150px',
+            height: '150px',
+            background: 'radial-gradient(#000000, #000000)',
+          }}
+          animate={{
+            background: [
+              'radial-gradient(#000000 0px, #000000 0px)',
+              'radial-gradient(#ffcc77 -400px, #000000 130px)',
+              'radial-gradient(#000000 0px , #000000 0px)',
+            ],
+          }}
+          transition={{
+            duration: 3,
+            times: [0, 0.5, 1],
+            ease: 'easeIn',
+            repeat: Infinity,
           }}
         />
       </div>
