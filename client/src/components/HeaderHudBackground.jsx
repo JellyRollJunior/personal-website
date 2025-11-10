@@ -253,12 +253,12 @@ const HeaderBackground = () => {
     <div className="absolute -z-1 grid h-full w-full grid-cols-[1fr_240px_1fr] grid-rows-[1fr_120px_120px_1fr]">
       <div className="col-span-3 flex flex-col items-center justify-center">
         <Marquee
-          className="-z-10 mt-auto"
+          className="-z-10 my-auto"
           textArray={['Javascript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS']}
           leftToRight={true}
         />
         <Marquee
-          className="-z-50 mt-auto translate-y-[50%]"
+          className="-z-50 mb-auto"
           textArray={['Javascript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS']}
           leftToRight={false}
         />
@@ -283,14 +283,14 @@ const HeaderBackground = () => {
       <div className="relative h-full w-full">
         <HudLine className="absolute bottom-0 left-0 translate-y-3/1 -scale-y-100 rotate-22" />
       </div>
-      <div className="col-span-3 flex flex-col items-center justify-center">
+      <div className="col-span-3 flex flex-col items-center">
         <Marquee
-          className="-z-10 mb-auto -translate-y-[50%]"
+          className="-z-10 mt-auto"
           textArray={['Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'Node', 'Javascript']}
           leftToRight={true}
         />
         <Marquee
-          className="-z-50 mb-auto"
+          className="-z-50 my-auto"
           textArray={['Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'Node', 'Javascript']}
           leftToRight={false}
         />
