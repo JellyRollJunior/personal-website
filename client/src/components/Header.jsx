@@ -3,7 +3,7 @@ import { ArrowDownLink } from './ArrowDownLink.jsx';
 
 const Header = () => {
   return (
-    <header className="h-screen p-5">
+    <header className="h-screen">
       <div className="border-yellow relative grid h-full grid-cols-3 grid-rows-3 flex-col overflow-clip rounded-md border-2">
         <div className="col-span-3"></div>
         <div className="text-blue col-span-3 flex items-center justify-center">
