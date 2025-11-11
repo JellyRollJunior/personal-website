@@ -1,35 +1,45 @@
 import { useState } from 'react';
-import image from '../assets/icons/arrow-down.svg';
+import chat from '../assets/projects/chiikawaNewsNetwork/chat.webp';
+import home from '../assets/projects/chiikawaNewsNetwork/home.webp';
+import mobile from '../assets/projects/chiikawaNewsNetwork/mobile.webp';
+import profile from '../assets/projects/chiikawaNewsNetwork/profile.webp';
 
 const ImageCarousel = ({ className, imageArray }) => {
   const [imgIndex, setImgIndex] = useState(0);
 
+  const baseImgStyling =
+    'border-red border-5 col-span-7 row-span-7 aspect-16/10 w-full';
+  const modulo = (input, mod) => ((input % mod) + mod) % mod;
   return (
     <div className={`isolate ${className}`}>
       <div className="grid grid-cols-9">
         <img
-          className="border-yellow bg-red z-0 col-span-7 col-start-1 row-span-7 row-start-1 aspect-16/10 w-full border-2"
+          className={`${baseImgStyling} col-start-1 row-start-1`}
           src={imageArray[imgIndex % imageArray.length]}
         />
         <img
-          className="border-yellow bg-blue z-1 col-span-7 col-start-2 row-span-7 row-start-2 aspect-16/10 w-full border-2"
+          className={`${baseImgStyling} z-1 col-start-2 row-start-2`}
           src={imageArray[(imgIndex + 1) % imageArray.length]}
         />
         <img
-          className="border-yellow bg-green z-0 col-span-7 col-start-3 row-span-7 row-start-3 aspect-16/10 w-full border-2"
+          className={`${baseImgStyling} col-start-3 row-start-3`}
           src={imageArray[(imgIndex + 2) % imageArray.length]}
         />
       </div>
-      <div className='flex w-full justify-between px-5 mt-3'>
-        <button>prev</button>
-        <button>next</button>
+      <div className="mt-3 flex w-full justify-between px-5">
+        <button onClick={() => setImgIndex((prev) => modulo(prev - 1, imageArray.length))}>
+          prev
+        </button>
+        <button onClick={() => setImgIndex((prev) => modulo(prev + 1, imageArray.length))}>
+          next
+        </button>
       </div>
     </div>
   );
 };
 
 const Projects = () => {
-  const images = [image, image, image];
+  const images = [chat, home, mobile, profile];
 
   return (
     <>
@@ -57,10 +67,7 @@ const Projects = () => {
             </div>
           </div>
           <div className="col-span-2 flex items-center justify-center">
-            <ImageCarousel
-            className='w-1/2'
-              imageArray={images}
-            />
+            <ImageCarousel className="w-1/2" imageArray={images} />
           </div>
         </div>
       </section>
