@@ -1,6 +1,6 @@
+import { Fragment } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
-import { Fragment } from 'react';
 
 const HudLine = ({
   className,
