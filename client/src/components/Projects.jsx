@@ -3,6 +3,8 @@ import cnnChat from '../assets/projects/chiikawaNewsNetwork/chat.webp';
 import cnnHome from '../assets/projects/chiikawaNewsNetwork/home.webp';
 import cnnMobile from '../assets/projects/chiikawaNewsNetwork/mobile.webp';
 import cnnProfile from '../assets/projects/chiikawaNewsNetwork/profile.webp';
+import leftArrow from '../assets/icons/chevron-left.svg';
+import rightArrow from '../assets/icons/chevron-right.svg';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -43,7 +45,10 @@ const ImageCarousel = ({ className, imageArray }) => {
     'border-green border-5 col-span-4 row-span-4 aspect-16/10 w-full h-full rounded-md';
 
   return (
-    <div className={`isolate ${className}`}>
+    <div className={`isolate ${className} flex items-center gap-3`}>
+      <button className="shrink-0" onClick={prevImage}>
+        <img className="w-[50px]" src={leftArrow} />
+      </button>
       <div className="grid grid-cols-6">
         <AnimatePresence custom={direction}>
           <motion.img
@@ -81,10 +86,9 @@ const ImageCarousel = ({ className, imageArray }) => {
           />
         </AnimatePresence>
       </div>
-      <div className="mt-3 flex w-full justify-between px-5">
-        <button onClick={prevImage}>prev</button>
-        <button onClick={nextImage}>next</button>
-      </div>
+      <button className="shrink-0" onClick={nextImage}>
+        <img className="w-[50px]" src={rightArrow} />
+      </button>
     </div>
   );
 };
@@ -99,8 +103,8 @@ const Projects = () => {
         <h2 className="text-blue text-3xl font-extrabold">P R O J E C T S</h2>
         {/* Chiikawa News Network */}
         <div className="mx-8 mt-8 grid grid-cols-3 gap-8">
-          <div className="self-center justify-self-center">
-            <h3 className="text-red text-xl font-bold">
+          <div className="max-w-md self-center justify-self-center">
+            <h3 className="text-red text-center text-xl font-bold">
               Chiikawa News Network
             </h3>
             <p className="mt-3">
