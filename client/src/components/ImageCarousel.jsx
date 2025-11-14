@@ -44,6 +44,7 @@ const ImageCarousel = ({
   const baseImgStyling =
     'border-green border-5 col-span-9 row-span-9 w-full h-full rounded-md bg-black';
 
+  if (!Array.isArray(imageArray)) return null;
   return (
     <div
       className={`isolate ${className} flex items-center gap-3 ${reverseOrientation && '-scale-x-100'}`}
@@ -51,43 +52,50 @@ const ImageCarousel = ({
       <button className="shrink-0" onClick={prevImage}>
         <img className="w-[50px]" src={leftArrow} />
       </button>
-      <div className="grid grid-cols-11">
-        <AnimatePresence custom={direction}>
-          <motion.img
-            key={imageArray[imgIndex % imageArray.length] + Date.now()}
-            src={imageArray[imgIndex % imageArray.length]}
-            className={`${baseImgStyling} col-start-1 row-start-1 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: 0.5,
-            }}
-          />
-          <motion.img
-            key={imgIndex}
-            src={imageArray[(imgIndex + 1) % imageArray.length]}
-            className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
-            custom={direction}
-            variants={variants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 0.5 }}
-          />
-          <motion.img
-            key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}
-            src={imageArray[(imgIndex + 2) % imageArray.length]}
-            className={`${baseImgStyling} col-start-3 row-start-3 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: 0.5,
-            }}
-          />
-        </AnimatePresence>
-      </div>
+      {imageArray.length > 1 ? (
+        <div className="grid grid-cols-11">
+          <AnimatePresence custom={direction}>
+            <motion.img
+              key={imageArray[imgIndex % imageArray.length] + Date.now()}
+              src={imageArray[imgIndex % imageArray.length]}
+              className={`${baseImgStyling} col-start-1 row-start-1 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.5,
+              }}
+            />
+            <motion.img
+              key={imgIndex}
+              src={imageArray[(imgIndex + 1) % imageArray.length]}
+              className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
+              custom={direction}
+              variants={variants}
+              initial="enter"
+              animate="center"
+              exit="exit"
+              transition={{ duration: 0.5 }}
+            />
+            <motion.img
+              key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}
+              src={imageArray[(imgIndex + 2) % imageArray.length]}
+              className={`${baseImgStyling} col-start-3 row-start-3 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.5,
+              }}
+            />
+          </AnimatePresence>
+        </div>
+      ) : (
+        <img
+          src={imageArray[0]}
+          className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
+        />
+      )}
       <button className="shrink-0" onClick={nextImage}>
         <img className="w-[50px]" src={rightArrow} />
       </button>

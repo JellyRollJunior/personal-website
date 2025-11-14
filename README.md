@@ -12,6 +12,9 @@ My personal website. Includes my works, profile, and interests
         -   update transitions for reverse carousel   
         -   make center biggers
         -   make aspect ratio fixed, imgs keep aspect ratio
+    -   project links
+    -   project link styling
+    -   project layout
 
 - About Me
 - Skills & tools    
@@ -22,3 +25,5 @@ My personal website. Includes my works, profile, and interests
     -   content max w
     -   text color gray default (white hurts eyes on black)
     -   paragraph text different font (orbitron hard to read)
+
+- ejs icon
