@@ -42,7 +42,7 @@ const ImageCarousel = ({
     setImgIndex([modulo(imgIndex - 1, imageArray.length), -1]);
   };
   const baseImgStyling =
-    'border-green border-5 col-span-4 row-span-4 aspect-16/10 w-full h-full rounded-md bg-black';
+    'border-green border-5 col-span-9 row-span-9 w-full h-full rounded-md bg-black';
 
   return (
     <div
@@ -51,7 +51,7 @@ const ImageCarousel = ({
       <button className="shrink-0" onClick={prevImage}>
         <img className="w-[50px]" src={leftArrow} />
       </button>
-      <div className="grid grid-cols-6">
+      <div className="grid grid-cols-11">
         <AnimatePresence custom={direction}>
           <motion.img
             key={imageArray[imgIndex % imageArray.length] + Date.now()}

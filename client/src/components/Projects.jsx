@@ -35,7 +35,7 @@ const Project = ({
       </div>
       <div className="mt-7 w-full self-center justify-self-center">
         <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
-        <div className="mt-2 flex flex-wrap justify-center gap-x-2">
+        <div className="mt-2 flex flex-wrap justify-center gap-x-2 px-14">
           {techStackArray.map((tech) => (
             <div className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
               <img className="w-full" src={tech.icon} />
@@ -79,25 +79,22 @@ const Projects = () => {
   return (
     <>
       <section className="min-h-screen">
-        <div className="grid grid-cols-2">
-          <h2 className="text-blue text-center text-3xl font-extrabold">
-            P R O J E C T S
-          </h2>
-          <div />
-        </div>
+        <h2 className="text-blue text-center text-3xl font-extrabold">
+          P R O J E C T S
+        </h2>
         <div className="grid grid-cols-2">
           <Project
             title="Chiikawa News Network"
             description="Social networking by and for Chiikawa enjoyers. Message friends
-                in real time, share posts, customize your profile, and interact
-                through likes & comments!"
+                  in real time, share posts, customize your profile, and interact
+                  through likes & comments!"
             techStackArray={cnnTechStack}
             carouselImagesArray={cnnImages}
           />
           <Project
             title="Chiikawa I Spy"
             description="I AM USAGI YAHAAHAHHAHAHAHAHHAHAHA
-            asdhsdfjksadfh dfshakdfjsdhfkasfds"
+              asdhsdfjksadfh dfshakdfjsdhfkasfds"
             techStackArray={cisTechStack}
             carouselImagesArray={cisImages}
             carouselReverseOrientation={true}
