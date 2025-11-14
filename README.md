@@ -10,6 +10,8 @@ My personal website. Includes my works, profile, and interests
         -   LR button styling
         -   animation on load (fade in)
         -   update transitions for reverse carousel   
+        -   make center biggers
+        -   make aspect ratio fixed, imgs keep aspect ratio
 
 - About Me
 - Skills & tools    
