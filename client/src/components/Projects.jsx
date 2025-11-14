@@ -37,7 +37,7 @@ const variants = {
   },
 };
 
-const ImageCarousel = ({ className, imageArray }) => {
+const ImageCarousel = ({ className, imageArray, reverseOrientation = false }) => {
   const [[imgIndex, direction], setImgIndex] = useState([0, 0]);
 
   const modulo = (input, mod) => ((input % mod) + mod) % mod;
@@ -51,7 +51,7 @@ const ImageCarousel = ({ className, imageArray }) => {
     'border-green border-5 col-span-4 row-span-4 aspect-16/10 w-full h-full rounded-md';
 
   return (
-    <div className={`isolate ${className} flex items-center gap-3`}>
+    <div className={`isolate ${className} flex items-center gap-3 ${reverseOrientation && '-scale-x-100'}`}>
       <button className="shrink-0" onClick={prevImage}>
         <img className="w-[50px]" src={leftArrow} />
       </button>
@@ -60,7 +60,7 @@ const ImageCarousel = ({ className, imageArray }) => {
           <motion.img
             key={imageArray[imgIndex % imageArray.length] + Date.now()}
             src={imageArray[imgIndex % imageArray.length]}
-            className={`${baseImgStyling} col-start-1 row-start-1 opacity-50`}
+            className={`${baseImgStyling} col-start-1 row-start-1 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
@@ -71,7 +71,7 @@ const ImageCarousel = ({ className, imageArray }) => {
           <motion.img
             key={imgIndex}
             src={imageArray[(imgIndex + 1) % imageArray.length]}
-            className={`${baseImgStyling} z-1 col-start-2 row-start-2`}
+            className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
             custom={direction}
             variants={variants}
             initial="enter"
@@ -82,7 +82,7 @@ const ImageCarousel = ({ className, imageArray }) => {
           <motion.img
             key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}
             src={imageArray[(imgIndex + 2) % imageArray.length]}
-            className={`${baseImgStyling} col-start-3 row-start-3 opacity-50`}
+            className={`${baseImgStyling} col-start-3 row-start-3 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
@@ -111,10 +111,11 @@ const Projects = () => {
 
   return (
     <>
-      {/* temp hscreen for working purposes */}
       <section className="min-h-screen">
-        <div className='grid grid-cols-2'>
-          <h2 className="text-blue text-center text-3xl font-extrabold">P R O J E C T S</h2>
+        <div className="grid grid-cols-2">
+          <h2 className="text-blue text-center text-3xl font-extrabold">
+            P R O J E C T S
+          </h2>
           <div />
         </div>
         <div className="grid grid-cols-2">
