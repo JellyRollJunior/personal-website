@@ -8,6 +8,12 @@ import rightArrow from '../assets/icons/chevron-right.svg';
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'motion/react';
 
+import react from '../assets/icons/react.svg';
+import nodejs from '../assets/icons/nodejs.svg';
+import express from '../assets/icons/express.svg';
+import prisma from '../assets/icons/prisma.svg';
+import socketio from '../assets/icons/socketio.svg';
+
 const TRANSLATE_DISTANCE = `${(1 / 6) * 100}%`;
 const variants = {
   enter: (direction) => {
@@ -94,35 +100,55 @@ const ImageCarousel = ({ className, imageArray }) => {
 };
 
 const Projects = () => {
-  const chiikawaNewsNetworkImages = [cnnChat, cnnHome, cnnMobile, cnnProfile];
+  const cnnImages = [cnnChat, cnnHome, cnnMobile, cnnProfile];
+  const cnnTechStack = [
+    { icon: react, name: 'React' },
+    { icon: nodejs, name: 'NodeJs' },
+    { icon: express, name: 'Express' },
+    { icon: prisma, name: 'PrismaORM' },
+    { icon: socketio, name: 'Socket.IO' },
+  ];
 
   return (
     <>
       {/* temp hscreen for working purposes */}
-      <section className="min-h-screen px-5">
-        <h2 className="text-blue text-3xl font-extrabold">P R O J E C T S</h2>
-        {/* Chiikawa News Network */}
-        <div className="mx-8 mt-8 grid grid-cols-3 gap-8">
-          <div className="max-w-md self-center justify-self-center">
-            <h3 className="text-red text-center text-xl font-bold">
-              Chiikawa News Network
-            </h3>
-            <p className="mt-3">
-              Social networking by and for Chiikawa enjoyers. Message friends in
-              real time, share posts, customize your profile, and interact
-              through likes & comments!
-            </p>
-            <div className="mt-5 flex justify-around">
-              <button className="border-yellow rounded-md border px-5 py-1">
-                GitHub
-              </button>
-              <button className="border-yellow rounded-md border px-5 py-1">
-                Live Demo
-              </button>
+      <section className="min-h-screen">
+        <div className='grid grid-cols-2'>
+          <h2 className="text-blue text-center text-3xl font-extrabold">P R O J E C T S</h2>
+          <div />
+        </div>
+        <div className="grid grid-cols-2">
+          {/* Chiikawa News Network */}
+          <div className="mt-8 rounded-sm p-3">
+            <div className="flex items-center justify-center">
+              <ImageCarousel imageArray={cnnImages} />
             </div>
-          </div>
-          <div className="col-span-2 flex items-center justify-center">
-            <ImageCarousel imageArray={chiikawaNewsNetworkImages} />
+            <div className="mt-7 w-full self-center justify-self-center">
+              <h3 className="text-red text-center text-2xl font-bold">
+                Chiikawa News Network
+              </h3>
+              <div className="mt-2 flex flex-wrap justify-center gap-x-2">
+                {cnnTechStack.map((tech) => (
+                  <div className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
+                    <img className="w-full" src={tech.icon} />
+                    <div className="mt-1 text-xs">{tech.name}</div>
+                  </div>
+                ))}
+              </div>
+              <p className="mx-auto mt-3.5 max-w-md text-center">
+                Social networking by and for Chiikawa enjoyers. Message friends
+                in real time, share posts, customize your profile, and interact
+                through likes & comments!
+              </p>
+              <div className="mt-5 flex justify-around">
+                <button className="border-yellow rounded-md border px-5 py-1">
+                  GitHub
+                </button>
+                <button className="border-yellow rounded-md border px-5 py-1">
+                  Live Demo
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
