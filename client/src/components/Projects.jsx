@@ -40,7 +40,7 @@ const Project = ({
   carouselReverseOrientation = false,
 }) => {
   return (
-    <div className={`mt-8 rounded-sm ${className}`}>
+    <div className={`rounded-sm ${className}`}>
       <div className="flex items-center justify-center">
         <ImageCarousel
           imageArray={carouselImagesArray}
@@ -58,14 +58,7 @@ const Project = ({
           ))}
         </div>
         <p className="mx-auto mt-3.5 max-w-md text-center">{description}</p>
-        <div className="mt-5 flex justify-around">
-          <button className="border-yellow rounded-md border px-5 py-1">
-            GitHub
-          </button>
-          <button className="border-yellow rounded-md border px-5 py-1">
-            Live Demo
-          </button>
-        </div>
+        {/* Link buttons github an live demo */}
       </div>
     </div>
   );
@@ -111,11 +104,15 @@ const Projects = () => {
 
   return (
     <>
-      <section className="min-h-screen">
-        <h2 className="text-blue text-center text-3xl font-extrabold">
-          P R O J E C T S
-        </h2>
-        <div className="grid grid-cols-2 items-center gap-y-5">
+      <section className="border-yellow rounded-sm rounded-b-3xl border-2 pb-14">
+        <div className="border-yellow flex border-b-2">
+          <div className="yellow-stripes flex-1" />
+          <h2 className="text-blue border-yellow border-x-2 px-5 pt-2 pb-1 text-center text-3xl font-extrabold">
+            P R O J E C T S
+          </h2>
+          <div className="yellow-stripes flex-1 -scale-x-100" />
+        </div>
+        <div className="mt-8 grid grid-cols-2 items-center">
           <Project
             className="col-span-2 mx-auto max-w-5xl"
             title="Chiikawa News Network"
@@ -126,8 +123,8 @@ const Projects = () => {
             carouselImagesArray={cnnImages}
           />
         </div>
-        <div className="grid grid-cols-2">
-          <div className="flex flex-col gap-5">
+        <div className="mt-20 grid grid-cols-2 gap-8 px-8">
+          <div className="flex flex-col gap-20">
             <Project
               title="Chiikawa I Spy"
               description="Play a rousing game of I Spy with Chiikawa and friends! Can you
@@ -144,7 +141,7 @@ const Projects = () => {
               carouselImagesArray={fotImages}
             />
           </div>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-20">
             <Project
               title="Sailor Moon Memory"
               description="Play a game of memory with sailor moon powered by Giphy!"

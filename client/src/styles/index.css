@@ -15,3 +15,14 @@
   --color-red: #ff7777;
   --color-yellow: #ffcc77;
 }
+
+@utility yellow-stripes {
+  --color: #ffcc77;
+  background: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 20px,
+    var(--color) 20px,
+    var(--color) 40px
+  );
+}
