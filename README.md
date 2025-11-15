@@ -15,6 +15,10 @@ My personal website. Includes my works, profile, and interests
     -   project links
     -   project link styling
     -   project layout
+    -   tech stack stagger translate in on view
+    - wrap projects in yellow tape
+    - text colors
+    - readable text
 
 - About Me
 - Skills & tools    

@@ -16,7 +16,6 @@ import fotEdit from '../assets/projects/foodsOfTaiwan/edit.gif';
 import slHome from '../assets/projects/socketLovers/index.png';
 import slChat from '../assets/projects/socketLovers/creating-chat.gif';
 import slProfile from '../assets/projects/socketLovers/edit-profile.gif';
-import slLoading from '../assets/projects/socketLovers/loading-animations.gif';
 /* Sailor Moon Memory */
 import smmHome from '../assets/projects/sailorMoonMemory/index.png';
 /* Tech */
@@ -35,8 +34,8 @@ const Project = ({
   title,
   techStackArray,
   description,
-  githubLink,
-  demoLink,
+  // githubLink,
+  // demoLink,
   carouselImagesArray,
   carouselReverseOrientation = false,
 }) => {
@@ -76,7 +75,7 @@ const Projects = () => {
   const cnnImages = [cnnChat, cnnHome, cnnMobile, cnnProfile];
   const cnnTechStack = [
     { icon: react, name: 'React' },
-    { icon: nodejs, name: 'NodeJs' },
+    { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: prisma, name: 'PrismaORM' },
     { icon: socketio, name: 'Socket.IO' },
@@ -84,7 +83,7 @@ const Projects = () => {
   const cisImages = [cisGameplay, cisStart, cisWin];
   const cisTechStack = [
     { icon: react, name: 'React' },
-    { icon: nodejs, name: 'NodeJs' },
+    { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: prisma, name: 'PrismaORM' },
     { icon: socketio, name: 'Socket.IO' },
@@ -95,14 +94,14 @@ const Projects = () => {
     { icon: js, name: 'Javascript' },
     { icon: html, name: 'HTML' },
     { icon: js, name: 'EJS' },
-    { icon: nodejs, name: 'NodeJs' },
+    { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: pg, name: 'PostgreSQL' },
   ];
-  const slImages = [slLoading, slHome, slChat, slProfile];
+  const slImages = [slProfile, slHome, slChat];
   const slTechStack = [
     { icon: react, name: 'React' },
-    { icon: nodejs, name: 'NodeJs' },
+    { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: prisma, name: 'PrismaORM' },
     { icon: socketio, name: 'Socket.IO' },
@@ -116,50 +115,50 @@ const Projects = () => {
         <h2 className="text-blue text-center text-3xl font-extrabold">
           P R O J E C T S
         </h2>
-        <div className="grid grid-cols-2 grid-rows-7 items-center gap-y-8">
+        <div className="grid grid-cols-2 items-center gap-y-5">
           <Project
-            className="row-span-7"
+            className="col-span-2 mx-auto max-w-5xl"
             title="Chiikawa News Network"
             description="Social networking by and for Chiikawa enjoyers. Message friends
-                    in real time, share posts, customize your profile, and interact
-                    through likes & comments!"
+                    in real time through private and public chats, share posts, customize 
+                    your profile, and interact through likes & comments!"
             techStackArray={cnnTechStack}
             carouselImagesArray={cnnImages}
           />
-          <div></div>
-          <Project
-            className="row-span-7"
-            title="Chiikawa I Spy"
-            description="I AM USAGI YAHAAHAHHAHAHAHAHHAHAHA
-                asdhsdfjksadfh dfshakdfjsdhfkasfds"
-            techStackArray={cisTechStack}
-            carouselImagesArray={cisImages}
-            carouselReverseOrientation={true}
-          />
-          <Project
-            className="row-span-7"
-            title="Foods of Taiwan"
-            description="I AM USAGI YAHAAHAHHAHAHAHAHHAHAHA
-              asdhsdfjksadfh dfshakdfjsdhfkasfds"
-            techStackArray={fotTechStack}
-            carouselImagesArray={fotImages}
-          />
-          <Project
-            className="row-span-7"
-            title="Sailor Moon Memory"
-            description="I AM USAGI YAHAAHAHHAHAHAHAHHAHAHA
-              asdhsdfjksadfh dfshakdfjsdhfkasfds"
-            techStackArray={smmTechStack}
-            carouselImagesArray={smmImages}
-          />
-          <Project
-            className="row-span-7"
-            title="Socket Lovers"
-            description="I AM USAGI YAHAAHAHHAHAHAHAHHAHAHA
-              asdhsdfjksadfh dfshakdfjsdhfkasfds"
-            techStackArray={slTechStack}
-            carouselImagesArray={slImages}
-          />
+        </div>
+        <div className="grid grid-cols-2">
+          <div className="flex flex-col gap-5">
+            <Project
+              title="Chiikawa I Spy"
+              description="Play a rousing game of I Spy with Chiikawa and friends! Can you
+                      spot all the cute critters?"
+              techStackArray={cisTechStack}
+              carouselImagesArray={cisImages}
+              carouselReverseOrientation={true}
+            />
+            <Project
+              title="Foods of Taiwan"
+              description="A user generated database of Taiwanese foods! Create/edit/delete 
+                      foods & food categories with all entries stored on a remote SQL database"
+              techStackArray={fotTechStack}
+              carouselImagesArray={fotImages}
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <Project
+              title="Sailor Moon Memory"
+              description="Play a game of memory with sailor moon powered by Giphy!"
+              techStackArray={smmTechStack}
+              carouselImagesArray={smmImages}
+            />
+            <Project
+              title="Socket Lovers"
+              description="Real time messaging app with a clean minimal design. Message friends 
+                      in real time through private and public chats, and customize your profile!"
+              techStackArray={slTechStack}
+              carouselImagesArray={slImages}
+            />
+          </div>
         </div>
       </section>
     </>
