@@ -175,14 +175,14 @@ const OtherProjects = () => {
   );
 
   return (
-    <section className="mt-8 rounded-md">
-      <h2 className="text-blue text-center text-3xl font-extrabold">
+    <section className="lg:border-yellow lg:mx-5 mt-8 rounded-md lg:border-2">
+      <h2 className="text-blue lg:mt-8 text-center text-3xl font-extrabold">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
       </h2>
-      <ul className="mt-5 flex">
+      <ul className="flex justify-around mt-5">
         {otherProjectsList.map((project) => (
-          <li className="relative" key={project.title}>
+          <li className="relative flex-1" key={project.title}>
             <button
               className="size-full pb-2"
               onClick={() => setSelectedProject(project.title)}
@@ -199,7 +199,7 @@ const OtherProjects = () => {
           </li>
         ))}
       </ul>
-      <div className="mt-8 pb-8">
+      <div className="mt-8 lg:px-5 pb-8">
         {otherProjectsList.map((project) => (
           <Fragment key={project.title}>
             <Project

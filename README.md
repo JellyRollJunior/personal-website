@@ -10,11 +10,7 @@ My personal website. Includes my works, profile, and interests
         -   animation on load (fade in)
         -   update transitions for reverse carousel
     -   project links
-    -   project link styling
     -   tech stack stagger translate in on view
-    -   text colors
-    -   readable text
-    -   mobile view
 
 -   About Me
 -   Skills & tools
@@ -23,7 +19,6 @@ My personal website. Includes my works, profile, and interests
 
 -   page
 
-    -   content max w
     -   text color gray default (white hurts eyes on black)
     -   paragraph text different font (orbitron hard to read)
 
