@@ -45,6 +45,7 @@ const Project = ({
             (src, index) =>
               index > 0 && (
                 <img
+                  key={src}
                   className="border-green hidden w-full rounded-lg border-5 object-fill lg:block"
                   src={src}
                 />
@@ -66,7 +67,10 @@ const Project = ({
         className={`mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${reverseOrientation && 'row-start-1 items-end'}`}
       >
         {techStackArray.map((tech) => (
-          <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
+          <li
+            key={tech.name}
+            className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1"
+          >
             <img className="w-full" src={tech.icon} />
             <div className="text-xs lg:mt-1">{tech.name}</div>
           </li>
