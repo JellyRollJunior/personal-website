@@ -49,9 +49,9 @@ const ImageCarousel = ({
   if (!Array.isArray(imageArray)) return null;
   return (
     <div
-      className={`isolate ${className} flex items-center gap-3 ${reverseOrientation && '-scale-x-100'}`}
+      className={`isolate flex items-center lg:gap-3 ${className} ${reverseOrientation && '-scale-x-100'}`}
     >
-      <button className="shrink-0" onClick={prevImage}>
+      <button className="shrink-0 w-8 lg:w-fit" onClick={prevImage}>
         <img className="w-[50px]" src={leftArrow} />
       </button>
       {imageArray.length > 1 ? (
@@ -98,7 +98,7 @@ const ImageCarousel = ({
           className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
         />
       )}
-      <button className="shrink-0" onClick={nextImage}>
+      <button className="shrink-0 w-8 lg:w-fit" onClick={nextImage}>
         <img className="w-[50px]" src={rightArrow} />
       </button>
     </div>
