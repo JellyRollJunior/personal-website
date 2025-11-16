@@ -10,21 +10,6 @@ import {
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
-const TechStack = ({ className, techStackArray }) => {
-  return (
-    <ul
-      className={`mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${className}`}
-    >
-      {techStackArray.map((tech) => (
-        <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
-          <img className="w-full" src={tech.icon} />
-          <div className="text-xs lg:mt-1">{tech.name}</div>
-        </li>
-      ))}
-    </ul>
-  );
-};
-
 const Project = ({
   className,
   title,
@@ -50,14 +35,21 @@ const Project = ({
         </div>
       ) : (
         <div
-          className={`col-span-4 flex gap-8 ${reverseOrientation && 'col-start-4'}`}
+          className={`col-span-4 mx-5 flex gap-8 ${reverseOrientation && 'col-start-4'}`}
         >
-          {images.map((src) => (
-            <img
-              className="border-green w-full rounded-lg border-5 object-fill"
-              src={src}
-            />
-          ))}
+          <img
+            className="border-green w-full rounded-lg border-5 object-fill"
+            src={images && images[0]}
+          />
+          {images.map(
+            (src, index) =>
+              index > 0 && (
+                <img
+                  className="border-green hidden w-full rounded-lg border-5 object-fill lg:block"
+                  src={src}
+                />
+              )
+          )}
         </div>
       )}
       {/* Title & Description */}
@@ -119,16 +111,13 @@ const FeaturedProjects = () => {
 };
 
 const OtherProjects = () => {
-  const otherProjectsList = [
-    FOODS_OF_TAIWAN,
-    SOCKET_LOVERS,
-  ];
+  const otherProjectsList = [FOODS_OF_TAIWAN, SOCKET_LOVERS];
   const [selectedProject, setSelectedProject] = useState(
     otherProjectsList[0].title
   );
 
   return (
-    <section className="lg:border-yellow mt-8 lg:h-120 rounded-md pb-5 lg:mx-5 lg:border-2">
+    <section className="lg:border-yellow mt-8 rounded-md pb-5 lg:mx-5 lg:h-120 lg:border-2">
       <h2 className="text-blue text-center text-3xl font-extrabold lg:mt-8">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
