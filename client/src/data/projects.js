@@ -25,6 +25,7 @@ import jest from '../assets/icons/jest.svg';
 import pg from '../assets/icons/postgresql.svg';
 import js from '../assets/icons/js.svg';
 import html from '../assets/icons/html.svg';
+import ejs from '../assets/icons/ejs.svg';
 
 /* Project Data */
 const CNN_IMAGES = [cnnChat, cnnHome, cnnMobile, cnnProfile];
@@ -47,7 +48,7 @@ const FOT_IMAGES = [fotHome, fotCategories];
 const FOT_STACK = [
     { icon: js, name: 'Javascript' },
     { icon: html, name: 'HTML' },
-    { icon: js, name: 'EJS' },
+    { icon: ejs, name: 'EJS' },
     { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: pg, name: 'PostgreSQL' },

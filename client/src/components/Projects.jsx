@@ -72,7 +72,7 @@ const Project = ({
             className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1"
           >
             <img className="w-full" src={tech.icon} />
-            <div className="text-xs lg:mt-1">{tech.name}</div>
+            <div className="text-sm">{tech.name}</div>
           </li>
         ))}
       </ul>
@@ -121,7 +121,7 @@ const OtherProjects = () => {
   );
 
   return (
-    <section className="lg:border-yellow mt-8 rounded-md pb-5 lg:mx-5 lg:h-120 lg:border-2">
+    <section className="lg:border-yellow mt-5 rounded-md pb-5 lg:mx-5 lg:h-120 lg:border-2">
       <h2 className="text-blue text-center text-3xl font-extrabold lg:mt-8">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S

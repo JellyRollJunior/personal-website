@@ -15,5 +15,3 @@ My personal website. Includes my works, profile, and interests
 -   Skills & tools
 -   Work Experience
 -   Contact me
-
--   ejs icon
