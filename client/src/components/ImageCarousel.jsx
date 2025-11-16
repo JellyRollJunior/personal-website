@@ -71,7 +71,7 @@ const ImageCarousel = ({
             <motion.img
               key={imgIndex}
               src={imageArray[(imgIndex + 1) % imageArray.length]}
-              className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
+              className={`${baseImgStyling} z-1 col-start-2 row-start-2 drop-shadow-xl/25 drop-shadow-black ${reverseOrientation && '-scale-x-100'}`}
               custom={direction}
               variants={variants}
               initial="enter"

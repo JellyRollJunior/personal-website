@@ -1,33 +1,29 @@
 # personal-website
+
 My personal website. Includes my works, profile, and interests
 
 #### TODO
 
-- Projects
+-   Projects
+
     -   image carousel
-        -   img shadow
-        -   dots for index
-        -   LR button styling
         -   animation on load (fade in)
-        -   update transitions for reverse carousel   
-        -   make center biggers
-        -   make aspect ratio fixed, imgs keep aspect ratio
+        -   update transitions for reverse carousel
     -   project links
     -   project link styling
-    -   project layout
     -   tech stack stagger translate in on view
-    - wrap projects in yellow tape
-    - text colors
-    - readable text
+    -   text colors
+    -   readable text
 
-- About Me
-- Skills & tools    
-- Work Experience
-- Contact me
+-   About Me
+-   Skills & tools
+-   Work Experience
+-   Contact me
 
-- page
+-   page
+
     -   content max w
     -   text color gray default (white hurts eyes on black)
     -   paragraph text different font (orbitron hard to read)
 
-- ejs icon
+-   ejs icon

@@ -30,7 +30,7 @@ import pg from '../assets/icons/postgresql.svg';
 import js from '../assets/icons/js.svg';
 import html from '../assets/icons/html.svg';
 // eslint-disable-next-line no-unused-vars
-import { motion, AnimatePresence } from 'motion/react';
+import { motion } from 'motion/react';
 
 /* Project Data */
 const cnnImages = [cnnChat, cnnHome, cnnMobile, cnnProfile];
