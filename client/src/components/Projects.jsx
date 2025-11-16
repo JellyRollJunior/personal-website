@@ -104,7 +104,7 @@ const Project = ({
   reverseOrientation = false,
 }) => {
   return (
-    <div className={`grid grid-cols-7 ${className} `}>
+    <div className={`flex flex-col lg:grid lg:grid-cols-7 ${className}`}>
       <div
         className={`col-span-4 flex items-center justify-center ${reverseOrientation && 'col-start-4'}`}
       >
@@ -115,14 +115,14 @@ const Project = ({
         />
       </div>
       <div
-        className={`col-span-2 flex w-full flex-col justify-center ${reverseOrientation && 'col-start-2 row-start-1'}`}
+        className={`col-span-2 mt-3 flex w-full flex-col justify-center lg:mt-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
       >
         <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
         <p className="mx-auto mt-3.5 max-w-md text-center">{description}</p>
         {/* Link buttons github an live demo */}
       </div>
       <ul
-        className={`flex flex-col justify-center ${reverseOrientation && 'col-start-1 items-end row-start-1 '}`}
+        className={`mt-3 flex flex-wrap justify-center lg:mt-0 lg:flex-col ${reverseOrientation && 'col-start-1 row-start-1 items-end '}`}
       >
         {techStackArray.map((tech) => (
           <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
@@ -151,7 +151,7 @@ const FeaturedProjects = () => {
           carouselImageArray={cnnImages}
         />
         <Project
-          className="mr-20 w-4/5 self-end"
+          className="mt-8 lg:mt-0 lg:mr-20 lg:w-4/5 lg:self-end"
           title="Chiikawa I Spy"
           description="Play a rousing game of I Spy with Chiikawa and friends! Can you
                         spot all the cute critters?"

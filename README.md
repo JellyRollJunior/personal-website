@@ -14,6 +14,7 @@ My personal website. Includes my works, profile, and interests
     -   tech stack stagger translate in on view
     -   text colors
     -   readable text
+    -   mobile view
 
 -   About Me
 -   Skills & tools
