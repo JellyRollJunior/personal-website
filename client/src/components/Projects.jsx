@@ -120,14 +120,14 @@ const Project = ({
         />
       </div>
       <div
-        className={`col-span-2 mt-3 flex w-full flex-col justify-center lg:mt-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
+        className={`col-span-2 mt-3 flex w-full flex-col justify-center px-5 lg:px-0 lg:mt-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
       >
         <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
         <p className="mx-auto mt-3.5 max-w-md text-center">{description}</p>
         {/* Link buttons github an live demo */}
       </div>
       <ul
-        className={`mt-3 flex flex-wrap justify-center lg:mt-0 lg:flex-col ${reverseOrientation && 'col-start-1 row-start-1 items-end '}`}
+        className={`mt-3 flex flex-wrap justify-center px-5 lg:px-0 lg:mt-0 lg:flex-col ${reverseOrientation && 'col-start-1 row-start-1 items-end '}`}
       >
         {techStackArray.map((tech) => (
           <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
@@ -142,7 +142,7 @@ const Project = ({
 
 const FeaturedProjects = () => {
   return (
-    <section>
+    <section className="lg:mx-5">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         P R O J E C T S
       </h2>
@@ -175,11 +175,12 @@ const OtherProjects = () => {
   );
 
   return (
-    <section className="border-yellow mt-8 rounded-md border-2">
-      <h2 className="text-blue mt-8 text-center text-3xl font-extrabold">
-        O T H E R ‣ W O R K S
+    <section className="mt-8 rounded-md">
+      <h2 className="text-blue text-center text-3xl font-extrabold">
+        O T H E R <span className="hidden lg:inline-block">‣</span>
+        <br className="lg:hidden" /> W O R K S
       </h2>
-      <ul className="mt-5 grid grid-cols-3">
+      <ul className="mt-5 flex">
         {otherProjectsList.map((project) => (
           <li className="relative" key={project.title}>
             <button
@@ -198,7 +199,7 @@ const OtherProjects = () => {
           </li>
         ))}
       </ul>
-      <div className="mt-8 px-5 pb-8">
+      <div className="mt-8 pb-8">
         {otherProjectsList.map((project) => (
           <Fragment key={project.title}>
             <Project
