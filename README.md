@@ -11,6 +11,10 @@ My personal website. Includes my works, profile, and interests
         -   update transitions for reverse carousel
     -   project links
     -   tech stack stagger translate in on view
+    -   tech stack
+        -   extract
+    -   info section
+        -   extract
 
 -   About Me
 -   Skills & tools
@@ -19,7 +23,6 @@ My personal website. Includes my works, profile, and interests
 
 -   page
 
-    -   text color gray default (white hurts eyes on black)
     -   paragraph text different font (orbitron hard to read)
 
 -   ejs icon

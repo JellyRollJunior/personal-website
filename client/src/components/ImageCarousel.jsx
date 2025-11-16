@@ -27,12 +27,7 @@ const variants = {
   },
 };
 
-const ImageCarousel = ({
-  className,
-  imageArray,
-  staticImageAspectRatio = false,
-  reverseOrientation = false,
-}) => {
+const ImageCarousel = ({ className, imageArray }) => {
   const [[imgIndex, direction], setImgIndex] = useState([0, 0]);
 
   const modulo = (input, mod) => ((input % mod) + mod) % mod;
@@ -43,15 +38,11 @@ const ImageCarousel = ({
     setImgIndex([modulo(imgIndex - 1, imageArray.length), -1]);
   };
   const baseImgStyling =
-    'border-green border-5 col-span-9 row-span-9 w-full h-full rounded-md ' +
-    (staticImageAspectRatio && ` aspect-8/6 object-contain border-none`);
-
+    'border-green border-5 col-span-9 row-span-9 w-full h-full rounded-md';
   if (!Array.isArray(imageArray)) return null;
   return (
-    <div
-      className={`isolate flex items-center lg:gap-3 ${className} ${reverseOrientation && '-scale-x-100'}`}
-    >
-      <button className="shrink-0 w-8 lg:w-fit" onClick={prevImage}>
+    <div className={`isolate flex items-center lg:gap-3 ${className}`}>
+      <button className="w-8 shrink-0 lg:w-fit" onClick={prevImage}>
         <img className="w-[50px]" src={leftArrow} />
       </button>
       {imageArray.length > 1 ? (
@@ -60,7 +51,7 @@ const ImageCarousel = ({
             <motion.img
               key={imageArray[imgIndex % imageArray.length] + Date.now()}
               src={imageArray[imgIndex % imageArray.length]}
-              className={`${baseImgStyling} col-start-1 row-start-1 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
+              className={`${baseImgStyling} col-start-1 row-start-1 opacity-50`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
@@ -71,7 +62,7 @@ const ImageCarousel = ({
             <motion.img
               key={imgIndex}
               src={imageArray[(imgIndex + 1) % imageArray.length]}
-              className={`${baseImgStyling} z-1 col-start-2 row-start-2 drop-shadow-xl/25 drop-shadow-black ${reverseOrientation && '-scale-x-100'}`}
+              className={`${baseImgStyling} z-1 col-start-2 row-start-2 drop-shadow-xl/25 drop-shadow-black`}
               custom={direction}
               variants={variants}
               initial="enter"
@@ -82,7 +73,7 @@ const ImageCarousel = ({
             <motion.img
               key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}
               src={imageArray[(imgIndex + 2) % imageArray.length]}
-              className={`${baseImgStyling} col-start-3 row-start-3 opacity-50 ${reverseOrientation && '-scale-x-100'}`}
+              className={`${baseImgStyling} col-start-3 row-start-3 opacity-50`}
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
@@ -95,10 +86,10 @@ const ImageCarousel = ({
       ) : (
         <img
           src={imageArray[0]}
-          className={`${baseImgStyling} z-1 col-start-2 row-start-2 ${reverseOrientation && '-scale-x-100'}`}
+          className={`${baseImgStyling} z-1 col-start-2 row-start-2`}
         />
       )}
-      <button className="shrink-0 w-8 lg:w-fit" onClick={nextImage}>
+      <button className="w-8 shrink-0 lg:w-fit" onClick={nextImage}>
         <img className="w-[50px]" src={rightArrow} />
       </button>
     </div>

@@ -5,9 +5,15 @@
   src: url(../assets/fonts/orbitron-variablefont_wght-webfont.woff2);
 }
 
+@font-face {
+  font-family: 'saira';
+  src: url(../assets/fonts/saira-variablefont_wdthwght-webfont.woff2);
+}
+
 @theme {
   /* Fonts */
   --font-orbitron: 'orbitron', arial;
+  --font-saira: 'saira', arial;
 
   /* Colors */
   --color-blue: #92b0e0;
