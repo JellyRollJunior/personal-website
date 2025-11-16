@@ -10,51 +10,28 @@ import {
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
-const ProjectCarousel = ({
-  className,
-  title,
-  techStackArray,
-  description,
-  carouselImageArray,
-  hidden = false,
-}) => {
+const TechStack = ({ className, techStackArray }) => {
   return (
-    <div
-      className={
-        hidden ? 'hidden' : `flex flex-col lg:grid lg:grid-cols-7 ${className}`
-      }
+    <ul
+      className={`mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${className}`}
     >
-      <div className={`col-span-4 flex items-center justify-center`}>
-        <ImageCarousel imageArray={carouselImageArray} />
-      </div>
-      <div
-        className={`col-span-2 mt-3 flex w-full flex-col justify-center px-5 lg:mt-0 lg:px-0`}
-      >
-        <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
-        <p className="font-saira mx-auto mt-2.5 max-w-md text-center text-lg">
-          {description}
-        </p>
-      </div>
-      <ul
-        className={`mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0`}
-      >
-        {techStackArray.map((tech) => (
-          <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
-            <img className="w-full" src={tech.icon} />
-            <div className="text-xs lg:mt-1">{tech.name}</div>
-          </li>
-        ))}
-      </ul>
-    </div>
+      {techStackArray.map((tech) => (
+        <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
+          <img className="w-full" src={tech.icon} />
+          <div className="text-xs lg:mt-1">{tech.name}</div>
+        </li>
+      ))}
+    </ul>
   );
 };
 
-const ProjectStatic = ({
+const Project = ({
   className,
   title,
   techStackArray,
   description,
   images,
+  isCarousel = true,
   hidden = false,
   reverseOrientation = false,
 }) => {
@@ -63,27 +40,36 @@ const ProjectStatic = ({
       className={
         hidden
           ? 'hidden'
-          : `flex flex-col gap-6 lg:grid lg:grid-cols-7 ${className}`
+          : `flex flex-col lg:grid lg:grid-cols-7 ${className} gap-6`
       }
     >
+      {/* Images */}
+      {isCarousel ? (
+        <div className="col-span-4 flex items-center justify-center">
+          <ImageCarousel imageArray={images} />
+        </div>
+      ) : (
+        <div
+          className={`col-span-4 flex gap-8 ${reverseOrientation && 'col-start-4'}`}
+        >
+          {images.map((src) => (
+            <img
+              className="border-green aspect-8/6 w-full rounded-lg border-5 object-fill"
+              src={src}
+            />
+          ))}
+        </div>
+      )}
+      {/* Title & Description */}
       <div
-        className={`col-span-4 flex gap-8 ${reverseOrientation && 'col-start-4'}`}
-      >
-        {images.map((src) => (
-          <img
-            className="border-green aspect-8/6 w-full rounded-lg border-5 object-fill"
-            src={src}
-          />
-        ))}
-      </div>
-      <div
-        className={`col-span-2 mt-3 flex flex-col justify-center px-5 lg:mt-0 lg:px-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
+        className={`col-span-2 mt-3 flex w-full flex-col justify-center px-5 lg:mt-0 lg:px-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
       >
         <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
         <p className="font-saira mx-auto mt-2.5 max-w-md text-center text-lg">
           {description}
         </p>
       </div>
+      {/* Tech Stack */}
       <ul
         className={`mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${reverseOrientation && 'row-start-1 items-end'}`}
       >
@@ -105,21 +91,22 @@ const FeaturedProjects = () => {
         P R O J E C T S
       </h2>
       <div className="mt-8 mb-3 flex flex-col gap-16">
-        <ProjectCarousel
+        <Project
           title="Chiikawa News Network"
           description="Social networking by and for Chiikawa enjoyers. Message friends
                       in real time through private and public chats, share posts, customize
                       your profile, and interact through likes & comments!"
           techStackArray={cnnTechStack}
-          carouselImageArray={cnnImages}
+          images={cnnImages}
         />
-        <ProjectStatic
+        <Project
           className="lg:mr-10"
           title="Chiikawa I Spy"
           description="Play a rousing game of I Spy with Chiikawa and friends! Can you
                         spot all the cute critters?"
           techStackArray={cisTechStack}
           images={cisImages}
+          isCarousel={false}
           reverseOrientation={true}
         />
       </div>
@@ -160,12 +147,12 @@ const OtherProjects = () => {
       <div className="mt-8 lg:px-5">
         {otherProjectsList.map((project) => (
           <Fragment key={project.title}>
-            <ProjectStatic
+            <Project
               title={project.title}
               description={project.description}
               techStackArray={project.techStackArray}
               images={project.images}
-              staticImageAspectRatio={true}
+              isCarousel={false}
               hidden={selectedProject !== project.title}
             />
           </Fragment>
