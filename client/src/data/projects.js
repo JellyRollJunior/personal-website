@@ -13,7 +13,8 @@ import fotCategories from '../assets/projects/foodsOfTaiwan/categories-page.gif'
 import slChat from '../assets/projects/socketLovers/creating-chat.gif';
 import slProfile from '../assets/projects/socketLovers/edit-profile.gif';
 /* Sailor Moon Memory */
-import smmHome from '../assets/projects/sailorMoonMemory/index.png';
+import smmHome from '../assets/projects/sailorMoonMemory/memory-home.png';
+import smmWin from '../assets/projects/sailorMoonMemory/memory-win.png';
 /* Tech */
 import react from '../assets/icons/react.svg';
 import nodejs from '../assets/icons/nodejs.svg';
@@ -26,24 +27,24 @@ import js from '../assets/icons/js.svg';
 import html from '../assets/icons/html.svg';
 
 /* Project Data */
-const cnnImages = [cnnChat, cnnHome, cnnMobile, cnnProfile];
-const cnnTechStack = [
+const CNN_IMAGES = [cnnChat, cnnHome, cnnMobile, cnnProfile];
+const CNN_STACK = [
     { icon: react, name: 'React' },
     { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: prisma, name: 'PrismaORM' },
     { icon: socketio, name: 'Socket.IO' },
 ];
-const cisImages = [cisGameplay, cisStart];
-const cisTechStack = [
+const CIS_IMAGES = [cisGameplay, cisStart];
+const CIS_STACK = [
     { icon: react, name: 'React' },
     { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: prisma, name: 'PrismaORM' },
     { icon: jest, name: 'Jest' },
 ];
-const fotImages = [fotHome, fotCategories];
-const fotTechStack = [
+const FOT_IMAGES = [fotHome, fotCategories];
+const FOT_STACK = [
     { icon: js, name: 'Javascript' },
     { icon: html, name: 'HTML' },
     { icon: js, name: 'EJS' },
@@ -51,38 +52,57 @@ const fotTechStack = [
     { icon: express, name: 'Express' },
     { icon: pg, name: 'PostgreSQL' },
 ];
-const slImages = [slChat, slProfile];
-const slTechStack = [
+const SL_IMAGES = [slChat, slProfile];
+const SL_STACK = [
     { icon: react, name: 'React' },
     { icon: nodejs, name: 'NodeJS' },
     { icon: express, name: 'Express' },
     { icon: prisma, name: 'PrismaORM' },
     { icon: socketio, name: 'Socket.IO' },
 ];
-const smmImages = [smmHome];
-const smmTechStack = [{ icon: react, name: 'React' }];
-/* Project Lists */
-const otherProjectsList = [
-    {
-        title: 'Foods of Taiwan',
-        description:
-            'A user generated database of Taiwanese foods! Create/edit/delete foods & food categories with all entries stored on a remote SQL database',
-        techStackArray: fotTechStack,
-        images: fotImages,
-    },
-    {
-        title: 'Sailor Moon Memory',
-        description: 'Play a game of memory with sailor moon powered by Giphy!',
-        techStackArray: smmTechStack,
-        images: smmImages,
-    },
-    {
-        title: 'Socket Lovers',
-        description:
-            'Real time messaging app with a clean minimal design. Message friends in real time through private and public chats, and customize your profile!',
-        techStackArray: slTechStack,
-        images: slImages,
-    },
-];
+const SMM_IMAGES = [smmHome, smmWin];
+const SMM_STACK = [{ icon: react, name: 'React' }];
 
-export { cnnImages, cnnTechStack, cisImages, cisTechStack, otherProjectsList };
+/* Projects */
+const CHIIKAWA_NEWS_NETWORK = {
+    title: 'Chiikawa News Network',
+    description:
+        'Social networking by and for Chiikawa enjoyers. Message friends in real time through private and public chats, share posts, customize your profile, and interact through likes & comments!',
+    techStackArray: CNN_STACK,
+    images: CNN_IMAGES,
+};
+const CHIIKAWA_I_SPY = {
+    title: 'Chiikawa I Spy',
+    description:
+        'Play a rousing game of I Spy with Chiikawa and friends! Can you spot all the cute critters?',
+    techStackArray: CIS_STACK,
+    images: CIS_IMAGES,
+};
+const SAILOR_MOON_MEMORY = {
+    title: 'Sailor Moon Memory',
+    description: 'Play a game of memory with sailor moon powered by Giphy!',
+    techStackArray: SMM_STACK,
+    images: SMM_IMAGES,
+};
+const SOCKET_LOVERS = {
+    title: 'Socket Lovers',
+    description:
+        'Real time messaging app with a clean minimal design. Message friends in real time through private and public chats, and customize your profile!',
+    techStackArray: SL_STACK,
+    images: SL_IMAGES,
+};
+const FOODS_OF_TAIWAN = {
+    title: 'Foods of Taiwan',
+    description:
+        'A user generated database of Taiwanese foods! Create/edit/delete foods & food categories with all entries stored on a remote SQL database',
+    techStackArray: FOT_STACK,
+    images: FOT_IMAGES,
+};
+
+export {
+    CHIIKAWA_NEWS_NETWORK,
+    CHIIKAWA_I_SPY,
+    SAILOR_MOON_MEMORY,
+    SOCKET_LOVERS,
+    FOODS_OF_TAIWAN,
+};

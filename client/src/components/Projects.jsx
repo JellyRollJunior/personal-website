@@ -1,11 +1,11 @@
 import { useState, Fragment } from 'react';
 import { ImageCarousel } from './ImageCarousel.jsx';
 import {
-  cnnImages,
-  cnnTechStack,
-  cisImages,
-  cisTechStack,
-  otherProjectsList,
+  CHIIKAWA_NEWS_NETWORK,
+  CHIIKAWA_I_SPY,
+  SAILOR_MOON_MEMORY,
+  SOCKET_LOVERS,
+  FOODS_OF_TAIWAN,
 } from '../data/projects.js';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
@@ -54,7 +54,7 @@ const Project = ({
         >
           {images.map((src) => (
             <img
-              className="border-green aspect-8/6 w-full rounded-lg border-5 object-fill"
+              className="border-green w-full rounded-lg border-5 object-fill"
               src={src}
             />
           ))}
@@ -92,22 +92,26 @@ const FeaturedProjects = () => {
       </h2>
       <div className="mt-8 mb-3 flex flex-col gap-16">
         <Project
-          title="Chiikawa News Network"
-          description="Social networking by and for Chiikawa enjoyers. Message friends
-                      in real time through private and public chats, share posts, customize
-                      your profile, and interact through likes & comments!"
-          techStackArray={cnnTechStack}
-          images={cnnImages}
+          title={CHIIKAWA_NEWS_NETWORK.title}
+          description={CHIIKAWA_NEWS_NETWORK.description}
+          techStackArray={CHIIKAWA_NEWS_NETWORK.techStackArray}
+          images={CHIIKAWA_NEWS_NETWORK.images}
         />
         <Project
           className="lg:mr-10"
-          title="Chiikawa I Spy"
-          description="Play a rousing game of I Spy with Chiikawa and friends! Can you
-                        spot all the cute critters?"
-          techStackArray={cisTechStack}
-          images={cisImages}
+          title={CHIIKAWA_I_SPY.title}
+          description={CHIIKAWA_I_SPY.description}
+          techStackArray={CHIIKAWA_I_SPY.techStackArray}
+          images={CHIIKAWA_I_SPY.images}
           isCarousel={false}
           reverseOrientation={true}
+        />
+        <Project
+          title={SAILOR_MOON_MEMORY.title}
+          description={SAILOR_MOON_MEMORY.description}
+          techStackArray={SAILOR_MOON_MEMORY.techStackArray}
+          images={SAILOR_MOON_MEMORY.images}
+          isCarousel={false}
         />
       </div>
     </section>
@@ -115,12 +119,16 @@ const FeaturedProjects = () => {
 };
 
 const OtherProjects = () => {
+  const otherProjectsList = [
+    FOODS_OF_TAIWAN,
+    SOCKET_LOVERS,
+  ];
   const [selectedProject, setSelectedProject] = useState(
     otherProjectsList[0].title
   );
 
   return (
-    <section className="lg:border-yellow mt-8 rounded-md pb-5 lg:mx-5 lg:border-2">
+    <section className="lg:border-yellow mt-8 lg:h-120 rounded-md pb-5 lg:mx-5 lg:border-2">
       <h2 className="text-blue text-center text-3xl font-extrabold lg:mt-8">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
