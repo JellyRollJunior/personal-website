@@ -102,9 +102,14 @@ const Project = ({
   carouselImageArray,
   staticImageAspectRatio = false,
   reverseOrientation = false,
+  hidden = false,
 }) => {
   return (
-    <div className={`flex flex-col lg:grid lg:grid-cols-7 ${className}`}>
+    <div
+      className={
+        hidden ? 'hidden' : `flex flex-col lg:grid lg:grid-cols-7 ${className}`
+      }
+    >
       <div
         className={`col-span-4 flex items-center justify-center ${reverseOrientation && 'col-start-4'}`}
       >
@@ -197,12 +202,12 @@ const OtherProjects = () => {
         {otherProjectsList.map((project) => (
           <Fragment key={project.title}>
             <Project
-              className={`${selectedProject !== project.title && 'hidden'}`}
               title={project.title}
               description={project.description}
               techStackArray={project.techStackArray}
               carouselImageArray={project.carouselImageArray}
               staticImageAspectRatio={true}
+              hidden={selectedProject !== project.title}
             />
           </Fragment>
         ))}
