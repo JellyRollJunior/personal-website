@@ -55,16 +55,16 @@ const Project = ({
       )}
       {/* Title & Description */}
       <div
-        className={`col-span-2 mt-3 flex w-full flex-col justify-center px-5 lg:mt-0 lg:px-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
+        className={`col-span-2 flex w-full flex-col justify-center px-5 lg:px-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
       >
         <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
-        <p className="font-saira mx-auto mt-2.5 max-w-md text-center text-lg">
+        <p className="font-saira mx-auto max-w-md text-center text-lg">
           {description}
         </p>
       </div>
       {/* Tech Stack */}
       <ul
-        className={`mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${reverseOrientation && 'row-start-1 items-end'}`}
+        className={`-mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${reverseOrientation && 'row-start-1 items-end'}`}
       >
         {techStackArray.map((tech) => (
           <li
