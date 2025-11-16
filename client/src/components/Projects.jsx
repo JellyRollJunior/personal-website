@@ -47,7 +47,6 @@ const cisTechStack = [
   { icon: nodejs, name: 'NodeJS' },
   { icon: express, name: 'Express' },
   { icon: prisma, name: 'PrismaORM' },
-  { icon: socketio, name: 'Socket.IO' },
   { icon: jest, name: 'Jest' },
 ];
 const fotImages = [fotHome, fotCategories, fotEdit];
@@ -123,7 +122,7 @@ const Project = ({
         {/* Link buttons github an live demo */}
       </div>
       <ul
-        className={`flex flex-col justify-center ${reverseOrientation && 'col-start-1 row-start-1 '}`}
+        className={`flex flex-col justify-center ${reverseOrientation && 'col-start-1 items-end row-start-1 '}`}
       >
         {techStackArray.map((tech) => (
           <li className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1">
