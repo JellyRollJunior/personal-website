@@ -30,6 +30,7 @@ const variants = {
 const ImageCarousel = ({
   className,
   imageArray,
+  staticImageAspectRatio = false,
   reverseOrientation = false,
 }) => {
   const [[imgIndex, direction], setImgIndex] = useState([0, 0]);
@@ -42,7 +43,8 @@ const ImageCarousel = ({
     setImgIndex([modulo(imgIndex - 1, imageArray.length), -1]);
   };
   const baseImgStyling =
-    'border-green border-5 col-span-9 row-span-9 w-full h-full rounded-md bg-black';
+    'border-green border-5 col-span-9 row-span-9 w-full h-full rounded-md ' +
+    (staticImageAspectRatio && ` aspect-8/6 object-contain border-none`);
 
   if (!Array.isArray(imageArray)) return null;
   return (

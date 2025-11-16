@@ -101,6 +101,7 @@ const Project = ({
   // githubLink,
   // demoLink,
   carouselImageArray,
+  staticImageAspectRatio = false,
   reverseOrientation = false,
 }) => {
   return (
@@ -111,6 +112,7 @@ const Project = ({
         <ImageCarousel
           imageArray={carouselImageArray}
           reverseOrientation={reverseOrientation}
+          staticImageAspectRatio={staticImageAspectRatio}
         />
       </div>
       <div
@@ -169,21 +171,21 @@ const OtherProjects = () => {
   );
 
   return (
-    <section className="border-yellow rounded-md border-2">
+    <section className="border-yellow mt-8 rounded-md border-2">
       <h2 className="text-blue mt-8 text-center text-3xl font-extrabold">
         O T H E R ‣ W O R K S
       </h2>
-      <ul className="grid grid-cols-3">
+      <ul className="mt-5 grid grid-cols-3">
         {otherProjectsList.map((project) => (
-          <li key={project.title}>
+          <li className="relative" key={project.title}>
             <button
-              className="size-full"
+              className="size-full pb-2"
               onClick={() => setSelectedProject(project.title)}
             >
               {project.title}
               {project.title === selectedProject && (
                 <motion.div
-                  className="bg-blue h-1"
+                  className="bg-red absolute bottom-0 h-1 w-full translate-y-1/1 rounded-sm"
                   layoutId="underline"
                   id="underline"
                 />
@@ -192,7 +194,7 @@ const OtherProjects = () => {
           </li>
         ))}
       </ul>
-      <div className="mt-8 px-5">
+      <div className="mt-8 px-5 pb-8">
         {otherProjectsList.map((project) => (
           <Fragment key={project.title}>
             <Project
@@ -201,6 +203,7 @@ const OtherProjects = () => {
               description={project.description}
               techStackArray={project.techStackArray}
               carouselImageArray={project.carouselImageArray}
+              staticImageAspectRatio={true}
             />
           </Fragment>
         ))}
