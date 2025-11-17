@@ -16,6 +16,8 @@ const Project = ({
   techStackArray,
   description,
   images,
+  repoLink = null,
+  projectLink = null,
   isCarousel = true,
   hidden = false,
   reverseOrientation = false,
@@ -66,9 +68,31 @@ const Project = ({
         className={`col-span-2 flex w-full flex-col justify-center px-5 lg:px-0 ${reverseOrientation && 'col-start-2 row-start-1'}`}
       >
         <h3 className="text-red text-center text-2xl font-bold">{title}</h3>
-        <p className="font-saira mx-auto max-w-md text-center text-lg">
+        <p className="font-saira mx-auto mt-1.5 max-w-md text-center text-lg">
           {description}
         </p>
+        <div className="text-blue mt-2 flex justify-around">
+          {repoLink && (
+            <a
+              className="hover:underline"
+              href={repoLink}
+              target="_blank"
+              rel="noopener"
+            >
+              Repository
+            </a>
+          )}
+          {projectLink && (
+            <a
+              className="hover:underline"
+              href={projectLink}
+              target="_blank"
+              rel="noopener"
+            >
+              Live Demo
+            </a>
+          )}
+        </div>
       </div>
       {/* Tech Stack */}
       <motion.ul
@@ -118,6 +142,8 @@ const FeaturedProjects = () => {
           description={CHIIKAWA_NEWS_NETWORK.description}
           techStackArray={CHIIKAWA_NEWS_NETWORK.techStackArray}
           images={CHIIKAWA_NEWS_NETWORK.images}
+          repoLink={CHIIKAWA_NEWS_NETWORK.repoLink}
+          projectLink={CHIIKAWA_NEWS_NETWORK.projectLink}
         />
         <Project
           className="lg:mr-10"
@@ -125,6 +151,8 @@ const FeaturedProjects = () => {
           description={CHIIKAWA_I_SPY.description}
           techStackArray={CHIIKAWA_I_SPY.techStackArray}
           images={CHIIKAWA_I_SPY.images}
+          repoLink={CHIIKAWA_I_SPY.repoLink}
+          projectLink={CHIIKAWA_I_SPY.projectLink}
           isCarousel={false}
           reverseOrientation={true}
         />
@@ -133,6 +161,8 @@ const FeaturedProjects = () => {
           description={SAILOR_MOON_MEMORY.description}
           techStackArray={SAILOR_MOON_MEMORY.techStackArray}
           images={SAILOR_MOON_MEMORY.images}
+          repoLink={SAILOR_MOON_MEMORY.repoLink}
+          projectLink={SAILOR_MOON_MEMORY.projectLink}
           isCarousel={false}
         />
       </div>
@@ -177,6 +207,8 @@ const OtherWorks = () => {
               description={selectedProject.description}
               techStackArray={selectedProject.techStackArray}
               images={selectedProject.images}
+              repoLink={selectedProject.repoLink}
+              projectLink={selectedProject.projectLink}
               isCarousel={false}
             />
           </motion.div>

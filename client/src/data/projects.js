@@ -71,6 +71,8 @@ const CHIIKAWA_NEWS_NETWORK = {
         'Social networking by and for Chiikawa enjoyers. Message friends in real time through private and public chats, share posts, customize your profile, and interact through likes & comments!',
     techStackArray: CNN_STACK,
     images: CNN_IMAGES,
+    repoLink: 'https://github.com/JellyRollJunior/chiikawa-news-network',
+    projectLink: 'https://chiikawa-news-network.netlify.app/',
 };
 const CHIIKAWA_I_SPY = {
     title: 'Chiikawa I Spy',
@@ -78,12 +80,16 @@ const CHIIKAWA_I_SPY = {
         'Play a rousing game of I Spy with Chiikawa and friends! Can you spot all the cute critters?',
     techStackArray: CIS_STACK,
     images: CIS_IMAGES,
+    repoLink: 'https://github.com/JellyRollJunior/i-spy-chiikawa',
+    projectLink: 'https://i-spy-chiikawa.netlify.app/',
 };
 const SAILOR_MOON_MEMORY = {
     title: 'Sailor Moon Memory',
     description: 'Play a game of memory with sailor moon powered by Giphy!',
     techStackArray: SMM_STACK,
     images: SMM_IMAGES,
+    repoLink: 'https://github.com/JellyRollJunior/sailor-moon-memory',
+    projectLink: 'https://sailor-moon-memory.netlify.app/',
 };
 const SOCKET_LOVERS = {
     title: 'Socket Lovers',
@@ -91,6 +97,7 @@ const SOCKET_LOVERS = {
         'Real time messaging app with a clean minimal design. Message friends in real time through private and public chats, and customize your profile!',
     techStackArray: SL_STACK,
     images: SL_IMAGES,
+    repoLink: 'https://github.com/JellyRollJunior/socket-lovers',
 };
 const FOODS_OF_TAIWAN = {
     title: 'Foods of Taiwan',
@@ -98,6 +105,7 @@ const FOODS_OF_TAIWAN = {
         'A user generated database of Taiwanese foods! Create/edit/delete foods & food categories with all entries stored on a remote SQL database',
     techStackArray: FOT_STACK,
     images: FOT_IMAGES,
+    repoLink: 'https://github.com/JellyRollJunior/foods-of-taiwan',
 };
 
 export {
