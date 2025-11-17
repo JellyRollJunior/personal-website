@@ -8,7 +8,7 @@ import {
   FOODS_OF_TAIWAN,
 } from '../data/projects.js';
 // eslint-disable-next-line no-unused-vars
-import { motion, stagger } from 'motion/react';
+import { AnimatePresence, motion, stagger } from 'motion/react';
 
 const Project = ({
   className,
@@ -20,6 +20,14 @@ const Project = ({
   hidden = false,
   reverseOrientation = false,
 }) => {
+  if (
+    !images ||
+    !techStackArray ||
+    !Array.isArray(images) ||
+    !Array.isArray(techStackArray)
+  ) {
+    return null;
+  }
   return (
     <div
       className={
@@ -132,11 +140,9 @@ const FeaturedProjects = () => {
   );
 };
 
-const OtherProjects = () => {
+const OtherWorks = () => {
   const otherProjectsList = [FOODS_OF_TAIWAN, SOCKET_LOVERS];
-  const [selectedProject, setSelectedProject] = useState(
-    otherProjectsList[0].title
-  );
+  const [selectedProject, setSelectedProject] = useState(otherProjectsList[0]);
 
   return (
     <section className="lg:border-yellow mt-5 rounded-md pb-5 lg:mx-5 lg:h-120 lg:border-2">
@@ -149,10 +155,10 @@ const OtherProjects = () => {
           <li className="relative flex-1" key={project.title}>
             <button
               className="size-full pb-2"
-              onClick={() => setSelectedProject(project.title)}
+              onClick={() => setSelectedProject(project)}
             >
               {project.title}
-              {project.title === selectedProject && (
+              {project.title === selectedProject.title && (
                 <motion.div
                   className="bg-red absolute bottom-0 h-1 w-full translate-y-1/1 rounded-sm"
                   layoutId="underline"
@@ -164,18 +170,17 @@ const OtherProjects = () => {
         ))}
       </ul>
       <div className="mt-8 lg:px-5">
-        {otherProjectsList.map((project) => (
-          <Fragment key={project.title}>
+        <AnimatePresence mode="wait">
+          <motion.div key={selectedProject.title} exit={{ opacity: 0 }}>
             <Project
-              title={project.title}
-              description={project.description}
-              techStackArray={project.techStackArray}
-              images={project.images}
+              title={selectedProject.title}
+              description={selectedProject.description}
+              techStackArray={selectedProject.techStackArray}
+              images={selectedProject.images}
               isCarousel={false}
-              hidden={selectedProject !== project.title}
             />
-          </Fragment>
-        ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </section>
   );
@@ -185,7 +190,7 @@ const Projects = () => {
   return (
     <>
       <FeaturedProjects />
-      <OtherProjects />
+      <OtherWorks />
     </>
   );
 };
