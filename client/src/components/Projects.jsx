@@ -8,7 +8,7 @@ import {
   FOODS_OF_TAIWAN,
 } from '../data/projects.js';
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'motion/react';
+import { motion, stagger } from 'motion/react';
 
 const Project = ({
   className,
@@ -63,19 +63,37 @@ const Project = ({
         </p>
       </div>
       {/* Tech Stack */}
-      <ul
+      <motion.ul
         className={`-mt-3 flex flex-wrap justify-center px-5 lg:mt-0 lg:flex-col lg:px-0 ${reverseOrientation && 'row-start-1 items-end'}`}
+        variants={{
+          hidden: {},
+          visible: {
+            transition: {
+              delayChildren: stagger(0.1),
+            },
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{
+          once: true,
+          amount: 1,
+        }}
       >
         {techStackArray.map((tech) => (
-          <li
+          <motion.li
             key={tech.name}
             className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1"
+            variants={{
+              hidden: { opacity: 0, x: reverseOrientation ? -15 : 15 },
+              visible: { opacity: 1, x: 0 },
+            }}
           >
             <img className="w-full" src={tech.icon} />
             <div className="text-sm">{tech.name}</div>
-          </li>
+          </motion.li>
         ))}
-      </ul>
+      </motion.ul>
     </div>
   );
 };

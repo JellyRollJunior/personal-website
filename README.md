@@ -7,7 +7,6 @@ My personal website. Includes my works, profile, and interests
 -   Projects
 
     -   project links
-    -   tech stack stagger translate in on view
     -   other projects
         -   fadeout
 
