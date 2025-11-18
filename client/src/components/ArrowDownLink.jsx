@@ -11,7 +11,7 @@ const ArrowDownLink = ({ className = '', href = '', size = 40 }) => {
         height: size,
       }}
     >
-      <a className={`size-full`} href={href}>
+      <div className={`size-full`} href={href}>
         {[...Array(3)].map((item, index) => (
           <motion.img
             key={index}
@@ -34,7 +34,7 @@ const ArrowDownLink = ({ className = '', href = '', size = 40 }) => {
             }}
           />
         ))}
-      </a>
+      </div>
     </div>
   );
 };

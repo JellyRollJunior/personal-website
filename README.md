@@ -5,6 +5,7 @@ My personal website. Includes my works, profile, and interests
 #### TODO
 
 -   About Me
+    -   picture
+    -   description
 -   Skills & tools
--   Work Experience
 -   Contact me

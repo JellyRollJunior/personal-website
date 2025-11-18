@@ -9,6 +9,7 @@ import {
 } from '../data/projects.js';
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, stagger } from 'motion/react';
+import { Link } from './Links.jsx';
 
 const Project = ({
   className,
@@ -31,7 +32,7 @@ const Project = ({
     return null;
   }
   return (
-    <div
+    <article
       className={
         hidden
           ? 'hidden'
@@ -72,26 +73,8 @@ const Project = ({
           {description}
         </p>
         <div className="text-blue mt-2 flex justify-around">
-          {repoLink && (
-            <a
-              className="hover:underline"
-              href={repoLink}
-              target="_blank"
-              rel="noopener"
-            >
-              Repository
-            </a>
-          )}
-          {projectLink && (
-            <a
-              className="hover:underline"
-              href={projectLink}
-              target="_blank"
-              rel="noopener"
-            >
-              Live Demo
-            </a>
-          )}
+          {repoLink && <Link href={repoLink}>Repository</Link>}
+          {projectLink && <Link href={projectLink}>Live Demo</Link>}
         </div>
       </div>
       {/* Tech Stack */}
@@ -126,7 +109,7 @@ const Project = ({
           </motion.li>
         ))}
       </motion.ul>
-    </div>
+    </article>
   );
 };
 

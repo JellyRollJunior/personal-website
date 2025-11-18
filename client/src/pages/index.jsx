@@ -1,4 +1,5 @@
 import { Header } from '../components/Header.jsx';
+import { About } from '../components/About.jsx';
 import { Projects } from '../components/Projects.jsx';
 
 const Index = () => {
@@ -7,6 +8,7 @@ const Index = () => {
       <div className='max-w-[1800px] flex flex-col gap-5'>
         <Header />
         <Projects />
+        <About />
       </div>
     </div>
   );
