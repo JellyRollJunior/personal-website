@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="mt-5">
         <h4>Let's Connect! Send me an e-mail at:</h4>
         <h3 className="text-red mt-1 text-xl font-bold break-all lg:text-3xl">
-          BrandonLin9716@gmail.com
+          <a className='hover:underline' href="mailto:BrandonLin9716@gmail.com">BrandonLin9716@gmail.com</a>
         </h3>
       </div>
       <div className="my-5">OR</div>
