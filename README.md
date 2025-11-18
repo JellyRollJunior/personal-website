@@ -6,3 +6,6 @@ My personal website. Includes my works, profile, and interests
 
 -   Skills & tools
 -   Contact me
+
+- tablet view
+    - images max w
