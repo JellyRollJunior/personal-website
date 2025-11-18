@@ -15,9 +15,22 @@ const About = () => {
         A B O U T
       </h2>
       <div className="mt-8 grid w-full grid-cols-2 justify-center gap-16">
-        <div className="border-green w-100 self-center justify-self-end rounded-md border-5">
+        <motion.div
+          className="border-green w-100 self-center justify-self-end rounded-md border-5"
+          initial={{
+            rotate: 0,
+          }}
+          whileHover={{
+            rotate: [0, 3, 3, -3],
+            transition: {
+              duration: 1,
+              times: [0, 0.3, 0.4, 1],
+              ease: 'easeInOut',
+            },
+          }}
+        >
           <img src={me} alt="" />
-        </div>
+        </motion.div>
         <div className="max-w-150 self-center">
           <motion.h3 className="text-red text-3xl" style={{ x: titleX }}>
             Hello!
