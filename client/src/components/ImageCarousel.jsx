@@ -77,7 +77,12 @@ const ImageCarousel = ({ className, imageArray }) => {
               initial="enter"
               animate="center"
               exit="exit"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{
+                scale: 1.05,
+                transition: {
+                  ease: 'easeInOut',
+                },
+              }}
             />
             <motion.img
               key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}

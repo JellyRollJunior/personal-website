@@ -51,7 +51,12 @@ const Project = ({
           <motion.img
             className="border-green w-full rounded-lg border-5 object-fill"
             src={images && images[0]}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{
+              scale: 1.05,
+              transition: {
+                ease: 'easeInOut',
+              },
+            }}
           />
           {images.map(
             (src, index) =>
@@ -60,7 +65,12 @@ const Project = ({
                   key={src}
                   className="border-green hidden w-full rounded-lg border-5 object-fill lg:block"
                   src={src}
-                  whileHover={{ scale: 1.05 }}
+                  whileHover={{
+                    scale: 1.05,
+                    transition: {
+                      ease: 'easeInOut',
+                    },
+                  }}
                 />
               )
           )}
