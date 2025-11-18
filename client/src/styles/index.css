@@ -22,13 +22,10 @@
   --color-yellow: #ffcc77;
 }
 
-@utility yellow-stripes {
-  --color: #ffcc77;
-  background: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 20px,
-    var(--color) 20px,
-    var(--color) 40px
-  );
+@utility grid-lines {
+  z-index: -80;
+  background:
+    linear-gradient(to right, rgb(53, 65, 53, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(53, 65, 53, 0.6) 1px, transparent 1px);
+  background-size: 25px 25px;
 }

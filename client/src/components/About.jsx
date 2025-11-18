@@ -10,11 +10,11 @@ const About = () => {
   const nameX = useTransform(scrollYProgress, (value) => -100 + value * 100);
 
   return (
-    <section ref={scrollRef} className="mt-5 mx-5">
+    <section ref={scrollRef} className="mx-5 mt-5">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         A B O U T
       </h2>
-      <div className="mt-8 flex flex-col items-center lg:grid lg:w-full lg:grid-cols-2 justify-center lg:gap-16">
+      <div className="mt-8 flex flex-col items-center justify-center lg:grid lg:w-full lg:grid-cols-2 lg:gap-16">
         <motion.div
           className="border-green max-w-100 self-center justify-self-end rounded-md border-5"
           initial={{
@@ -31,7 +31,7 @@ const About = () => {
         >
           <img src={me} alt="" />
         </motion.div>
-        <div className="mt-6 lg:mt-0 max-w-150 self-center">
+        <div className="mt-6 max-w-150 self-center lg:mt-0">
           <motion.h3 className="text-red text-3xl" style={{ x: titleX }}>
             Hello!
           </motion.h3>

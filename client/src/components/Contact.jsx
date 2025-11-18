@@ -6,14 +6,16 @@ import { motion } from 'motion/react';
 
 const Contact = () => {
   return (
-    <section className="lg:border-yellow mx-5 my-5 rounded-md text-center lg:border-2 lg:py-5">
+    <section className="lg:border-yellow mx-5 my-5 rounded-md text-center lg:border-2 lg:py-5 lg:backdrop-blur-[1px]">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         C O N T A C T
       </h2>
       <div className="mt-5">
         <h4>Let's Connect! Send me an e-mail at:</h4>
         <h3 className="text-red mt-1 text-xl font-bold break-all lg:text-3xl">
-          <a className='hover:underline' href="mailto:BrandonLin9716@gmail.com">BrandonLin9716@gmail.com</a>
+          <a className="hover:underline" href="mailto:BrandonLin9716@gmail.com">
+            BrandonLin9716@gmail.com
+          </a>
         </h3>
       </div>
       <div className="my-5">OR</div>
