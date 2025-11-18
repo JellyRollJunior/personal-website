@@ -127,7 +127,7 @@ const Project = ({
 
 const FeaturedProjects = () => {
   return (
-    <section className="lg:mx-5">
+    <section className="lg:mx-5 mt-5">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         P R O J E C T S
       </h2>
