@@ -69,7 +69,7 @@ const ImageCarousel = ({ className, imageArray }) => {
               }}
             />
             <motion.img
-              key={imgIndex}
+              key={imgIndex + Date.now()}
               src={imageArray[(imgIndex + 1) % imageArray.length]}
               className={`${baseImgStyling} z-1 col-start-2 row-start-2 drop-shadow-xl/25 drop-shadow-black`}
               custom={direction}
