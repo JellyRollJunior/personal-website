@@ -38,7 +38,7 @@ const About = () => {
           <motion.h3 className="text-blue mt-1 text-5xl" style={{ x: nameX }}>
             I'm Brandon
           </motion.h3>
-          <p className="font-saira mt-5 ml-0.5 lg:ml-0">
+          <p className="font-saira mt-5 ml-0.5 lg:mr-10 lg:ml-0">
             Deeply invested in the life-long learning mentality, I'm a
             full-stack developer who loves to experiment in design. I create
             responsive layouts using React, NodeJS, inspiration around me, and
