@@ -11,18 +11,27 @@ const variants = {
       x: direction > 0 ? TRANSLATE_DISTANCE : '-' + TRANSLATE_DISTANCE,
       y: direction > 0 ? TRANSLATE_DISTANCE : '-' + TRANSLATE_DISTANCE,
       opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
     };
   },
   center: {
     x: 0,
     y: 0,
     opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
   },
   exit: (direction) => {
     return {
       x: direction < 0 ? TRANSLATE_DISTANCE : '-' + TRANSLATE_DISTANCE,
       y: direction > 0 ? '-' + TRANSLATE_DISTANCE : TRANSLATE_DISTANCE,
       opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
     };
   },
 };
@@ -68,7 +77,7 @@ const ImageCarousel = ({ className, imageArray }) => {
               initial="enter"
               animate="center"
               exit="exit"
-              transition={{ duration: 0.5 }}
+              whileHover={{ scale: 1.05 }}
             />
             <motion.img
               key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}

@@ -9,7 +9,7 @@ import {
 } from '../data/projects.js';
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, stagger } from 'motion/react';
-import { Link } from './Links.jsx';
+import { Link } from './Link.jsx';
 
 const Project = ({
   className,
@@ -48,17 +48,19 @@ const Project = ({
         <div
           className={`col-span-4 mx-5 flex gap-8 ${reverseOrientation && 'col-start-4'}`}
         >
-          <img
+          <motion.img
             className="border-green w-full rounded-lg border-5 object-fill"
             src={images && images[0]}
+            whileHover={{ scale: 1.05 }}
           />
           {images.map(
             (src, index) =>
               index > 0 && (
-                <img
+                <motion.img
                   key={src}
                   className="border-green hidden w-full rounded-lg border-5 object-fill lg:block"
                   src={src}
+                  whileHover={{ scale: 1.05 }}
                 />
               )
           )}
