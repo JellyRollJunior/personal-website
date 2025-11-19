@@ -1,7 +1,24 @@
 import { useRef } from 'react';
 import me from '../assets/me/me.jpg';
 // eslint-disable-next-line no-unused-vars
-import { motion, useScroll, useTransform } from 'motion/react';
+import { motion, stagger, useScroll, useTransform } from 'motion/react';
+
+const textEnterVariants = {
+  initial: {
+    opacity: 0,
+    transformOrigin: 'top left',
+    rotate: '3deg',
+  },
+  whileInView: {
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      duration: 0.5,
+      type: 'linear',
+      ease: 'easeInOut',
+    },
+  },
+};
 
 const About = () => {
   const scrollRef = useRef(null);
@@ -38,18 +55,33 @@ const About = () => {
           <motion.h3 className="text-blue mt-1 text-5xl" style={{ x: nameX }}>
             I'm Brandon
           </motion.h3>
-          <p className="font-saira mt-5 ml-0.5 lg:mr-10 lg:ml-0">
-            Deeply invested in the life-long learning mentality, I'm a
-            full-stack developer who loves to experiment in design. I create
-            responsive layouts using React, NodeJS, inspiration around me, and
-            whatevers in my noggin!
+          <motion.div
+            className="font-saira mt-5 ml-0.5 lg:mr-10 lg:ml-0"
+            variants={{
+              whileInView: {
+                transition: {
+                  delayChildren: stagger(0.5),
+                },
+              },
+            }}
+            initial="initial"
+            whileInView="whileInView"
+            viewport={{ once: true, amount: 1 }}
+          >
+            <motion.p variants={textEnterVariants}>
+              Deeply invested in the life-long learning mentality, I'm a
+              full-stack developer who loves to experiment in design. I create
+              responsive layouts using React, NodeJS, inspiration around me, and
+              whatevers in my noggin!
+            </motion.p>
             <br />
-            <br />
-            From my experience as a Software Quality Assurance Specialist, I'm
-            well acquainted to identifying and planning fixes of all kinds. I’m
-            curious and passionate, especially when it comes to fashion,
-            pottery, and music.
-          </p>
+            <motion.p variants={textEnterVariants}>
+              From my experience as a Software Quality Assurance Specialist, I'm
+              well acquainted to identifying and planning fixes of all kinds.
+              I’m curious and passionate, especially when it comes to fashion,
+              pottery, and music.
+            </motion.p>
+          </motion.div>
         </div>
       </div>
     </section>

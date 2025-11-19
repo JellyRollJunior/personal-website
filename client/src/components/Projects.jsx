@@ -1,5 +1,6 @@
-import { useState, Fragment } from 'react';
+import { useState } from 'react';
 import { ImageCarousel } from './ImageCarousel.jsx';
+import { Link } from './Link.jsx';
 import {
   CHIIKAWA_NEWS_NETWORK,
   CHIIKAWA_I_SPY,
@@ -9,7 +10,6 @@ import {
 } from '../data/projects.js';
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion, stagger } from 'motion/react';
-import { Link } from './Link.jsx';
 
 const Project = ({
   className,
@@ -127,7 +127,7 @@ const Project = ({
 
 const FeaturedProjects = () => {
   return (
-    <section className="lg:mx-5 mt-5">
+    <section className="mt-5 lg:mx-5">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         P R O J E C T S
       </h2>
