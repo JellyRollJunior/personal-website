@@ -28,7 +28,7 @@ const tailwind = { icon: tailwindIcon, name: 'TailwindCSS' };
 /* Backend */
 const nodeJs = { icon: nodejsIcon, name: 'NodeJS' };
 const express = { icon: expressIcon, name: 'Express' };
-const prisma = { icon: prismaIcon, name: 'PrismaORM' };
+const prisma = { icon: prismaIcon, name: 'Prisma' };
 const socketIo = { icon: socketioIcon, name: 'Socket.IO' };
 const jest = { icon: jestIcon, name: 'Jest' };
 const postgreSql = { icon: pgIcon, name: 'PostgreSQL' };

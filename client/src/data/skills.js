@@ -3,12 +3,12 @@ import * as tech from '../data/tech.js';
 const FRONTEND = [
     tech.react,
     tech.javascript,
+    tech.css,
     tech.html,
     tech.ejs,
-    tech.css,
     tech.jest,
-    tech.motion,
     tech.tailwind,
+    tech.motion,
 ];
 
 const BACKEND = [
@@ -16,16 +16,16 @@ const BACKEND = [
     tech.express,
     tech.socketIo,
     tech.jest,
-    tech.postgreSql,
     tech.prisma,
+    tech.postgreSql,
 ];
 
 const MISCELLANEOUS = [
     tech.git,
-    tech.github,
-    tech.postman,
-    tech.linux,
     tech.vscode,
+    tech.postman,
+    tech.github,
+    tech.linux,
     tech.supabase,
 ];
 
