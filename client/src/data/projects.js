@@ -16,53 +16,23 @@ import slProfile from '../assets/projects/socketLovers/edit-profile.gif';
 import smmHome from '../assets/projects/sailorMoonMemory/memory-home.png';
 import smmWin from '../assets/projects/sailorMoonMemory/memory-win.png';
 /* Tech */
-import react from '../assets/icons/react.svg';
-import nodejs from '../assets/icons/nodejs.svg';
-import express from '../assets/icons/express.svg';
-import prisma from '../assets/icons/prisma.svg';
-import socketio from '../assets/icons/socketio.svg';
-import jest from '../assets/icons/jest.svg';
-import pg from '../assets/icons/postgresql.svg';
-import js from '../assets/icons/js.svg';
-import html from '../assets/icons/html.svg';
-import ejs from '../assets/icons/ejs.svg';
+import { react, nodeJs, javascript, express, prisma, socketIo, jest, ejs, html, postgreSql,  } from './tech.js';
 
 /* Project Data */
 const CNN_IMAGES = [cnnChat, cnnHome, cnnMobile, cnnProfile];
-const CNN_STACK = [
-    { icon: react, name: 'React' },
-    { icon: nodejs, name: 'NodeJS' },
-    { icon: express, name: 'Express' },
-    { icon: prisma, name: 'PrismaORM' },
-    { icon: socketio, name: 'Socket.IO' },
-];
+const CNN_STACK = [react, nodeJs, express, prisma, socketIo];
+
 const CIS_IMAGES = [cisGameplay, cisStart];
-const CIS_STACK = [
-    { icon: react, name: 'React' },
-    { icon: nodejs, name: 'NodeJS' },
-    { icon: express, name: 'Express' },
-    { icon: prisma, name: 'PrismaORM' },
-    { icon: jest, name: 'Jest' },
-];
+const CIS_STACK = [react, nodeJs, express, prisma, jest];
+
 const FOT_IMAGES = [fotHome, fotCategories];
-const FOT_STACK = [
-    { icon: js, name: 'Javascript' },
-    { icon: html, name: 'HTML' },
-    { icon: ejs, name: 'EJS' },
-    { icon: nodejs, name: 'NodeJS' },
-    { icon: express, name: 'Express' },
-    { icon: pg, name: 'PostgreSQL' },
-];
+const FOT_STACK = [javascript, html, ejs, nodeJs, express, postgreSql];
+
 const SL_IMAGES = [slChat, slProfile];
-const SL_STACK = [
-    { icon: react, name: 'React' },
-    { icon: nodejs, name: 'NodeJS' },
-    { icon: express, name: 'Express' },
-    { icon: prisma, name: 'PrismaORM' },
-    { icon: socketio, name: 'Socket.IO' },
-];
+const SL_STACK = [react, nodeJs, express, prisma, socketIo];
+
 const SMM_IMAGES = [smmHome, smmWin];
-const SMM_STACK = [{ icon: react, name: 'React' }];
+const SMM_STACK = [react];
 
 /* Projects */
 const CHIIKAWA_NEWS_NETWORK = {
