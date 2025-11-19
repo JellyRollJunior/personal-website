@@ -46,10 +46,10 @@ const Project = ({
         </div>
       ) : (
         <div
-          className={`col-span-4 mx-5 flex justify-center gap-8 ${reverseOrientation && 'col-start-4'}`}
+          className={`col-span-4 mx-5 flex items-center justify-center gap-8 ${reverseOrientation && 'col-start-4'}`}
         >
           <motion.img
-            className="border-green max-w-100 min-w-0 flex-1 rounded-lg border-5 object-fill"
+            className="border-green h-fit max-w-100 min-w-0 rounded-lg border-5"
             src={images && images[0]}
             whileHover={{
               scale: 1.05,
@@ -63,7 +63,7 @@ const Project = ({
               index > 0 && (
                 <motion.img
                   key={src}
-                  className="border-green hidden max-w-100 min-w-0 flex-1 rounded-lg border-5 object-fill lg:block"
+                  className="border-green hidden h-fit max-w-100 min-w-0 rounded-lg border-5 lg:block"
                   src={src}
                   whileHover={{
                     scale: 1.05,
@@ -110,7 +110,7 @@ const Project = ({
         {techStackArray.map((tech) => (
           <motion.li
             key={tech.name}
-            className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md py-1"
+            className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1 lg:px-0"
             variants={{
               hidden: { opacity: 0, x: reverseOrientation ? -15 : 15 },
               visible: { opacity: 1, x: 0 },
