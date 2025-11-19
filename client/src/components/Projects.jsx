@@ -175,11 +175,11 @@ const OtherWorks = () => {
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
       </h2>
-      <ul className="mt-5 flex justify-around">
+      <ul className="mt-3 flex justify-around">
         {otherProjectsList.map((project) => (
-          <li className="relative flex-1" key={project.title}>
+          <li className="relative flex-1 hover:bg-red/20" key={project.title}>
             <button
-              className="size-full pb-2"
+              className="size-full py-2"
               onClick={() => setSelectedProject(project)}
             >
               {project.title}
