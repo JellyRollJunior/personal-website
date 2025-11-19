@@ -41,15 +41,15 @@ const Project = ({
     >
       {/* Images */}
       {isCarousel ? (
-        <div className="col-span-4 flex items-center justify-center">
+        <div className="col-span-4 flex self-center items-center justify-center max-w-170 lg:max-w-none">
           <ImageCarousel imageArray={images} />
         </div>
       ) : (
         <div
-          className={`col-span-4 mx-5 flex gap-8 ${reverseOrientation && 'col-start-4'}`}
+          className={`col-span-4 mx-5 justify-center flex gap-8 ${reverseOrientation && 'col-start-4'}`}
         >
           <motion.img
-            className="border-green min-w-0 flex-1 rounded-lg border-5 object-fill"
+            className="border-green min-w-0 max-w-100 flex-1 rounded-lg border-5 object-fill"
             src={images && images[0]}
             whileHover={{
               scale: 1.05,
@@ -63,7 +63,7 @@ const Project = ({
               index > 0 && (
                 <motion.img
                   key={src}
-                  className="border-green hidden min-w-0 flex-1 rounded-lg border-5 object-fill lg:block"
+                  className="border-green hidden min-w-0 max-w-100 flex-1 rounded-lg border-5 object-fill lg:block"
                   src={src}
                   whileHover={{
                     scale: 1.05,
