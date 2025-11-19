@@ -27,7 +27,7 @@ const About = () => {
   const nameX = useTransform(scrollYProgress, (value) => -100 + value * 100);
 
   return (
-    <section ref={scrollRef} className="mx-5 mt-5">
+    <section ref={scrollRef} className="mx-5 mt-8">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         A B O U T
       </h2>
@@ -49,12 +49,14 @@ const About = () => {
           <img src={me} alt="" />
         </motion.div>
         <div className="mt-6 max-w-150 self-center lg:mt-0">
-          <motion.h3 className="text-red text-3xl" style={{ x: titleX }}>
-            Hello!
-          </motion.h3>
-          <motion.h3 className="text-blue mt-1 text-5xl" style={{ x: nameX }}>
-            I'm Brandon
-          </motion.h3>
+          <div className="mx-auto w-fit lg:mx-0">
+            <motion.h3 className="text-red text-3xl" style={{ x: titleX }}>
+              Hello!
+            </motion.h3>
+            <motion.h3 className="text-blue mt-1 text-5xl" style={{ x: nameX }}>
+              I'm Brandon
+            </motion.h3>
+          </div>
           <motion.div
             className="font-saira mt-5 ml-0.5 lg:mr-10 lg:ml-0"
             variants={{
