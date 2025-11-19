@@ -41,15 +41,15 @@ const Project = ({
     >
       {/* Images */}
       {isCarousel ? (
-        <div className="col-span-4 flex self-center items-center justify-center max-w-170 lg:max-w-none">
+        <div className="col-span-4 flex max-w-170 items-center justify-center self-center lg:max-w-none">
           <ImageCarousel imageArray={images} />
         </div>
       ) : (
         <div
-          className={`col-span-4 mx-5 justify-center flex gap-8 ${reverseOrientation && 'col-start-4'}`}
+          className={`col-span-4 mx-5 flex justify-center gap-8 ${reverseOrientation && 'col-start-4'}`}
         >
           <motion.img
-            className="border-green min-w-0 max-w-100 flex-1 rounded-lg border-5 object-fill"
+            className="border-green max-w-100 min-w-0 flex-1 rounded-lg border-5 object-fill"
             src={images && images[0]}
             whileHover={{
               scale: 1.05,
@@ -63,7 +63,7 @@ const Project = ({
               index > 0 && (
                 <motion.img
                   key={src}
-                  className="border-green hidden min-w-0 max-w-100 flex-1 rounded-lg border-5 object-fill lg:block"
+                  className="border-green hidden max-w-100 min-w-0 flex-1 rounded-lg border-5 object-fill lg:block"
                   src={src}
                   whileHover={{
                     scale: 1.05,
@@ -170,8 +170,8 @@ const OtherWorks = () => {
   const [selectedProject, setSelectedProject] = useState(otherProjectsList[0]);
 
   return (
-    <section className="lg:border-yellow mt-5 rounded-md pb-5 lg:mx-5 lg:h-120 lg:border-2 lg:backdrop-blur-[1px]">
-      <h2 className="text-blue text-center text-3xl font-extrabold lg:mt-8">
+    <section className="border-yellow mt-5 rounded-md pb-5 pt-5 lg:pt-8 mx-5 lg:h-120 border-2 lg:backdrop-blur-[1px]">
+      <h2 className="text-blue text-center text-3xl font-extrabold ">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
       </h2>
