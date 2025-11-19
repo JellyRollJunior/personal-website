@@ -8,6 +8,3 @@ My personal website. Includes my works, profile, and interests
 
 - tablet view
     - images max w
-
-- bug
-    -   move carousel above grid

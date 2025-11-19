@@ -11,11 +11,18 @@ const Contact = () => {
         C O N T A C T
       </h2>
       <div className="mt-5">
-        <h4>Let's Connect! Send me an e-mail at:</h4>
+        <h4>
+          Let's Connect! Click{' '}
+          <a
+            className="text-red underline"
+            href="mailto:BrandonLin9716@gmail.com"
+          >
+            Here
+          </a>{' '}
+          to send me an e-mail at:
+        </h4>
         <h3 className="text-red mt-1 text-xl font-bold break-all lg:text-3xl">
-          <a className="hover:underline" href="mailto:BrandonLin9716@gmail.com">
-            BrandonLin9716@gmail.com
-          </a>
+          BrandonLin9716@gmail.com
         </h3>
       </div>
       <div className="my-5">OR</div>
