@@ -5,6 +5,3 @@ My personal website. Includes my works, profile, and interests
 #### TODO
 
 -   Skills & tools
-
-- tablet view
-    - images max w

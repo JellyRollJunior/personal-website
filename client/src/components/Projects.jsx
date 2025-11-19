@@ -110,7 +110,7 @@ const Project = ({
         {techStackArray.map((tech) => (
           <motion.li
             key={tech.name}
-            className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md px-3 py-1"
+            className="grid grid-cols-[16px_1fr] items-center gap-2 rounded-md py-1"
             variants={{
               hidden: { opacity: 0, x: reverseOrientation ? -15 : 15 },
               visible: { opacity: 1, x: 0 },
@@ -170,8 +170,8 @@ const OtherWorks = () => {
   const [selectedProject, setSelectedProject] = useState(otherProjectsList[0]);
 
   return (
-    <section className="border-yellow mt-5 rounded-md pb-5 pt-5 lg:pt-8 mx-5 lg:h-120 border-2 lg:backdrop-blur-[1px]">
-      <h2 className="text-blue text-center text-3xl font-extrabold ">
+    <section className="border-yellow mx-5 mt-5 rounded-md border-2 pt-5 pb-5 lg:h-120 lg:pt-8 lg:backdrop-blur-[1px]">
+      <h2 className="text-blue text-center text-3xl font-extrabold">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
       </h2>
