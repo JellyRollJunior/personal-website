@@ -79,9 +79,9 @@ const About = () => {
             <br />
             <motion.p variants={textEnterVariants}>
               From my experience as a Software Quality Assurance Specialist, I'm
-              well acquainted to identifying and planning fixes of all kinds.
-              I’m curious and passionate, especially when it comes to fashion,
-              pottery, and music.
+              well acquainted to identifying and planning fixes of all kinds as
+              well as coding automation tests. I’m curious and passionate,
+              especially when it comes to fashion, pottery, and music.
             </motion.p>
           </motion.div>
         </div>
