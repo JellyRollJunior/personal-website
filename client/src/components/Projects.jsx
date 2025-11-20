@@ -170,7 +170,7 @@ const OtherWorks = () => {
   const [selectedProject, setSelectedProject] = useState(otherProjectsList[0]);
 
   return (
-    <section className="border-yellow mx-5 mt-8 rounded-md border-2 pt-5 pb-5 min-h-200 lg:min-h-120 lg:pt-8 lg:backdrop-blur-[1px]">
+    <section className="border-yellow mx-5 mt-8 backdrop-blur-[1px] rounded-md border-2 pt-5 pb-5 min-h-200 lg:min-h-120 lg:pt-8 lg:backdrop-blur-[1px]">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S

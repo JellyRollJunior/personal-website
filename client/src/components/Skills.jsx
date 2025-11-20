@@ -1,7 +1,7 @@
 import { FRONTEND, BACKEND, MISCELLANEOUS } from '../data/skills.js';
-import mandarin from '../assets/icons/mandarin.png'
-import english from '../assets/icons/english.png'
-import japanese from '../assets/icons/japanese.png'
+import mandarin from '../assets/icons/mandarin.png';
+import english from '../assets/icons/english.png';
+import japanese from '../assets/icons/japanese.png';
 // eslint-disable-next-line no-unused-vars
 import { motion, stagger } from 'motion/react';
 
@@ -69,7 +69,7 @@ const Skills = () => {
         />
       </div>
       <SkillsCard
-        className="border-yellow mx-auto mt-8 lg:mt-3 max-w-[360px] pl-5 pr-2 rounded-md border-2 pt-2 pb-3"
+        className="border-yellow mx-auto mt-8 max-w-[360px] rounded-md border-2 pt-2 pr-2 pb-3 pl-5 backdrop-blur-[1px] lg:mt-3"
         title={'Languages'}
         techStackArray={[
           { icon: mandarin, name: 'Conversational Mandarin' },

@@ -4,4 +4,8 @@ My personal website. Includes my works, profile, and interests
 
 #### TODO
 
-- languages blur
+-   languages blur
+-   other works blur
+-   standarize blur
+-   header blur
+-   contact border tablet
