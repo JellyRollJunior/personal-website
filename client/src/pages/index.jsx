@@ -9,7 +9,7 @@ const Index = () => {
   return (
     <div className="grid-lines flex w-full justify-center overflow-x-hidden">
       <div className="flex w-full max-w-[1800px] flex-col gap-5">
-        <LoadingMask delay={2} />
+        <LoadingMask />
         <Header />
         <Skills />
         <Projects />
