@@ -6,7 +6,7 @@ import { motion } from 'motion/react';
 
 const Contact = () => {
   return (
-    <section className="lg:border-yellow mx-5 my-8 rounded-md text-center lg:border-2 lg:py-5 lg:backdrop-blur-[1px]">
+    <footer className="lg:border-yellow mx-5 my-8 rounded-md text-center lg:border-2 lg:py-5 lg:backdrop-blur-[1px]">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         C O N T A C T
       </h2>
@@ -64,7 +64,7 @@ const Contact = () => {
           </motion.a>
         </div>
       </div>
-    </section>
+    </footer>
   );
 };
 
