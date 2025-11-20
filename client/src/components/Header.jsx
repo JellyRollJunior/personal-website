@@ -1,4 +1,4 @@
-import { HeaderBackground } from './HeaderHudBackground.jsx';
+import { HeaderBackground } from './HeaderBackground.jsx';
 import { ArrowDownLink } from './ArrowDownLink.jsx';
 
 const Header = () => {
