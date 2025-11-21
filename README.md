@@ -1,5 +1,7 @@
 <h1 align="center">Portfolio Website</h1>
-<h3 align="center">My personal website with my works, skills, and interests. Up to date as of November 20th 2025
+<h3 align="center">My personal website with my works, skills, and interests.
+ <br/>
+ Up to date as of November 20th 2025
  <br/>
  Click <a href='https://brandon-lin.netlify.app/' target="_blank">here</a> to check it out.
 </h3>
