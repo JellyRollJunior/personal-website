@@ -31,6 +31,7 @@ const Project = ({
   ) {
     return null;
   }
+  const imageStyling = 'border-green h-auto max-w-100 min-w-0 rounded-lg border-5'
   return (
     <article
       className={
@@ -49,7 +50,7 @@ const Project = ({
           className={`col-span-4 mx-5 flex items-center justify-center gap-8 ${reverseOrientation && 'col-start-4'}`}
         >
           <motion.img
-            className="border-green h-fit max-w-100 min-w-0 rounded-lg border-5"
+            className={`${imageStyling}`}
             src={images && images[0]}
             whileHover={{
               scale: 1.05,
@@ -63,7 +64,7 @@ const Project = ({
               index > 0 && (
                 <motion.img
                   key={src}
-                  className="border-green hidden h-fit max-w-100 min-w-0 rounded-lg border-5 lg:block"
+                  className={`${imageStyling} hidden lg:block`}
                   src={src}
                   whileHover={{
                     scale: 1.05,

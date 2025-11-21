@@ -19,6 +19,9 @@
     -   Animate presence wait mode (fade out -> wait for fade out to end -> render new component)
     -   Layout animations
 -   First time implementing a Loading mask
+-   TESTING ON ALL MAJOR BROWSERS (CHROME, SAFARI, FIREFOX)
+    -   THE IMAGE LAYOUTS ALL LOOK DIFFERENT ON EACH BROWSER WHYYYYYY 
+    -   Solution -> height: auto instead of height: fit
 
 ### Retrospective aka yapping
 
