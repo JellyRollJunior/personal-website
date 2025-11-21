@@ -36,6 +36,7 @@ const variants = {
   },
 };
 
+// All images have to be the same size but at least there should be any box size shifts when loading images
 const ImageCarousel = ({ className, imageArray }) => {
   const [[imgIndex, direction], setImgIndex] = useState([0, 0]);
 
@@ -56,21 +57,27 @@ const ImageCarousel = ({ className, imageArray }) => {
       </button>
       {imageArray.length > 1 ? (
         <div className="grid grid-cols-11">
-          <AnimatePresence custom={direction}>
-            <motion.img
-              key={imageArray[imgIndex % imageArray.length] + Date.now()}
-              src={imageArray[imgIndex % imageArray.length]}
-              className={`${baseImgStyling} col-start-1 row-start-1 opacity-50`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 0.5,
-              }}
-            />
+          <AnimatePresence custom={direction} propagate>
+            <div className="relative col-span-9 col-start-1 row-span-9 row-start-1">
+              <img
+                className="opacity-0"
+                src={imageArray[imgIndex % imageArray.length]}
+              />
+              <motion.img
+                key={imageArray[imgIndex % imageArray.length] + Date.now()}
+                src={imageArray[modulo(imgIndex - 1, imageArray.length)]}
+                className={`${baseImgStyling} absolute top-0 left-0 col-start-1 row-start-1 opacity-50`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 0.5,
+                }}
+              />
+            </div>
             <motion.img
               key={imgIndex + Date.now()}
-              src={imageArray[(imgIndex + 1) % imageArray.length]}
+              src={imageArray[imgIndex % imageArray.length]}
               className={`${baseImgStyling} z-1 col-start-2 row-start-2 drop-shadow-xl/25 drop-shadow-black`}
               custom={direction}
               variants={variants}
@@ -84,17 +91,25 @@ const ImageCarousel = ({ className, imageArray }) => {
                 },
               }}
             />
-            <motion.img
-              key={imageArray[(imgIndex + 2) % imageArray.length] + Date.now()}
-              src={imageArray[(imgIndex + 2) % imageArray.length]}
-              className={`${baseImgStyling} col-start-3 row-start-3 opacity-50`}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 0.5,
-              }}
-            />
+            <div className="relative col-span-9 col-start-3 row-span-9 row-start-3">
+              <img
+                className="opacity-0"
+                src={imageArray[imgIndex % imageArray.length]}
+              />
+              <motion.img
+                key={
+                  imageArray[(imgIndex + 2) % imageArray.length] + Date.now()
+                }
+                src={imageArray[(imgIndex + 2) % imageArray.length]}
+                className={`${baseImgStyling} absolute top-0 left-0 opacity-50`}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 0.5 }}
+                exit={{ opacity: 0 }}
+                transition={{
+                  duration: 0.5,
+                }}
+              />
+            </div>
           </AnimatePresence>
         </div>
       ) : (

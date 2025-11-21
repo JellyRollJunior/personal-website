@@ -22,7 +22,7 @@
 
 Since this project didn't need a backend, I took the time to beef up my animation skills by reading through the entire framer motion react docs. I feel confident using Variants, Animation Presence, and gestures now! I would like more time practicing the various hooks and motion values though.
 
-Regarding the design process, I would like to trust the process and myself a bit more. I am constantly thinking oh this doesnt look great oh what is this design until magically in the middle, somehow it starts looking good to me. Confidence can be increase by creating a finalized design (maybe i can learn figma) instead of a pen and paper draft. This would allow me to see the vision from earlier on. Also, I may need to create the content BEFORE creating the site; in doing so, I can plan the layout better as well. 
+Regarding the design process, I would like to trust the process and myself a bit more. I am constantly thinking oh this doesnt look great oh what is this design until magically in the middle, somehow it starts looking good to me. Confidence can be increase by creating a finalized design (maybe i can learn figma) instead of a pen and paper draft. This would allow me to see the vision from earlier on. Also, I may need to create the content BEFORE creating the site; in doing so, I can plan the layout better as well.
 
 ## Start commands
 

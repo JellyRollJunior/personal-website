@@ -19,7 +19,7 @@ import smmWin from '../assets/projects/sailorMoonMemory/memory-win.png';
 import { react, nodeJs, javascript, express, prisma, socketIo, jest, ejs, html, postgreSql,  } from './tech.js';
 
 /* Project Data */
-const CNN_IMAGES = [cnnChat, cnnHome, cnnMobile, cnnProfile];
+const CNN_IMAGES = [cnnHome, cnnMobile, cnnProfile, cnnChat];
 const CNN_STACK = [react, nodeJs, express, prisma, socketIo];
 
 const CIS_IMAGES = [cisGameplay, cisStart];
