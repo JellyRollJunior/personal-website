@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import me from '../assets/me/me.jpg';
 // eslint-disable-next-line no-unused-vars
 import { motion, stagger, useScroll, useTransform } from 'motion/react';
+import { Link } from './Link.jsx';
 
 const textEnterVariants = {
   initial: {
@@ -82,6 +83,17 @@ const About = () => {
               well acquainted to identifying and planning fixes of all kinds as
               well as coding automation tests. I’m curious and passionate,
               especially when it comes to fashion, pottery, and music.
+            </motion.p>
+            <br />
+            <motion.p variants={textEnterVariants}>
+              Fun fact: I completed{' '}
+              <Link href="https://www.theodinproject.com/">
+                The Odin Project
+              </Link>{' '}
+              in it's entirety and my Chiikawa News Network is the 15th most
+              liked project for the final "implement a social networking app"
+              project (out of about 120 submissions as of Nov 25th 2025)! I'm
+              quite proud of that my work is being recognized by my peers :)
             </motion.p>
           </motion.div>
         </div>
