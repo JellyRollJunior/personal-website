@@ -17,7 +17,7 @@ const Link = ({ className, href, children }) => {
       {children}
       {isHover && (
         <motion.div
-          className="bg-blue absolute bottom-px h-0.5 w-full rounded-lg"
+          className="bg-blue absolute left-0 bottom-px h-0.5 w-full rounded-lg"
           initial={{scaleX: 0}}
           animate={{scaleX: 1}}
           transition={{ duration: 0.25, ease: 'easeInOut'}}

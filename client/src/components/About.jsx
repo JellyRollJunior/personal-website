@@ -72,28 +72,36 @@ const About = () => {
             viewport={{ once: true, amount: 1 }}
           >
             <motion.p variants={textEnterVariants}>
-              Deeply invested in the life-long learning mentality, I'm a
-              full-stack developer who loves to experiment in design. I create
-              responsive layouts using React, NodeJS, inspiration around me, and
-              whatevers in my noggin!
+              Deeply invested in the{' '}
+              <span className="text-red">life-long learning mentality</span>,
+              I'm a <span className="text-red">full-stack developer</span> who
+              loves to experiment in design. I create responsive layouts using
+              React, NodeJS, inspiration around me, and whatevers in my noggin!
             </motion.p>
             <br />
             <motion.p variants={textEnterVariants}>
               From my experience as a Software Quality Assurance Specialist, I'm
-              well acquainted to identifying and planning fixes of all kinds as
-              well as coding automation tests. I’m curious and passionate,
-              especially when it comes to fashion, pottery, and music.
+              well acquainted to{' '}
+              <span className="text-red">
+                identifying and coordinating fixes
+              </span>{' '}
+              of all kinds as well as coding automation tests. I’m curious and
+              passionate, especially when it comes to fashion, pottery, and
+              music.
             </motion.p>
             <br />
             <motion.p variants={textEnterVariants}>
               Fun fact: I completed{' '}
-              <Link href="https://www.theodinproject.com/">
+              <Link
+                className="text-blue"
+                href="https://www.theodinproject.com/"
+              >
                 The Odin Project
               </Link>{' '}
               in it's entirety and my Chiikawa News Network is the 15th most
-              liked project for the final "implement a social networking app"
-              project (out of about 120 submissions as of Nov 25th 2025)! I'm
-              quite proud of that my work is being recognized by my peers :)
+              liked submission for the final "implement a social networking app"
+              project (out of about 120 submissions as of Nov 2025)! I'm quite
+              proud that my work is being recognized by my peers :)
             </motion.p>
           </motion.div>
         </div>
