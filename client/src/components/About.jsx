@@ -98,9 +98,9 @@ const About = () => {
               >
                 The Odin Project
               </Link>{' '}
-              in it's entirety and my Chiikawa News Network is the 15th most
+              in it's entirety and my Chiikawa News Network is the 10th most
               liked submission for the final "implement a social networking app"
-              project (out of about 120 submissions as of Nov 2025)! I'm quite
+              project (out of about 140 submissions as of Dec 2025)! I'm quite
               proud that my work is being recognized by my peers :)
             </motion.p>
           </motion.div>
