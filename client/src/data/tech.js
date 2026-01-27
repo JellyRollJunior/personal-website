@@ -17,6 +17,9 @@ import vscodeIcon from '../assets/icons/vscode.svg';
 import postmanIcon from '../assets/icons/postman.svg';
 import tailwindIcon from '../assets/icons/tailwind.svg';
 import supabaseIcon from '../assets/icons/supabase.svg';
+import typescriptIcon from '../assets/icons/typescript.svg';
+import vitestIcon from '../assets/icons/vitest.svg';
+import zodIcon from '../assets/icons/zod.svg';
 
 /* Frontend */
 const react = { icon: reactIcon, name: 'React' };
@@ -25,6 +28,9 @@ const html = { icon: htmlIcon, name: 'HTML' };
 const ejs = { icon: ejsIcon, name: 'EJS' };
 const css = { icon: cssIcon, name: 'CSS' };
 const tailwind = { icon: tailwindIcon, name: 'TailwindCSS' };
+const typescript = { icon: typescriptIcon, name: 'Typescript' };
+const vitest = { icon: vitestIcon, name: 'Vitest' };
+const zod = { icon: zodIcon, name: 'Zod' };
 /* Backend */
 const nodeJs = { icon: nodejsIcon, name: 'NodeJS' };
 const express = { icon: expressIcon, name: 'Express' };
@@ -42,25 +48,30 @@ const postman = { icon: postmanIcon, name: 'Postman' };
 const supabase = { icon: supabaseIcon, name: 'Supabase' };
 
 export {
+    // languages
+    typescript,
+    javascript,
+    // Tools
+    zod,
+    jest,
+    vitest,
     // Frontend
     react,
-    javascript,
     html,
     ejs,
     css,
     tailwind,
+    motion,
     // Backend
     nodeJs,
     express,
     prisma,
     socketIo,
-    jest,
     postgreSql,
-    // Tools
+    // platforms
     git,
     github,
     linux,
-    motion,
     vscode,
     postman,
     supabase,

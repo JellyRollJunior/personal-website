@@ -64,12 +64,12 @@ const Skills = () => {
         />
         <SkillsCard
           className="mx-auto max-w-[380px] sm:col-span-2 md:col-span-1"
-          title={'Miscellaneous'}
+          title={'Languages & Tools'}
           techStackArray={MISCELLANEOUS}
         />
       </div>
       <SkillsCard
-        className="border-yellow mx-auto mt-8 max-w-[360px] rounded-md border-2 pt-2 pr-2 pb-3 pl-5 backdrop-blur-[1px] lg:mt-3"
+        className="border-yellow mx-auto mt-8 max-w-[360px] rounded-md border-2 pt-2 pr-2 pb-3 pl-5 backdrop-blur-[1px] lg:mt-6"
         title={'Languages'}
         techStackArray={[
           { icon: mandarin, name: 'Conversational Mandarin' },
