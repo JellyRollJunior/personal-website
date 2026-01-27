@@ -130,18 +130,21 @@ const Marquee = ({
   );
 };
 
+const MARQUEE_ITEMS_TOP = ['Javascript', 'Typescript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS', 'Zod']
+const MARQUEE_ITEMS_BOTTOM = ['Vitest', 'Jest', 'Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'NodeJS']
+
 const HeaderBackground = () => {
   return (
     <div className="absolute -z-1 grid h-full w-full grid-cols-[1fr_240px_1fr] grid-rows-[1fr_120px_120px_1fr]">
       <div className="col-span-3 flex flex-col items-center justify-center">
         <Marquee
           className="-z-10 my-auto"
-          textArray={['Javascript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS']}
+          textArray={MARQUEE_ITEMS_TOP}
           leftToRight={true}
         />
         <Marquee
           className="-z-50 mb-auto"
-          textArray={['Javascript', 'React', 'HTML', 'JSX', 'TailwindCSS', 'CSS', 'EJS']}
+          textArray={MARQUEE_ITEMS_TOP}
           leftToRight={false}
         />
       </div>
@@ -168,12 +171,12 @@ const HeaderBackground = () => {
       <div className="col-span-3 flex flex-col items-center">
         <Marquee
           className="-z-10 mt-auto"
-          textArray={['Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'Node', 'Javascript']}
+          textArray={MARQUEE_ITEMS_BOTTOM}
           leftToRight={true}
         />
         <Marquee
           className="-z-50 my-auto"
-          textArray={['Passport.js', 'Socket.IO', 'PrismaORM', 'PostgreSQL', 'Express', 'Node', 'Javascript']}
+          textArray={MARQUEE_ITEMS_BOTTOM}
           leftToRight={false}
         />
       </div>

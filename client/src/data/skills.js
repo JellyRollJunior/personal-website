@@ -20,8 +20,8 @@ const BACKEND = [
 ];
 
 const MISCELLANEOUS = [
-    tech.typescript,
     tech.javascript,
+    tech.typescript,
     tech.zod,
     tech.vitest,
     tech.jest,
