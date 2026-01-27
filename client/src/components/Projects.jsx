@@ -31,7 +31,8 @@ const Project = ({
   ) {
     return null;
   }
-  const imageStyling = 'border-green h-auto max-w-100 min-w-0 rounded-lg border-5'
+  const imageStyling =
+    'border-green h-auto max-w-100 min-w-0 rounded-lg border-5';
   return (
     <article
       className={
@@ -142,6 +143,16 @@ const FeaturedProjects = () => {
           projectLink={CHIIKAWA_NEWS_NETWORK.projectLink}
         />
         <Project
+          title={SAILOR_MOON_MEMORY.title}
+          description={SAILOR_MOON_MEMORY.description}
+          techStackArray={SAILOR_MOON_MEMORY.techStackArray}
+          images={SAILOR_MOON_MEMORY.images}
+          repoLink={SAILOR_MOON_MEMORY.repoLink}
+          projectLink={SAILOR_MOON_MEMORY.projectLink}
+          isCarousel={false}
+          reverseOrientation={true}
+        />
+        <Project
           className="lg:mr-10"
           title={CHIIKAWA_I_SPY.title}
           description={CHIIKAWA_I_SPY.description}
@@ -149,16 +160,6 @@ const FeaturedProjects = () => {
           images={CHIIKAWA_I_SPY.images}
           repoLink={CHIIKAWA_I_SPY.repoLink}
           projectLink={CHIIKAWA_I_SPY.projectLink}
-          isCarousel={false}
-          reverseOrientation={true}
-        />
-        <Project
-          title={SAILOR_MOON_MEMORY.title}
-          description={SAILOR_MOON_MEMORY.description}
-          techStackArray={SAILOR_MOON_MEMORY.techStackArray}
-          images={SAILOR_MOON_MEMORY.images}
-          repoLink={SAILOR_MOON_MEMORY.repoLink}
-          projectLink={SAILOR_MOON_MEMORY.projectLink}
           isCarousel={false}
         />
       </div>
@@ -171,14 +172,14 @@ const OtherWorks = () => {
   const [selectedProject, setSelectedProject] = useState(otherProjectsList[0]);
 
   return (
-    <section className="border-yellow mx-5 mt-8 backdrop-blur-[1px] rounded-md border-2 pt-5 pb-5 min-h-200 lg:min-h-120 lg:pt-8 lg:backdrop-blur-[1px]">
+    <section className="border-yellow mx-5 mt-8 min-h-200 rounded-md border-2 pt-5 pb-5 backdrop-blur-[1px] lg:min-h-120 lg:pt-8 lg:backdrop-blur-[1px]">
       <h2 className="text-blue text-center text-3xl font-extrabold">
         O T H E R <span className="hidden lg:inline-block">‣</span>
         <br className="lg:hidden" /> W O R K S
       </h2>
       <ul className="mt-3 flex justify-around">
         {otherProjectsList.map((project) => (
-          <li className="relative flex-1 hover:bg-red/20" key={project.title}>
+          <li className="hover:bg-red/20 relative flex-1" key={project.title}>
             <button
               className="size-full py-2"
               onClick={() => setSelectedProject(project)}

@@ -14,25 +14,25 @@ import slChat from '../assets/projects/socketLovers/creating-chat.gif';
 import slProfile from '../assets/projects/socketLovers/edit-profile.gif';
 /* Sailor Moon Memory */
 import smmHome from '../assets/projects/sailorMoonMemory/memory-home.png';
-import smmWin from '../assets/projects/sailorMoonMemory/memory-win.png';
+import smmLoading from '../assets/projects/sailorMoonMemory/memory-loading.gif';
 /* Tech */
-import { react, nodeJs, javascript, express, prisma, socketIo, jest, ejs, html, postgreSql,  } from './tech.js';
+import { react, nodeJs, javascript, express, prisma, socketIo, jest, vitest, ejs, html, postgreSql, typescript } from './tech.js';
 
 /* Project Data */
 const CNN_IMAGES = [cnnHome, cnnMobile, cnnProfile, cnnChat];
-const CNN_STACK = [react, nodeJs, express, prisma, socketIo];
+const CNN_STACK = [javascript, react, nodeJs, express, prisma, socketIo];
+
+const SMM_IMAGES = [smmHome, smmLoading];
+const SMM_STACK = [typescript, react, nodeJs, express, prisma, vitest ];
 
 const CIS_IMAGES = [cisGameplay, cisStart];
-const CIS_STACK = [react, nodeJs, express, prisma, jest];
+const CIS_STACK = [javascript, react, nodeJs, express, prisma, jest];
 
 const FOT_IMAGES = [fotHome, fotCategories];
 const FOT_STACK = [javascript, html, ejs, nodeJs, express, postgreSql];
 
 const SL_IMAGES = [slChat, slProfile];
 const SL_STACK = [react, nodeJs, express, prisma, socketIo];
-
-const SMM_IMAGES = [smmHome, smmWin];
-const SMM_STACK = [react];
 
 /* Projects */
 const CHIIKAWA_NEWS_NETWORK = {
@@ -58,7 +58,7 @@ const SAILOR_MOON_MEMORY = {
     description: 'Play a game of memory with sailor moon powered by Giphy!',
     techStackArray: SMM_STACK,
     images: SMM_IMAGES,
-    repoLink: 'https://github.com/JellyRollJunior/sailor-moon-memory',
+    repoLink: 'https://github.com/JellyRollJunior/ts-memory',
     projectLink: 'https://sailor-moon-memory.netlify.app/',
 };
 const SOCKET_LOVERS = {
