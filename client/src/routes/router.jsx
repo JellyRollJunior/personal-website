@@ -1,6 +1,7 @@
 import { Navigate, createBrowserRouter } from 'react-router-dom';
-import { App } from './App.jsx';
-import { Index } from './components/v1/index.jsx';
+import { App } from '../App.jsx';
+import { Index } from './../components/v2/Index.jsx';
+import { Index as V1 } from './../components/v1/index.jsx';
 
 const routes = [
   {
@@ -8,7 +9,7 @@ const routes = [
     element: <App />,
     children: [
       { index: true, element: <Index /> },
-      { path: '/v1', element: <Index /> },
+      { path: '/v1', element: <V1 /> },
     ],
     errorElement: <Navigate to="/" />,
   },

@@ -22,6 +22,10 @@
   --color-yellow: #ffcc77;
 }
 
+@utility v1 {
+  @apply text-stone-200 bg-black font-orbitron font-extralight
+}
+
 @utility grid-lines {
   z-index: -80;
   background:
