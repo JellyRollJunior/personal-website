@@ -6,11 +6,11 @@ const routes = [
   {
     path: '/',
     element: <App />,
-    children: [{ index: '/', element: <Index /> }],
-  },
-  {
-    path: '/*',
-    element: <Navigate to="/" />,
+    children: [
+      { index: true, element: <Index /> },
+      { path: '/v1', element: <Index /> },
+    ],
+    errorElement: <Navigate to="/" />,
   },
 ];
 
