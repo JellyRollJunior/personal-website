@@ -12,7 +12,8 @@
 
 :root {
   /* Site background */
-  --site-bg-image: url('../assets/v2/images/background.jpeg');
+  /* --site-bg-image: url('../assets/v2/images/background.jpeg'); */
+  --site-bg-image: url('../assets/v2/images/placeholder.jpg');
 }
 
 @theme {
