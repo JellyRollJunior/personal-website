@@ -10,6 +10,11 @@
   src: url(../assets/fonts/saira-variablefont_wdthwght-webfont.woff2);
 }
 
+:root {
+  /* Site background */
+  --site-bg-image: url('../assets/v2/images/background.jpeg');
+}
+
 @theme {
   /* Fonts */
   --font-orbitron: 'orbitron', arial;
@@ -20,6 +25,15 @@
   --color-green: #88a688;
   --color-red: #ff7777;
   --color-yellow: #ffcc77;
+}
+
+/* Site background */
+@utility site-bg {
+  background-image: var(--site-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: difference;
 }
 
 @utility v1 {
