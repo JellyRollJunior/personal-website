@@ -1,6 +1,7 @@
-import instagram from '../assets/icons/instagram.svg';
-import github from '../assets/icons/github.svg';
-import linkedin from '../assets/icons/linkedin.svg';
+import instagram from '../../assets/icons/instagram.svg';
+import github from '../../assets/icons/github.svg';
+import linkedin from '../../assets/icons/linkedin.svg';
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 

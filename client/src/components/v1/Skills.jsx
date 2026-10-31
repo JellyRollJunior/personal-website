@@ -1,9 +1,11 @@
-import { FRONTEND, BACKEND, MISCELLANEOUS } from '../data/skills.js';
-import mandarin from '../assets/icons/mandarin.png';
-import english from '../assets/icons/english.png';
-import japanese from '../assets/icons/japanese.png';
+import mandarin from '../../assets/icons/mandarin.png';
+import english from '../../assets/icons/english.png';
+import japanese from '../../assets/icons/japanese.png';
+
 // eslint-disable-next-line no-unused-vars
 import { motion, stagger } from 'motion/react';
+
+import { FRONTEND, BACKEND, MISCELLANEOUS } from '../../data/skills.js';
 
 const SkillsCard = ({ className, title, techStackArray }) => {
   if (!techStackArray || !Array.isArray(techStackArray) || !title) return null;

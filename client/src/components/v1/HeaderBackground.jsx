@@ -1,7 +1,8 @@
-import { Fragment } from 'react';
-import { HudViewFinder } from './HudViewFinder.jsx';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
+
+import { Fragment } from 'react';
+import { HudViewFinder } from './HudViewFinder.jsx';
 
 const HudLine = ({
   className,

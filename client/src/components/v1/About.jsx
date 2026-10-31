@@ -1,7 +1,9 @@
-import { useRef } from 'react';
-import me from '../assets/me/me.jpg';
+import me from '../../assets/me/me.jpg';
+
 // eslint-disable-next-line no-unused-vars
 import { motion, stagger, useScroll, useTransform } from 'motion/react';
+
+import { useRef } from 'react';
 import { Link } from './Link.jsx';
 
 const textEnterVariants = {
@@ -99,10 +101,10 @@ const About = () => {
                 The Odin Project
               </Link>{' '}
               in it's entirety and my Chiikawa News Network is the 6th most
-              liked submission for the final project of the course: 
-              "implement a social networking app" (out of about 144 submissions 
-              as of Dec 2025)! I'm quite proud that my work is being recognized 
-              by my peers :)
+              liked submission for the final project of the course: "implement a
+              social networking app" (out of about 144 submissions as of Dec
+              2025)! I'm quite proud that my work is being recognized by my
+              peers :)
             </motion.p>
           </motion.div>
         </div>

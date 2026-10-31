@@ -1,15 +1,17 @@
-import { useState } from 'react';
-import { ImageCarousel } from './ImageCarousel.jsx';
-import { Link } from './Link.jsx';
+// eslint-disable-next-line no-unused-vars
+import { AnimatePresence, motion, stagger } from 'motion/react';
+
 import {
   CHIIKAWA_NEWS_NETWORK,
   CHIIKAWA_I_SPY,
   SAILOR_MOON_MEMORY,
   SOCKET_LOVERS,
   FOODS_OF_TAIWAN,
-} from '../data/projects.js';
-// eslint-disable-next-line no-unused-vars
-import { AnimatePresence, motion, stagger } from 'motion/react';
+} from '../../data/projects.js';
+
+import { useState } from 'react';
+import { ImageCarousel } from './ImageCarousel.jsx';
+import { Link } from './Link.jsx';
 
 const Project = ({
   className,

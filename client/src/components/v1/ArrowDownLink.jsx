@@ -1,4 +1,5 @@
-import arrowDown from '../assets/icons/arrow-down.svg';
+import arrowDown from '../../assets/icons/arrow-down.svg';
+
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 

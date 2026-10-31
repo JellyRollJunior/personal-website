@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';
-import { HudViewFinder } from './HudViewFinder.jsx';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
+
+import { useEffect, useState } from 'react';
+import { HudViewFinder } from './HudViewFinder.jsx';
 
 const LoadingMask = ({ delay = 2, duration = 2 }) => {
   // Remove loading mask from DOM after fadeout

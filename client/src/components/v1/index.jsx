@@ -1,9 +1,9 @@
-import { Header } from '../components/Header.jsx';
-import { About } from '../components/About.jsx';
-import { Projects } from '../components/Projects.jsx';
-import { Contact } from '../components/Contact.jsx';
-import { Skills } from '../components/Skills.jsx';
-import { LoadingMask } from '../components/Loading.jsx';
+import { Header } from './Header.jsx';
+import { About } from './About.jsx';
+import { Projects } from './Projects.jsx';
+import { Contact } from './Contact.jsx';
+import { Skills } from './Skills.jsx';
+import { LoadingMask } from './Loading.jsx';
 
 const Index = () => {
   return (
