@@ -10,6 +10,7 @@ const Tab = ({
   title,
   tabStyle = TAB_STYLE.BORDERLESS,
   defaultPosition = { x: 0, y: 0 },
+  isHidden = false,
   dragConstraintsRef,
   children,
 }) => {
@@ -18,6 +19,7 @@ const Tab = ({
       className={[
         'tab absolute h-fit w-fit',
         tabStyle === TAB_STYLE.BORDERED && 'tab-bordered',
+        isHidden && 'hidden',
       ].join(' ')}
       style={{
         x: defaultPosition.x,
