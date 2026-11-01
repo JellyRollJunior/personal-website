@@ -11,7 +11,4 @@
 - rework blurb
 
 - tabs
-    - minimize by button click
-        - minimize animation
-    - z index
-    - header buttons
+    - minimize animation

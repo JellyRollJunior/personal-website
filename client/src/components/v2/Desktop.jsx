@@ -17,6 +17,7 @@ const Desktop = ({ tabData, state, dispatch }) => {
             isHidden={state.hidden.includes(id)}
             zIndex={state.stack.indexOf(id)}
             handleFocus={() => dispatch({ type: ACTION.FOCUS, id })}
+            handleHide={() => dispatch({ type: ACTION.HIDE, id })}
             dragConstraintsRef={containerRef}
           >
             <Content />
