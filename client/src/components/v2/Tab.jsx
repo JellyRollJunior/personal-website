@@ -1,10 +1,23 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
-const Tab = ({ title, dragConstraintsRef, children }) => {
+const TAB_STYLE = Object.freeze({
+  BORDERLESS: 'BORDERLESS',
+  BORDERED: 'BORDERED',
+});
+
+const Tab = ({
+  title,
+  tabStyle = TAB_STYLE.BORDERLESS,
+  dragConstraintsRef,
+  children,
+}) => {
   return (
     <motion.article
-      className="tab tab-bordered h-fit w-fit"
+      className={[
+        'tab h-fit w-fit',
+        tabStyle === TAB_STYLE.BORDERED && 'tab-bordered',
+      ].join(' ')}
       drag
       dragConstraints={dragConstraintsRef}
       dragMomentum={false}
@@ -15,9 +28,16 @@ const Tab = ({ title, dragConstraintsRef, children }) => {
       </header>
 
       {/* Content */}
-      <div className="tab-bordered-content">{children}</div>
+      <div
+        className={[
+          '',
+          tabStyle === TAB_STYLE.BORDERED && 'tab-bordered-content',
+        ].join(' ')}
+      >
+        {children}
+      </div>
     </motion.article>
   );
 };
 
-export { Tab };
+export { Tab, TAB_STYLE };

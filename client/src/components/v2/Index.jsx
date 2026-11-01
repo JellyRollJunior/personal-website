@@ -1,7 +1,7 @@
 import erpin from '../../assets/v2/images/background.jpeg';
 
 import { useRef } from 'react';
-import { Tab } from './Tab.jsx';
+import { Tab, TAB_STYLE } from './Tab.jsx';
 import { TabButton } from './TabButton.jsx';
 
 const Index = () => {
@@ -15,6 +15,13 @@ const Index = () => {
         ref={contentsRef}
       >
         <Tab title="Erpin Rocks" dragConstraintsRef={contentsRef}>
+          <img src={erpin} />
+        </Tab>
+        <Tab
+          title="Erpin Rocks"
+          tabStyle={TAB_STYLE.BORDERED}
+          dragConstraintsRef={contentsRef}
+        >
           <img src={erpin} />
         </Tab>
       </main>
