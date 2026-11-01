@@ -1,32 +1,43 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'motion/react';
+import { useState } from 'react';
 
-/* Tab Strip colors
-  - text color de-selected
-  - text color
-  - border TL
-  - border BL
-  - selected strip color
-*/
+const TabButton = ({ children, ...props }) => {
+  const [isPressed, setIsPressed] = useState(false);
+
+  return (
+    <button
+      {...props}
+      onClick={() => setIsPressed((prev) => !prev)}
+      className={[
+        'min-w-30 border-2 pt-0.5 pl-0.5 text-left select-none',
+        isPressed
+          ? 'tab-button-pressed border-slate-400 border-t-gray-600 border-l-gray-600'
+          : 'border-gray-600 border-t-slate-300 border-l-slate-300',
+      ].join(' ')}
+    >
+      <div
+        className={[
+          'border-2 pl-2',
+          isPressed
+            ? 'border-gray-500 border-t-gray-800 border-l-gray-800 pr-5.5 pb-0.5'
+            : 'border-r-4 border-b-4 border-gray-800 border-t-gray-500 border-l-gray-500 pr-5',
+        ].join(' ')}
+      >
+        <span>{children}</span>
+      </div>
+    </button>
+  );
+};
+
 const Index = () => {
   return (
-    <div className="flex h-dvh w-dvw flex-col bg-black px-8 pt-8">
+    <div className="v2 base flex h-dvh w-dvw flex-col bg-black px-8 pt-8">
       {/* Content */}
       <div className="site-bg flex-1 border border-black"></div>
 
       {/* Tab container */}
       <div className="flex gap-1 border border-black p-1 text-[#fcfcfc]">
-        <div className="relative border border-t border-l border-gray-600 border-t-gray-300 border-l-gray-300 px-8">
-          hi
-          <motion.div
-            className="absolute bottom-0 left-0 h-[1.5px] w-full bg-blue-400"
-            style={{ originX: 0.5 }}
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            exit={{ scaleX: 0 }}
-            transition={{ duration: 0.5, ease: 'easeOut' }}
-          />
-        </div>
+        <TabButton pressed={true} children={'Pressed'} />
+        <TabButton pressed={false} children={'Not Pressed'} />
       </div>
     </div>
   );

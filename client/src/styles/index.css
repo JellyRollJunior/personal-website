@@ -1,5 +1,39 @@
 @import 'tailwindcss';
 
+:root {
+  /* Colors */
+  --white: #fcfcfc;
+  --light-gray: #c9c9c9;
+}
+
+/* ------------------------------------------------------------------------------------- */
+/* Version 2 Styling */
+.v2 {
+  /* Site background */
+  /* --site-bg-image: url('../assets/v2/images/background.jpeg'); */
+  --site-bg-image: url('../assets/v2/images/placeholder.jpg');
+
+  --text-primary: var(--white);
+  --text-secondary: var(--light-gray);
+}
+
+@utility base {
+  color: var(--text-primary);
+}
+
+@utility site-bg {
+  background-image: var(--site-bg-image);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: difference;
+}
+
+@utility tab-button-pressed {
+  color: var(--text-secondary);
+}
+/* ------------------------------------------------------------------------------------- */
+/* Version 1 Styling */
 @font-face {
   font-family: 'orbitron';
   src: url(../assets/fonts/orbitron-variablefont_wght-webfont.woff2);
@@ -8,12 +42,6 @@
 @font-face {
   font-family: 'saira';
   src: url(../assets/fonts/saira-variablefont_wdthwght-webfont.woff2);
-}
-
-:root {
-  /* Site background */
-  /* --site-bg-image: url('../assets/v2/images/background.jpeg'); */
-  --site-bg-image: url('../assets/v2/images/placeholder.jpg');
 }
 
 @theme {
@@ -28,17 +56,8 @@
   --color-yellow: #ffcc77;
 }
 
-/* Site background */
-@utility site-bg {
-  background-image: var(--site-bg-image);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: difference;
-}
-
 @utility v1 {
-  @apply text-stone-200 bg-black font-orbitron font-extralight
+  @apply font-orbitron bg-black font-extralight text-stone-200;
 }
 
 @utility grid-lines {
