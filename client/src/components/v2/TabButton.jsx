@@ -1,12 +1,7 @@
-import { useState } from 'react';
-
-const TabButton = ({ children, ...props }) => {
-  const [isPressed, setIsPressed] = useState(false);
-
+const TabButton = ({ isPressed = false, children, ...props }) => {
   return (
     <button
       {...props}
-      onClick={() => setIsPressed((prev) => !prev)}
       className={[
         'min-w-30 border-2 pt-0.5 pl-0.5 text-left select-none',
         isPressed
