@@ -11,9 +11,9 @@ const DesktopShell = () => {
 
   return (
     <div className="flex h-full w-full flex-col">
-      <main className="min-h-0 flex-1">
+      <div className="min-h-0 flex-1">
         <Desktop tabData={data} state={state} dispatch={dispatch} />
-      </main>
+      </div>
       <TabStrip tabData={data} state={state} dispatch={dispatch} />
     </div>
   );
@@ -24,7 +24,7 @@ const data = [
     id: '1',
     title: 'Erpin Rocks',
     tabStyle: TAB_STYLE.BORDERED,
-    defaultPosition: { x: 5, y: 5 },
+    defaultPosition: { x: 0, y: 0 },
     Content: () => <img src={erpin} />,
   },
   {

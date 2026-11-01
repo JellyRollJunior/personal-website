@@ -7,6 +7,7 @@ const TabStrip = ({ tabData, state, dispatch }) => {
       {tabData &&
         tabData.map(({ id, title }) => (
           <TabButton
+            key={id}
             children={title}
             isPressed={state.hidden.includes(id)}
             onClick={() => dispatch({ type: ACTION.TOGGLE, id })}

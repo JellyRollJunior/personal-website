@@ -21,7 +21,7 @@ const Tab = ({
       className={[
         'tab absolute h-fit w-fit',
         tabStyle === TAB_STYLE.BORDERED && 'tab-bordered',
-        isHidden && 'hidden',
+        isHidden && 'invisible pointer-events-none',
       ].join(' ')}
       style={{
         x: defaultPosition.x,

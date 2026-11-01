@@ -10,6 +10,7 @@ const Desktop = ({ tabData, state, dispatch }) => {
       {tabData &&
         tabData.map(({ id, title, tabStyle, defaultPosition, Content }) => (
           <Tab
+            key={id}
             title={title}
             tabStyle={tabStyle}
             defaultPosition={defaultPosition}
