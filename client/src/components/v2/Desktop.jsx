@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { Tab } from './Tab.jsx';
+import { ACTION } from './desktopShell/tabManagerReducer.js';
 
 const Desktop = ({ tabData, state, dispatch }) => {
   const containerRef = useRef(null);
@@ -14,7 +15,7 @@ const Desktop = ({ tabData, state, dispatch }) => {
             defaultPosition={defaultPosition}
             isHidden={state.hidden.includes(id)}
             zIndex={state.stack.indexOf(id)}
-            handleFocus={() => dispatch({ type: 'focus', id })}
+            handleFocus={() => dispatch({ type: ACTION.FOCUS, id })}
             dragConstraintsRef={containerRef}
           >
             <Content />

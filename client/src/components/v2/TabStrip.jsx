@@ -1,3 +1,4 @@
+import { ACTION } from './desktopShell/tabManagerReducer.js';
 import { TabButton } from './TabButton.jsx';
 
 const TabStrip = ({ tabData, state, dispatch }) => {
@@ -8,7 +9,7 @@ const TabStrip = ({ tabData, state, dispatch }) => {
           <TabButton
             children={title}
             isPressed={state.hidden.includes(id)}
-            onClick={() => dispatch({ type: 'toggle', id })}
+            onClick={() => dispatch({ type: ACTION.TOGGLE, id })}
           />
         ))}
     </div>

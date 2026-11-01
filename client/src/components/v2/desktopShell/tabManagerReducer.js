@@ -1,0 +1,44 @@
+const ACTION = Object.freeze({
+    FOCUS: 'focus',
+    HIDE: 'hide',
+    SHOW: 'show',
+    TOGGLE: 'toggle',
+});
+
+const init = (tabs) => ({ hidden: [], stack: tabs.map((t) => t.id) });
+
+const tabManagerReducer = (state, action) => {
+    const { id } = action;
+
+    switch (action.type) {
+        case 'focus': {
+            if (state.stack.at(-1) === id) return state;
+            // move tab to end
+            return {
+                ...state,
+                stack: [...state.stack.filter((i) => i !== id), id],
+            };
+        }
+        case 'hide': {
+            if (state.hidden.includes(id)) return state;
+            return { ...state, hidden: [...state.hidden, id] };
+        }
+        case 'show': {
+            // remove from hidden & focus tab
+            return {
+                hidden: state.hidden.filter((i) => i !== id),
+                stack: [...state.stack.filter((i) => i !== id), id],
+            };
+        }
+        case 'toggle': {
+            return tabManagerReducer(state, {
+                type: state.hidden.includes(id) ? 'show' : 'hide',
+                id,
+            });
+        }
+        default:
+            return state;
+    }
+};
+
+export { tabManagerReducer, init, ACTION };
