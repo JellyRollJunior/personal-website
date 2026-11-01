@@ -1,29 +1,12 @@
-import erpin from '../../assets/v2/images/background.jpeg';
-
-import { useRef } from 'react';
-import { Tab, TAB_STYLE } from './Tab.jsx';
 import { TabButton } from './TabButton.jsx';
+import { Desktop } from './Desktop.jsx';
 
 const Index = () => {
-  const contentsRef = useRef(null);
-
   return (
     <div className="v2 base flex h-dvh w-dvw flex-col overflow-clip bg-black px-8 pt-8">
       {/* Content */}
-      <main
-        className="site-bg flex-1 border border-black pt-10 pl-10"
-        ref={contentsRef}
-      >
-        <Tab title="Erpin Rocks" dragConstraintsRef={contentsRef}>
-          <img src={erpin} />
-        </Tab>
-        <Tab
-          title="Erpin Rocks"
-          tabStyle={TAB_STYLE.BORDERED}
-          dragConstraintsRef={contentsRef}
-        >
-          <img src={erpin} />
-        </Tab>
+      <main className="min-h-0 flex-1">
+        <Desktop />
       </main>
 
       {/* Tab container */}
