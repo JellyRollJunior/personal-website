@@ -14,6 +14,5 @@
     - minimize by button click
         - minimize animation
     - z index
-    - shadow
     - header buttons
     - 
