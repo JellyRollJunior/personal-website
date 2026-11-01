@@ -1,56 +1,8 @@
-// eslint-disable-next-line no-unused-vars
-import { motion } from 'motion/react';
-
 import erpin from '../../assets/v2/images/background.jpeg';
 
-import { useRef, useState } from 'react';
-
-const TabButton = ({ children, ...props }) => {
-  const [isPressed, setIsPressed] = useState(false);
-
-  return (
-    <button
-      {...props}
-      onClick={() => setIsPressed((prev) => !prev)}
-      className={[
-        'min-w-30 border-2 pt-0.5 pl-0.5 text-left select-none',
-        isPressed
-          ? 'tab-button-pressed border-slate-400 border-t-gray-600 border-l-gray-600'
-          : 'border-gray-600 border-t-slate-300 border-l-slate-300',
-      ].join(' ')}
-    >
-      <div
-        className={[
-          'border-2 pl-2',
-          isPressed
-            ? 'border-gray-500 border-t-gray-800 border-l-gray-800 pr-5.5 pb-0.5'
-            : 'border-r-4 border-b-4 border-gray-800 border-t-gray-500 border-l-gray-500 pr-5',
-        ].join(' ')}
-      >
-        <span>{children}</span>
-      </div>
-    </button>
-  );
-};
-
-const Tab = ({ title, dragConstraintsRef, children }) => {
-  return (
-    <motion.article
-      className="tab tab-bordered h-fit w-fit"
-      drag
-      dragConstraints={dragConstraintsRef}
-      dragMomentum={false}
-    >
-      {/* Title bar */}
-      <header className="tab-header-gradient pt-1.5 pb-1 pl-3 text-xs">
-        {title}
-      </header>
-
-      {/* Content */}
-      <div className="tab-bordered-content">{children}</div>
-    </motion.article>
-  );
-};
+import { useRef } from 'react';
+import { Tab } from './Tab.jsx';
+import { TabButton } from './TabButton.jsx';
 
 const Index = () => {
   const contentsRef = useRef(null);
