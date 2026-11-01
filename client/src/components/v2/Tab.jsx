@@ -9,15 +9,20 @@ const TAB_STYLE = Object.freeze({
 const Tab = ({
   title,
   tabStyle = TAB_STYLE.BORDERLESS,
+  defaultPosition = { x: 0, y: 0 },
   dragConstraintsRef,
   children,
 }) => {
   return (
     <motion.article
       className={[
-        'tab h-fit w-fit',
+        'tab absolute h-fit w-fit',
         tabStyle === TAB_STYLE.BORDERED && 'tab-bordered',
       ].join(' ')}
+      style={{
+        x: defaultPosition.x,
+        y: defaultPosition.y,
+      }}
       drag
       dragConstraints={dragConstraintsRef}
       dragMomentum={false}

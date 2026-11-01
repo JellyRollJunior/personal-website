@@ -57,7 +57,7 @@
 }
 
 @utility tab-bordered-content {
-  @apply rounded-b-md overflow-clip;
+  @apply overflow-clip rounded-b-md;
 }
 
 @utility tab-button-pressed {
