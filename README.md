@@ -15,4 +15,3 @@
         - minimize animation
     - z index
     - header buttons
-    - 

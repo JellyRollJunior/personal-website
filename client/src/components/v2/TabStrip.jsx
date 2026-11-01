@@ -1,14 +1,14 @@
 import { TabButton } from './TabButton.jsx';
 
-const TabStrip = ({ tabData, hiddenTabs, toggleTab }) => {
+const TabStrip = ({ tabData, state, dispatch }) => {
   return (
     <div className="flex gap-1 border border-black p-1">
       {tabData &&
         tabData.map(({ id, title }) => (
           <TabButton
             children={title}
-            isPressed={hiddenTabs.includes(id)}
-            onClick={() => toggleTab(id)}
+            isPressed={state.hidden.includes(id)}
+            onClick={() => dispatch({ type: 'toggle', id })}
           />
         ))}
     </div>

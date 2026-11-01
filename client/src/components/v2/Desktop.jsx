@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Tab } from './Tab.jsx';
 
-const Desktop = ({ tabData, hiddenTabs }) => {
+const Desktop = ({ tabData, state }) => {
   const containerRef = useRef(null);
 
   return (
@@ -12,7 +12,8 @@ const Desktop = ({ tabData, hiddenTabs }) => {
             title={title}
             tabStyle={tabStyle}
             defaultPosition={defaultPosition}
-            isHidden={hiddenTabs.includes(id)}
+            isHidden={state.hidden.includes(id)}
+            zIndex={state.stack.indexOf(id)}
             dragConstraintsRef={containerRef}
           >
             <Content />

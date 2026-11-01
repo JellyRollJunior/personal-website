@@ -11,6 +11,7 @@ const Tab = ({
   tabStyle = TAB_STYLE.BORDERLESS,
   defaultPosition = { x: 0, y: 0 },
   isHidden = false,
+  zIndex = 0,
   dragConstraintsRef,
   children,
 }) => {
@@ -24,6 +25,7 @@ const Tab = ({
       style={{
         x: defaultPosition.x,
         y: defaultPosition.y,
+        zIndex,
       }}
       drag
       dragConstraints={dragConstraintsRef}
