@@ -1,3 +1,4 @@
+import erpin from '../../assets/v2/images/background.jpeg';
 import { useState } from 'react';
 
 const TabButton = ({ children, ...props }) => {
@@ -28,11 +29,29 @@ const TabButton = ({ children, ...props }) => {
   );
 };
 
+const Tab = ({ title, children }) => {
+  return (
+    <article className="tab tab-bordered h-fit w-fit" draggable>
+      {/* Title bar */}
+      <header className="tab-header-gradient pt-1.5 pb-1 pl-3 text-xs">
+        {title}
+      </header>
+
+      {/* Content */}
+      <div className="tab-bordered-content">{children}</div>
+    </article>
+  );
+};
+
 const Index = () => {
   return (
     <div className="v2 base flex h-dvh w-dvw flex-col bg-black px-8 pt-8">
       {/* Content */}
-      <div className="site-bg flex-1 border border-black"></div>
+      <div className="site-bg flex-1 border border-black pt-10 pl-10">
+        <Tab title="Erpin Rocks">
+          <img src={erpin} />
+        </Tab>
+      </div>
 
       {/* Tab container */}
       <div className="flex gap-1 border border-black p-1 text-[#fcfcfc]">

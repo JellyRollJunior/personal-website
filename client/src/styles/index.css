@@ -3,7 +3,12 @@
 :root {
   /* Colors */
   --white: #fcfcfc;
+
   --light-gray: #c9c9c9;
+  --gray: #6b7280;
+  --dark-slate-gray: #24292d;
+
+  --intense-black: #1a1919;
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -15,6 +20,10 @@
 
   --text-primary: var(--white);
   --text-secondary: var(--light-gray);
+
+  --tab-border: var(--intense-black);
+  --tab-gradient-start: var(--gray);
+  --tab-gradient-end: var(--dark-slate-gray);
 }
 
 @utility base {
@@ -29,9 +38,32 @@
   background-blend-mode: difference;
 }
 
+@utility tab {
+  @apply overflow-clip rounded-lg border;
+  border-color: var(--tab-border);
+}
+
+@utility tab-bordered {
+  @apply px-1 pb-1;
+  background-color: var(--tab-gradient-end);
+}
+
+@utility tab-header-gradient {
+  background: linear-gradient(
+    to bottom,
+    var(--tab-gradient-start),
+    var(--tab-gradient-end) 13%
+  );
+}
+
+@utility tab-bordered-content {
+  @apply rounded-b-md overflow-clip;
+}
+
 @utility tab-button-pressed {
   color: var(--text-secondary);
 }
+
 /* ------------------------------------------------------------------------------------- */
 /* Version 1 Styling */
 @font-face {
