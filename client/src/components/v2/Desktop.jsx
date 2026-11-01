@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { Tab } from './Tab.jsx';
 
-const Desktop = ({ tabData, state }) => {
+const Desktop = ({ tabData, state, dispatch }) => {
   const containerRef = useRef(null);
 
   return (
@@ -14,6 +14,7 @@ const Desktop = ({ tabData, state }) => {
             defaultPosition={defaultPosition}
             isHidden={state.hidden.includes(id)}
             zIndex={state.stack.indexOf(id)}
+            handleFocus={() => dispatch({ type: 'focus', id })}
             dragConstraintsRef={containerRef}
           >
             <Content />

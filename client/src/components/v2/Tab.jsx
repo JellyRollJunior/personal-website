@@ -12,6 +12,7 @@ const Tab = ({
   defaultPosition = { x: 0, y: 0 },
   isHidden = false,
   zIndex = 0,
+  handleFocus,
   dragConstraintsRef,
   children,
 }) => {
@@ -30,6 +31,7 @@ const Tab = ({
       drag
       dragConstraints={dragConstraintsRef}
       dragMomentum={false}
+      onPointerDown={handleFocus}
     >
       {/* Title bar */}
       <header className="tab-header-gradient pt-1.5 pb-1 pl-3 text-xs">
