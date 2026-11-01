@@ -1,21 +1,33 @@
-import { TabButton } from './TabButton.jsx';
+import erpin from '../../assets/v2/images/background.jpeg';
+
 import { Desktop } from './Desktop.jsx';
+import { TAB_STYLE } from './Tab.jsx';
+import { TabStrip } from './TabStrip.jsx';
 
 const Index = () => {
   return (
     <div className="v2-base flex h-dvh w-dvw flex-col overflow-clip bg-black px-8 pt-8">
       {/* Content */}
       <main className="min-h-0 flex-1">
-        <Desktop />
+        <Desktop tabData={data} />
       </main>
 
-      {/* Tab container */}
-      <div className="flex gap-1 border border-black p-1">
-        <TabButton pressed={true} children={'Pressed'} />
-        <TabButton pressed={false} children={'Not Pressed'} />
-      </div>
+      <TabStrip tabData={data} />
     </div>
   );
 };
+
+const data = [
+  {
+    title: 'Erpin Rocks',
+    tabStyle: TAB_STYLE.BORDERED,
+    Content: () => <img src={erpin} />,
+  },
+  {
+    title: 'Erpin Rocks 2',
+    tabStyle: TAB_STYLE.BORDERLESS,
+    Content: () => <img src={erpin} />,
+  },
+];
 
 export { Index };
