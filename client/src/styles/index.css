@@ -13,7 +13,7 @@
 
 /* ------------------------------------------------------------------------------------- */
 /* Version 2 Styling */
-.v2 {
+.v2-base {
   /* Site background */
   /* --site-bg-image: url('../assets/v2/images/background.jpeg'); */
   --site-bg-image: url('../assets/v2/images/placeholder.jpg');
@@ -26,7 +26,7 @@
   --tab-gradient-end: var(--dark-slate-gray);
 }
 
-@utility base {
+@utility v2-base {
   color: var(--text-primary);
 }
 
