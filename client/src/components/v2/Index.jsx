@@ -1,5 +1,9 @@
+// eslint-disable-next-line no-unused-vars
+import { motion } from 'motion/react';
+
 import erpin from '../../assets/v2/images/background.jpeg';
-import { useState } from 'react';
+
+import { useRef, useState } from 'react';
 
 const TabButton = ({ children, ...props }) => {
   const [isPressed, setIsPressed] = useState(false);
@@ -29,9 +33,14 @@ const TabButton = ({ children, ...props }) => {
   );
 };
 
-const Tab = ({ title, children }) => {
+const Tab = ({ title, dragConstraintsRef, children }) => {
   return (
-    <article className="tab tab-bordered h-fit w-fit" draggable>
+    <motion.article
+      className="tab tab-bordered h-fit w-fit"
+      drag
+      dragConstraints={dragConstraintsRef}
+      dragMomentum={false}
+    >
       {/* Title bar */}
       <header className="tab-header-gradient pt-1.5 pb-1 pl-3 text-xs">
         {title}
@@ -39,19 +48,24 @@ const Tab = ({ title, children }) => {
 
       {/* Content */}
       <div className="tab-bordered-content">{children}</div>
-    </article>
+    </motion.article>
   );
 };
 
 const Index = () => {
+  const contentsRef = useRef(null);
+
   return (
-    <div className="v2 base flex h-dvh w-dvw flex-col bg-black px-8 pt-8">
+    <div className="v2 base flex h-dvh w-dvw flex-col overflow-clip bg-black px-8 pt-8">
       {/* Content */}
-      <div className="site-bg flex-1 border border-black pt-10 pl-10">
-        <Tab title="Erpin Rocks">
+      <main
+        className="site-bg flex-1 border border-black pt-10 pl-10"
+        ref={contentsRef}
+      >
+        <Tab title="Erpin Rocks" dragConstraintsRef={contentsRef}>
           <img src={erpin} />
         </Tab>
-      </div>
+      </main>
 
       {/* Tab container */}
       <div className="flex gap-1 border border-black p-1 text-[#fcfcfc]">
