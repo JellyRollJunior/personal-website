@@ -9,6 +9,3 @@
     - add trickcal bug tracker
     - sailor moon & others to minimal view
 - rework blurb
-
-- tabs
-    - minimize animation

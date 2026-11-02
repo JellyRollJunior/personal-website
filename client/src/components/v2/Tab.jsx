@@ -1,14 +1,32 @@
 // eslint-disable-next-line no-unused-vars
-import { motion } from 'motion/react';
+import { motion, useMotionValue } from 'motion/react';
 
 import hide from '../../assets/v2/icons/minimize.svg';
+
+import { useLayoutEffect, useRef } from 'react';
 
 const TAB_STYLE = Object.freeze({
   BORDERLESS: 'BORDERLESS',
   BORDERED: 'BORDERED',
 });
 
+const VARIANTS = {
+  visible: {
+    opacity: 1,
+    scale: 1,
+    visibility: 'visible',
+    transition: { duration: 0.2, ease: 'easeOut' },
+  },
+  hidden: {
+    opacity: 0,
+    scale: 0.15,
+    transition: { duration: 0.2, ease: 'easeIn' },
+    transitionEnd: { visibility: 'hidden' },
+  },
+};
+
 const Tab = ({
+  id,
   title,
   tabStyle = TAB_STYLE.BORDERLESS,
   defaultPosition = { x: 0, y: 0 },
@@ -19,22 +37,49 @@ const Tab = ({
   dragConstraintsRef,
   children,
 }) => {
+  // Hide/Show tab animation origin
+  const originX = useMotionValue(0);
+  const originY = useMotionValue(0);
+  const ref = useRef(null);
+  
+  // Calculate Hide/Show tab animation origin
+  useLayoutEffect(() => {
+    if (!isHidden) return;
+    const tabButton = document.querySelector(`[data-tab-button="${id}"]`);
+    const tab = ref.current;
+    if (!tabButton || !tab) return;
+
+    const b = tabButton.getBoundingClientRect();
+    const t = tab.getBoundingClientRect();
+    // Set center of tab button as scale origin
+    // Tranform origin sets element top left as origin (0, 0)
+    //    Therefore values need to be relative to tabs top left corner
+    originX.set(`${b.left + b.width / 2 - t.left}px`);
+    originY.set(`${b.top + b.height / 2 - t.top}px`);
+  }, [id, isHidden, originX, originY]);
+
   return (
     <motion.article
       className={[
         'tab absolute h-fit w-fit',
         tabStyle === TAB_STYLE.BORDERED && 'tab-bordered',
-        isHidden && 'pointer-events-none invisible',
       ].join(' ')}
       style={{
         x: defaultPosition.x,
         y: defaultPosition.y,
         zIndex,
+        originX,
+        originY,
+        pointerEvents: isHidden ? 'none' : 'auto',
       }}
+      variants={VARIANTS}
+      initial={false}
+      animate={isHidden ? 'hidden' : 'visible'}
       drag
       dragConstraints={dragConstraintsRef}
       dragMomentum={false}
       onPointerDown={handleFocus}
+      ref={ref}
     >
       {/* Title bar */}
       <header className="tab-header-gradient flex items-center px-3 pt-1.5 pb-1 text-xs">
