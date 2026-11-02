@@ -4,11 +4,7 @@ import { motion, useMotionValue } from 'motion/react';
 import hide from '../../assets/v2/icons/minimize.svg';
 
 import { useLayoutEffect, useRef } from 'react';
-
-const TAB_STYLE = Object.freeze({
-  BORDERLESS: 'BORDERLESS',
-  BORDERED: 'BORDERED',
-});
+import { TAB_STYLE } from '../../data/v2/createTab.js';
 
 const VARIANTS = {
   visible: {

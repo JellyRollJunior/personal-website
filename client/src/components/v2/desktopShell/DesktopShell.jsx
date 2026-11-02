@@ -5,6 +5,7 @@ import { init, tabManagerReducer } from './tabManagerReducer.js';
 import { TAB_STYLE } from '../Tab.jsx';
 import { Desktop } from '../Desktop.jsx';
 import { TabStrip } from '../TabStrip.jsx';
+import { FileManagerTab } from '../tabs/FileManager.jsx';
 
 const DesktopShell = () => {
   const [state, dispatch] = useReducer(tabManagerReducer, data, init);
@@ -20,6 +21,7 @@ const DesktopShell = () => {
 };
 
 const data = [
+  FileManagerTab,
   {
     id: '1',
     title: 'Erpin Rocks',
