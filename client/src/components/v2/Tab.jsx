@@ -78,10 +78,10 @@ const Tab = ({
       ref={ref}
     >
       {/* Title bar */}
-      <header className="tab-header-gradient flex items-center px-3 pt-1.5 pb-1 text-xs">
+      <header className="tab-header-gradient flex items-center px-3 pt-1.5 pb-1 text-xs min-w-2xs">
         <span className="block flex-1">{title}</span>
         <button
-          className="rounded-full hover:bg-gray-600"
+          className="rounded-full hover:bg-gray-600 ml-5"
           aria-label="minimize tab button"
           onClick={handleHide}
         >
