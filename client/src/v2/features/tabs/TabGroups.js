@@ -1,6 +1,4 @@
-import { TAB_ID } from './Tabs.js';
-
-const GROUP_ID = Object.freeze({ HOME: 'home', GALLERY: 'gallery' });
+import { TAB_ID, GROUP_ID } from './tabIds.js';
 
 const GROUPS = [
     {

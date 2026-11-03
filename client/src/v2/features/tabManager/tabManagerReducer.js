@@ -1,11 +1,18 @@
+import { GROUP_ID } from '../tabs/TabGroups.js';
+
 const ACTION = Object.freeze({
     FOCUS: 'focus',
     HIDE: 'hide',
     SHOW: 'show',
     TOGGLE: 'toggle',
+    SET_GROUP: 'setGroup',
 });
 
-const init = (tabs) => ({ hidden: [], stack: tabs.map((t) => t.id) });
+const init = (tabs) => ({
+    hidden: [],
+    stack: tabs.map((t) => t.id),
+    activeGroupId: GROUP_ID.HOME,
+});
 
 const tabManagerReducer = (state, action) => {
     const { id } = action;
@@ -35,6 +42,12 @@ const tabManagerReducer = (state, action) => {
                 type: state.hidden.includes(id) ? 'show' : 'hide',
                 id,
             });
+        }
+        case 'setGroup': {
+            return {
+                ...state,
+                activeGroupId: id,
+            };
         }
         default:
             return state;

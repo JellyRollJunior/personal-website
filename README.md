@@ -10,6 +10,17 @@
     - sailor moon & others to minimal view
 - rework blurb
 
+
+
+- tab groups
+    - active group id
+    - tab group data structure
+        - same tab in group (file system) works?
+    - render tab group animation
+    - unmount tab group animation
+    - render tab button animation
+    - unmount tab button animation
+
 - Menu
     - menu header
     - menu tabs
