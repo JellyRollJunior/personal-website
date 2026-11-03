@@ -27,5 +27,8 @@
     - contact
     - resume
 
+- tab header change to gripper
+    - img content pointer events non?
+
 - revamp color scheme
     - focused tab button

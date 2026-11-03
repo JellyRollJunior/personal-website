@@ -11,7 +11,7 @@ const ErpinTab = createTab({
   id: TAB_ID.ERPIN,
   title: 'Erpin Rocks',
   tabStyle: TAB_STYLE.BORDERED,
-  defaultPosition: { x: 0, y: 0 },
+  defaultPosition: { x: 50, y: 200 },
   Content: ErpinTabContent,
 });
 

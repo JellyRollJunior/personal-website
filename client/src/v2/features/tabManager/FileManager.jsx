@@ -11,8 +11,9 @@ const TabManagerMenuContent = () => {
 
   return (
     <div className="flex flex-col">
+      {/* Menu Decoration */}
       <ul
-        className="file-manager-menu ml-2 flex gap-2 py-0.5 text-sm font-semibold"
+        className="file-manager-menu flex gap-2 py-0.5 pl-2 text-sm font-semibold"
         aria-hidden={true}
       >
         {MENU_ITEMS.map((i) => (
@@ -22,19 +23,65 @@ const TabManagerMenuContent = () => {
           </li>
         ))}
       </ul>
-      <nav className="flex flex-col items-start bg-black">
-        {/* nav content here */}
-        {GROUPS.map((g) => (
-          <button
-            key={g.id}
-            className={[state.activeGroupId === g.id ? 'underline' : ''].join(
-              ' '
-            )}
-            onClick={() => dispatch({ type: ACTION.SET_GROUP, id: g.id })}
-          >
-            {g.name}
-          </button>
-        ))}
+
+      {/* Nav */}
+      <nav className="file-manager-nav flex flex-col items-start bg-black px-2 py-4">
+        <table className="w-full table-auto border-separate border-spacing-1 border-none">
+          <thead className="text-left">
+            <tr>
+              <th scope="col" className="file-manager-header-cell">
+                Name
+              </th>
+              <th
+                scope="col"
+                className="file-manager-header-cell file-manager-decoration-cell"
+              >
+                Size
+              </th>
+              <th
+                scope="col"
+                className="file-manager-header-cell file-manager-decoration-cell"
+              >
+                Type
+              </th>
+              <th
+                scope="col"
+                className="file-manager-header-cell file-manager-decoration-cell"
+              >
+                Date modified
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {GROUPS.map((g) => (
+              <tr>
+                <td className="p-0" scope="row">
+                  <button
+                    key={g.id}
+                    className={[
+                      'min-w-62.5 text-left text-white hover:bg-black',
+                      state.activeGroupId === g.id ? 'underline' : '',
+                    ].join(' ')}
+                    onClick={() =>
+                      dispatch({ type: ACTION.SET_GROUP, id: g.id })
+                    }
+                  >
+                    {g.name}
+                  </button>
+                </td>
+                <td className="file-manager-cell file-manager-decoration-cell">
+                  100mb
+                </td>
+                <td className="file-manager-cell file-manager-decoration-cell">
+                  folder
+                </td>
+                <td className="file-manager-cell file-manager-decoration-cell">
+                  2024-09-30
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </nav>
     </div>
   );
@@ -43,7 +90,7 @@ const TabManagerMenuContent = () => {
 const FileManagerTab = createTab({
   id: TAB_ID.FILE_MANAGER,
   title: 'File Manager',
-  tabStyle: TAB_STYLE.BORDERED,
+  tabStyle: TAB_STYLE.BORDERLESS,
   defaultPosition: { x: 0, y: 0 },
   Content: TabManagerMenuContent,
 });
