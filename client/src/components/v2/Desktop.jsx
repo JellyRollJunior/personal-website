@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Tab } from './Tab.jsx';
+import { Tab } from './tabs/Tab.jsx';
 import { ACTION } from './desktopShell/tabManagerReducer.js';
 
 const Desktop = ({ tabData, state, dispatch }) => {

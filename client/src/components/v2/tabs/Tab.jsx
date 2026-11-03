@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue } from 'motion/react';
 
-import hide from '../../assets/v2/icons/minimize.svg';
+import hide from '../../../assets/v2/icons/minimize.svg';
 
 import { useLayoutEffect, useRef } from 'react';
-import { TAB_STYLE } from '../../data/v2/createTab.js';
+import { TAB_STYLE } from '../../../data/v2/createTab.js';
 
 const VARIANTS = {
   visible: {
@@ -37,7 +37,7 @@ const Tab = ({
   const originX = useMotionValue(0);
   const originY = useMotionValue(0);
   const ref = useRef(null);
-  
+
   // Calculate Hide/Show tab animation origin
   useLayoutEffect(() => {
     if (!isHidden) return;
@@ -78,10 +78,10 @@ const Tab = ({
       ref={ref}
     >
       {/* Title bar */}
-      <header className="tab-header-gradient flex items-center px-3 pt-1.5 pb-1 text-xs min-w-2xs">
+      <header className="tab-header-gradient flex min-w-2xs items-center px-3 pt-1.5 pb-1 text-xs">
         <span className="block flex-1">{title}</span>
         <button
-          className="rounded-full hover:bg-gray-600 ml-5"
+          className="ml-5 rounded-full hover:bg-gray-600"
           aria-label="minimize tab button"
           onClick={handleHide}
         >
@@ -102,4 +102,4 @@ const Tab = ({
   );
 };
 
-export { Tab, TAB_STYLE };
+export { Tab };

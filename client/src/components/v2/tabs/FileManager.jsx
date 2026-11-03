@@ -1,21 +1,16 @@
 import { createTab } from '../../../data/v2/createTab.js';
-import { Tab, TAB_STYLE } from '../Tab.jsx';
+import { TAB_STYLE } from '../../../data/v2/createTab.js';
 
 const TabManagerMenuContent = () => {
   return (
-    <Tab
-      id="menu"
-      title="File Manager"
-      tabStyle={TAB_STYLE.BORDERLESS}
-      defaultPosition={{ x: 0, y: 0 }}
-      isHidden={false}
-    >
-      <nav></nav>
-    </Tab>
+    <nav>
+      {/* nav content here */}
+    </nav>
   );
 };
 
 const FileManagerTab = createTab({
+  id: 'File Manager',
   title: 'File Manager',
   tabStyle: TAB_STYLE.BORDERLESS,
   defaultPosition: { x: 0, y: 0 },
