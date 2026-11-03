@@ -19,11 +19,11 @@ const VARIANTS = {
     transition: { duration: 0.2, ease: 'easeIn' },
     transitionEnd: { visibility: 'hidden' },
   },
-  // nonActive: {
-  //   opacity: 0,
-  //   transition: { duration: 0.2, ease: 'easeIn' },
-  //   transitionEnd: { visibility: 'hidden' },
-  // },
+  inactive: {
+    opacity: 0,
+    transition: { duration: 0.2, ease: 'easeIn' },
+    transitionEnd: { visibility: 'hidden' },
+  },
 };
 
 const Tab = ({
@@ -76,7 +76,7 @@ const Tab = ({
       }}
       variants={VARIANTS}
       initial={false}
-      animate={isHidden ? 'hidden' : 'visible'}
+      animate={!isInActiveGroup ? 'inactive' : isHidden ? 'hidden' : 'visible'}
       drag
       dragConstraints={dragConstraintsRef}
       dragMomentum={false}

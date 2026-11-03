@@ -12,21 +12,19 @@
 
 
 
-- tab groups
-    - render tab group animation
-    - unmount tab group animation
-    - render tab button animation
-    - unmount tab button animation
-
 - tab
     - borderless has gap between header & content`
+
+- tab button
+    - on click
+        - if unfocused -> focus
+        - if focused -> hide
+        - if hidden -> focus
 
 - Menu
     - menu header
     - menu tabs
     - menu content
-    - switch data on click
-- switch data animation
 - data
     - tech stacks
     - intro + images
@@ -34,3 +32,6 @@
     - latest work
     - contact
     - resume
+
+- revamp color scheme
+    - focused tab button

@@ -66,4 +66,8 @@ const isShown = (state, id) => {
     return isInActiveGroup(state, id) && !state.hidden.includes(id);
 };
 
-export { tabManagerReducer, init, ACTION, isInActiveGroup, isShown };
+const isFocused = (state, id) => {
+    return isShown(state, id) && state.stack.at(-1) === id;
+};
+
+export { tabManagerReducer, init, ACTION, isInActiveGroup, isShown, isFocused };

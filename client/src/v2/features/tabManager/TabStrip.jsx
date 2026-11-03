@@ -1,4 +1,4 @@
-import { ACTION, isInActiveGroup } from './tabManagerReducer.js';
+import { ACTION, isFocused, isInActiveGroup } from './tabManagerReducer.js';
 import { TabButton } from './TabButton.jsx';
 import { useTabManagerContext } from './context/useTabManager.js';
 
@@ -13,6 +13,7 @@ const TabStrip = ({ tabData }) => {
             key={id}
             data-tab-button={id}
             children={title}
+            isFocused={isFocused(state, id)}
             isHidden={!isInActiveGroup(state, id)}
             isPressed={state.hidden.includes(id)}
             onClick={() => dispatch({ type: ACTION.TOGGLE, id })}

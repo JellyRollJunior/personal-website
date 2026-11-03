@@ -1,4 +1,10 @@
-const TabButton = ({ isHidden, isPressed = false, children, ...props }) => {
+const TabButton = ({
+  isFocused = false,
+  isHidden = false,
+  isPressed = false,
+  children,
+  ...props
+}) => {
   return (
     <button
       {...props}
@@ -13,13 +19,19 @@ const TabButton = ({ isHidden, isPressed = false, children, ...props }) => {
     >
       <div
         className={[
-          'border-2 pl-2',
+          'relative border-2 pl-2',
           isPressed
             ? 'border-gray-500 border-t-gray-800 border-l-gray-800 pr-5.5 pb-0.5'
             : 'border-r-4 border-b-4 border-gray-800 border-t-gray-500 border-l-gray-500 pr-5',
         ].join(' ')}
       >
         <span>{children}</span>
+        <div
+          className={[
+            'h-px w-full bg-blue-400 bottom-0 left-0',
+            isFocused ? 'absolute' : 'hidden',
+          ].join(' ')}
+        />
       </div>
     </button>
   );
