@@ -1,4 +1,4 @@
-import { GROUP_ID } from '../tabs/TabGroups.js';
+import { GROUP_ID, GROUPS } from '../tabs/TabGroups.js';
 
 const ACTION = Object.freeze({
     FOCUS: 'focus',
@@ -54,4 +54,12 @@ const tabManagerReducer = (state, action) => {
     }
 };
 
-export { tabManagerReducer, init, ACTION };
+const isInGroup = (state, id) => {
+    return GROUPS.find((g) => g.id === state.activeGroupId).tabIds.includes(id);
+};
+
+const isShown = (state, id) => {
+    return isInGroup(state, id) && !state.hidden.includes(id);
+};
+
+export { tabManagerReducer, init, ACTION, isInGroup, isShown };

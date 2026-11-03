@@ -10,11 +10,9 @@ const TabManagerMenuContent = () => {
   return (
     <nav>
       {/* nav content here */}
-      {GROUPS.map((group) => (
-        <button
-          onClick={() => dispatch({ type: ACTION.SET_GROUP, id: group.id })}
-        >
-          {group.name}
+      {GROUPS.map((g) => (
+        <button onClick={() => dispatch({ type: ACTION.SET_GROUP, id: g.id })}>
+          {g.name}
         </button>
       ))}
     </nav>
