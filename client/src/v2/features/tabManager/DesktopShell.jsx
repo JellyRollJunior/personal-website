@@ -1,4 +1,4 @@
-import { data } from '../tabs/TabData.jsx';
+import { TABS } from '../tabs/Tabs.js';
 import { Desktop } from './Desktop.jsx';
 import { TabStrip } from './TabStrip.jsx';
 import { TabManagerProvider } from './context/TabManagerContext.jsx';
@@ -8,9 +8,9 @@ const DesktopShell = () => {
     <TabManagerProvider>
       <div className="flex h-full w-full flex-col">
         <div className="min-h-0 flex-1">
-          <Desktop tabData={data} />
+          <Desktop tabData={TABS} />
         </div>
-        <TabStrip tabData={data} />
+        <TabStrip tabData={TABS} />
       </div>
     </TabManagerProvider>
   );

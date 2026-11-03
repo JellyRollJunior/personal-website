@@ -1,11 +1,11 @@
 import { createContext, useReducer } from 'react';
 import { init, tabManagerReducer } from '../tabManagerReducer.js';
-import { data } from '../../tabs/TabData.jsx';
+import { TABS } from '../../tabs/Tabs.js';
 
 const TabManagerContext = createContext(null);
 
 const TabManagerProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(tabManagerReducer, data, init);
+  const [state, dispatch] = useReducer(tabManagerReducer, TABS, init);
 
   return (
     <TabManagerContext.Provider value={{ state, dispatch }}>
