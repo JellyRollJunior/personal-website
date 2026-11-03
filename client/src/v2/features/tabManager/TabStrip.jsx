@@ -5,6 +5,14 @@ import { useTabManagerContext } from './context/useTabManager.js';
 const TabStrip = ({ tabData }) => {
   const { state, dispatch } = useTabManagerContext();
 
+  const handleClick = (state, id) => {
+    if (isFocused(state, id)) {
+      dispatch({ type: ACTION.TOGGLE, id });
+    } else {
+      dispatch({ type: ACTION.SHOW, id });
+    }
+  };
+
   return (
     <div className="flex gap-1 border border-black p-1">
       {tabData &&
@@ -16,7 +24,7 @@ const TabStrip = ({ tabData }) => {
             isFocused={isFocused(state, id)}
             isHidden={!isInActiveGroup(state, id)}
             isPressed={state.hidden.includes(id)}
-            onClick={() => dispatch({ type: ACTION.TOGGLE, id })}
+            onClick={() => handleClick(state, id)}
           />
         ))}
     </div>

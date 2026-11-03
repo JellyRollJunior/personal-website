@@ -15,12 +15,6 @@
 - tab
     - borderless has gap between header & content`
 
-- tab button
-    - on click
-        - if unfocused -> focus
-        - if focused -> hide
-        - if hidden -> focus
-
 - Menu
     - menu header
     - menu tabs
