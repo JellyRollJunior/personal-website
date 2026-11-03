@@ -1,4 +1,4 @@
-import { ACTION } from './desktopShell/tabManagerReducer.js';
+import { ACTION } from './tabManagerReducer.js';
 import { TabButton } from './TabButton.jsx';
 
 const TabStrip = ({ tabData, state, dispatch }) => {

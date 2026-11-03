@@ -1,5 +1,4 @@
-import { createTab } from '../../../data/v2/createTab.js';
-import { TAB_STYLE } from '../../../data/v2/createTab.js';
+import { createTab, TAB_STYLE } from '../tabs/createTab.js';
 
 const TabManagerMenuContent = () => {
   return (

@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue } from 'motion/react';
 
-import hide from '../../../assets/v2/icons/minimize.svg';
+import hide from '../../assets/icons/minimize.svg';
 
 import { useLayoutEffect, useRef } from 'react';
-import { TAB_STYLE } from '../../../data/v2/createTab.js';
+import { TAB_STYLE } from './createTab.js';
 
 const VARIANTS = {
   visible: {

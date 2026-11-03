@@ -2,8 +2,8 @@
 import { useReducer } from 'react';
 import { data } from '../tabs/TabData.jsx';
 import { init, tabManagerReducer } from './tabManagerReducer.js';
-import { Desktop } from '../Desktop.jsx';
-import { TabStrip } from '../TabStrip.jsx';
+import { Desktop } from './Desktop.jsx';
+import { TabStrip } from './TabStrip.jsx';
 
 const DesktopShell = () => {
   const [state, dispatch] = useReducer(tabManagerReducer, data, init);

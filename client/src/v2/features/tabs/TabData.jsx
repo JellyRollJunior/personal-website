@@ -1,7 +1,7 @@
-import erpin from '../../../assets/v2/images/background.jpeg';
+import erpin from '../../assets/images/background.jpeg';
 
-import { FileManagerTab } from './FileManager.jsx';
-import { TAB_STYLE } from '../../../data/v2/createTab.js';
+import { TAB_STYLE } from './createTab.js';
+import { FileManagerTab } from './../tabManager/FileManager.jsx';
 
 const data = [
   FileManagerTab,

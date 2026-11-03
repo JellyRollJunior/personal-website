@@ -1,4 +1,4 @@
-import { DesktopShell } from './desktopShell/DesktopShell.jsx';
+import { DesktopShell } from './../features/tabManager/DesktopShell.jsx';
 
 const Index = () => {
   return (

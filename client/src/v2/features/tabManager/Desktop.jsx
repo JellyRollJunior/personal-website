@@ -1,6 +1,6 @@
 import { useRef } from 'react';
-import { Tab } from './tabs/Tab.jsx';
-import { ACTION } from './desktopShell/tabManagerReducer.js';
+import { Tab } from './../tabs/Tab.jsx';
+import { ACTION } from './tabManagerReducer.js';
 
 const Desktop = ({ tabData, state, dispatch }) => {
   const containerRef = useRef(null);

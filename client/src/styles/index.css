@@ -15,8 +15,7 @@
 /* Version 2 Styling */
 .v2-base {
   /* Site background */
-  /* --site-bg-image: url('../assets/v2/images/background.jpeg'); */
-  --site-bg-image: url('../assets/v2/images/placeholder.jpg');
+  --site-bg-image: url('./../v2/assets/images/placeholder.jpg');
 
   --text-primary: var(--white);
   --text-secondary: var(--light-gray);
