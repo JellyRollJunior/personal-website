@@ -19,7 +19,7 @@
     - unmount tab button animation
 
 - tab
-    - borderless has gap between header & content
+    - borderless has gap between header & content`
 
 - Menu
     - menu header

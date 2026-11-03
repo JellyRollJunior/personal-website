@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { Tab } from './../tabs/Tab.jsx';
-import { ACTION, isShown } from './tabManagerReducer.js';
+import { ACTION, isInActiveGroup, isShown } from './tabManagerReducer.js';
 import { useTabManagerContext } from './context/useTabManager.js';
 
 const Desktop = ({ tabData }) => {
@@ -17,6 +17,7 @@ const Desktop = ({ tabData }) => {
             title={title}
             tabStyle={tabStyle}
             defaultPosition={defaultPosition}
+            isInActiveGroup={isInActiveGroup(state, id)}
             isHidden={!isShown(state, id)}
             zIndex={state.stack.indexOf(id)}
             handleFocus={() => dispatch({ type: ACTION.FOCUS, id })}

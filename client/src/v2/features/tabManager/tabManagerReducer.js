@@ -28,11 +28,15 @@ const tabManagerReducer = (state, action) => {
         }
         case 'hide': {
             if (state.hidden.includes(id)) return state;
-            return { ...state, hidden: [...state.hidden, id] };
+            return {
+                ...state,
+                hidden: [...state.hidden, id],
+            };
         }
         case 'show': {
             // remove from hidden & focus tab
             return {
+                ...state,
                 hidden: state.hidden.filter((i) => i !== id),
                 stack: [...state.stack.filter((i) => i !== id), id],
             };
@@ -54,12 +58,12 @@ const tabManagerReducer = (state, action) => {
     }
 };
 
-const isInGroup = (state, id) => {
+const isInActiveGroup = (state, id) => {
     return GROUPS.find((g) => g.id === state.activeGroupId).tabIds.includes(id);
 };
 
 const isShown = (state, id) => {
-    return isInGroup(state, id) && !state.hidden.includes(id);
+    return isInActiveGroup(state, id) && !state.hidden.includes(id);
 };
 
-export { tabManagerReducer, init, ACTION, isInGroup, isShown };
+export { tabManagerReducer, init, ACTION, isInActiveGroup, isShown };

@@ -19,6 +19,11 @@ const VARIANTS = {
     transition: { duration: 0.2, ease: 'easeIn' },
     transitionEnd: { visibility: 'hidden' },
   },
+  // nonActive: {
+  //   opacity: 0,
+  //   transition: { duration: 0.2, ease: 'easeIn' },
+  //   transitionEnd: { visibility: 'hidden' },
+  // },
 };
 
 const Tab = ({
@@ -26,6 +31,7 @@ const Tab = ({
   title,
   tabStyle = TAB_STYLE.BORDERLESS,
   defaultPosition = { x: 0, y: 0 },
+  isInActiveGroup = false,
   isHidden = false,
   zIndex = 0,
   handleFocus,
