@@ -1,9 +1,11 @@
 import { useRef } from 'react';
 import { Tab } from './../tabs/Tab.jsx';
 import { ACTION } from './tabManagerReducer.js';
+import { useTabManagerContext } from './context/useTabManager.js';
 
-const Desktop = ({ tabData, state, dispatch }) => {
+const Desktop = ({ tabData }) => {
   const containerRef = useRef(null);
+  const { state, dispatch } = useTabManagerContext()
 
   return (
     <main className="site-bg relative h-full w-full" ref={containerRef}>

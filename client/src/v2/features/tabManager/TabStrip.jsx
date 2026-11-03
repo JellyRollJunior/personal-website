@@ -1,7 +1,10 @@
 import { ACTION } from './tabManagerReducer.js';
 import { TabButton } from './TabButton.jsx';
+import { useTabManagerContext } from './context/useTabManager.js';
 
-const TabStrip = ({ tabData, state, dispatch }) => {
+const TabStrip = ({ tabData }) => {
+  const { state, dispatch } = useTabManagerContext();
+
   return (
     <div className="flex gap-1 border border-black p-1">
       {tabData &&
