@@ -18,6 +18,9 @@
     - render tab button animation
     - unmount tab button animation
 
+- tab
+    - borderless has gap between header & content
+
 - Menu
     - menu header
     - menu tabs
