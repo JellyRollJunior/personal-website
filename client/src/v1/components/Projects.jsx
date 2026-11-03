@@ -7,7 +7,7 @@ import {
   SAILOR_MOON_MEMORY,
   SOCKET_LOVERS,
   FOODS_OF_TAIWAN,
-} from '../../data/projects.js';
+} from '../data/projects.js';
 
 import { useState } from 'react';
 import { ImageCarousel } from './ImageCarousel.jsx';

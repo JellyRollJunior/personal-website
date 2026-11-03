@@ -1,5 +1,5 @@
-import leftArrow from '../../assets/icons/chevron-left.svg';
-import rightArrow from '../../assets/icons/chevron-right.svg';
+import leftArrow from '../assets/icons/chevron-left.svg';
+import rightArrow from '../assets/icons/chevron-right.svg';
 
 // eslint-disable-next-line no-unused-vars
 import { motion, AnimatePresence } from 'motion/react';

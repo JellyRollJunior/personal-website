@@ -1,4 +1,4 @@
-import me from '../../assets/me/me.jpg';
+import me from '../assets/me/me.jpg';
 
 // eslint-disable-next-line no-unused-vars
 import { motion, stagger, useScroll, useTransform } from 'motion/react';
