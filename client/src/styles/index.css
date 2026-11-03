@@ -6,6 +6,7 @@
 
   --light-gray: #c9c9c9;
   --gray: #6b7280;
+  --dark-charcoal: #333333;
   --dark-slate-gray: #24292d;
 
   --intense-black: #1a1919;
@@ -19,6 +20,8 @@
 
   --text-primary: var(--white);
   --text-secondary: var(--light-gray);
+
+  --file-manager-menu-bg: var(--dark-charcoal);
 
   --tab-border: var(--intense-black);
   --tab-gradient-start: var(--gray);
@@ -35,6 +38,11 @@
   background-position: center;
   background-size: cover;
   background-blend-mode: difference;
+}
+
+@utility file-manager-menu {
+  color: var(--text-secondary);
+  background-color: var(--file-manager-menu-bg);
 }
 
 @utility tab {
