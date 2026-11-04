@@ -17,7 +17,7 @@ const TabManagerMenuContent = () => {
         aria-hidden={true}
       >
         {MENU_ITEMS.map((i) => (
-          <li>
+          <li key={i}>
             <span className="underline">{i.substring(0, 1)}</span>
             {i.substring(1)}
           </li>
@@ -54,7 +54,7 @@ const TabManagerMenuContent = () => {
           </thead>
           <tbody>
             {GROUPS.map((g, index) => (
-              <tr>
+              <tr key={g.id}>
                 <td className="p-0" scope="row">
                   <button
                     key={g.id}
