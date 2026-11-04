@@ -4,7 +4,7 @@ import { createTab, TAB_STYLE } from './createTab.js';
 import { TAB_ID } from './tabIds.js';
 
 const ErpinTabContent = () => {
-  return <img src={erpin} />;
+  return <img className="pointer-events-none" src={erpin} />;
 };
 
 const ErpinTab = createTab({
