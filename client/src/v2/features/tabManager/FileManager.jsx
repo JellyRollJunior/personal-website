@@ -73,13 +73,13 @@ const TabManagerMenuContent = () => {
                   </button>
                 </td>
                 <td className="file-manager-cell file-manager-decoration-cell">
-                  100mb
+                  {g.size}
                 </td>
                 <td className="file-manager-cell file-manager-decoration-cell">
-                  folder
+                  {g.type}
                 </td>
                 <td className="file-manager-cell file-manager-decoration-cell">
-                  2024-09-30
+                  {g.dateModified}
                 </td>
               </tr>
             ))}
