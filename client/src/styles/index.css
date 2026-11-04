@@ -51,12 +51,12 @@
 }
 
 @utility file-manager-nav {
-  color: var(--text-secondary);
+  color: var(--text-primary);
   background-color: var(--file-manager-nav-bg);
 }
 
 @utility file-manager-header-cell {
-  @apply py-0.5 px-1;
+  @apply px-1 pt-0.5;
   background: linear-gradient(
     to bottom,
     var(--file-manager-cell-bg) 50%,
@@ -65,14 +65,23 @@
   border: solid 1px var(--charcoal);
 }
 
-@utility file-manager-cell {
-  @apply py-0.5 px-1 text-center;
-  background-color: var(--file-manager-cell-bg);
+@utility file-manager-row-header-cell-a {
+  @apply px-1 py-0.5;
+  background: var(--file-manager-cell-bg);
+  border: solid 1px var(--file-manager-cell-bg-secondary);
 }
 
-/* @utility file-manager-decoration-cell {
-  @apply hidden sm:table-cell;
-} */
+@utility file-manager-row-header-cell-b {
+  @apply px-1 py-0.5;
+  background: var(--file-manager-cell-bg-secondary);
+  border: solid 1px var(--file-manager-cell-bg);
+}
+
+@utility file-manager-cell {
+  @apply px-1 py-0.5 text-center text-xs;
+  color: var(--text-secondary);
+  background-color: var(--file-manager-cell-bg);
+}
 
 @utility tab {
   @apply overflow-clip rounded-lg border;

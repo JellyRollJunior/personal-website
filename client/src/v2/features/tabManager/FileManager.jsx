@@ -25,12 +25,12 @@ const TabManagerMenuContent = () => {
       </ul>
 
       {/* Nav */}
-      <nav className="file-manager-nav flex flex-col items-start bg-black px-2 py-4">
-        <table className="w-full table-auto border-separate border-spacing-1 border-none">
-          <thead className="text-left">
+      <nav className="file-manager-nav flex flex-col items-start bg-black px-1 py-2">
+        <table className="w-full table-auto border-separate border-spacing-0.5 border-none text-left text-sm font-semibold">
+          <thead className="">
             <tr>
               <th scope="col" className="file-manager-header-cell">
-                Name
+                Tab groups
               </th>
               <th
                 scope="col"
@@ -53,13 +53,16 @@ const TabManagerMenuContent = () => {
             </tr>
           </thead>
           <tbody>
-            {GROUPS.map((g) => (
+            {GROUPS.map((g, index) => (
               <tr>
                 <td className="p-0" scope="row">
                   <button
                     key={g.id}
                     className={[
-                      'min-w-62.5 text-left text-white hover:bg-black',
+                      'min-w-62.5 text-left text-white hover:brightness-75',
+                      index % 2 === 1
+                        ? 'file-manager-row-header-cell-a'
+                        : 'file-manager-row-header-cell-b',
                       state.activeGroupId === g.id ? 'underline' : '',
                     ].join(' ')}
                     onClick={() =>
