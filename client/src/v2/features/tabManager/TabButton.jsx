@@ -28,7 +28,7 @@ const TabButton = ({
         <span>{children}</span>
         <div
           className={[
-            'h-px w-full bg-blue-400 bottom-0 left-0',
+            'tab-button-focused bottom-0 left-0 h-0.5 w-full',
             isFocused ? 'absolute' : 'hidden',
           ].join(' ')}
         />

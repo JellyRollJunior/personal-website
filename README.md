@@ -15,10 +15,6 @@
 - tab
     - borderless has gap between header & content`
 
-- Menu
-    - menu header
-    - menu tabs
-    - menu content
 - data
     - tech stacks
     - intro + images

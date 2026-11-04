@@ -31,6 +31,8 @@
   --tab-border: var(--intense-black);
   --tab-gradient-start: var(--gray);
   --tab-gradient-end: var(--dark-slate-gray);
+
+  --tab-button-focused: var(--pansy-petal);
 }
 
 @utility v2-base {
@@ -108,6 +110,10 @@
 
 @utility tab-button-pressed {
   color: var(--text-secondary);
+}
+
+@utility tab-button-focused {
+  background: var(--tab-button-focused);
 }
 
 /* ------------------------------------------------------------------------------------- */
