@@ -63,7 +63,7 @@ const Tab = ({
   return (
     <motion.article
       className={[
-        'tab absolute h-fit w-fit',
+        'tab absolute h-fit w-fit bg-black',
         tabStyle === TAB_STYLE.BORDERED && 'tab-bordered',
       ].join(' ')}
       style={{

@@ -11,10 +11,6 @@
 - rework blurb
 
 
-
-- tab
-    - borderless has gap between header & content`
-
 - data
     - tech stacks
     - intro + images
