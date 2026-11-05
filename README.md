@@ -20,4 +20,3 @@
     - resume
 
 - bug
-    - reset img advance on next/prev click

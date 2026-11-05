@@ -4,7 +4,7 @@ const GROUPS = [
     {
         id: GROUP_ID.HOME,
         name: 'Home',
-        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.ERPIN],
+        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.ERPIN, TAB_ID.TBT_IMAGES],
         size: '67mb',
         type: 'folder',
         dateModified: '2026-11-04',
@@ -12,7 +12,7 @@ const GROUPS = [
     {
         id: GROUP_ID.PROJECTS,
         name: 'Projects',
-        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.CNN_IMAGES],
+        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.CNN_IMAGES, TAB_ID.TBT_IMAGES],
         size: '500mb',
         type: 'folder',
         dateModified: '2026-11-04',

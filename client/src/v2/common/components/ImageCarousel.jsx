@@ -66,7 +66,12 @@ const ImageCarousel = ({ className, imageArray }) => {
         </button>
 
         {/* Image index buttons */}
-        <div className="grid grid-cols-4 items-center gap-3">
+        <div
+          className="grid items-center gap-3"
+          style={{
+            gridTemplateColumns: `repeat(${imageArray.length}, 1.5rem)`,
+          }}
+        >
           {imageArray.map((src, index) => (
             <button
               key={`${src}:${index}`}
@@ -75,7 +80,7 @@ const ImageCarousel = ({ className, imageArray }) => {
                 imageIndex == index ? 'bg-red w-5' : 'bg-blue',
               ].join(' ')}
               onClick={() => setImageIndex(index)}
-            ></button>
+            />
           ))}
         </div>
 
