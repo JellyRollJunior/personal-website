@@ -10,6 +10,14 @@ const GROUPS = [
         dateModified: '2026-11-04',
     },
     {
+        id: GROUP_ID.PROJECTS,
+        name: 'Projects',
+        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.CNN_IMAGES],
+        size: '500mb',
+        type: 'folder',
+        dateModified: '2026-11-04',
+    },
+    {
         id: GROUP_ID.GALLERY,
         name: 'Gallery',
         tabIds: [TAB_ID.FILE_MANAGER],
