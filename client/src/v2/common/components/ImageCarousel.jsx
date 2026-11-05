@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useState } from 'react';
 
 const ImageCarousel = ({ className, imageArray }) => {
   // Determine aspect ratio from 1st image
@@ -16,15 +16,6 @@ const ImageCarousel = ({ className, imageArray }) => {
     // This is (prev - 1) % length
     setImageIndex((prev) => (((prev - 1) % length) + length) % length);
   };
-
-  // Advance image every 8 seconds
-  useEffect(() => {
-    const imgNextInterval = setInterval(() => {
-      showNextImage(imageArray.length);
-    }, 8000);
-
-    return () => clearInterval(imgNextInterval);
-  }, [imageArray, showNextImage, imageIndex]);
 
   if (!imageArray || !Array.isArray(imageArray)) return;
   return (
