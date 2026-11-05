@@ -3,6 +3,9 @@ import { useCallback, useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
 const ImageCarousel = ({ className, imageArray }) => {
+  // Determine aspect ratio from 1st image
+  const [ratio, setRatio] = useState(16 / 9);
+
   // Setting image index
   const [imageIndex, setImageIndex] = useState(0);
   const showNextImage = useCallback((length = 1) => {
@@ -25,14 +28,18 @@ const ImageCarousel = ({ className, imageArray }) => {
   if (!imageArray || !Array.isArray(imageArray)) return;
   return (
     <div className={`${className}`}>
-      <div className="block-shadow h-9/10 flex-1 overflow-clip rounded-lg border-3 border-pink-300 bg-pink-200">
+      {/* Images */}
+      <div
+        className="w-[30rem] max-w-[80vw] overflow-clip"
+        style={{ aspectRatio: ratio }}
+      >
         <motion.div
           initial={{ translateX: 0 }}
           animate={{ translateX: `${imageIndex * -100}%` }}
           transition={{
             type: 'spring',
             visualDuration: 0.35,
-            bounce: 0.3,
+            bounce: 0.2,
           }}
           className="relative flex h-full"
         >
@@ -40,30 +47,49 @@ const ImageCarousel = ({ className, imageArray }) => {
             <img
               style={{ left: `${100 * index}%` }}
               key={index}
-              className="`aspect-auto` absolute h-full w-full object-contain"
+              className="absolute h-full w-full object-contain"
               src={src}
+              onLoad={
+                index === 0
+                  ? (e) =>
+                      setRatio(
+                        e.currentTarget.naturalWidth /
+                          e.currentTarget.naturalHeight
+                      )
+                  : undefined
+              }
             />
           ))}
         </motion.div>
       </div>
-      <div className="mt-3 flex items-center justify-center gap-8">
+
+      {/* Carousel Control Buttons */}
+      <div className="mt-3 flex items-center justify-center gap-8 pb-2">
+        {/* Prev */}
         <button
-          className="yellow-button px-5"
+          className="px-5"
           onClick={() => showPrevImage(imageArray.length)}
         >
           Prev
         </button>
+
+        {/* Image index buttons */}
         <div className="grid grid-cols-4 items-center gap-3">
           {imageArray.map((src, index) => (
             <button
               key={`${src}:${index}`}
-              className={`block-shadow size-4 justify-self-center rounded-full ${imageIndex == index ? 'yellow-gradient w-7' : 'duckegg-gradient'}`}
+              className={[
+                'block-shadow size-3 justify-self-center rounded-full',
+                imageIndex == index ? 'bg-red w-5' : 'bg-blue',
+              ].join(' ')}
               onClick={() => setImageIndex(index)}
             ></button>
           ))}
         </div>
+
+        {/* Next */}
         <button
-          className="yellow-button px-5"
+          className="px-5"
           onClick={() => showNextImage(imageArray.length)}
         >
           Next

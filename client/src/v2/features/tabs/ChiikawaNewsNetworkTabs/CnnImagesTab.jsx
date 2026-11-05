@@ -10,13 +10,13 @@ import { ImageCarousel } from '../../../common/components/ImageCarousel.jsx';
 const CNN_IMAGES = [cnnHome, cnnMobile, cnnProfile, cnnChat];
 
 const CnnImageTabContent = () => {
-  return <ImageCarousel className={'h-50 w-50'} imageArray={CNN_IMAGES} />;
+  return <ImageCarousel className={''}  imageArray={CNN_IMAGES} />;
 };
 
 const CnnImagesTab = createTab({
   id: TAB_ID.CNN_IMAGES,
-  title: 'Chiikawa News Network',
-  tabStyle: TAB_STYLE.BORDERLESS,
+  title: 'Chiikawa News Network - Images',
+  tabStyle: TAB_STYLE.BORDERED,
   defaultPosition: { x: 50, y: 200 },
   Content: CnnImageTabContent,
 });
