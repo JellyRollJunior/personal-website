@@ -1,16 +1,5 @@
 ## Todo
 
-- rework to tab based retro style
-- fix carousel
-- rework tech stack
-    - new icons
-    - new animation thingy?
-- projects rework
-    - add trickcal bug tracker
-    - sailor moon & others to minimal view
-- rework blurb
-
-
 - data
     - tech stacks
     - intro + images
@@ -19,4 +8,17 @@
     - contact
     - resume
 
+- style image carousel 
+    - colors
+    - buttons
+
+- make focused more noticeable
+    - perhaps darken non focused tabs (?)
+    - perhaps lighten focused tabs (?)
+
+- tab icons
+
 - bug
+    - selecting projects shifts site-bg
+        - too many tabs buttons -> cause strip to move up
+        - research how overflow tabs work are handled

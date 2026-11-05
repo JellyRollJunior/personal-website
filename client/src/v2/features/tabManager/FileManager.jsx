@@ -55,11 +55,11 @@ const TabManagerMenuContent = () => {
           <tbody>
             {GROUPS.map((g, index) => (
               <tr key={g.id}>
-                <td className="p-0" scope="row">
+                <td className="h-px min-w-62.5 p-0">
                   <button
                     key={g.id}
                     className={[
-                      'min-w-62.5 text-left text-white hover:brightness-75',
+                      'block h-full w-full px-1 text-left text-white hover:brightness-75',
                       index % 2 === 1
                         ? 'file-manager-row-header-cell-a'
                         : 'file-manager-row-header-cell-b',
