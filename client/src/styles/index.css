@@ -89,10 +89,6 @@
   @apply overflow-clip rounded-lg border;
   border-color: var(--tab-border);
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.16);
-}
-
-@utility tab-bordered {
-  @apply px-1 pb-1;
   background-color: var(--tab-gradient-end);
 }
 
@@ -106,6 +102,11 @@
 
 @utility tab-bordered-content {
   @apply overflow-clip rounded-b-md;
+  --border-size: 5px;
+  border-color: var(--tab-gradient-end);
+  border-left-width: var(--border-size);
+  border-right-width: var(--border-size);
+  border-bottom-width: var(--border-size);
 }
 
 @utility tab-button-pressed {

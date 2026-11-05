@@ -20,5 +20,4 @@
     - resume
 
 - bug
-    - bordered tab styling border is wrong color
     - reset img advance on next/prev click

@@ -1,6 +1,7 @@
-import { useCallback, useEffect, useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'motion/react';
+
+import { useCallback, useEffect, useState } from 'react';
 
 const ImageCarousel = ({ className, imageArray }) => {
   // Determine aspect ratio from 1st image
