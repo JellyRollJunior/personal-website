@@ -39,10 +39,16 @@
   --button-hover-bg: var(--pansy-petal);
   --carousel-index-button-bg: var(--gray);
   --carousel-index-button-selected-bg: var(--pansy-petal);
+
+  --external-link-highlight-color: var(--pansy-petal);
 }
 
 @utility v2-base {
   color: var(--text-primary);
+}
+
+@utility v2-text-secondary {
+  color: var(--text-secondary);
 }
 
 @utility site-bg {
@@ -140,6 +146,10 @@
 
 @utility carousel-index-button-selected {
   background: var(--carousel-index-button-selected-bg);
+}
+
+@utility external-link-highlight {
+  background: var(--external-link-highlight-color);
 }
 
 /* ------------------------------------------------------------------------------------- */
