@@ -4,7 +4,7 @@ const GROUPS = [
     {
         id: GROUP_ID.HOME,
         name: 'Home',
-        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.ERPIN, TAB_ID.TBT_IMAGES],
+        tabIds: [TAB_ID.FILE_MANAGER, TAB_ID.ERPIN],
         size: '67mb',
         type: 'folder',
         dateModified: '2026-11-04',

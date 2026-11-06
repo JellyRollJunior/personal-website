@@ -59,7 +59,7 @@ const ImageCarousel = ({ className, imageArray }) => {
       <div className="mt-3 flex items-center justify-center gap-8 pb-2">
         {/* Prev */}
         <button
-          className="px-5"
+          className="carousel-button px-5"
           onClick={() => showPrevImage(imageArray.length)}
         >
           Prev
@@ -76,8 +76,10 @@ const ImageCarousel = ({ className, imageArray }) => {
             <button
               key={`${src}:${index}`}
               className={[
-                'block-shadow size-3 justify-self-center rounded-full',
-                imageIndex == index ? 'bg-red w-5' : 'bg-blue',
+                'size-3 justify-self-center rounded-full hover:cursor-pointer',
+                imageIndex == index
+                  ? 'carousel-index-button-selected w-5'
+                  : 'carousel-index-button',
               ].join(' ')}
               onClick={() => setImageIndex(index)}
             />
@@ -86,7 +88,7 @@ const ImageCarousel = ({ className, imageArray }) => {
 
         {/* Next */}
         <button
-          className="px-5"
+          className="carousel-button px-5"
           onClick={() => showNextImage(imageArray.length)}
         >
           Next
