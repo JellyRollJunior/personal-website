@@ -1,7 +1,7 @@
 import erpin from '../../assets/images/background.jpeg';
 
-import { createTab, TAB_STYLE } from './createTab.js';
-import { TAB_ID } from './tabIds.js';
+import { createTab, TAB_STYLE } from './data/createTab.js';
+import { TAB_ID } from './data/tabIds.js';
 
 const ErpinTabContent = () => {
   return <img className="pointer-events-none" src={erpin} />;

@@ -4,7 +4,7 @@ import { motion, useMotionValue } from 'motion/react';
 import hide from '../../assets/icons/minimize.svg';
 
 import { useLayoutEffect, useRef } from 'react';
-import { TAB_STYLE } from './createTab.js';
+import { TAB_STYLE } from './data/createTab.js';
 
 const VARIANTS = {
   visible: {
@@ -62,9 +62,7 @@ const Tab = ({
 
   return (
     <motion.article
-      className={[
-        'tab absolute h-fit w-fit ',
-      ].join(' ')}
+      className={['tab absolute h-fit w-fit'].join(' ')}
       style={{
         x: defaultPosition.x,
         y: defaultPosition.y,

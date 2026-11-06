@@ -1,6 +1,6 @@
 import { createContext, useReducer } from 'react';
 import { init, tabManagerReducer } from '../tabManagerReducer.js';
-import { TABS } from '../../tabs/Tabs.js';
+import { TABS } from '../../tabs/data/Tabs.js';
 
 const TabManagerContext = createContext(null);
 

@@ -1,4 +1,4 @@
-import { TABS } from '../tabs/Tabs.js';
+import { TABS } from '../tabs/data/Tabs.js';
 import { Desktop } from './Desktop.jsx';
 import { TabStrip } from './TabStrip.jsx';
 import { TabManagerProvider } from './context/TabManagerContext.jsx';

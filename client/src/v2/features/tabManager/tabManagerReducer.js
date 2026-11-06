@@ -1,4 +1,4 @@
-import { GROUP_ID, GROUPS } from '../tabs/TabGroups.js';
+import { GROUP_ID, GROUPS } from '../tabs/data/TabGroups.js';
 
 const ACTION = Object.freeze({
     FOCUS: 'focus',

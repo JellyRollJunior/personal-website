@@ -1,10 +1,10 @@
-import cnnChat from '../../../../v1/assets/projects/chiikawaNewsNetwork/chat.webp';
-import cnnHome from '../../../../v1/assets/projects/chiikawaNewsNetwork/home.webp';
-import cnnMobile from '../../../../v1/assets/projects/chiikawaNewsNetwork/mobile.webp';
-import cnnProfile from '../../../../v1/assets/projects/chiikawaNewsNetwork/profile.webp';
+import cnnChat from './../../../assets/images/chiikawaNewsNetwork/chat.webp';
+import cnnHome from './../../../assets/images/chiikawaNewsNetwork/home.webp';
+import cnnMobile from './../../../assets/images/chiikawaNewsNetwork/mobile.webp';
+import cnnProfile from './../../../assets/images/chiikawaNewsNetwork/profile.webp';
 
-import { TAB_ID } from '../tabIds.js';
-import { createTab, TAB_STYLE } from '../createTab.js';
+import { TAB_ID } from '../data/tabIds.js';
+import { createTab, TAB_STYLE } from '../data/createTab.js';
 import { ImageCarousel } from '../../../common/components/ImageCarousel.jsx';
 
 const CNN_IMAGES = [cnnHome, cnnMobile, cnnProfile, cnnChat];

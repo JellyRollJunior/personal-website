@@ -1,6 +1,6 @@
-import { createTab, TAB_STYLE } from '../tabs/createTab.js';
-import { GROUPS } from '../tabs/TabGroups.js';
-import { TAB_ID } from '../tabs/tabIds.js';
+import { createTab, TAB_STYLE } from '../tabs/data/createTab.js';
+import { GROUPS } from '../tabs/data/TabGroups.js';
+import { TAB_ID } from '../tabs/data/tabIds.js';
 import { useTabManagerContext } from './context/useTabManager.js';
 import { ACTION } from './tabManagerReducer.js';
 

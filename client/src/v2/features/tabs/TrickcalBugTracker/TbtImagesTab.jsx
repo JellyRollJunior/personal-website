@@ -1,9 +1,9 @@
-import tbtMove from './../../../assets/images/trickcal-bug-tracker/move-ticket.gif';
-import tbtBoard from './../../../assets/images/trickcal-bug-tracker/boards-dark.png';
-import tbtTicket from './../../../assets/images/trickcal-bug-tracker/boards-ticket.png';
+import tbtMove from './../../../assets/images/trickcalBugTracker/move-ticket.gif';
+import tbtBoard from './../../../assets/images/trickcalBugTracker/boards-dark.png';
+import tbtTicket from './../../../assets/images/trickcalBugTracker/boards-ticket.png';
 
-import { TAB_ID } from '../tabIds.js';
-import { createTab, TAB_STYLE } from '../createTab.js';
+import { TAB_ID } from '../data/tabIds.js';
+import { createTab, TAB_STYLE } from '../data/createTab.js';
 import { ImageCarousel } from '../../../common/components/ImageCarousel.jsx';
 
 const TBT_IMAGEs = [tbtMove, tbtBoard, tbtTicket];
