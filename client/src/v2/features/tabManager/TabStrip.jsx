@@ -1,9 +1,11 @@
 import { ACTION, isFocused, isInActiveGroup } from './tabManagerReducer.js';
 import { TabButton } from './TabButton.jsx';
 import { useTabManagerContext } from './context/useTabManager.js';
+import { useTaskbarSlot } from '../shell/Taskbar/useTaskbarSlot.js';
 
 const TabStrip = ({ tabData }) => {
   const { state, dispatch } = useTabManagerContext();
+  const { setSlot } = useTaskbarSlot();
 
   const handleClick = (state, id) => {
     if (isFocused(state, id)) {
@@ -27,6 +29,9 @@ const TabStrip = ({ tabData }) => {
             onClick={() => handleClick(state, id)}
           />
         ))}
+
+      {/* Dedicated, empty container. Portaled buttons render in here. */}
+      <div ref={setSlot} className="flex gap-1" />
     </div>
   );
 };

@@ -2,6 +2,7 @@ const TabButton = ({
   isFocused = false,
   isHidden = false,
   isPressed = false,
+  ref,
   children,
   ...props
 }) => {
@@ -16,6 +17,7 @@ const TabButton = ({
             ? 'tab-button-pressed border-slate-400 border-t-gray-600 border-l-gray-600'
             : 'border-gray-600 border-t-slate-300 border-l-slate-300',
       ].join(' ')}
+      ref={ref}
     >
       <div
         className={[

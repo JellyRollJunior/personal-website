@@ -54,6 +54,15 @@ const SAILOR_MOON_MEMORY = {
     demoLink: 'https://sailor-moon-memory.netlify.app/',
 };
 
+const PROJECTS = [
+    TRICKCAL_BUG_TRACKER,
+    CHIIKAWA_NEWS_NETWORK,
+    CHIIKAWA_I_SPY,
+    SAILOR_MOON_MEMORY,
+];
+
+export { PROJECTS };
+
 export {
     TRICKCAL_BUG_TRACKER,
     CHIIKAWA_NEWS_NETWORK,

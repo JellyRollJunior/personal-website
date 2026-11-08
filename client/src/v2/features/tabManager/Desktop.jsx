@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { Tab } from './../tabs/Tab.jsx';
 import { ACTION, isInActiveGroup, isShown } from './tabManagerReducer.js';
 import { useTabManagerContext } from './context/useTabManager.js';
+import { HomeGroup } from '../groups/HomeGroup/HomeGroup.jsx';
 
 const Desktop = ({ tabData }) => {
   const containerRef = useRef(null);
@@ -27,6 +28,7 @@ const Desktop = ({ tabData }) => {
             <Content />
           </Tab>
         ))}
+        <HomeGroup />
     </main>
   );
 };
