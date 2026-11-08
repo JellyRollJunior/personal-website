@@ -27,3 +27,5 @@
     - Each section renders it's own tabs
     - Each section has its own component
     - Each tab renders it's own tab button through portal
+
+- tab & tab butotn handle null state

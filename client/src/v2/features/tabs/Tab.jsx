@@ -8,6 +8,7 @@ import { createPortal } from 'react-dom';
 import { TAB_STYLE } from './data/createTab.js';
 import { useTaskbarSlot } from '../shell/Taskbar/useTaskbarSlot.js';
 import { TabButton } from '../tabManager/TabButton.jsx';
+import { ACTION, isFocused } from '../groups/TabManager/tabManagerReducer.js';
 
 const VARIANTS = {
   visible: {
@@ -41,6 +42,8 @@ const Tab = ({
   handleHide,
   dragConstraintsRef,
   children,
+  state,
+  dispatch,
 }) => {
   const { slot } = useTaskbarSlot();
 
@@ -65,6 +68,14 @@ const Tab = ({
     originX.set(`${b.left + b.width / 2 - t.left}px`);
     originY.set(`${b.top + b.height / 2 - t.top}px`);
   }, [id, isHidden, originX, originY]);
+
+  const handleClick = (state, id) => {
+    if (isFocused(state, id)) {
+      dispatch({ type: ACTION.TOGGLE, id });
+    } else {
+      dispatch({ type: ACTION.SHOW, id });
+    }
+  };
 
   return (
     <>
@@ -114,17 +125,17 @@ const Tab = ({
       </motion.article>
 
       {/* Taskbar Tab Button */}
-      {slot &&
+      {slot && state && 
         createPortal(
           <TabButton
-            data-tab-button={id}
-            isPressed={false}
-            onClick={() => {}}
             ref={buttonRef}
-          >
-            {title}
-          </TabButton>,
-          slot,
+            isFocused={state && isFocused(state, id)}
+            isHidden={false}
+            isPressed={isHidden}
+            onClick={() => handleClick(state, id)}
+            children={title}
+          />,
+          slot
         )}
     </>
   );
