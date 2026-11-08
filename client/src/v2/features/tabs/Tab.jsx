@@ -73,7 +73,7 @@ const Tab = ({
     if (isFocused(state, id)) {
       dispatch({ type: ACTION.TOGGLE, id });
     } else {
-      dispatch({ type: ACTION.SHOW, id });
+      dispatch({ type: ACTION.SHOW, id, z: 1 });
     }
   };
 
@@ -125,11 +125,12 @@ const Tab = ({
       </motion.article>
 
       {/* Taskbar Tab Button */}
-      {slot && state && 
+      {slot &&
+        state &&
         createPortal(
           <TabButton
             ref={buttonRef}
-            isFocused={state && isFocused(state, id)}
+            isFocused={isFocused(state, id)}
             isHidden={false}
             isPressed={isHidden}
             onClick={() => handleClick(state, id)}

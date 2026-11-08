@@ -5,42 +5,35 @@ const ACTION = Object.freeze({
     TOGGLE: 'toggle',
 });
 
-const init = (tabIdArray) => ({
+const init = {
     hidden: [],
-    stack: tabIdArray,
-});
+    z: {},
+};
 
 const tabManagerReducer = (state, action) => {
     const { id } = action;
 
     switch (action.type) {
-        case 'focus': {
-            if (state.stack.at(-1) === id) return state;
-            // move tab to end
-            return {
-                ...state,
-                stack: [...state.stack.filter((i) => i !== id), id],
-            };
+        case ACTION.FOCUS: {
+            return { ...state, z: { ...state.z, [id]: action.z } };
         }
-        case 'hide': {
+        case ACTION.HIDE: {
             if (state.hidden.includes(id)) return state;
-            return {
-                ...state,
-                hidden: [...state.hidden, id],
-            };
+            return { ...state, hidden: [...state.hidden, id] };
         }
-        case 'show': {
-            // remove from hidden & focus tab
+        case ACTION.SHOW: {
+            // remove from hidden & bring to front
             return {
                 ...state,
                 hidden: state.hidden.filter((i) => i !== id),
-                stack: [...state.stack.filter((i) => i !== id), id],
+                z: { ...state.z, [id]: action.z },
             };
         }
-        case 'toggle': {
+        case ACTION.TOGGLE: {
+            // forwards the whole action so `z` reaches SHOW
             return tabManagerReducer(state, {
-                type: state.hidden.includes(id) ? 'show' : 'hide',
-                id,
+                ...action,
+                type: state.hidden.includes(id) ? ACTION.SHOW : ACTION.HIDE,
             });
         }
         default:
@@ -48,12 +41,19 @@ const tabManagerReducer = (state, action) => {
     }
 };
 
-const isShown = (state, id) => {
-    return !state.hidden.includes(id);
-};
+const isShown = (state, id) => !state.hidden.includes(id);
 
+const zIndexOf = (state, id) => state.z[id] ?? 0;
+
+// Focused *within this manager*: shown, and highest z among its shown tabs
 const isFocused = (state, id) => {
-    return isShown(state, id) && state.stack.at(-1) === id;
+    if (!isShown(state, id)) return false;
+    const z = zIndexOf(state, id);
+    if (z === 0) return false;
+    return Object.entries(state.z).every(
+        ([otherId, otherZ]) =>
+            otherId === id || !isShown(state, otherId) || otherZ <= z
+    );
 };
 
-export { tabManagerReducer, init, ACTION, isShown, isFocused };
+export { tabManagerReducer, init, ACTION, isShown, isFocused, zIndexOf };

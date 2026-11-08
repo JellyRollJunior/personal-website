@@ -29,3 +29,5 @@
     - Each tab renders it's own tab button through portal
 
 - tab & tab butotn handle null state
+
+- tab -> round content edges

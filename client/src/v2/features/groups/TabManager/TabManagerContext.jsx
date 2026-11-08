@@ -3,8 +3,8 @@ import { init, tabManagerReducer } from './tabManagerReducer.js';
 
 const TabManagerContext = createContext(null);
 
-const TabManagerProvider = ({ tabIdArray, children }) => {
-  const [state, dispatch] = useReducer(tabManagerReducer, tabIdArray, init);
+const TabManagerProvider = ({ children }) => {
+  const [state, dispatch] = useReducer(tabManagerReducer, init);
 
   return (
     <TabManagerContext.Provider value={{ state, dispatch }}>
