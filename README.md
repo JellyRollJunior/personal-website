@@ -22,3 +22,8 @@
     - selecting projects shifts site-bg
         - too many tabs buttons -> cause strip to move up
         - research how overflow tabs work are handled
+
+- Tab render rework
+    - Each section renders it's own tabs
+    - Each section has its own component
+    - Each tab renders it's own tab button through portal
