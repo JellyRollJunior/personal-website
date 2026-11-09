@@ -71,6 +71,7 @@
 
 @utility file-manager-header-cell {
   @apply px-1 pt-0.5;
+  color: var(--text-secondary);
   background: linear-gradient(
     to bottom,
     var(--file-manager-cell-bg) 50%,

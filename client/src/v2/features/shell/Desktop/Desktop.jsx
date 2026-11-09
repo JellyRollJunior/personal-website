@@ -3,6 +3,7 @@ import { DesktopContextProvider } from './DesktopContext.jsx';
 import { GroupManager } from '../../groups/GroupManager.jsx';
 import { IntroGroup } from '../../groups/IntroGroup/IntroGroup.jsx';
 import { WorksGroup } from '../../groups/WorksGroup/WorksGroup.jsx'
+import { ContactGroup } from '../../groups/ContactGroup.jsx';
 
 const Desktop = () => {
   return (
@@ -20,6 +21,7 @@ const DesktopContent = () => {
       <GroupManager dragConstraintsRef={containerRef} />
       <IntroGroup dragConstraintsRef={containerRef} />
       <WorksGroup dragConstraintsRef={containerRef} />
+      <ContactGroup dragConstraintsRef={containerRef} />
     </main>
   );
 };

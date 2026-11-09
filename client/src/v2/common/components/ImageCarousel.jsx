@@ -22,7 +22,7 @@ const ImageCarousel = ({ className, imageArray }) => {
     <div className={`${className}`}>
       {/* Images */}
       <div
-        className="w-[30rem] max-w-[80vw] overflow-clip"
+        className="w-[40rem] max-w-[80vw] overflow-clip"
         style={{ aspectRatio: ratio }}
       >
         <motion.div

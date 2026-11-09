@@ -14,6 +14,14 @@ const worksGroupData = {
     dateModified: '09-11-2026',
 };
 
-const groups = [introGroupData, worksGroupData];
+const contactGroupData = {
+    id: 'contact',
+    name: 'Contact',
+    size: '50mb',
+    type: 'text',
+    dateModified: '09-12-2026',
+};
 
-export { introGroupData, worksGroupData, groups };
+const groups = [introGroupData, worksGroupData, contactGroupData];
+
+export { introGroupData, worksGroupData, contactGroupData, groups };

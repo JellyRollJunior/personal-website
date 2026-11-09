@@ -58,7 +58,7 @@ const GroupManagerContent = ({ groups = [] }) => {
           <thead className="">
             <tr>
               <th scope="col" className="file-manager-header-cell">
-                Tab groups
+                Name
               </th>
               <th
                 scope="col"
