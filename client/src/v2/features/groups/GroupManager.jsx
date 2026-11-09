@@ -2,18 +2,19 @@ import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { TAB_STYLE, Tab } from '../tabs/Tab/Tab.jsx';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { groups } from './data/groups.js';
 
 const GROUP_MANAGER_ID = 'group-manager';
 
-const GroupManagerContainer = ({ groups = [], dragConstraintsRef }) => {
+const GroupManagerContainer = ({ dragConstraintsRef }) => {
   return (
     <TabManagerProvider>
-      <GroupManager groups={groups} dragConstraintsRef={dragConstraintsRef} />
+      <GroupManager dragConstraintsRef={dragConstraintsRef} />
     </TabManagerProvider>
   );
 };
 
-const GroupManager = ({ groups = [], dragConstraintsRef }) => {
+const GroupManager = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
 
   return (

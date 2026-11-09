@@ -7,27 +7,29 @@ import {
   CHIIKAWA_NEWS_NETWORK,
   TRICKCAL_BUG_TRACKER,
 } from '../../../data/projects.js';
+import { worksGroupData } from '../data/groups.js';
 
-const ProjectGroup = ({ dragConstraintsRef }) => {
+const WorksGroup = ({ dragConstraintsRef }) => {
   return (
     <TabManagerProvider>
-      <ProjectGroupContent dragConstraintsRef={dragConstraintsRef} />
+      <WorksGroupContent dragConstraintsRef={dragConstraintsRef} />
     </TabManagerProvider>
   );
 };
 
-const ProjectGroupContent = ({ dragConstraintsRef }) => {
+const WorksGroupContent = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
   const { activeGroupId } = useDesktopContext();
 
   const projects = [TRICKCAL_BUG_TRACKER, CHIIKAWA_NEWS_NETWORK];
 
-  const isActiveGroup = activeGroupId === ProjectGroupData.id;
+  const isActiveGroup = activeGroupId === worksGroupData.id;
 
   return (
     <>
       {projects.map((p) => (
         <Tab
+          key={p.id}
           id={p.id + '-images'}
           title={p.title + ' - Images'}
           tabStyle={TAB_STYLE.BORDERED}
@@ -44,12 +46,4 @@ const ProjectGroupContent = ({ dragConstraintsRef }) => {
   );
 };
 
-const ProjectGroupData = {
-  id: 'projects',
-  name: 'Projects',
-  size: '250mb',
-  type: 'folder',
-  dateModified: '09-11-2026',
-};
-
-export { ProjectGroup, ProjectGroupData };
+export { WorksGroup };

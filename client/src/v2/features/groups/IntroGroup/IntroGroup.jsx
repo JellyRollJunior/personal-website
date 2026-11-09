@@ -1,25 +1,25 @@
 import erpin from './../../../assets/images/background.jpeg';
 
+import { introGroupData } from '../data/groups.js';
 import { Tab, TAB_STYLE } from '../../tabs/Tab/Tab.jsx';
 import { TabManagerProvider } from '../TabManager/TabManagerContext.jsx';
 import { useTabManager } from '../TabManager/useTabManager.js';
 import { useDesktopContext } from '../../shell/Desktop/useDesktopContext.js';
 
-const HomeGroup = ({ dragConstraintsRef }) => {
+const IntroGroup = ({ dragConstraintsRef }) => {
   return (
     <TabManagerProvider>
-      <HomeGroupContent dragConstraintsRef={dragConstraintsRef} />
+      <IntroGroupContent dragConstraintsRef={dragConstraintsRef} />
     </TabManagerProvider>
   );
 };
 
-const HomeGroupContent = ({ dragConstraintsRef }) => {
+const IntroGroupContent = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
   const { activeGroupId } = useDesktopContext();
   const ERPIN_TAB_ID = 'home:erpin';
-  const tabIds = [ERPIN_TAB_ID];
 
-  const isActiveGroup = activeGroupId === HomeGroupData.id;
+  const isActiveGroup = activeGroupId === introGroupData.id;
 
   return (
     <>
@@ -39,12 +39,4 @@ const HomeGroupContent = ({ dragConstraintsRef }) => {
   );
 };
 
-const HomeGroupData = {
-  id: 'home',
-  name: 'Home',
-  size: '250mb',
-  type: 'folder',
-  dateModified: '09-11-2026',
-};
-
-export { HomeGroup, HomeGroupData };
+export { IntroGroup };
