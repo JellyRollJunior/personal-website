@@ -21,7 +21,7 @@ const GroupManager = ({ dragConstraintsRef }) => {
     <Tab
       id={GROUP_MANAGER_ID}
       title={'File Manager'}
-      tabStyle={TAB_STYLE.BORDERED}
+      tabStyle={TAB_STYLE.BORDERLESS}
       defaultPosition={{ x: 0, y: 0 }}
       isInActiveGroup={true}
       state={state}

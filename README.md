@@ -1,5 +1,13 @@
 ## Todo
 
+- sections
+    - introduction
+    - works
+    - skills & tools
+    - About me
+    - other works
+    - contact
+
 - data
     - tech stacks
     - intro + images
@@ -17,20 +25,11 @@
     - perhaps lighten focused tabs (?)
 
 - tab icons
+- separate file manager tab with extra space0
 
 - bug
     - selecting projects shifts site-bg
         - too many tabs buttons -> cause strip to move up
         - research how overflow tabs work are handled
-
-- Tab render rework
-    - Each section renders it's own tabs
-    - Each section has its own component
-    - Each tab renders it's own tab button through portal
-
-- tab & tab butotn handle null state
-
-- tab -> round content edges
-
-- move stack management responsibilty to desktop
-- separate file manager tab with extra space0
+    - tab -> round content edges
+    - is focus / reducer data is late by one refresh
