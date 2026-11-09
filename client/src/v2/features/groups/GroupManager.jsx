@@ -8,6 +8,7 @@ import {
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { Tab } from '../tabs/Tab.jsx';
+import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
 
 const GROUP_MANAGER_ID = 'group-manager';
 
@@ -21,6 +22,7 @@ const GroupManagerContainer = ({ groups = [], dragConstraintsRef }) => {
 
 const GroupManager = ({ groups = [], dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
+  const { getNextZ } = useDesktopContext();
 
   return (
     <Tab
@@ -33,7 +35,7 @@ const GroupManager = ({ groups = [], dragConstraintsRef }) => {
       isFocused={!isFocused(state, GROUP_MANAGER_ID)}
       zIndex={zIndexOf(state, GROUP_MANAGER_ID)}
       handleFocus={() =>
-        dispatch({ type: ACTION.FOCUS, id: GROUP_MANAGER_ID, z: 2 })
+        dispatch({ type: ACTION.FOCUS, id: GROUP_MANAGER_ID, z: getNextZ() })
       }
       handleHide={() => dispatch({ type: ACTION.HIDE, id: GROUP_MANAGER_ID })}
       dragConstraintsRef={dragConstraintsRef}

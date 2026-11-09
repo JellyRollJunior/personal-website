@@ -31,3 +31,6 @@
 - tab & tab butotn handle null state
 
 - tab -> round content edges
+
+- move stack management responsibilty to desktop
+- separate file manager tab with extra space0

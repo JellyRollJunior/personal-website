@@ -1,4 +1,4 @@
-import { Desktop } from './Desktop.jsx';
+import { Desktop } from './Desktop/Desktop.jsx';
 import { TaskbarSlotProvider } from './../shell/Taskbar/TaskbarSlotContext.jsx';
 import { TaskBar } from './Taskbar/Taskbar.jsx';
 
