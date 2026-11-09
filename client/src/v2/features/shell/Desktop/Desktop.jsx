@@ -1,7 +1,8 @@
 import { useRef } from 'react';
-import { HomeGroup, HomeGroupData } from '../../groups/HomeGroup/HomeGroup.jsx';
-import { GroupManager } from '../../groups/GroupManager.jsx';
 import { DesktopContextProvider } from './DesktopContext.jsx';
+import { GroupManager } from '../../groups/GroupManager.jsx';
+import { HomeGroup, HomeGroupData } from '../../groups/HomeGroup/HomeGroup.jsx';
+import { ProjectGroup, ProjectGroupData } from '../../groups/ProjectGroup/ProjectGroup.jsx';
 
 const Desktop = () => {
   return (
@@ -13,12 +14,13 @@ const Desktop = () => {
 
 const DesktopContent = () => {
   const containerRef = useRef(null);
-  const groups = [HomeGroupData];
+  const groups = [HomeGroupData, ProjectGroupData];
 
   return (
     <main className="site-bg relative h-full w-full" ref={containerRef}>
       <GroupManager groups={groups} dragConstraintsRef={containerRef} />
       <HomeGroup dragConstraintsRef={containerRef} />
+      <ProjectGroup dragConstraintsRef={containerRef} />
     </main>
   );
 };

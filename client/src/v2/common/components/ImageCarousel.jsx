@@ -39,7 +39,7 @@ const ImageCarousel = ({ className, imageArray }) => {
             <img
               style={{ left: `${100 * index}%` }}
               key={index}
-              className="absolute h-full w-full object-contain"
+              className="absolute h-full w-full object-contain pointer-events-none"
               src={src}
               onLoad={
                 index === 0

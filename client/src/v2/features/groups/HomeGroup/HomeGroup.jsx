@@ -41,7 +41,7 @@ const HomeGroupContent = ({ dragConstraintsRef }) => {
 
 const HomeGroupData = {
   id: 'home',
-  name: 'home',
+  name: 'Home',
   size: '250mb',
   type: 'folder',
   dateModified: '09-11-2026',

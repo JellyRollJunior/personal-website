@@ -8,16 +8,16 @@ import cnnHome from './../assets/images/chiikawaNewsNetwork/home.webp';
 import cnnMobile from './../assets/images/chiikawaNewsNetwork/mobile.webp';
 import cnnProfile from './../assets/images/chiikawaNewsNetwork/profile.webp';
 /* Chiikawa I Spy */
-import cisGameplay from './../assets/projects/chiikawaISpy/gameplay.gif';
-import cisStart from './../assets/projects/chiikawaISpy/start-page.png';
+import cisGameplay from './../assets/images/chiikawaISpy/gameplay.gif';
+import cisStart from './../assets/images/chiikawaISpy/start-page.png';
 /* Sailor Moon Memory */
-import smmHome from './../assets/projects/sailorMoonMemory/memory-home.png';
-import smmLoading from './../assets/projects/sailorMoonMemory/memory-loading.gif';
+import smmHome from './../assets/images/sailorMoonMemory/memory-home.png';
+import smmLoading from './../assets/images/sailorMoonMemory/memory-loading.gif';
 
 /* Projects */
 const TRICKCAL_BUG_TRACKER = {
     id: 'trickcal-bug-tracker',
-    title: 'Chiikawa News Network',
+    title: 'Trickcal Bug Tracker',
     description:
         'A Kanban board where your whole team stays in sync. Every create, edit, delete, or move syncs to everyone the moment it happens. No refreshing needed.',
     images: [tbtMove, tbtBoard, tbtTicket],
