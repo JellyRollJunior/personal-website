@@ -1,4 +1,4 @@
-const TabButton = ({
+const TaskbarButton = ({
   isFocused = false,
   isHidden = false,
   isPressed = false,
@@ -39,4 +39,4 @@ const TabButton = ({
   );
 };
 
-export { TabButton };
+export { TaskbarButton };

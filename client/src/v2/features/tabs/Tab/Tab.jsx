@@ -1,14 +1,18 @@
 // eslint-disable-next-line no-unused-vars
 import { motion, useMotionValue } from 'motion/react';
 
-import hide from '../../assets/icons/minimize.svg';
+import hide from '../../../assets/icons/minimize.svg';
 
 import { useLayoutEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import { TAB_STYLE } from './data/createTab.js';
-import { useTaskbarSlot } from '../shell/Taskbar/useTaskbarSlot.js';
-import { TabButton } from '../tabManager/TabButton.jsx';
-import { ACTION, isFocused } from '../groups/TabManager/tabManagerReducer.js';
+import { useTaskbarSlot } from '../../shell/Taskbar/useTaskbarSlot.js';
+import { TaskbarButton } from '../../shell/Taskbar/TaskbarButton.jsx';
+import { useTab } from './useTab.js';
+
+const TAB_STYLE = Object.freeze({
+  BORDERLESS: 'BORDERLESS',
+  BORDERED: 'BORDERED',
+});
 
 const VARIANTS = {
   visible: {
@@ -36,15 +40,19 @@ const Tab = ({
   tabStyle = TAB_STYLE.BORDERLESS,
   defaultPosition = { x: 0, y: 0 },
   isInActiveGroup = false,
-  isHidden = false,
-  zIndex = 0,
-  handleFocus,
-  handleHide,
   dragConstraintsRef,
-  children,
   state,
   dispatch,
+  children,
 }) => {
+  const {
+    isTabHidden,
+    isTabFocused,
+    zIndex,
+    handleTabFocus,
+    handleTabHide,
+    handleTaskbarButtonClick,
+  } = useTab({ id, state, dispatch });
   const { slot } = useTaskbarSlot();
 
   // Hide/Show tab animation origin
@@ -55,7 +63,7 @@ const Tab = ({
 
   // Calculate Hide/Show tab animation origin
   useLayoutEffect(() => {
-    if (!isHidden) return;
+    if (!isTabHidden) return;
     const taskbarButton = buttonRef.current;
     const tab = ref.current;
     if (!taskbarButton || !tab) return;
@@ -67,15 +75,7 @@ const Tab = ({
     //    Therefore values need to be relative to tabs top left corner
     originX.set(`${b.left + b.width / 2 - t.left}px`);
     originY.set(`${b.top + b.height / 2 - t.top}px`);
-  }, [id, isHidden, originX, originY]);
-
-  const handleClick = (state, id) => {
-    if (isFocused(state, id)) {
-      dispatch({ type: ACTION.TOGGLE, id });
-    } else {
-      dispatch({ type: ACTION.SHOW, id, z: 1 });
-    }
-  };
+  }, [id, isTabHidden, originX, originY]);
 
   return (
     <>
@@ -85,20 +85,20 @@ const Tab = ({
         style={{
           x: defaultPosition.x,
           y: defaultPosition.y,
-          zIndex,
+          zIndex: zIndex ?? 0,
           originX,
           originY,
-          pointerEvents: isHidden ? 'none' : 'auto',
+          pointerEvents: isTabHidden ? 'none' : 'auto',
         }}
         variants={VARIANTS}
         initial={false}
         animate={
-          !isInActiveGroup ? 'inactive' : isHidden ? 'hidden' : 'visible'
+          !isInActiveGroup ? 'inactive' : isTabHidden ? 'hidden' : 'visible'
         }
         drag
         dragConstraints={dragConstraintsRef}
         dragMomentum={false}
-        onPointerDown={handleFocus}
+        onPointerDown={handleTabFocus}
         ref={ref}
       >
         {/* Title bar */}
@@ -107,7 +107,7 @@ const Tab = ({
           <button
             className="ml-5 rounded-full hover:bg-gray-600"
             aria-label="minimize tab button"
-            onClick={handleHide}
+            onClick={handleTabHide}
           >
             <img className="size-4.5" src={hide} aria-hidden={true} />
           </button>
@@ -128,12 +128,12 @@ const Tab = ({
       {slot &&
         state &&
         createPortal(
-          <TabButton
+          <TaskbarButton
             ref={buttonRef}
-            isFocused={isFocused(state, id)}
+            isFocused={isTabFocused}
             isHidden={false}
-            isPressed={isHidden}
-            onClick={() => handleClick(state, id)}
+            isPressed={isTabHidden}
+            onClick={handleTaskbarButtonClick}
             children={title}
           />,
           slot
@@ -142,4 +142,4 @@ const Tab = ({
   );
 };
 
-export { Tab };
+export { Tab, TAB_STYLE };

@@ -1,14 +1,6 @@
-import { TAB_STYLE } from '../tabs/data/createTab.js';
-import {
-  ACTION,
-  isFocused,
-  isShown,
-  zIndexOf,
-} from './TabManager/tabManagerReducer.js';
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
-import { Tab } from '../tabs/Tab.jsx';
-import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { TAB_STYLE, Tab } from '../tabs/Tab/Tab.jsx';
 
 const GROUP_MANAGER_ID = 'group-manager';
 
@@ -22,7 +14,6 @@ const GroupManagerContainer = ({ groups = [], dragConstraintsRef }) => {
 
 const GroupManager = ({ groups = [], dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
-  const { getNextZ } = useDesktopContext();
 
   return (
     <Tab
@@ -31,16 +22,9 @@ const GroupManager = ({ groups = [], dragConstraintsRef }) => {
       tabStyle={TAB_STYLE.BORDERED}
       defaultPosition={{ x: 0, y: 0 }}
       isInActiveGroup={true}
-      isHidden={!isShown(state, GROUP_MANAGER_ID)}
-      isFocused={!isFocused(state, GROUP_MANAGER_ID)}
-      zIndex={zIndexOf(state, GROUP_MANAGER_ID)}
-      handleFocus={() =>
-        dispatch({ type: ACTION.FOCUS, id: GROUP_MANAGER_ID, z: getNextZ() })
-      }
-      handleHide={() => dispatch({ type: ACTION.HIDE, id: GROUP_MANAGER_ID })}
-      dragConstraintsRef={dragConstraintsRef}
       state={state}
       dispatch={dispatch}
+      dragConstraintsRef={dragConstraintsRef}
     >
       <GroupManagerContent groups={groups} />
     </Tab>
