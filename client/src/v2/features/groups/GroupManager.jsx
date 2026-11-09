@@ -1,6 +1,7 @@
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { TAB_STYLE, Tab } from '../tabs/Tab/Tab.jsx';
+import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
 
 const GROUP_MANAGER_ID = 'group-manager';
 
@@ -33,6 +34,7 @@ const GroupManager = ({ groups = [], dragConstraintsRef }) => {
 
 const GroupManagerContent = ({ groups = [] }) => {
   const MENU_ITEMS = ['File', 'Edit', 'View', 'Go', 'Help'];
+  const { activeGroupId, setActiveGroupId } = useDesktopContext();
 
   return (
     <div className="flex flex-col">
@@ -85,12 +87,12 @@ const GroupManagerContent = ({ groups = [] }) => {
                     key={g.id}
                     className={[
                       'block h-full w-full px-1 text-left text-white hover:brightness-75',
-                      index % 2 === 1
+                      index % 2 === 0
                         ? 'file-manager-row-header-cell-a'
                         : 'file-manager-row-header-cell-b',
-                      //   state.activeGroupId === g.id ? 'underline' : '',
+                      activeGroupId === g.id ? 'underline' : '',
                     ].join(' ')}
-                    onClick={() => {}}
+                    onClick={() => setActiveGroupId(g.id)}
                   >
                     {g.name}
                   </button>

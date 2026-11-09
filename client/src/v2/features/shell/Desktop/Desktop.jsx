@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { HomeGroup } from '../../groups/HomeGroup/HomeGroup.jsx';
+import { HomeGroup, HomeGroupData } from '../../groups/HomeGroup/HomeGroup.jsx';
 import { GroupManager } from '../../groups/GroupManager.jsx';
 import { DesktopContextProvider } from './DesktopContext.jsx';
 
@@ -13,10 +13,11 @@ const Desktop = () => {
 
 const DesktopContent = () => {
   const containerRef = useRef(null);
+  const groups = [HomeGroupData];
 
   return (
     <main className="site-bg relative h-full w-full" ref={containerRef}>
-      <GroupManager dragConstraintsRef={containerRef} />
+      <GroupManager groups={groups} dragConstraintsRef={containerRef} />
       <HomeGroup dragConstraintsRef={containerRef} />
     </main>
   );
