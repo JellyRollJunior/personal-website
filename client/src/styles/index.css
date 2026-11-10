@@ -176,8 +176,9 @@
   position: relative;
   font-size: 0.75rem;
   font-weight: bold;
-  white-space: pre;
+}
 
+@utility terminal-static-line {
   &::before {
     content: '';
     position: absolute;

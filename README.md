@@ -27,6 +27,8 @@
 - tab icons
 - separate file manager tab with extra space0
 
+- project description icon stack
+
 - bug
     - selecting projects shifts site-bg
         - too many tabs buttons -> cause strip to move up

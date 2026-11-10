@@ -8,6 +8,7 @@ import {
   TRICKCAL_BUG_TRACKER,
 } from '../../../data/projects.js';
 import { worksGroupData } from '../data/groups.js';
+import { ProjectContent } from '../../tabs/ProjectContent.jsx';
 
 const WorksGroup = ({ dragConstraintsRef }) => {
   return (
@@ -40,6 +41,27 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
           dragConstraintsRef={dragConstraintsRef}
         >
           <ImageCarousel imageArray={p.images} />
+        </Tab>
+      ))}
+
+      {projects.map((p) => (
+        <Tab
+          key={p.id}
+          id={p.id + '-details'}
+          title={p.title + ' - Details'}
+          tabStyle={TAB_STYLE.BORDERED}
+          defaultPosition={{ x: 0, y: 0 }}
+          isInActiveGroup={isActiveGroup}
+          state={state}
+          dispatch={dispatch}
+          dragConstraintsRef={dragConstraintsRef}
+        >
+          <ProjectContent
+            title={p.title}
+            body={p.description}
+            repoLink={p.repoLink}
+            demoLink={p.demoLink}
+          />
         </Tab>
       ))}
     </>

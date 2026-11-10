@@ -38,7 +38,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-text-green bg-black px-5 py-3">
+        <div className="terminal terminal-static-line terminal-text-green bg-black px-5 py-3">
           <p>
             Click{' '}
             <a className="underline" href="mailto:BrandonLin9716@gmail.com">
@@ -61,7 +61,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-text-orange bg-black px-5 py-3">
+        <div className="terminal terminal-static-line terminal-text-orange bg-black px-5 py-3">
           <h4 className="">Reach me through social media:</h4>
           <div className="mt-3 flex w-full items-center justify-center gap-8">
             <a
