@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import './v2-fonts.css';
 
 :root {
   /* Colors */
@@ -11,6 +12,11 @@
   --dark-slate-gray: #24292d;
   --intense-black: #1a1919;
 
+  --neon-green: #03ca03;
+  --spring-green: #00ff88;
+  --tomato-orange: #ff7627;
+  --mac-n-cheese: #f8b78f;
+
   --pansy-petal: #654864;
 }
 
@@ -19,6 +25,8 @@
 .v2-base {
   /* Site background */
   --site-bg-image: url('./../v2/assets/images/placeholder.jpg');
+
+  --font-primary: 'arimo', arial;
 
   --text-primary: var(--white);
   --text-secondary: var(--light-gray);
@@ -41,14 +49,25 @@
   --carousel-index-button-selected-bg: var(--pansy-petal);
 
   --external-link-highlight-color: var(--pansy-petal);
+
+  --terminal-font: 'Cascadia Code', arial;
+  --terminal-text-green: var(--neon-green);
+  --terminal-text-green-shadow: var(--spring-green);
+  --terminal-text-orange: var(--tomato-orange);
+  --terminal-text-orange-shadow: var(--mac-n-cheese);
 }
 
 @utility v2-base {
   color: var(--text-primary);
+  font-family: var(--font-primary), arial;
 }
 
 @utility v2-text-secondary {
   color: var(--text-secondary);
+}
+
+@utility font-kaisei-opti {
+  font-family: 'Kaisei Opti', arial;
 }
 
 @utility site-bg {
@@ -153,16 +172,46 @@
   background: var(--external-link-highlight-color);
 }
 
+@utility terminal {
+  position: relative;
+  font-size: 0.75rem;
+  font-weight: bold;
+  white-space: pre;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0.2) 3px
+    );
+    pointer-events: none;
+  }
+}
+
+@utility terminal-text-green {
+  color: var(--terminal-text-green);
+  text-shadow: 0 0 5px var(--terminal-text-green-shadow);
+}
+
+@utility terminal-text-orange {
+  color: var(--terminal-text-orange);
+  text-shadow: 0 0 5px var(--terminal-text-orange-shadow);
+}
+
 /* ------------------------------------------------------------------------------------- */
 /* Version 1 Styling */
 @font-face {
   font-family: 'orbitron';
-  src: url(../assets/fonts/orbitron-variablefont_wght-webfont.woff2);
+  src: url('./../v1/assets/fonts/orbitron-variablefont_wght-webfont.woff2');
 }
 
 @font-face {
   font-family: 'saira';
-  src: url(../assets/fonts/saira-variablefont_wdthwght-webfont.woff2);
+  src: url('./../v1/assets/fonts/saira-variablefont_wdthwght-webfont.woff2');
 }
 
 @theme {

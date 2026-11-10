@@ -30,64 +30,65 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
       {/* Email Tab */}
       <Tab
         id={EMAIL_TAB_ID}
-        title={'Email'}
-        tabStyle={TAB_STYLE.BORDERED}
+        title={'User Email'}
+        tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <h2>Let's Connect!</h2>
-        <p>
-          Click{' '}
-          <a className="underline" href="mailto:BrandonLin9716@gmail.com">
-            Here
-          </a>{' '}
-          to send me an e-mail at:
-        </p>
-        <h3 className="mt-1 text-xl font-bold break-all">
-          BrandonLin9716@gmail.com
-        </h3>
+        <div className="terminal terminal-text-green bg-black px-5 py-3">
+          <p>
+            Click{' '}
+            <a className="underline" href="mailto:BrandonLin9716@gmail.com">
+              here
+            </a>{' '}
+            to send me an e-mail at:
+          </p>
+          <h3 className="break-all">BrandonLin9716@gmail.com</h3>
+        </div>
       </Tab>
 
       {/* Socials Tab */}
       <Tab
         id={SOCIALS_TAB_ID}
         title={'Socials'}
-        tabStyle={TAB_STYLE.BORDERED}
+        tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <h4 className="font-saira">Reach me through social media:</h4>
-        <div className="mt-2 flex items-center justify-center gap-8">
-          <a
-            className="inline-block w-[42px] shrink-0"
-            href="https://github.com/jellyrolljunior"
-            target="”_blank”"
-            rel="noopener"
-          >
-            <img className="w-full" src={github} />
-          </a>
-          <a
-            className="inline-block w-[42px] shrink-0"
-            href="https://www.instagram.com/river.flows__"
-            target="”_blank”"
-            rel="noopener"
-          >
-            <img className="w-full" src={instagram} />
-          </a>
-          <a
-            className="inline-block w-[42px] shrink-0"
-            href="https://www.linkedin.com/in/jellyrolljunior/"
-            target="”_blank”"
-            rel="noopener"
-          >
-            <img className="w-full" src={linkedin} />
-          </a>
+        <div className="terminal terminal-text-orange bg-black px-5 py-3">
+          <h4 className="">Reach me through social media:</h4>
+          <div className="mt-3 flex w-full items-center justify-center gap-8">
+            <a
+              className="inline-block w-[38px] shrink-0"
+              href="https://github.com/jellyrolljunior"
+              target="”_blank”"
+              rel="noopener"
+            >
+              <img className="w-full" src={github} aria-hidden={true} />
+            </a>
+            <a
+              className="inline-block w-[38px] shrink-0"
+              href="https://www.instagram.com/river.flows__"
+              target="”_blank”"
+              rel="noopener"
+            >
+              <img className="w-full" src={instagram} aria-hidden={true} />
+            </a>
+            <a
+              className="inline-block w-[38px] shrink-0"
+              href="https://www.linkedin.com/in/jellyrolljunior/"
+              target="”_blank”"
+              rel="noopener"
+            >
+              <img className="w-full" src={linkedin} aria-hidden={true} />
+            </a>
+          </div>
         </div>
       </Tab>
     </>

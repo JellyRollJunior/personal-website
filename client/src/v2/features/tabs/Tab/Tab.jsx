@@ -102,7 +102,7 @@ const Tab = ({
         ref={ref}
       >
         {/* Title bar */}
-        <header className="tab-header-gradient flex min-w-2xs items-center px-3 pt-1.5 pb-1 text-xs hover:cursor-grab active:cursor-grabbing">
+        <header className="tab-header-gradient font-kaisei-opti flex min-w-2xs items-center px-3 pt-1.5 pb-1 text-xs hover:cursor-grab active:cursor-grabbing">
           <span className="block flex-1">{title}</span>
           <button
             className="ml-5 rounded-full hover:bg-gray-600"
