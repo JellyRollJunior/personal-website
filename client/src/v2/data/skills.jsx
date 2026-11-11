@@ -39,74 +39,102 @@ import {
   SiPostman,
 } from 'react-icons/si';
 
-const LANGUAGES = [
-  { icon: SiJavascript, label: 'JavaScript' },
-  { icon: SiTypescript, label: 'TypeScript' },
-  { icon: SiHtml5, label: 'HTML5' },
-  { icon: FaCss3Alt, label: 'CSS3' },
-];
+const LANGUAGES = {
+  id: 'languages',
+  title: 'Languages',
+  icons: [
+    { icon: SiJavascript, label: 'JavaScript' },
+    { icon: SiTypescript, label: 'TypeScript' },
+    { icon: SiHtml5, label: 'HTML5' },
+    { icon: FaCss3Alt, label: 'CSS3' },
+    { icon: FaJava, label: 'Java' },
+  ],
+};
 
-const FRONTEND = [
-  { icon: SiReact, label: 'React' },
-  { icon: RiTailwindCssFill, label: 'Tailwind CSS' },
-  { icon: SiVite, label: 'Vite' },
-  { icon: SiTanstack, label: 'TanStack Query' },
-  { icon: SiReactrouter, label: 'React Router' },
-  { icon: SiFramer, label: 'Framer Motion' },
-  { icon: SiEjs, label: 'EJS' },
-];
+const FRONTEND = {
+  id: 'frontend',
+  title: 'Frontend',
+  icons: [
+    { icon: SiReact, label: 'React' },
+    { icon: RiTailwindCssFill, label: 'Tailwind CSS' },
+    { icon: SiVite, label: 'Vite' },
+    { icon: SiTanstack, label: 'TanStack Query' },
+    { icon: SiReactrouter, label: 'React Router' },
+    { icon: SiFramer, label: 'Framer Motion' },
+    { icon: SiEjs, label: 'EJS' },
+  ],
+};
 
-const BACKEND = [
-  { icon: FaNodeJs, label: 'Node.js' },
-  { icon: SiExpress, label: 'Express' },
-  { icon: SiSocketdotio, label: 'Socket.IO' },
-  { icon: SiPassport, label: 'Passport' },
-  { icon: SiZod, label: 'Zod' },
-];
+const BACKEND = {
+  id: 'backend',
+  title: 'Backend',
+  icons: [
+    { icon: FaNodeJs, label: 'Node.js' },
+    { icon: SiExpress, label: 'Express' },
+    { icon: SiSocketdotio, label: 'Socket.IO' },
+    { icon: SiPassport, label: 'Passport' },
+    { icon: SiZod, label: 'Zod' },
+  ],
+};
 
-const DATA = [
-  { icon: SiPostgresql, label: 'PostgreSQL' },
-  { icon: SiPrisma, label: 'Prisma' },
-  { icon: DiRedis, label: 'Redis' },
-  { icon: SiNeon, label: 'Neon' },
-  { icon: SiSupabase, label: 'Supabase' },
-];
+const DATA = {
+  id: 'data',
+  title: 'Data',
+  icons: [
+    { icon: SiPostgresql, label: 'PostgreSQL' },
+    { icon: SiPrisma, label: 'Prisma' },
+    { icon: DiRedis, label: 'Redis' },
+    { icon: SiNeon, label: 'Neon' },
+    { icon: SiSupabase, label: 'Supabase' },
+  ],
+};
 
-const TOOLS = [
-  { icon: SiGit, label: 'Git' },
-  { icon: SiGithub, label: 'GitHub' },
-  { icon: SiNpm, label: 'npm' },
-  { icon: SiPnpm, label: 'pnpm' },
-  { icon: SiTurborepo, label: 'Turborepo' },
-  { icon: VscVscodeInsiders, label: 'VS Code' },
-  { icon: SiPostman, label: 'Postman' },
-];
+const TOOLS = {
+  id: 'tools',
+  title: 'Tools',
+  icons: [
+    { icon: SiGit, label: 'Git' },
+    { icon: SiGithub, label: 'GitHub' },
+    { icon: SiNpm, label: 'npm' },
+    { icon: SiPnpm, label: 'pnpm' },
+    { icon: SiTurborepo, label: 'Turborepo' },
+    { icon: VscVscodeInsiders, label: 'VS Code' },
+    { icon: SiPostman, label: 'Postman' },
+  ],
+};
 
-const DEPLOY = [
-  { icon: SiDocker, label: 'Docker' },
-  { icon: SiNginx, label: 'Nginx' },
-  { icon: SiLinux, label: 'Linux' },
-  { icon: SiRender, label: 'Render' },
-  { icon: SiNetlify, label: 'Netlify' },
-  { icon: SiKoyeb, label: 'Koyeb' },
-];
+const DEPLOY = {
+  id: 'deploy',
+  title: 'Deploy',
+  icons: [
+    { icon: SiDocker, label: 'Docker' },
+    { icon: SiNginx, label: 'Nginx' },
+    { icon: SiLinux, label: 'Linux' },
+    { icon: SiRender, label: 'Render' },
+    { icon: SiNetlify, label: 'Netlify' },
+    { icon: SiKoyeb, label: 'Koyeb' },
+  ],
+};
 
-const TESTING = [
-  { icon: SiVitest, label: 'Vitest' },
-  { icon: SiJest, label: 'Jest' },
-  { icon: FaJava, label: 'Java' },
-  { icon: SiSelenium, label: 'Selenium' },
-  { icon: SiJenkins, label: 'Jenkins' },
-];
+const TESTING = {
+  id: 'testing',
+  title: 'Testing',
+  icons: [
+    { icon: SiVitest, label: 'Vitest' },
+    { icon: SiJest, label: 'Jest' },
+    { icon: SiSelenium, label: 'Selenium' },
+    { icon: SiJenkins, label: 'Jenkins' },
+  ],
+};
 
-const SKILLS = Object.freeze({
-  Languages: LANGUAGES,
-  Frontend: FRONTEND,
-  Backend: BACKEND,
-  Data: DATA,
-  Tools: TOOLS,
-  Deploy: DEPLOY,
-  Testing: TESTING,
-});
+const SKILLS = Object.freeze([
+  LANGUAGES,
+  FRONTEND,
+  BACKEND,
+  DATA,
+  TOOLS,
+  DEPLOY,
+  TESTING,
+]);
 
 export { SKILLS };

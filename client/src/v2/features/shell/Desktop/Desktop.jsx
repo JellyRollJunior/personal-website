@@ -4,7 +4,7 @@ import { GroupManager } from '../../groups/GroupManager.jsx';
 import { IntroGroup } from '../../groups/IntroGroup/IntroGroup.jsx';
 import { WorksGroup } from '../../groups/WorksGroup/WorksGroup.jsx'
 import { ContactGroup } from '../../groups/ContactGroup.jsx';
-import { SkillsToolsGroup } from '../../groups/SkillsToolsGroup/SkillsToolsGroup.jsx';
+import { SkillsAndToolsGroup } from '../../groups/SkillsAndToolsGroup/SkillsAndToolsGroup.jsx';
 
 const Desktop = () => {
   return (
@@ -22,7 +22,7 @@ const DesktopContent = () => {
       <GroupManager dragConstraintsRef={containerRef} />
       <IntroGroup dragConstraintsRef={containerRef} />
       <WorksGroup dragConstraintsRef={containerRef} />
-      <SkillsToolsGroup dragConstraintsRef={containerRef} />
+      <SkillsAndToolsGroup dragConstraintsRef={containerRef} />
       <ContactGroup dragConstraintsRef={containerRef} />
     </main>
   );

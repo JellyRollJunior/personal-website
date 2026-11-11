@@ -6,7 +6,7 @@ const introGroupData = {
     dateModified: '09-11-2026',
 };
 
-const skillsToolsGroupData = {
+const skillsAndToolsGroupData = {
     id: 'skills-tools',
     name: 'Skills & Tools',
     size: '250mb',
@@ -33,14 +33,14 @@ const contactGroupData = {
 const groups = [
     introGroupData,
     worksGroupData,
-    skillsToolsGroupData,
+    skillsAndToolsGroupData,
     contactGroupData,
 ];
 
 export {
     introGroupData,
     worksGroupData,
-    skillsToolsGroupData,
+    skillsAndToolsGroupData,
     contactGroupData,
     groups,
 };

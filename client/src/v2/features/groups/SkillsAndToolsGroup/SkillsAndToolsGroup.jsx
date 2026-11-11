@@ -2,23 +2,48 @@ import { useTabManager } from '../TabManager/useTabManager.js';
 import { TabManagerProvider } from '../TabManager/TabManagerContext.jsx';
 import { useDesktopContext } from '../../shell/Desktop/useDesktopContext.js';
 import { Tab, TAB_STYLE } from '../../tabs/Tab/Tab.jsx';
-import { skillsToolsGroupData } from '../data/groups.js';
+import { skillsAndToolsGroupData } from '../data/groups.js';
+import { SKILLS } from '../../../data/skills.jsx';
+import { IconGrid } from '../../tabs/IconGrid.jsx';
 
 const SkillsAndToolsGroup = ({ dragConstraintsRef }) => {
   return (
     <TabManagerProvider>
-      <SkillsToolsGroupContent dragConstraintsRef={dragConstraintsRef} />
+      <SkillsAndToolsGroupContent dragConstraintsRef={dragConstraintsRef} />
     </TabManagerProvider>
   );
 };
 
-const SkillsToolsGroupContent = ({ dragConstraintsRef }) => {
+const SkillsAndToolsGroupContent = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
   const { activeGroupId } = useDesktopContext();
 
-  const isActiveGroup = activeGroupId === skillsToolsGroupData.id;
+  const isActiveGroup = activeGroupId === skillsAndToolsGroupData.id;
 
-  return <></>;
+  return (
+    <>
+      {SKILLS.map((s) => (
+        <Tab
+          key={s.id}
+          id={s.id}
+          title={s.title}
+          tabStyle={TAB_STYLE.BORDERLESS}
+          defaultPosition={{ x: 0, y: 0 }}
+          isInActiveGroup={isActiveGroup}
+          state={state}
+          dispatch={dispatch}
+          dragConstraintsRef={dragConstraintsRef}
+        >
+          <div className="terminal terminal-static-line font-kaisei-opti bg-black px-5 py-5">
+            <IconGrid gridCols={3} jsxIconArray={s.icons} />
+            <h2 className="terminal-text-green mt-3 text-center text-base">
+              {s.title}
+            </h2>
+          </div>
+        </Tab>
+      ))}
+    </>
+  );
 };
 
 export { SkillsAndToolsGroup };
