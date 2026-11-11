@@ -39,3 +39,6 @@
         - fixed size
         - make text spill over
         - if too many tabs to fit screen, scroll
+
+- tab
+    - tab base positions

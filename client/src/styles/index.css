@@ -182,6 +182,7 @@
   position: relative;
   font-size: 0.75rem;
   font-weight: bold;
+  text-shadow: 0 0 5px var(--icon-grid-text-shadow);
 }
 
 @utility terminal-static-line {
@@ -209,10 +210,10 @@
   text-shadow: 0 0 5px var(--terminal-text-orange-shadow);
 }
 
+
 @utility icon-grid-icons {
-  @apply border-white/10  transition-colors hover:bg-white/10 v2-text-secondary;
+  @apply v2-text-secondary border-white/10 transition-colors hover:bg-white/10;
   background: var(--icon-grid-bg);
-  text-shadow: 0 0 5px var(--icon-grid-text-shadow);
 
   &:hover {
     color: var(--icon-grid-hover-color);

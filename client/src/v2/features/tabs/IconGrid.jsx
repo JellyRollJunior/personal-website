@@ -28,7 +28,7 @@ const IconGrid = ({ className = '', gridCols = 3, jsxIconArray }) => {
       {jsxIconArray.map(({ icon: Icon, label }) => (
         <motion.li
           key={label}
-          className="group icon-grid-icons flex flex-col items-center gap-2 rounded-lg border px-2 py-3"
+          className="icon-grid-icons flex flex-col items-center gap-2 rounded-lg border px-2 py-3"
           whileHover={{ y: -2 }}
           variants={{
             hidden: { opacity: 0, x: -20 },
