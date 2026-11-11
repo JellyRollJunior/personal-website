@@ -10,7 +10,7 @@ const useTab = ({ id, state, dispatch }) => {
     const { getNextZ } = useDesktopContext();
 
     const isTabHidden = !isShown(state, id);
-    const isTabFocused = !isFocused(state, id);
+    const isTabFocused = isFocused(state, id);
     const zIndex = zIndexOf(state, id);
 
     const handleTabFocus = () => {

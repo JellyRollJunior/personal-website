@@ -30,7 +30,6 @@ const tabManagerReducer = (state, action) => {
             };
         }
         case ACTION.TOGGLE: {
-            // forwards the whole action so `z` reaches SHOW
             return tabManagerReducer(state, {
                 ...action,
                 type: state.hidden.includes(id) ? ACTION.SHOW : ACTION.HIDE,
@@ -45,7 +44,7 @@ const isShown = (state, id) => !state.hidden.includes(id);
 
 const zIndexOf = (state, id) => state.z[id] ?? 0;
 
-// Focused *within this manager*: shown, and highest z among its shown tabs
+// Focused: shown, and highest z among shown tabs
 const isFocused = (state, id) => {
     if (!isShown(state, id)) return false;
     const z = zIndexOf(state, id);

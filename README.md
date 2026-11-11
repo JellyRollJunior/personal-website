@@ -34,4 +34,3 @@
         - too many tabs buttons -> cause strip to move up
         - research how overflow tabs work are handled
     - tab -> round content edges
-    - is focus / reducer data is late by one refresh
