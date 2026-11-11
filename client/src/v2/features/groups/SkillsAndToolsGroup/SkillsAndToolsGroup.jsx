@@ -4,7 +4,7 @@ import { useDesktopContext } from '../../shell/Desktop/useDesktopContext.js';
 import { Tab, TAB_STYLE } from '../../tabs/Tab/Tab.jsx';
 import { skillsToolsGroupData } from '../data/groups.js';
 
-const SkillsToolsGroup = ({ dragConstraintsRef }) => {
+const SkillsAndToolsGroup = ({ dragConstraintsRef }) => {
   return (
     <TabManagerProvider>
       <SkillsToolsGroupContent dragConstraintsRef={dragConstraintsRef} />
@@ -18,11 +18,7 @@ const SkillsToolsGroupContent = ({ dragConstraintsRef }) => {
 
   const isActiveGroup = activeGroupId === skillsToolsGroupData.id;
 
-  return (
-    <>
-      
-    </>
-  );
+  return <></>;
 };
 
-export { SkillsToolsGroup };
+export { SkillsAndToolsGroup };
