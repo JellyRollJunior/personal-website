@@ -131,7 +131,7 @@ const Tab = ({
           <TaskbarButton
             ref={buttonRef}
             isFocused={isTabFocused}
-            isHidden={false}
+            isHidden={!isInActiveGroup}
             isPressed={isTabHidden}
             onClick={handleTaskbarButtonClick}
             children={title}

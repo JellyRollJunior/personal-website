@@ -34,3 +34,8 @@
         - too many tabs buttons -> cause strip to move up
         - research how overflow tabs work are handled
     - tab -> round content edges
+    - task bar button - label doesnt expand to fit button space
+        - make it like a real taskbar
+        - fixed size
+        - make text spill over
+        - if too many tabs to fit screen, scroll
