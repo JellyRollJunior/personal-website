@@ -20,7 +20,7 @@ const GroupManager = ({ dragConstraintsRef }) => {
   return (
     <Tab
       id={GROUP_MANAGER_ID}
-      title={'File Manager'}
+      title={'Navigator'}
       tabStyle={TAB_STYLE.BORDERLESS}
       defaultPosition={{ x: 0, y: 0 }}
       isInActiveGroup={true}
@@ -28,12 +28,12 @@ const GroupManager = ({ dragConstraintsRef }) => {
       dispatch={dispatch}
       dragConstraintsRef={dragConstraintsRef}
     >
-      <GroupManagerContent groups={groups} />
+      <Navigator groups={groups} />
     </Tab>
   );
 };
 
-const GroupManagerContent = ({ groups = [] }) => {
+const Navigator = ({ groups = [] }) => {
   const MENU_ITEMS = ['File', 'Edit', 'View', 'Go', 'Help'];
   const { activeGroupId, setActiveGroupId } = useDesktopContext();
 

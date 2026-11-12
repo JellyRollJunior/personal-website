@@ -1,10 +1,10 @@
 import { useRef } from 'react';
 import { DesktopContextProvider } from './DesktopContext.jsx';
 import { GroupManager } from '../../groups/GroupManager.jsx';
-import { IntroGroup } from '../../groups/IntroGroup/IntroGroup.jsx';
+import { IntroGroup } from '../../groups/IntroGroup.jsx';
 import { WorksGroup } from '../../groups/WorksGroup/WorksGroup.jsx'
 import { ContactGroup } from '../../groups/ContactGroup.jsx';
-import { SkillsAndToolsGroup } from '../../groups/SkillsAndToolsGroup/SkillsAndToolsGroup.jsx';
+import { SkillsAndToolsGroup } from '../../groups/SkillsAndToolsGroup.jsx';
 
 const Desktop = () => {
   return (

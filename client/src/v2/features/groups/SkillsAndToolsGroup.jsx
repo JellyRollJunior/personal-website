@@ -1,10 +1,10 @@
-import { useTabManager } from '../TabManager/useTabManager.js';
-import { TabManagerProvider } from '../TabManager/TabManagerContext.jsx';
-import { useDesktopContext } from '../../shell/Desktop/useDesktopContext.js';
-import { Tab, TAB_STYLE } from '../../tabs/Tab/Tab.jsx';
-import { skillsAndToolsGroupData } from '../data/groups.js';
-import { SKILLS } from '../../../data/skills.jsx';
-import { IconGrid } from '../../tabs/IconGrid.jsx';
+import { useTabManager } from './TabManager/useTabManager.js';
+import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
+import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
+import { skillsAndToolsGroupData } from './data/groups.js';
+import { SKILLS } from '../../data/skills.jsx';
+import { IconGrid } from '../tabs/IconGrid.jsx';
 
 const SkillsAndToolsGroup = ({ dragConstraintsRef }) => {
   return (

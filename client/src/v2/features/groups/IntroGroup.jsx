@@ -1,14 +1,14 @@
-import me from './../../../assets/images/me.JPG';
+import me from './../../assets/images/me.JPG';
 
-import { introGroupData } from '../data/groups.js';
-import { TRICKCAL_BUG_TRACKER } from '../../../data/projects.js';
-import { Tab, TAB_STYLE } from '../../tabs/Tab/Tab.jsx';
-import { TabManagerProvider } from '../TabManager/TabManagerContext.jsx';
-import { useTabManager } from '../TabManager/useTabManager.js';
-import { useDesktopContext } from '../../shell/Desktop/useDesktopContext.js';
-import { ImageCarousel } from '../../../common/components/ImageCarousel.jsx';
-import { ProjectContent } from '../../tabs/ProjectContent.jsx';
-import { LANGUAGES } from '../../../data/languages.js';
+import { introGroupData } from './data/groups.js';
+import { TRICKCAL_BUG_TRACKER } from '../../data/projects.js';
+import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
+import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
+import { useTabManager } from './TabManager/useTabManager.js';
+import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { ImageCarousel } from '../../common/components/ImageCarousel.jsx';
+import { ProjectContent } from '../tabs/ProjectContent.jsx';
+import { LANGUAGES } from '../../data/languages.js';
 
 const IntroGroup = ({ dragConstraintsRef }) => {
   return (
