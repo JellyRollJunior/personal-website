@@ -51,6 +51,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dragConstraintsRef={dragConstraintsRef}
       >
         <div className="terminal terminal-static-line terminal-text-green tab-content px-5 py-3">
+          <h2>Want to chat? ٩(ˊᗜˋ*)و ♡</h2>
           <p>
             Click{' '}
             <a className="underline" href="mailto:BrandonLin9716@gmail.com">
@@ -74,7 +75,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dragConstraintsRef={dragConstraintsRef}
       >
         <div className="terminal terminal-static-line terminal-text-orange tab-content px-5 py-5">
-          <h4 className="text-center">Reach me through social media:</h4>
+          <h4 className="text-center text-sm">Reach me through social media:</h4>
           <div className="mt-3 flex w-full items-center justify-center gap-8">
             <a
               className="inline-block w-[38px] shrink-0"
@@ -101,6 +102,34 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
               <img className="w-full" src={linkedin} aria-hidden={true} />
             </a>
           </div>
+        </div>
+      </Tab>
+
+      {/* Version */}
+      <Tab
+        id={'contact:version'}
+        title={'@version'}
+        tabStyle={TAB_STYLE.BORDERLESS}
+        defaultPosition={{ x: 0, y: 0 }}
+        isInActiveGroup={isActiveGroup}
+        state={state}
+        dispatch={dispatch}
+        dragConstraintsRef={dragConstraintsRef}
+      >
+        <div className="terminal terminal-static-line terminal-text-green tab-content px-5 py-3">
+          brandonlin@Brandons-porfolio-site ~ % who am i
+          <br />
+          <span className="terminal-text-orange whitespace-pre">
+            Brandon Lin's Portfolio {"\t"} version 2.0 {"\t"} Nov 12 16:36 2026{' '}
+          </span>
+          <br />
+          brandonlin@Brandons-porfolio-site ~ % license
+          <br />
+          <span className="terminal-text-orange whitespace-pre">
+            Brandon Lin·2026 {"\t"} All Rights Reserved
+          </span>
+          <br />
+          brandonlin@Brandons-porfolio-site ~ %
         </div>
       </Tab>
     </>

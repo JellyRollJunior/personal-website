@@ -65,6 +65,9 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
             </span>{' '}
             and inspiration from the world around me.
           </p>
+          <p className="terminal-text-green mt-2 ml-auto w-fit">
+            ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
+          </p>
         </div>
       </Tab>
 
