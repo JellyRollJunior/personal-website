@@ -5,8 +5,8 @@
 - about me schpiel
 - version data tab
 - default positions
-- project description icon stack
 - mobile view ???
+- switch bg
 
 ## Bugs
 
