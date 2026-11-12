@@ -15,31 +15,18 @@ import smmHome from './../assets/images/sailorMoonMemory/memory-home.png';
 import smmLoading from './../assets/images/sailorMoonMemory/memory-loading.gif';
 
 import {
-    SiExpress,
-    SiPrisma,
-    SiSocketdotio,
-    SiJavascript,
-    SiReact,
-    SiTypescript,
-    SiTanstack,
-    SiRedis,
-    SiPostgresql,
-    SiZod,
-    SiDocker,
-} from 'react-icons/si';
-
-/* Icon Label Pairs */
-const EXPRESS = { icon: SiExpress, label: 'Express' };
-const PRISMA = { icon: SiPrisma, label: 'Prisma' };
-const SOCKET_IO = { icon: SiSocketdotio, label: 'Socket.IO' };
-const JAVASCRIPT = { icon: SiJavascript, label: 'JavaScript' };
-const REACT = { icon: SiReact, label: 'React' };
-const TYPESCRIPT = { icon: SiTypescript, label: 'TypeScript' };
-const TANSTACK = { icon: SiTanstack, label: 'TanStack' };
-const REDIS = { icon: SiRedis, label: 'Redis' };
-const POSTGRESQL = { icon: SiPostgresql, label: 'PostgreSQL' };
-const ZOD = { icon: SiZod, label: 'Zod' };
-const DOCKER = { icon: SiDocker, label: 'Docker' };
+    JAVASCRIPT,
+    TYPESCRIPT,
+    REACT,
+    TANSTACK_QUERY,
+    EXPRESS,
+    SOCKET_IO,
+    ZOD,
+    POSTGRESQL,
+    PRISMA,
+    REDIS,
+    DOCKER,
+} from './iconLabelPairs.js';
 
 /* Projects */
 const TRICKCAL_BUG_TRACKER = {
@@ -51,7 +38,7 @@ const TRICKCAL_BUG_TRACKER = {
     stackIcons: [
         TYPESCRIPT,
         REACT,
-        TANSTACK,
+        TANSTACK_QUERY,
         EXPRESS,
         PRISMA,
         SOCKET_IO,

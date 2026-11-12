@@ -1,130 +1,100 @@
-/* Imports */
-import { FaCss3Alt, FaNodeJs, FaJava } from 'react-icons/fa';
-import { RiTailwindCssFill } from 'react-icons/ri';
-import { DiRedis } from 'react-icons/di';
-import { VscVscodeInsiders } from 'react-icons/vsc';
 import {
-  SiTanstack,
-  SiVite,
-  SiReactrouter,
-  SiReact,
-  SiFramer,
-  SiEjs,
-  SiJavascript,
-  SiTypescript,
-  SiHtml5,
-  SiExpress,
-  SiSocketdotio,
-  SiPassport,
-  SiZod,
-  SiPrisma,
-  SiPostgresql,
-  SiNeon,
-  SiSupabase,
-  SiGit,
-  SiGithub,
-  SiNpm,
-  SiPnpm,
-  SiTurborepo,
-  SiDocker,
-  SiNginx,
-  SiLinux,
-  SiRender,
-  SiNetlify,
-  SiKoyeb,
-  SiVitest,
-  SiJest,
-  SiSelenium,
-  SiJenkins,
-  SiPostman,
-} from 'react-icons/si';
+  // Languages
+  JAVASCRIPT,
+  TYPESCRIPT,
+  HTML5,
+  CSS3,
+  JAVA,
+  // Frontend
+  REACT,
+  TAILWIND,
+  VITE,
+  TANSTACK_QUERY,
+  REACT_ROUTER,
+  FRAMER_MOTION,
+  EJS,
+  // Backend
+  NODE,
+  EXPRESS,
+  SOCKET_IO,
+  PASSPORT,
+  ZOD,
+  // Data
+  POSTGRESQL,
+  PRISMA,
+  REDIS,
+  NEON,
+  SUPABASE,
+  // Tools
+  GIT,
+  GITHUB,
+  NPM,
+  PNPM,
+  TURBOREPO,
+  VS_CODE,
+  POSTMAN,
+  // Deploy
+  DOCKER,
+  NGINX,
+  LINUX,
+  RENDER,
+  NETLIFY,
+  KOYEB,
+  // Testing
+  VITEST,
+  JEST,
+  SELENIUM,
+  JENKINS,
+} from './iconLabelPairs.js';
 
 const LANGUAGES = {
   id: 'languages',
   title: 'Languages',
-  icons: [
-    { icon: SiJavascript, label: 'JavaScript' },
-    { icon: SiTypescript, label: 'TypeScript' },
-    { icon: SiHtml5, label: 'HTML5' },
-    { icon: FaCss3Alt, label: 'CSS3' },
-    { icon: FaJava, label: 'Java' },
-  ],
+  icons: [JAVASCRIPT, TYPESCRIPT, HTML5, CSS3, JAVA],
 };
 
 const FRONTEND = {
   id: 'frontend',
   title: 'Frontend',
   icons: [
-    { icon: SiReact, label: 'React' },
-    { icon: RiTailwindCssFill, label: 'Tailwind CSS' },
-    { icon: SiVite, label: 'Vite' },
-    { icon: SiTanstack, label: 'TanStack Query' },
-    { icon: SiReactrouter, label: 'React Router' },
-    { icon: SiFramer, label: 'Framer Motion' },
-    { icon: SiEjs, label: 'EJS' },
+    REACT,
+    TAILWIND,
+    VITE,
+    TANSTACK_QUERY,
+    REACT_ROUTER,
+    FRAMER_MOTION,
+    EJS,
   ],
 };
 
 const BACKEND = {
   id: 'backend',
   title: 'Backend',
-  icons: [
-    { icon: FaNodeJs, label: 'Node.js' },
-    { icon: SiExpress, label: 'Express' },
-    { icon: SiSocketdotio, label: 'Socket.IO' },
-    { icon: SiPassport, label: 'Passport' },
-    { icon: SiZod, label: 'Zod' },
-  ],
+  icons: [NODE, EXPRESS, SOCKET_IO, PASSPORT, ZOD],
 };
 
 const DATA = {
   id: 'data',
   title: 'Data',
-  icons: [
-    { icon: SiPostgresql, label: 'PostgreSQL' },
-    { icon: SiPrisma, label: 'Prisma' },
-    { icon: DiRedis, label: 'Redis' },
-    { icon: SiNeon, label: 'Neon' },
-    { icon: SiSupabase, label: 'Supabase' },
-  ],
+  icons: [POSTGRESQL, PRISMA, REDIS, NEON, SUPABASE],
 };
 
 const TOOLS = {
   id: 'tools',
   title: 'Tools',
-  icons: [
-    { icon: SiGit, label: 'Git' },
-    { icon: SiGithub, label: 'GitHub' },
-    { icon: SiNpm, label: 'npm' },
-    { icon: SiPnpm, label: 'pnpm' },
-    { icon: SiTurborepo, label: 'Turborepo' },
-    { icon: VscVscodeInsiders, label: 'VS Code' },
-    { icon: SiPostman, label: 'Postman' },
-  ],
+  icons: [GIT, GITHUB, NPM, PNPM, TURBOREPO, VS_CODE, POSTMAN],
 };
 
 const DEPLOY = {
   id: 'deploy',
   title: 'Deploy',
-  icons: [
-    { icon: SiDocker, label: 'Docker' },
-    { icon: SiNginx, label: 'Nginx' },
-    { icon: SiLinux, label: 'Linux' },
-    { icon: SiRender, label: 'Render' },
-    { icon: SiNetlify, label: 'Netlify' },
-    { icon: SiKoyeb, label: 'Koyeb' },
-  ],
+  icons: [DOCKER, NGINX, LINUX, RENDER, NETLIFY, KOYEB],
 };
 
 const TESTING = {
   id: 'testing',
   title: 'Testing',
-  icons: [
-    { icon: SiVitest, label: 'Vitest' },
-    { icon: SiJest, label: 'Jest' },
-    { icon: SiSelenium, label: 'Selenium' },
-    { icon: SiJenkins, label: 'Jenkins' },
-  ],
+  icons: [VITEST, JEST, SELENIUM, JENKINS],
 };
 
 const SKILLS = Object.freeze([
