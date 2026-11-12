@@ -6,7 +6,7 @@ const TaskBar = () => {
   return (
     <>
       {/* Portaled buttons render in here */}
-      <div ref={setSlot} className="flex gap-1 border border-black p-1"></div>
+      <div ref={setSlot} className="flex overflow-x-auto w-full gap-1 border border-black py-1"></div>
     </>
   );
 };

@@ -1,6 +1,6 @@
 import { Desktop } from './Desktop/Desktop.jsx';
 import { TaskbarSlotProvider } from './../shell/Taskbar/TaskbarSlotContext.jsx';
-import { TaskBar } from './Taskbar/Taskbar.jsx';
+import { TaskBar } from './Taskbar/Taskbarz.jsx';
 
 const Shell = () => {
   return (

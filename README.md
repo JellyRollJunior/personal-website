@@ -3,7 +3,6 @@
 - sections
     - introduction
     - works
-    - skills & tools
     - About me
     - other works
     - contact

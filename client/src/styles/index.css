@@ -65,6 +65,10 @@
 @utility v2-base {
   color: var(--text-primary);
   font-family: var(--font-primary), arial;
+
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gray) transparent;
 }
 
 @utility v2-text-secondary {
@@ -209,7 +213,6 @@
   color: var(--terminal-text-orange);
   text-shadow: 0 0 5px var(--terminal-text-orange-shadow);
 }
-
 
 @utility icon-grid-icons {
   @apply v2-text-secondary border-white/10 transition-colors hover:bg-white/10;
