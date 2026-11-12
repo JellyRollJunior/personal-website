@@ -8,7 +8,6 @@ import { useTabManager } from './TabManager/useTabManager.js';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
 import { ImageCarousel } from '../../common/components/ImageCarousel.jsx';
 import { ProjectContent } from '../tabs/ProjectContent.jsx';
-import { LANGUAGES } from '../../data/languages.js';
 
 const IntroGroup = ({ dragConstraintsRef }) => {
   return (
@@ -59,32 +58,6 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
             responsive layouts using React, NodeJS, and inspiration from the
             world around me.
           </p>
-        </div>
-      </Tab>
-
-      {/* Languages */}
-      <Tab
-        id={'home:languages'}
-        title={'Spoken Languages'}
-        tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: 0, y: 0 }}
-        isInActiveGroup={isActiveGroup}
-        state={state}
-        dispatch={dispatch}
-        dragConstraintsRef={dragConstraintsRef}
-      >
-        <div className="px-5 py-3">
-          <h2 className="terminal-text-green text-center text-2xl">
-            Languages
-          </h2>
-          <ul className="terminal-text-content mt-5 grid max-w-2xs grid-cols-3 gap-x-3">
-            {LANGUAGES.map(({ icon, label }) => (
-              <li className="flex flex-col items-center gap-1">
-                <img className="size-[32px]" src={icon} aria-hidden={true} />
-                <div className="text-center text-sm break-keep">{label}</div>
-              </li>
-            ))}
-          </ul>
         </div>
       </Tab>
 

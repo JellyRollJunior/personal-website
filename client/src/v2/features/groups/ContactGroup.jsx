@@ -1,6 +1,7 @@
 import instagram from './../../assets/icons/instagram.svg';
 import github from './../../assets/icons/github.svg';
 import linkedin from './../../assets/icons/linkedin.svg';
+import kommy from './../../assets/images/kommy-w.PNG';
 
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
@@ -20,16 +21,27 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
   const { activeGroupId } = useDesktopContext();
 
-  const EMAIL_TAB_ID = 'contact:email';
-  const SOCIALS_TAB_ID = 'contact:socials';
-
   const isActiveGroup = activeGroupId === contactGroupData.id;
 
   return (
     <>
+      {/* Kommy */}
+      <Tab
+        id={'contact:kommy'}
+        title={'Wise Words from Kommy'}
+        tabStyle={TAB_STYLE.BORDERED}
+        defaultPosition={{ x: 0, y: 0 }}
+        isInActiveGroup={isActiveGroup}
+        state={state}
+        dispatch={dispatch}
+        dragConstraintsRef={dragConstraintsRef}
+      >
+        <img className="image-content" src={kommy} />
+      </Tab>
+
       {/* Email Tab */}
       <Tab
-        id={EMAIL_TAB_ID}
+        id={'contact:email'}
         title={'User Email'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
@@ -52,7 +64,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
 
       {/* Socials Tab */}
       <Tab
-        id={SOCIALS_TAB_ID}
+        id={'contact:socials'}
         title={'Socials'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}

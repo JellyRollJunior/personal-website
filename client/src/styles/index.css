@@ -229,6 +229,9 @@
   @apply terminal terminal-static-line v2-text-secondary font-kaisei-opti max-h-80 max-w-xs;
 }
 
+@utility image-content {
+  @apply pointer-events-none max-w-100 rounded-b-md;
+}
 /* ------------------------------------------------------------------------------------- */
 /* Version 1 Styling */
 @font-face {
