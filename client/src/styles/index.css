@@ -225,6 +225,10 @@
   }
 }
 
+@utility terminal-text-content {
+  @apply terminal terminal-static-line v2-text-secondary font-kaisei-opti max-h-80 max-w-xs;
+}
+
 /* ------------------------------------------------------------------------------------- */
 /* Version 1 Styling */
 @font-face {
