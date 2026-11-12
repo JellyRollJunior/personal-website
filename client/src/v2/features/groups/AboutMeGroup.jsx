@@ -78,7 +78,7 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="px-5 py-3">
+        <div className="tab-content px-5 py-3">
           <h2 className="terminal-text-green text-center text-2xl">
             Languages
           </h2>

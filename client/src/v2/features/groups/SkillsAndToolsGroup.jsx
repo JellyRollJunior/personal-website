@@ -34,7 +34,7 @@ const SkillsAndToolsGroupContent = ({ dragConstraintsRef }) => {
           dispatch={dispatch}
           dragConstraintsRef={dragConstraintsRef}
         >
-          <div className="terminal terminal-static-line font-kaisei-opti bg-black px-5 py-5">
+          <div className="terminal terminal-static-line font-kaisei-opti tab-content px-5 py-5">
             <IconGrid gridCols={3} jsxIconArray={s.icons} />
             <h2 className="terminal-text-green mt-3 text-center text-base">
               {s.title}

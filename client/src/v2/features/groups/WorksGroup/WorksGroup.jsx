@@ -49,7 +49,7 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
           key={p.id}
           id={p.id + '-details'}
           title={p.title + ' - Details'}
-          tabStyle={TAB_STYLE.BORDERED}
+          tabStyle={TAB_STYLE.BORDERLESS}
           defaultPosition={{ x: 0, y: 0 }}
           isInActiveGroup={isActiveGroup}
           state={state}

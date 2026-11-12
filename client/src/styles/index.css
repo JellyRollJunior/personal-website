@@ -42,6 +42,8 @@
 
   --tab-button-focused: var(--pansy-petal);
 
+  --tab-content-bg: var(--intense-black);
+
   --button-border: var(--pansy-petal);
   --button-bg: var(--intense-black);
   --button-hover-bg: var(--pansy-petal);
@@ -151,6 +153,10 @@
   border-bottom-width: var(--border-size);
 }
 
+@utility tab-content {
+  background: var(--tab-content-bg);
+}
+
 @utility tab-button-pressed {
   color: var(--text-secondary);
 }
@@ -232,6 +238,7 @@
 @utility image-content {
   @apply pointer-events-none max-w-100 rounded-b-md;
 }
+
 /* ------------------------------------------------------------------------------------- */
 /* Version 1 Styling */
 @font-face {

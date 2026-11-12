@@ -36,21 +36,21 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <img className="pointer-events-none max-w-100 rounded-b-md" src={me} />
+        <img className="image-content" src={me} />
       </Tab>
 
       {/* Intro Schpiel */}
       <Tab
         id={'home:schpiel'}
         title={'schpiel'}
-        tabStyle={TAB_STYLE.BORDERED}
+        tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal-text-content px-5 py-3">
+        <div className="terminal-text-content px-5 py-3 tab-content">
           <h2 className="terminal-text-orange text-2xl">Hi, I'm Brandon</h2>
           <p className="mt-2">
             Deeply invested in the life-long learning mentality, I'm a
@@ -77,7 +77,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
       <Tab
         id={TRICKCAL_BUG_TRACKER.id + '-details'}
         title={'Latest Work - Details'}
-        tabStyle={TAB_STYLE.BORDERED}
+        tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
         isInActiveGroup={isActiveGroup}
         state={state}
