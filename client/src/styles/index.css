@@ -24,7 +24,7 @@
 /* Version 2 Styling */
 .v2-base {
   /* Site background */
-  --site-bg-image: url('./../v2/assets/images/placeholder.jpg');
+  --site-bg-image: url('./../v2/assets/images/blooming.JPG');
 
   --font-primary: 'arimo', arial;
 
@@ -63,6 +63,7 @@
 }
 
 @utility v2-base {
+  @apply overflow-y-hidden;
   color: var(--text-primary);
   font-family: var(--font-primary), arial;
 

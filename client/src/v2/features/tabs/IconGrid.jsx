@@ -6,7 +6,7 @@ const IconGrid = ({ className = '', gridCols = 3, jsxIconArray }) => {
   return (
     <motion.ul
       className={[
-        'grid min-h-0 w-full min-w-0 gap-x-3 gap-y-7',
+        'grid min-h-0 w-full min-w-0 gap-3',
         `grid-cols-${gridCols}`,
         className,
       ].join(' ')}
