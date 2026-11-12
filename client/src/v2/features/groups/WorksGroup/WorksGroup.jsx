@@ -59,6 +59,7 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
           <ProjectContent
             title={p.title}
             body={p.description}
+            stackIcons={p.stackIcons}
             repoLink={p.repoLink}
             demoLink={p.demoLink}
           />

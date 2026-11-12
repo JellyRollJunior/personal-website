@@ -10,8 +10,6 @@
 
 ## Bugs
 
-
-
 ## Improvements
 
 - restyle image carousel 

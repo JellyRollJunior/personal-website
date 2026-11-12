@@ -94,6 +94,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         <ProjectContent
           title={TRICKCAL_BUG_TRACKER.title}
           body={TRICKCAL_BUG_TRACKER.description}
+          stackIcons={TRICKCAL_BUG_TRACKER.stackIcons}
           repoLink={TRICKCAL_BUG_TRACKER.repoLink}
           demoLink={TRICKCAL_BUG_TRACKER.demoLink}
         />
