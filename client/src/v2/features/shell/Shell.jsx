@@ -1,16 +1,19 @@
-import { Desktop } from './Desktop/Desktop.jsx';
 import { TaskbarSlotProvider } from './../shell/Taskbar/TaskbarSlotContext.jsx';
-import { TaskBar } from './Taskbar/TaskBar.jsx';
+import { DesktopContextProvider } from './Desktop/DesktopContext.jsx';
+import { Desktop } from './Desktop/Desktop.jsx';
+import { TaskBar } from './Taskbar/Taskbar.jsx';
 
 const Shell = () => {
   return (
     <TaskbarSlotProvider>
-      <div className="flex h-full w-full flex-col">
-        <div className="min-h-0 flex-1">
-          <Desktop />
+      <DesktopContextProvider>
+        <div className="flex h-full w-full flex-col">
+          <div className="min-h-0 flex-1">
+            <Desktop />
+          </div>
+          <TaskBar />
         </div>
-        <TaskBar />
-      </div>
+      </DesktopContextProvider>
     </TaskbarSlotProvider>
   );
 };

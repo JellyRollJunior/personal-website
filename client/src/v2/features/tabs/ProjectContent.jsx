@@ -23,7 +23,7 @@ const ProjectContent = ({ title, body, stackIcons, repoLink, demoLink }) => {
         )}
 
         {/* Links */}
-        <div className="mt-3 flex justify-end gap-5">
+        <div className="mt-1 flex justify-end gap-5">
           {repoLink && <ExternalLink href={repoLink}>Repository</ExternalLink>}
           {demoLink && (
             <ExternalLink className={'terminal-text-green'} href={demoLink}>

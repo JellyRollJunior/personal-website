@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import { DesktopContextProvider } from './DesktopContext.jsx';
 import { GroupManager } from '../../groups/GroupManager.jsx';
 import { IntroGroup } from '../../groups/IntroGroup.jsx';
 import { WorksGroup } from '../../groups/WorksGroup/WorksGroup.jsx';
@@ -10,14 +9,6 @@ import { useDesktopContext } from './useDesktopContext.js';
 import { BACKGROUNDS } from '../../../data/backgrounds.js';
 
 const Desktop = () => {
-  return (
-    <DesktopContextProvider>
-      <DesktopContent />
-    </DesktopContextProvider>
-  );
-};
-
-const DesktopContent = () => {
   const containerRef = useRef(null);
   const { backgroundId } = useDesktopContext();
   const background =

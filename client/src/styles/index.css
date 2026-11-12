@@ -62,6 +62,8 @@
   --icon-grid-text-shadow: var(--pansy-petal);
   --icon-grid-hover-color: var(--white);
   --icon-grid-hover-border: var(--pansy-petal);
+
+  --background-button-border: var(--pansy-petal);
 }
 
 @utility v2-base {
@@ -237,6 +239,10 @@
 
 @utility image-content {
   @apply pointer-events-none max-w-100 rounded-b-md;
+}
+
+@utility background-button {
+  border: 1px solid var(--background-button-border);
 }
 
 /* ------------------------------------------------------------------------------------- */

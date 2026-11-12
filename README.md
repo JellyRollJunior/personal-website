@@ -6,7 +6,6 @@
 - version data tab
 - default positions
 - mobile view ???
-- switch bg
 
 ## Bugs
 
