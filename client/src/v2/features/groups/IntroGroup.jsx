@@ -50,13 +50,20 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal-text-content px-5 py-3 tab-content">
+        <div className="terminal-text-content tab-content px-5 py-3">
           <h2 className="terminal-text-orange text-2xl">Hi, I'm Brandon</h2>
           <p className="mt-2">
-            Deeply invested in the life-long learning mentality, I'm a
-            full-stack developer who loves to experiment in design. I create
-            responsive layouts using React, NodeJS, and inspiration from the
-            world around me.
+            I'm a{' '}
+            <span className="terminal-text-green text-sm">
+              {' '}
+              Full-Stack Developer
+            </span>{' '}
+            whos deeply invested in the life-long learning mentality and loves
+            to experiment in design. I create responsive layouts using{' '}
+            <span className="terminal-text-green">
+              React, NodeJS, Typescript,
+            </span>{' '}
+            and inspiration from the world around me.
           </p>
         </div>
       </Tab>
