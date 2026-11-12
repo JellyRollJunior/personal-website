@@ -1,9 +1,9 @@
 ## Todo
 
+- NEXT: tab icons
+
 - resume
-- tab icons
 - about me schpiel
-- version data tab
 - default positions
 - mobile view ???
 

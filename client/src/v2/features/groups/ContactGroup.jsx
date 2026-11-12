@@ -74,7 +74,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-static-line terminal-text-orange tab-content px-5 py-5">
+        <div className="terminal terminal-static-line terminal-text-orange tab-content px-5 pt-3 pb-4">
           <h4 className="text-center text-sm">Reach me through social media:</h4>
           <div className="mt-3 flex w-full items-center justify-center gap-8">
             <a
