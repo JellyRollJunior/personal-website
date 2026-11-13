@@ -1,13 +1,12 @@
-import sick from './../../assets/images/sick-fit.jpeg';
-import onyx from './../../assets/images/onny-pie.jpeg';
-import prefire from './../../assets/images/pottery-prefire.jpeg';
+import languageIcon from './../../assets/icons/language.svg'
 
+import { LANGUAGES } from '../../data/languages.js';
+import { ABOUT_ME_IMAGES } from '../../data/aboutMeImages.js';
 import { aboutMeGroupData } from './data/groups.js';
 import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { useTabManager } from './TabManager/useTabManager.js';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
-import { LANGUAGES } from '../../data/languages.js';
 
 const AboutMeGroup = ({ dragConstraintsRef }) => {
   return (
@@ -25,51 +24,26 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
 
   return (
     <>
-      {/* Fashion */}
-      <Tab
-        id={'about:sick-fit'}
-        title={'sick-fit.jpg'}
-        tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: 0, y: 0 }}
-        isInActiveGroup={isActiveGroup}
-        state={state}
-        dispatch={dispatch}
-        dragConstraintsRef={dragConstraintsRef}
-      >
-        <img className="image-content" src={sick} />
-      </Tab>
-
-      {/* Onyx */}
-      <Tab
-        id={'about:onyx'}
-        title={'onyx.jpg'}
-        tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: 0, y: 0 }}
-        isInActiveGroup={isActiveGroup}
-        state={state}
-        dispatch={dispatch}
-        dragConstraintsRef={dragConstraintsRef}
-      >
-        <img className="image-content" src={onyx} />
-      </Tab>
-
-      {/* Pottery */}
-      <Tab
-        id={'about:prefire'}
-        title={'pottery-prefire.jpg'}
-        tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: 0, y: 0 }}
-        isInActiveGroup={isActiveGroup}
-        state={state}
-        dispatch={dispatch}
-        dragConstraintsRef={dragConstraintsRef}
-      >
-        <img className="image-content max-w-80" src={prefire} />
-      </Tab>
+      {ABOUT_ME_IMAGES.map(({ id, icon, title, src }) => (
+        <Tab
+          id={id}
+          icon={icon}
+          title={title}
+          tabStyle={TAB_STYLE.BORDERED}
+          defaultPosition={{ x: 0, y: 0 }}
+          isInActiveGroup={isActiveGroup}
+          state={state}
+          dispatch={dispatch}
+          dragConstraintsRef={dragConstraintsRef}
+        >
+          <img className="image-content" src={src} />
+        </Tab>
+      ))}
 
       {/* Languages */}
       <Tab
         id={'home:languages'}
+        icon={languageIcon}
         title={'Spoken Languages'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}

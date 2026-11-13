@@ -1,10 +1,9 @@
 ## Todo
 
-- NEXT: tab icons
-
-- resume
+- next: restyle tabs
 - about me schpiel
 - default positions
+- resume
 - mobile view ???
 
 ## Bugs
