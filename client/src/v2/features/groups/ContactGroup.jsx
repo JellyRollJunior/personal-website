@@ -50,7 +50,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-static-line terminal-text-green tab-content px-5 py-3">
+        <div className="terminal terminal-static-line terminal-text-green tab-content text-base px-5 py-3">
           <h2>Want to chat? ٩(ˊᗜˋ*)و ♡</h2>
           <p>
             Click{' '}
