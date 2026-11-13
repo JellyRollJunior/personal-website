@@ -1,3 +1,5 @@
+import codeIcon from './../../assets/icons/code.svg'
+
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
@@ -25,6 +27,7 @@ const SkillsAndToolsGroupContent = ({ dragConstraintsRef }) => {
       {SKILLS.map((s) => (
         <Tab
           key={s.id}
+          icon={codeIcon}
           id={s.id}
           title={s.title}
           tabStyle={TAB_STYLE.BORDERLESS}

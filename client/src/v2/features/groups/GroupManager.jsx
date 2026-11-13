@@ -1,8 +1,10 @@
-import { useTabManager } from './TabManager/useTabManager.js';
-import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
-import { TAB_STYLE, Tab } from '../tabs/Tab/Tab.jsx';
-import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import compassIcon from './../../assets/icons/compass.svg'
+
 import { groups } from './data/groups.js';
+import { useTabManager } from './TabManager/useTabManager.js';
+import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { TAB_STYLE, Tab } from '../tabs/Tab/Tab.jsx';
+import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 
 const GROUP_MANAGER_ID = 'group-manager';
 
@@ -20,6 +22,7 @@ const GroupManager = ({ dragConstraintsRef }) => {
   return (
     <Tab
       id={GROUP_MANAGER_ID}
+      icon={compassIcon}
       title={'Navigator'}
       tabStyle={TAB_STYLE.BORDERLESS}
       defaultPosition={{ x: 0, y: 0 }}

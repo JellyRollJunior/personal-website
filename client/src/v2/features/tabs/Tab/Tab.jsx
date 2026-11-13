@@ -36,6 +36,7 @@ const VARIANTS = {
 
 const Tab = ({
   id,
+  icon = null,
   title,
   tabStyle = TAB_STYLE.BORDERLESS,
   defaultPosition = { x: 0, y: 0 },
@@ -102,8 +103,9 @@ const Tab = ({
         ref={ref}
       >
         {/* Title bar */}
-        <header className="tab-header-gradient font-kaisei-opti flex min-w-2xs items-center px-3 pt-1.5 pb-1 text-xs hover:cursor-grab active:cursor-grabbing">
-          <span className="block flex-1">{title}</span>
+        <header className="tab-header-gradient font-kaisei-opti flex min-w-2xs items-center gap-1.5 px-3 pt-2 pb-1.5 text-sm hover:cursor-grab active:cursor-grabbing">
+          {icon && <img className="size-5" src={icon} aria-hidden={true} />}
+          <span className="flex flex-1 items-center">{title}</span>
           <button
             className="ml-5 rounded-full hover:bg-gray-600"
             aria-label="minimize tab button"

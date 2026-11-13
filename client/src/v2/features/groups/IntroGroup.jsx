@@ -1,4 +1,6 @@
 import me from './../../assets/images/me.JPG';
+import imageIcon from './../../assets/icons/image.svg';
+import windowIcon from './../../assets/icons/window.svg';
 
 import { introGroupData } from './data/groups.js';
 import { TRICKCAL_BUG_TRACKER } from '../../data/projects.js';
@@ -28,6 +30,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
       {/* Image */}
       <Tab
         id={'home:me'}
+        icon={imageIcon}
         title={'me.jpg'}
         tabStyle={TAB_STYLE.BORDERED}
         defaultPosition={{ x: 0, y: 0 }}
@@ -42,6 +45,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
       {/* Intro Schpiel */}
       <Tab
         id={'home:schpiel'}
+        icon={windowIcon}
         title={'schpiel'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
@@ -74,6 +78,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
       {/* Latest work */}
       <Tab
         id={TRICKCAL_BUG_TRACKER.id + '-images'}
+        icon={TRICKCAL_BUG_TRACKER.favicon}
         title={'Latest Work - Images'}
         tabStyle={TAB_STYLE.BORDERED}
         defaultPosition={{ x: 0, y: 0 }}
@@ -86,6 +91,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
       </Tab>
       <Tab
         id={TRICKCAL_BUG_TRACKER.id + '-details'}
+        icon={TRICKCAL_BUG_TRACKER.favicon}
         title={'Latest Work - Details'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}

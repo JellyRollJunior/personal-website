@@ -1,13 +1,15 @@
+import terminalIcon from './../../assets/icons/terminal.svg'
 import instagram from './../../assets/icons/instagram.svg';
 import github from './../../assets/icons/github.svg';
 import linkedin from './../../assets/icons/linkedin.svg';
 import kommy from './../../assets/images/kommy-w.PNG';
 
+import { contactGroupData } from './data/groups.js';
+import { TRICKCAL_BUG_TRACKER } from '../../data/projects.js';
+import { useDesktopContext } from './../shell/Desktop/useDesktopContext.js';
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
-import { useDesktopContext } from './../shell/Desktop/useDesktopContext.js';
 import { Tab, TAB_STYLE } from './../tabs/Tab/Tab.jsx';
-import { contactGroupData } from './data/groups.js';
 
 const ContactGroup = ({ dragConstraintsRef }) => {
   return (
@@ -28,6 +30,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
       {/* Kommy */}
       <Tab
         id={'contact:kommy'}
+        icon={TRICKCAL_BUG_TRACKER.favicon}
         title={'Wise Words from Kommy'}
         tabStyle={TAB_STYLE.BORDERED}
         defaultPosition={{ x: 0, y: 0 }}
@@ -42,6 +45,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
       {/* Email Tab */}
       <Tab
         id={'contact:email'}
+        icon={terminalIcon}
         title={'User Email'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
@@ -66,6 +70,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
       {/* Socials Tab */}
       <Tab
         id={'contact:socials'}
+        icon={terminalIcon}
         title={'Socials'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
@@ -108,6 +113,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
       {/* Version */}
       <Tab
         id={'contact:version'}
+        icon={terminalIcon}
         title={'@version'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}

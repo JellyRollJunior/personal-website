@@ -9,6 +9,7 @@ import {
 } from '../../../data/projects.js';
 import { worksGroupData } from '../data/groups.js';
 import { ProjectContent } from '../../tabs/ProjectContent.jsx';
+import { Fragment } from 'react';
 
 const WorksGroup = ({ dragConstraintsRef }) => {
   return (
@@ -29,41 +30,40 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
   return (
     <>
       {projects.map((p) => (
-        <Tab
-          key={p.id}
-          id={p.id + '-images'}
-          title={p.title + ' - Images'}
-          tabStyle={TAB_STYLE.BORDERED}
-          defaultPosition={{ x: 0, y: 0 }}
-          isInActiveGroup={isActiveGroup}
-          state={state}
-          dispatch={dispatch}
-          dragConstraintsRef={dragConstraintsRef}
-        >
-          <ImageCarousel imageArray={p.images} />
-        </Tab>
-      ))}
-
-      {projects.map((p) => (
-        <Tab
-          key={p.id}
-          id={p.id + '-details'}
-          title={p.title + ' - Details'}
-          tabStyle={TAB_STYLE.BORDERLESS}
-          defaultPosition={{ x: 0, y: 0 }}
-          isInActiveGroup={isActiveGroup}
-          state={state}
-          dispatch={dispatch}
-          dragConstraintsRef={dragConstraintsRef}
-        >
-          <ProjectContent
-            title={p.title}
-            body={p.description}
-            stackIcons={p.stackIcons}
-            repoLink={p.repoLink}
-            demoLink={p.demoLink}
-          />
-        </Tab>
+        <Fragment key={p.id}>
+          <Tab
+            id={p.id + '-images'}
+            icon={p.favicon}
+            title={p.title + ' - Images'}
+            tabStyle={TAB_STYLE.BORDERED}
+            defaultPosition={{ x: 0, y: 0 }}
+            isInActiveGroup={isActiveGroup}
+            state={state}
+            dispatch={dispatch}
+            dragConstraintsRef={dragConstraintsRef}
+          >
+            <ImageCarousel imageArray={p.images} />
+          </Tab>
+          <Tab
+            id={p.id + '-details'}
+            icon={p.favicon}
+            title={p.title + ' - Details'}
+            tabStyle={TAB_STYLE.BORDERLESS}
+            defaultPosition={{ x: 0, y: 0 }}
+            isInActiveGroup={isActiveGroup}
+            state={state}
+            dispatch={dispatch}
+            dragConstraintsRef={dragConstraintsRef}
+          >
+            <ProjectContent
+              title={p.title}
+              body={p.description}
+              stackIcons={p.stackIcons}
+              repoLink={p.repoLink}
+              demoLink={p.demoLink}
+            />
+          </Tab>
+        </Fragment>
       ))}
     </>
   );
