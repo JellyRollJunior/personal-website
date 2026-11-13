@@ -1,4 +1,4 @@
-import languageIcon from './../../assets/icons/language.svg'
+import languageIcon from './../../assets/icons/language.svg';
 
 import { LANGUAGES } from '../../data/languages.js';
 import { ABOUT_ME_IMAGES } from '../../data/aboutMeImages.js';
@@ -26,6 +26,7 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
     <>
       {ABOUT_ME_IMAGES.map(({ id, icon, title, src }) => (
         <Tab
+          key={id}
           id={id}
           icon={icon}
           title={title}
@@ -52,18 +53,18 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="tab-content px-5 py-3">
-          <h2 className="terminal-text-green text-center text-2xl">
-            Languages
-          </h2>
-          <ul className="terminal-text-content mt-5 grid max-w-2xs grid-cols-3 gap-x-3">
+        <div className="tab-content px-5 py-5">
+          <ul className="terminal-text-content grid max-w-2xs grid-cols-3 gap-x-3">
             {LANGUAGES.map(({ icon, label }) => (
-              <li className="flex flex-col items-center gap-1">
+              <li className="icon-grid-icons flex flex-col items-center gap-2 rounded-lg border px-2 py-3">
                 <img className="size-[32px]" src={icon} aria-hidden={true} />
-                <div className="text-center text-sm break-keep">{label}</div>
+                <div className="text-center text-xs break-keep">{label}</div>
               </li>
             ))}
           </ul>
+          <h2 className="terminal-text-green mt-3 text-center text-2xl">
+            Languages
+          </h2>
         </div>
       </Tab>
     </>

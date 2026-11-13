@@ -4,7 +4,7 @@ import english from './../assets/icons/english.png';
 
 const MANDARIN = {
     icon: mandarin,
-    label: 'Conversational Mandarin',
+    label: 'Intermediate Mandarin',
 };
 
 const JAPANESE = {

@@ -54,9 +54,9 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal-text-content tab-content px-5 py-3">
-          <h2 className="terminal-text-orange text-2xl">Hi, I'm Brandon</h2>
-          <p className="mt-2">
+        <div className="terminal-text-content tab-content max-h-80 max-w-md px-5 py-3">
+          <h2 className="terminal-text-orange text-xl">Hi, I'm Brandon</h2>
+          <p className="mt-3 text-sm">
             I'm a{' '}
             <span className="terminal-text-green text-sm">
               {' '}

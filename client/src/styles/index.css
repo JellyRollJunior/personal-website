@@ -138,6 +138,10 @@
   background-color: var(--tab-gradient-end);
 }
 
+@utility tab-header {
+  @apply font-kaisei-opti hover:cursor-grab active:cursor-grabbing text-xs;
+}
+
 @utility tab-header-gradient {
   background: linear-gradient(
     to bottom,
@@ -193,7 +197,6 @@
 @utility terminal {
   font-family: 'Cascadia Code', 'arial';
   position: relative;
-  font-size: 0.75rem;
   font-weight: bold;
   text-shadow: 0 0 5px var(--icon-grid-text-shadow);
 }
@@ -234,7 +237,7 @@
 }
 
 @utility terminal-text-content {
-  @apply terminal terminal-static-line v2-text-secondary font-kaisei-opti max-h-80 max-w-xs;
+  @apply terminal terminal-static-line v2-text-secondary font-kaisei-opti;
 }
 
 @utility image-content {
