@@ -1,9 +1,9 @@
 ## Todo
 
-- next: restyle tabs
-- about me schpiel
 - default positions
-- resume
+- experience section
+    - resume
+    - work history
 - mobile view ???
 
 ## Bugs

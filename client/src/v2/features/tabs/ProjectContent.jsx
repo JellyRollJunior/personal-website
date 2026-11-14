@@ -1,3 +1,4 @@
+import { IconContext } from 'react-icons/lib';
 import { ExternalLink } from '../../common/components/ExternalLink.jsx';
 
 const ProjectContent = ({ title, body, stackIcons, repoLink, demoLink }) => {
@@ -9,13 +10,15 @@ const ProjectContent = ({ title, body, stackIcons, repoLink, demoLink }) => {
 
         {/* Stack Icons */}
         {stackIcons && (
-          <ul className="mt-5 flex flex-wrap justify-start gap-4 gap-y-1 text-xs">
+          <ul className="mt-5 flex flex-wrap justify-start gap-4 gap-y-1.5 text-xs">
             {stackIcons.map(({ icon: Icon, label }) => (
               <li
                 key={label}
                 className="grid grid-cols-[20px_1fr] items-center"
               >
-                <Icon />
+                <IconContext.Provider value={{ size: '14px'}} >
+                  <Icon />
+                </IconContext.Provider>
                 <div className="">{label}</div>
               </li>
             ))}

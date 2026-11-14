@@ -26,4 +26,14 @@ const POTTERY = {
 
 const ABOUT_ME_IMAGES = [SICK_FIT, ONYX, POTTERY];
 
-export { ABOUT_ME_IMAGES };
+const INTERESTS = [
+    'fashion',
+    'music',
+    'pottery',
+    'gaming',
+    'art-and-design',
+    'food',
+    'onyx',
+];
+
+export { ABOUT_ME_IMAGES, INTERESTS };
