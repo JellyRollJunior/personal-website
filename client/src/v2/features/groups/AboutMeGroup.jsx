@@ -90,7 +90,7 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
           </div>
           brandon-lin@about interests % cat onyx/intro.txt
           <div className="terminal-text-orange whitespace-pre">
-            My cat is name Onyx aka Onny aka Onny Pie aka Kitty{'\n'}
+            My cat is named Onyx aka Onny aka Onny Pie aka Kitty{'\n'}
             aka Mr.Kitty aka Stinky Kitty aka Meow Meow Girl
           </div>
           brandon-lin@about interests % cat music/favorite-albums.txt
@@ -106,8 +106,10 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
             Fallout New Vegas{'\n'}
             Resident Evil 4{'\n'}
             Trickcal Chibi Go{'\n'}
+            Maplestory{'\n'}
             Kirby & the Amazing Mirror
           </div>
+          brandon-lin@about interests %
         </div>
       </Tab>
     </>

@@ -1,14 +1,14 @@
-import { useTabManager } from '../TabManager/useTabManager.js';
-import { TabManagerProvider } from '../TabManager/TabManagerContext.jsx';
-import { useDesktopContext } from '../../shell/Desktop/useDesktopContext.js';
-import { Tab, TAB_STYLE } from '../../tabs/Tab/Tab.jsx';
-import { ImageCarousel } from '../../../common/components/ImageCarousel.jsx';
+import { useTabManager } from './TabManager/useTabManager.js';
+import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
+import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
+import { ImageCarousel } from '../../common/components/ImageCarousel.jsx';
 import {
   CHIIKAWA_NEWS_NETWORK,
   TRICKCAL_BUG_TRACKER,
-} from '../../../data/projects.js';
-import { worksGroupData } from '../data/groups.js';
-import { ProjectContent } from '../../tabs/ProjectContent.jsx';
+} from '../../data/projects.js';
+import { worksGroupData } from './data/groups.js';
+import { ProjectContent } from '../tabs/ProjectContent.jsx';
 import { Fragment } from 'react';
 
 const WorksGroup = ({ dragConstraintsRef }) => {

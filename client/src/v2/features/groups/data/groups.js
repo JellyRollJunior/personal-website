@@ -30,6 +30,14 @@ const aboutMeGroupData = {
     dateModified: '09-12-2026',
 };
 
+const experienceGroupData = {
+    id: 'experience',
+    name: 'Experience',
+    size: '50mb',
+    type: 'text',
+    dateModified: '09-12-2026',
+};
+
 const contactGroupData = {
     id: 'contact',
     name: 'Contact',
@@ -42,6 +50,7 @@ const groups = [
     introGroupData,
     worksGroupData,
     skillsAndToolsGroupData,
+    experienceGroupData,
     aboutMeGroupData,
     contactGroupData,
 ];
@@ -51,6 +60,7 @@ export {
     worksGroupData,
     skillsAndToolsGroupData,
     aboutMeGroupData,
+    experienceGroupData,
     contactGroupData,
     groups,
 };
