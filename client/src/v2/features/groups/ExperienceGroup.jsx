@@ -80,14 +80,33 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
         id={'experience:resume'}
         icon={imageIcon}
         title={'Resume'}
-        tabStyle={TAB_STYLE.BORDERED}
+        tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <img className="image-content" src={erpin} />
+        <div className="tab-content terminal-text-content flex flex-col gap-2 px-5 py-3">
+          <h2 className="terminal-text-orange text-xl">Resume</h2>
+          <div className="flex gap-3 text-sm">
+            <a
+              className="terminal-text-green underline"
+              href="/brandon-lin-resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              open in new tab
+            </a>
+            <a
+              className="terminal-text-green underline"
+              href="/brandon-lin-resume.pdf"
+              download="brandon-lin-resume.pdf"
+            >
+              download
+            </a>
+          </div>
+        </div>
       </Tab>
 
       {/* See my other works! */}
