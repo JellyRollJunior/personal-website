@@ -1,6 +1,5 @@
-import erpin from './../../assets/images/erpin-rocks.jpeg';
-import imageIcon from './../../assets/icons/image.svg';
 import windowIcon from './../../assets/icons/window.svg';
+import codeIcon from './../../assets/icons/code.svg';
 
 import { experienceGroupData } from './data/groups.js';
 import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
@@ -78,7 +77,7 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
       {/* Resume */}
       <Tab
         id={'experience:resume'}
-        icon={imageIcon}
+        icon={windowIcon}
         title={'Resume'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: 0, y: 0 }}
@@ -112,7 +111,7 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
       {/* See my other works! */}
       <Tab
         id={'experience:see-more'}
-        icon={imageIcon}
+        icon={codeIcon}
         title={'"Extra Curriculars"'}
         tabStyle={TAB_STYLE.BORDERED}
         defaultPosition={{ x: 0, y: 0 }}
@@ -121,7 +120,19 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <img className="image-content" src={erpin} />
+        <div className="terminal-text-content tab-content max-h-80 max-w-md px-5 py-3">
+          <h2 className="terminal-text-orange text-xl">
+            I Do More Than Just Work
+          </h2>
+          <p className="mt-3 text-sm">
+            Want to see what I build outside of and after work?
+            <br />
+            See some of my projects in the "Works" section.
+          </p>
+          <p className="terminal-text-green mt-2 ml-auto w-fit">
+            ⸜(⸝⸝⸝´꒳`⸝⸝⸝)⸝
+          </p>
+        </div>
       </Tab>
     </>
   );

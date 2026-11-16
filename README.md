@@ -1,9 +1,6 @@
 ## Todo
 
 - default positions
-- experience section
-    - resume
-    - work history
 - mobile view ???
 
 ## Bugs
