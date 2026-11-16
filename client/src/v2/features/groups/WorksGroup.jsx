@@ -25,20 +25,39 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();
   const { activeGroupId } = useDesktopContext();
 
-  const projects = [TRICKCAL_BUG_TRACKER, CHIIKAWA_NEWS_NETWORK];
+  const projects = [CHIIKAWA_NEWS_NETWORK, TRICKCAL_BUG_TRACKER];
 
   const isActiveGroup = activeGroupId === worksGroupData.id;
 
+  const DEFAULT_POSITIONS = [
+    {
+      x: '40%',
+      y: '5%',
+    },
+    {
+      x: '60%',
+      y: '3%',
+    },
+    {
+      x: '15%',
+      y: '40%',
+    },
+    {
+      x: '2%',
+      y: '40%',
+    },
+  ];
+
   return (
     <>
-      {projects.map((p) => (
+      {projects.map((p, index) => (
         <Fragment key={p.id}>
           <Tab
             id={p.id + '-images'}
             icon={p.favicon}
             title={p.title + ' - Images'}
             tabStyle={TAB_STYLE.BORDERED}
-            defaultPosition={{ x: 0, y: 0 }}
+            defaultPosition={DEFAULT_POSITIONS[index * 2] ?? { x: 0, y: 0 }}
             isInActiveGroup={isActiveGroup}
             state={state}
             dispatch={dispatch}
@@ -51,7 +70,7 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
             icon={p.favicon}
             title={p.title + ' - Details'}
             tabStyle={TAB_STYLE.BORDERLESS}
-            defaultPosition={{ x: 0, y: 0 }}
+            defaultPosition={DEFAULT_POSITIONS[index * 2 + 1] ?? { x: 0, y: 0 }}
             isInActiveGroup={isActiveGroup}
             state={state}
             dispatch={dispatch}
@@ -74,7 +93,7 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
         icon={windowIcon}
         title={'See More'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: 0, y: 0 }}
+        defaultPosition={{ x:'70%', y: '60%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
