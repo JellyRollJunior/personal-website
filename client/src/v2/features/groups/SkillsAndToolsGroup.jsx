@@ -1,4 +1,4 @@
-import codeIcon from './../../assets/icons/code.svg'
+import codeIcon from './../../assets/icons/code.svg';
 
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
@@ -7,6 +7,37 @@ import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 import { skillsAndToolsGroupData } from './data/groups.js';
 import { SKILLS } from '../../data/skills.jsx';
 import { IconGrid } from '../tabs/IconGrid.jsx';
+
+const DEFAULT_POSITIONS = [
+  {
+    x: '40%',
+    y: '3%',
+  },
+  {
+    x: '60%',
+    y: '5%',
+  },
+  {
+    x: '1%',
+    y: '40%',
+  },
+  {
+    x: '10%',
+    y: '60%',
+  },
+  {
+    x: '35%',
+    y: '43%',
+  },
+  {
+    x: '50%',
+    y: '55%',
+  },
+  {
+    x: '70%',
+    y: '50%',
+  },
+];
 
 const SkillsAndToolsGroup = ({ dragConstraintsRef }) => {
   return (
@@ -24,14 +55,14 @@ const SkillsAndToolsGroupContent = ({ dragConstraintsRef }) => {
 
   return (
     <>
-      {SKILLS.map((s) => (
+      {SKILLS.map((s, index) => (
         <Tab
           key={s.id}
           icon={codeIcon}
           id={s.id}
           title={s.title}
           tabStyle={TAB_STYLE.BORDERLESS}
-          defaultPosition={{ x: 0, y: 0 }}
+          defaultPosition={DEFAULT_POSITIONS[index] ?? { x: 0, y: 0}}
           isInActiveGroup={isActiveGroup}
           state={state}
           dispatch={dispatch}

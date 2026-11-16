@@ -98,13 +98,13 @@ const TESTING = {
 };
 
 const SKILLS = Object.freeze([
-  LANGUAGES,
+  TESTING,
   FRONTEND,
+  LANGUAGES,
   BACKEND,
-  DATA,
   TOOLS,
   DEPLOY,
-  TESTING,
+  DATA,
 ]);
 
 export { SKILLS };

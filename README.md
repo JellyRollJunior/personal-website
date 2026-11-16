@@ -5,11 +5,13 @@
 
 ## Bugs
 
+- tab scroll on mouse
+
 ## Improvements
 
-- restyle image carousel 
+- restyle image carousels
 - make focused more noticeable
     - perhaps darken non focused tabs (?)
     - perhaps lighten focused tabs (?)
-- add group data flavor text 
+- add group data flavor text
 - remove/shorten side blinders on mobile / tablet
