@@ -63,22 +63,13 @@ const Navigator = ({ groups = [] }) => {
               <th scope="col" className="file-manager-header-cell">
                 Name
               </th>
-              <th
-                scope="col"
-                className="file-manager-header-cell file-manager-decoration-cell"
-              >
+              <th scope="col" className="file-manager-header-cell">
                 Size
               </th>
-              <th
-                scope="col"
-                className="file-manager-header-cell file-manager-decoration-cell"
-              >
+              <th scope="col" className="file-manager-header-cell">
                 Type
               </th>
-              <th
-                scope="col"
-                className="file-manager-header-cell file-manager-decoration-cell"
-              >
+              <th scope="col" className="file-manager-header-cell">
                 Date modified
               </th>
             </tr>
@@ -101,15 +92,9 @@ const Navigator = ({ groups = [] }) => {
                     {g.name}
                   </button>
                 </td>
-                <td className="file-manager-cell file-manager-decoration-cell">
-                  {g.size}
-                </td>
-                <td className="file-manager-cell file-manager-decoration-cell">
-                  {g.type}
-                </td>
-                <td className="file-manager-cell file-manager-decoration-cell">
-                  {g.dateModified}
-                </td>
+                <td className="file-manager-cell">{g.size}</td>
+                <td className="file-manager-cell">{g.type}</td>
+                <td className="file-manager-cell">{g.dateModified}</td>
               </tr>
             ))}
           </tbody>
