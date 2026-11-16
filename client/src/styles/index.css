@@ -39,6 +39,7 @@
   --tab-border: var(--intense-black);
   --tab-gradient-start: var(--gray);
   --tab-gradient-end: var(--dark-slate-gray);
+  --tab-focused-border: var(--pansy-petal);
 
   --tab-button-focused: var(--pansy-petal);
 
@@ -136,6 +137,10 @@
   border-color: var(--tab-border);
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.16);
   background-color: var(--tab-gradient-end);
+}
+
+@utility tab-focused {
+  outline: 2px solid var(--tab-focused-border);
 }
 
 @utility tab-header {

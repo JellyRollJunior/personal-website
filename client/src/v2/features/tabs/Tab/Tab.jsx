@@ -82,7 +82,7 @@ const Tab = ({
     <>
       {/* Tab */}
       <motion.article
-        className={['tab absolute h-fit w-fit'].join(' ')}
+        className={['tab absolute h-fit w-fit', isTabFocused && 'tab-focused'].join(' ')}
         style={{
           left: defaultPosition.x,
           top: defaultPosition.y,
@@ -103,7 +103,7 @@ const Tab = ({
         ref={ref}
       >
         {/* Title bar */}
-        <header className="tab-header-gradient tab-header flex min-w-2xs items-center gap-1.5 px-3 pt-2 pb-1.5">
+        <header className="tab-header-gradient tab-header flex min-w-2xs items-center gap-1.5 px-3 pt-2 pb-1.5 ">
           {icon && <img className="size-5" src={icon} aria-hidden={true} />}
           <span className="flex flex-1 items-center">{title}</span>
           <button
