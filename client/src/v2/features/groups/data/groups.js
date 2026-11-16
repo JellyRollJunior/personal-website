@@ -1,39 +1,39 @@
 const introGroupData = {
     id: 'introduction',
     name: 'Introduction',
-    size: '250mb',
-    type: 'folder',
-    dateModified: '09-11-2026',
+    size: '29MB',
+    type: 'text',
+    dateModified: '30-09-1997',
 };
 
 const skillsAndToolsGroupData = {
     id: 'skills-tools',
     name: 'Skills & Tools',
-    size: '250mb',
+    size: '99MB',
     type: 'folder',
-    dateModified: '09-12-2026',
+    dateModified: '16-11-2026',
 };
 
 const worksGroupData = {
     id: 'works',
     name: 'Works',
-    size: '250mb',
+    size: '360MB',
     type: 'folder',
-    dateModified: '09-11-2026',
+    dateModified: '16-11-2026',
 };
 
 const aboutMeGroupData = {
     id: 'about-me',
     name: 'About Me',
-    size: '50mb',
-    type: 'text',
-    dateModified: '09-12-2026',
+    size: '32MB',
+    type: 'img',
+    dateModified: '16-11-2026',
 };
 
 const experienceGroupData = {
     id: 'experience',
     name: 'Experience',
-    size: '50mb',
+    size: '99MB',
     type: 'text',
     dateModified: '09-12-2026',
 };
@@ -41,7 +41,7 @@ const experienceGroupData = {
 const contactGroupData = {
     id: 'contact',
     name: 'Contact',
-    size: '50mb',
+    size: '3MB',
     type: 'text',
     dateModified: '09-12-2026',
 };

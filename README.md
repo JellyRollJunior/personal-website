@@ -9,4 +9,3 @@
 ## Improvements
 
 - restyle image carousels
-- add group data flavor text
