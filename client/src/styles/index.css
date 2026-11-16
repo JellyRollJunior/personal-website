@@ -177,7 +177,7 @@
 }
 
 @utility carousel-button {
-  @apply hover:cursor-pointer;
+  @apply hover:cursor-pointer rounded-md;
   color: var(--text-secondary);
   background: var(--button-bg);
   border: solid 2px var(--button-border);

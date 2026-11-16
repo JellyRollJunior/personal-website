@@ -7,5 +7,3 @@
 - tab scroll on mouse
 
 ## Improvements
-
-- restyle image carousels
