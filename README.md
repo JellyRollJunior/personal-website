@@ -1,6 +1,5 @@
 ## Todo
 
-- default positions
 - mobile view ???
 
 ## Bugs
