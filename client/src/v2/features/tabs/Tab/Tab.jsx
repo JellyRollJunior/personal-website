@@ -84,8 +84,8 @@ const Tab = ({
       <motion.article
         className={['tab absolute h-fit w-fit'].join(' ')}
         style={{
-          x: defaultPosition.x,
-          y: defaultPosition.y,
+          left: defaultPosition.x,
+          top: defaultPosition.y,
           zIndex: zIndex ?? 0,
           originX,
           originY,

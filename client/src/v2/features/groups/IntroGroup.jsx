@@ -27,13 +27,47 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
 
   return (
     <>
+      {/* Latest work */}
+      <Tab
+        id={TRICKCAL_BUG_TRACKER.id + '-images'}
+        icon={TRICKCAL_BUG_TRACKER.favicon}
+        title={'Latest Work - Images'}
+        tabStyle={TAB_STYLE.BORDERED}
+        defaultPosition={{ x: '1%', y: '55%' }}
+        isInActiveGroup={isActiveGroup}
+        state={state}
+        dispatch={dispatch}
+        dragConstraintsRef={dragConstraintsRef}
+      >
+        <ImageCarousel imageArray={TRICKCAL_BUG_TRACKER.images} />
+      </Tab>
+      <Tab
+        id={TRICKCAL_BUG_TRACKER.id + '-details'}
+        icon={TRICKCAL_BUG_TRACKER.favicon}
+        title={'Latest Work - Details'}
+        tabStyle={TAB_STYLE.BORDERLESS}
+        defaultPosition={{ x: '55%', y: '58%' }}
+        isInActiveGroup={isActiveGroup}
+        state={state}
+        dispatch={dispatch}
+        dragConstraintsRef={dragConstraintsRef}
+      >
+        <ProjectContent
+          title={TRICKCAL_BUG_TRACKER.title}
+          body={TRICKCAL_BUG_TRACKER.description}
+          stackIcons={TRICKCAL_BUG_TRACKER.stackIcons}
+          repoLink={TRICKCAL_BUG_TRACKER.repoLink}
+          demoLink={TRICKCAL_BUG_TRACKER.demoLink}
+        />
+      </Tab>
+
       {/* Image */}
       <Tab
         id={'home:me'}
         icon={imageIcon}
         title={'me.jpg'}
         tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: 0, y: 0 }}
+        defaultPosition={{ x: "30%", y: '12%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -48,7 +82,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         icon={windowIcon}
         title={'schpiel'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: 0, y: 0 }}
+        defaultPosition={{ x: "55%", y: "0%" }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -73,40 +107,6 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
             ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
           </p>
         </div>
-      </Tab>
-
-      {/* Latest work */}
-      <Tab
-        id={TRICKCAL_BUG_TRACKER.id + '-images'}
-        icon={TRICKCAL_BUG_TRACKER.favicon}
-        title={'Latest Work - Images'}
-        tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: 0, y: 0 }}
-        isInActiveGroup={isActiveGroup}
-        state={state}
-        dispatch={dispatch}
-        dragConstraintsRef={dragConstraintsRef}
-      >
-        <ImageCarousel imageArray={TRICKCAL_BUG_TRACKER.images} />
-      </Tab>
-      <Tab
-        id={TRICKCAL_BUG_TRACKER.id + '-details'}
-        icon={TRICKCAL_BUG_TRACKER.favicon}
-        title={'Latest Work - Details'}
-        tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: 0, y: 0 }}
-        isInActiveGroup={isActiveGroup}
-        state={state}
-        dispatch={dispatch}
-        dragConstraintsRef={dragConstraintsRef}
-      >
-        <ProjectContent
-          title={TRICKCAL_BUG_TRACKER.title}
-          body={TRICKCAL_BUG_TRACKER.description}
-          stackIcons={TRICKCAL_BUG_TRACKER.stackIcons}
-          repoLink={TRICKCAL_BUG_TRACKER.repoLink}
-          demoLink={TRICKCAL_BUG_TRACKER.demoLink}
-        />
       </Tab>
     </>
   );

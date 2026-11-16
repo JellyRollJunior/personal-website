@@ -1,4 +1,4 @@
-import compassIcon from './../../assets/icons/compass.svg'
+import compassIcon from './../../assets/icons/compass.svg';
 
 import { groups } from './data/groups.js';
 import { useTabManager } from './TabManager/useTabManager.js';
