@@ -86,7 +86,7 @@ const Navigator = ({ groups = [] }) => {
           <tbody>
             {groups.map((g, index) => (
               <tr key={g.id}>
-                <td className="h-px min-w-62.5 p-0">
+                <td className="h-px min-w-50 p-0">
                   <button
                     key={g.id}
                     className={[

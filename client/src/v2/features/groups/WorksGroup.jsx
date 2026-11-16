@@ -44,7 +44,7 @@ const WorksGroupContent = ({ dragConstraintsRef }) => {
     },
     {
       x: '2%',
-      y: '40%',
+      y: '50%',
     },
   ];
 

@@ -24,7 +24,7 @@ const POTTERY = {
     src: prefire,
 };
 
-const ABOUT_ME_IMAGES = [SICK_FIT, ONYX, POTTERY];
+const ABOUT_ME_IMAGES = [POTTERY, SICK_FIT, ONYX ];
 
 const INTERESTS = [
     'fashion',

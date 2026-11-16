@@ -29,7 +29,7 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
         icon={windowIcon}
         title={'Work History - Fortinet'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: 0, y: 0 }}
+        defaultPosition={{ x: '2%', y: '40%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -80,7 +80,7 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
         icon={windowIcon}
         title={'Resume'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: 0, y: 0 }}
+        defaultPosition={{ x: '45%', y: '3%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -114,7 +114,7 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
         icon={codeIcon}
         title={'"Extra Curriculars"'}
         tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: 0, y: 0 }}
+        defaultPosition={{ x: '60%', y: '30%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}

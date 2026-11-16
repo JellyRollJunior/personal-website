@@ -1,8 +1,10 @@
+import languageIcon from './../../assets/icons/language.svg';
 import me from './../../assets/images/me.JPG';
 import imageIcon from './../../assets/icons/image.svg';
 import windowIcon from './../../assets/icons/window.svg';
 
 import { introGroupData } from './data/groups.js';
+import { LANGUAGES } from '../../data/languages.js';
 import { TRICKCAL_BUG_TRACKER } from '../../data/projects.js';
 import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
@@ -27,6 +29,33 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
 
   return (
     <>
+      {/* Languages */}
+      <Tab
+        id={'about:languages'}
+        icon={languageIcon}
+        title={'Spoken Languages'}
+        tabStyle={TAB_STYLE.BORDERLESS}
+        defaultPosition={{ x: '70%', y: '58%' }}
+        isInActiveGroup={isActiveGroup}
+        state={state}
+        dispatch={dispatch}
+        dragConstraintsRef={dragConstraintsRef}
+      >
+        <div className="tab-content px-5 py-5">
+          <ul className="terminal-text-content grid max-w-2xs grid-cols-3 gap-x-3">
+            {LANGUAGES.map(({ icon, label }) => (
+              <li className="icon-grid-icons flex flex-col items-center gap-2 rounded-lg border px-2 py-3">
+                <img className="size-[32px]" src={icon} aria-hidden={true} />
+                <div className="text-center text-xs break-keep">{label}</div>
+              </li>
+            ))}
+          </ul>
+          <h2 className="terminal-text-green mt-3 text-center text-2xl">
+            Languages
+          </h2>
+        </div>
+      </Tab>
+
       {/* Latest work */}
       <Tab
         id={TRICKCAL_BUG_TRACKER.id + '-images'}
@@ -46,7 +75,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         icon={TRICKCAL_BUG_TRACKER.favicon}
         title={'Latest Work - Details'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: '55%', y: '58%' }}
+        defaultPosition={{ x: '4%', y: '60%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -67,7 +96,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         icon={imageIcon}
         title={'me.jpg'}
         tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: "30%", y: '12%' }}
+        defaultPosition={{ x: '30%', y: '12%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -82,7 +111,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         icon={windowIcon}
         title={'schpiel'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: "55%", y: "0%" }}
+        defaultPosition={{ x: '55%', y: '0%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}

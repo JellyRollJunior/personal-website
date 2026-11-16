@@ -14,4 +14,3 @@
     - perhaps darken non focused tabs (?)
     - perhaps lighten focused tabs (?)
 - add group data flavor text
-- remove/shorten side blinders on mobile / tablet
