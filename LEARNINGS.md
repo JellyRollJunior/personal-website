@@ -1,3 +1,9 @@
+## V2
+
+- useExternalSyncStore
+- pb-[env(safe-area-inset-bottom)]
+- portals
+
 ## V1
 
 <h1 align="center">Portfolio Website</h1>
