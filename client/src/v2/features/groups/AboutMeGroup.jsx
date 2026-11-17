@@ -15,20 +15,20 @@ const AboutMeGroup = ({ dragConstraintsRef }) => {
   );
 };
 
-  const DEFAULT_IMAGE_POSITIONS = [
-    {
-      x: '60%',
-      y: '10%',
-    },
-    {
-      x: '30%',
-      y: '1%',
-    },
-    {
-      x: '50%',
-      y: '0%',
-    },
-  ];
+const DEFAULT_IMAGE_POSITIONS = [
+  {
+    x: '53%',
+    y: '15%',
+  },
+  {
+    x: '30%',
+    y: '5%',
+  },
+  {
+    x: '55%',
+    y: '0%',
+  },
+];
 
 const AboutMeContent = ({ dragConstraintsRef }) => {
   const { state, dispatch } = useTabManager();

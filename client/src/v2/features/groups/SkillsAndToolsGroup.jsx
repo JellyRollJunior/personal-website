@@ -15,7 +15,7 @@ const DEFAULT_POSITIONS = [
   },
   {
     x: '60%',
-    y: '5%',
+    y: '0%',
   },
   {
     x: '1%',
@@ -35,7 +35,7 @@ const DEFAULT_POSITIONS = [
   },
   {
     x: '70%',
-    y: '50%',
+    y: '52%',
   },
 ];
 
