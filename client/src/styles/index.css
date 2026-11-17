@@ -18,6 +18,8 @@
   --mac-n-cheese: #f8b78f;
 
   --pansy-petal: #654864;
+
+  background-color: black;
 }
 
 /* ------------------------------------------------------------------------------------- */
@@ -144,7 +146,7 @@
 }
 
 @utility tab-header {
-  @apply font-kaisei-opti hover:cursor-grab active:cursor-grabbing text-xs;
+  @apply font-kaisei-opti text-xs hover:cursor-grab active:cursor-grabbing;
 }
 
 @utility tab-header-gradient {
@@ -177,7 +179,7 @@
 }
 
 @utility carousel-button {
-  @apply hover:cursor-pointer rounded-md;
+  @apply rounded-md hover:cursor-pointer;
   color: var(--text-secondary);
   background: var(--button-bg);
   border: solid 2px var(--button-border);
