@@ -1,7 +1,5 @@
 const MobileShell = () => {
-    return (
-        <div>Im walkin here</div>
-    )
-}
+  return <div className="relative h-full w-full bg-transparent"></div>;
+};
 
-export { MobileShell }
+export { MobileShell };

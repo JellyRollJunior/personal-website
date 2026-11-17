@@ -70,7 +70,6 @@
 }
 
 @utility v2-base {
-  @apply overflow-y-hidden;
   color: var(--text-primary);
   font-family: var(--font-primary), arial;
 
