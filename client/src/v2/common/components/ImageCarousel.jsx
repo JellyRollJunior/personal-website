@@ -19,7 +19,7 @@ const ImageCarousel = ({ className, imageArray }) => {
 
   if (!imageArray || !Array.isArray(imageArray)) return;
   return (
-    <div className={`${className}`}>
+    <div className={`flex flex-col items-center ${className}`}>
       {/* Images */}
       <div
         className="w-[40rem] max-w-[80vw] overflow-clip"

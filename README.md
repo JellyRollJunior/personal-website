@@ -11,6 +11,9 @@
     - extract content to content folder
     - extract & rename project-content & icon-grid
 
+- nav bg block
+- reduce empty space on mobile... wasteful
+
 ## Bugs
 
 - tab scroll on mouse
