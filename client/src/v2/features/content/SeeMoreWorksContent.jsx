@@ -1,6 +1,6 @@
 const SeeMoreWorksContent = () => {
   return (
-    <div className="terminal-text-content tab-content max-h-80 max-w-md px-5 py-3">
+    <div className="terminal-text-content tab-content max-h-80 md:max-w-md px-5 py-3">
       <h2 className="terminal-text-orange text-xl">I've built a lot more!</h2>
       <p className="mt-3 text-sm">
         Trickcal Bug Tracker and Chiikawa News Network are just the headliners.
