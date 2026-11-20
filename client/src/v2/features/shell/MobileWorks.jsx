@@ -19,15 +19,7 @@ const MobileWorks = () => {
       {projects.map((p, index) => (
         <Fragment key={p.id}>
           <MobileTab
-            className={'mx-1 self-stretch mt-2'}
-            icon={p.favicon}
-            title={p.title + ' - Images'}
-            tabStyle={TAB_STYLE.BORDERED}
-          >
-            <ImageCarousel imageArray={p.images} />
-          </MobileTab>
-          <MobileTab
-            className={index % 2 ? '-mt-2 mr-7' : '-mt-2 ml-7'}
+            className={['mt-2 mx-1 z-10', index % 2 ? 'mr-7' : 'ml-7'].join(' ')}
             icon={p.favicon}
             title={p.title + ' - Details'}
             tabStyle={TAB_STYLE.BORDERLESS}
@@ -40,11 +32,19 @@ const MobileWorks = () => {
               demoLink={p.demoLink}
             />
           </MobileTab>
+          <MobileTab
+            className={'mx-1 -mt-2 self-stretch'}
+            icon={p.favicon}
+            title={p.title + ' - Images'}
+            tabStyle={TAB_STYLE.BORDERED}
+          >
+            <ImageCarousel imageArray={p.images} />
+          </MobileTab>
         </Fragment>
       ))}
 
       {/* See More */}
-      <MobileTab className={'mt-2 mx-5'} icon={windowIcon} title={'See More'}>
+      <MobileTab className={'mx-5 mt-2'} icon={windowIcon} title={'See More'}>
         <SeeMoreWorksContent />
       </MobileTab>
     </>
