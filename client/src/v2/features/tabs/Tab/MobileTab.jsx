@@ -11,7 +11,7 @@ const MobileTab = ({
 }) => {
   return (
     <article
-      className={['tab h-fit w-fit', className ? className : ''].join(' ')}
+      className={['tab h-fit', className ? className : ''].join(' ')}
     >
       {/* Title bar */}
       <header className="tab-header-gradient tab-header flex items-center gap-1.5 px-3 pt-2 pb-1.5">

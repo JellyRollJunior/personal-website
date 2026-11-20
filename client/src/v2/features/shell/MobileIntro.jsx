@@ -25,7 +25,6 @@ const MobileIntro = () => {
       {/* Description */}
       <MobileTab
         className={'mx-5 -mt-5 '}
-        id={'intro:description'}
         icon={windowIcon}
         title={'Hi everyone'}
       >
@@ -36,7 +35,6 @@ const MobileIntro = () => {
       <div className='flex -mt-2 z-10'>
         <MobileTab
           className={'z-10'}
-          id={'intro:resume'}
           icon={windowIcon}
           title={'Resume'}
         >
@@ -44,7 +42,6 @@ const MobileIntro = () => {
         </MobileTab>
         <MobileTab
           className={'mt-3 -ml-2 z-0'}
-          id={'intro:socials'}
           icon={terminalIcon}
           title={'Socials'}
         >
