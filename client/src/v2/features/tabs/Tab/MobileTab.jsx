@@ -6,12 +6,15 @@ const MobileTab = ({
   icon = null,
   title,
   tabStyle = TAB_STYLE.BORDERLESS,
+  className,
   children,
 }) => {
   return (
-    <article className={['tab h-fit w-fit'].join(' ')}>
+    <article
+      className={['tab h-fit w-fit', className ? className : ''].join(' ')}
+    >
       {/* Title bar */}
-      <header className="tab-header-gradient tab-header flex min-w-2xs items-center gap-1.5 px-3 pt-2 pb-1.5">
+      <header className="tab-header-gradient tab-header flex items-center gap-1.5 px-3 pt-2 pb-1.5">
         {icon && <img className="size-5" src={icon} aria-hidden={true} />}
         <span className="flex flex-1 items-center">{title}</span>
         <button

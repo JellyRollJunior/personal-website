@@ -1,5 +1,4 @@
 import languageIcon from './../../assets/icons/language.svg';
-import me from './../../assets/images/me.JPG';
 import imageIcon from './../../assets/icons/image.svg';
 import windowIcon from './../../assets/icons/window.svg';
 
@@ -12,6 +11,8 @@ import { useTabManager } from './TabManager/useTabManager.js';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
 import { ImageCarousel } from '../../common/components/ImageCarousel.jsx';
 import { ProjectContent } from '../tabs/ProjectContent.jsx';
+import { IntroDescription } from '../content/IntroDescription.jsx';
+import { IntroMainImage } from '../content/IntroMainImage.jsx';
 
 const IntroGroup = ({ dragConstraintsRef }) => {
   return (
@@ -102,14 +103,14 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <img className="image-content" src={me} />
+        <IntroMainImage />
       </Tab>
 
-      {/* Intro Schpiel */}
+      {/* Intro */}
       <Tab
-        id={'home:schpiel'}
+        id={'home:intro'}
         icon={windowIcon}
-        title={'schpiel'}
+        title={'Hi everyone'}
         tabStyle={TAB_STYLE.BORDERLESS}
         defaultPosition={{ x: '55%', y: '0%' }}
         isInActiveGroup={isActiveGroup}
@@ -117,25 +118,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal-text-content tab-content max-h-80 max-w-md px-5 py-3">
-          <h2 className="terminal-text-orange text-xl">Hi, I'm Brandon</h2>
-          <p className="mt-3 text-sm">
-            I'm a{' '}
-            <span className="terminal-text-green text-sm">
-              {' '}
-              Full-Stack Developer
-            </span>{' '}
-            whos deeply invested in the life-long learning mentality and loves
-            to experiment in design. I create responsive layouts using{' '}
-            <span className="terminal-text-green">
-              React, NodeJS, Typescript,
-            </span>{' '}
-            and inspiration from the world around me.
-          </p>
-          <p className="terminal-text-green mt-2 ml-auto w-fit">
-            ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧
-          </p>
-        </div>
+        <IntroDescription />
       </Tab>
     </>
   );
