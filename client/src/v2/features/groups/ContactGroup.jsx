@@ -1,7 +1,4 @@
 import terminalIcon from './../../assets/icons/terminal.svg';
-import instagram from './../../assets/icons/instagram.svg';
-import github from './../../assets/icons/github.svg';
-import linkedin from './../../assets/icons/linkedin.svg';
 import kommy from './../../assets/images/kommy-w.PNG';
 
 import { contactGroupData } from './data/groups.js';
@@ -10,6 +7,7 @@ import { useDesktopContext } from './../shell/Desktop/useDesktopContext.js';
 import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { Tab, TAB_STYLE } from './../tabs/Tab/Tab.jsx';
+import { SocialMediaContent } from '../content/SocialMediaContent.jsx';
 
 const ContactGroup = ({ dragConstraintsRef }) => {
   return (
@@ -79,35 +77,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-static-line terminal-text-orange tab-content px-5 pt-3 pb-4">
-          <h4 className="text-center">Reach me through social media:</h4>
-          <div className="mt-3 flex w-full items-center justify-center gap-8">
-            <a
-              className="inline-block w-[38px] shrink-0"
-              href="https://github.com/jellyrolljunior"
-              target="”_blank”"
-              rel="noopener"
-            >
-              <img className="w-full" src={github} aria-hidden={true} />
-            </a>
-            <a
-              className="inline-block w-[38px] shrink-0"
-              href="https://www.instagram.com/river.flows__"
-              target="”_blank”"
-              rel="noopener"
-            >
-              <img className="w-full" src={instagram} aria-hidden={true} />
-            </a>
-            <a
-              className="inline-block w-[38px] shrink-0"
-              href="https://www.linkedin.com/in/jellyrolljunior/"
-              target="”_blank”"
-              rel="noopener"
-            >
-              <img className="w-full" src={linkedin} aria-hidden={true} />
-            </a>
-          </div>
-        </div>
+        <SocialMediaContent />
       </Tab>
 
       {/* Version */}
@@ -145,7 +115,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
           <br />
           <span className="terminal-text-orange whitespace-pre">
             Want to see version 1.0? click{' '}
-            <a href="/v1" target="_blank" rel="noopener" className='underline'>
+            <a href="/v1" target="_blank" rel="noopener" className="underline">
               here
             </a>
           </span>

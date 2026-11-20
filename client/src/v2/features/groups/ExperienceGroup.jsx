@@ -6,6 +6,7 @@ import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { useTabManager } from './TabManager/useTabManager.js';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
+import { ResumeContent } from '../content/ResumeContent.jsx';
 
 const ExperienceGroup = ({ dragConstraintsRef }) => {
   return (
@@ -86,26 +87,7 @@ const ExperienceGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="tab-content terminal-text-content flex flex-col gap-2 px-5 py-3">
-          <h2 className="terminal-text-orange text-xl">Resume</h2>
-          <div className="flex gap-3 text-sm">
-            <a
-              className="terminal-text-green underline"
-              href="/brandon-lin-resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              open in new tab
-            </a>
-            <a
-              className="terminal-text-green underline"
-              href="/brandon-lin-resume.pdf"
-              download="brandon-lin-resume.pdf"
-            >
-              download
-            </a>
-          </div>
-        </div>
+        <ResumeContent />
       </Tab>
 
       {/* See my other works! */}

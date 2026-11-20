@@ -1,6 +1,6 @@
 const MobileSection = ({ id, children }) => {
   return (
-    <section id={id} className="scroll-mt-4 my-5">
+    <section id={id} className="flex scroll-mt-4 flex-col items-center">
       {children}
     </section>
   );

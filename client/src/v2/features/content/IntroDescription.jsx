@@ -11,7 +11,7 @@ const IntroDescription = () => {
         whos deeply invested in the life-long learning mentality and loves to
         experiment in design. I create responsive layouts using{' '}
         <span className="terminal-text-green">
-          React, NodeJS, Typescript,
+          React, NodeJS, Typescript, PostgreSQL,
         </span>{' '}
         and inspiration from the world around me.
       </p>
