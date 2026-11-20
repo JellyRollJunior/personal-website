@@ -24,7 +24,7 @@ const MobileIntro = () => {
 
       {/* Description */}
       <MobileTab
-        className={'mx-5 -mt-5 ml-25 self-end'}
+        className={'mx-5 -mt-5 '}
         id={'intro:description'}
         icon={windowIcon}
         title={'Introduction'}
@@ -33,8 +33,9 @@ const MobileIntro = () => {
       </MobileTab>
 
       {/* Resume & Socials */}
+      <div className='flex -mt-2 z-10'>
         <MobileTab
-          className={'self-start ml-1 -mt-5 sm:-mt-8 sm:ml-15 z-10'}
+          className={'z-10'}
           id={'intro:resume'}
           icon={windowIcon}
           title={'Resume'}
@@ -42,13 +43,14 @@ const MobileIntro = () => {
           <ResumeContent />
         </MobileTab>
         <MobileTab
-          className={'mt-2'}
+          className={'mt-3 -ml-2 z-0'}
           id={'intro:socials'}
           icon={terminalIcon}
           title={'Socials'}
         >
           <SocialMediaContent />
         </MobileTab>
+      </div>
     </>
   );
 };
