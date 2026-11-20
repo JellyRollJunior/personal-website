@@ -4,7 +4,7 @@ import { MobileSection } from './MobileSection.jsx';
 
 const MobileShell = () => {
   return (
-    <div className="relative flex h-full w-full flex-col">
+    <div className="relative flex h-full w-full flex-col pb-20">
       {/* Background picker */}
       {/* Content */}
       <main className="mt-2 flex flex-col gap-12">

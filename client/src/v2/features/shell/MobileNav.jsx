@@ -2,7 +2,7 @@ import { MOBILE_SECTIONS } from './data/MobileSections.js';
 
 const MobileNav = () => {
   return (
-    <nav className="fixed inset-x-0 bottom-0 flex justify-around pb-[env(safe-area-inset-bottom)]">
+    <nav className="fixed inset-x-0 bottom-0 bg-black pt-1 flex z-50 justify-around pb-[env(safe-area-inset-bottom)]">
       {MOBILE_SECTIONS.map(({ id, label, icon }) => (
         <a
           key={id}
