@@ -12,36 +12,49 @@ import { ResumeContent } from '../content/ResumeContent.jsx';
 const MobileIntro = () => {
   return (
     <>
-      {/* Image */}
-      <MobileTab
-        className={'mx-2'}
-        icon={imageIcon}
-        title={'me.jpg'}
-        tabStyle={TAB_STYLE.BORDERED}
-      >
-        <IntroMainImage className={'w-full'} />
-      </MobileTab>
-
-      {/* Description */}
-      <MobileTab
-        className={'mx-5 -mt-5 '}
-        icon={windowIcon}
-        title={''}
-      >
-        <IntroDescription />
-      </MobileTab>
-
-      {/* Resume & Socials */}
-      <div className='flex -mt-8 z-10'>
+      <div className="flex flex-col sm:grid sm:grid-cols-2">
+        {/* Image */}
         <MobileTab
-          className={'z-10'}
+          className={'mx-2 sm:row-span-2 sm:mr-0'}
+          icon={imageIcon}
+          title={'me.jpg'}
+          tabStyle={TAB_STYLE.BORDERED}
+        >
+          <IntroMainImage className={'w-full'} />
+        </MobileTab>
+
+        {/* Description */}
+        <MobileTab
+          className={'mx-5 -mt-5 sm:mx-0 sm:-ml-4'}
+          icon={windowIcon}
+          title={''}
+        >
+          <IntroDescription />
+        </MobileTab>
+
+        {/* Resume */}
+        <MobileTab
+          className={'z-10 mx-1 -mt-2 hidden w-fit sm:mt-2 sm:-ml-7 sm:block'}
           icon={windowIcon}
           title={'Resume'}
         >
           <ResumeContent />
         </MobileTab>
+      </div>
+
+      <div className="flex w-full flex-row justify-center">
+        {/* Resume */}
         <MobileTab
-          className={'mt-12 -ml-5 z-0'}
+          className={'z-10 -mt-2 -mr-6 w-fit sm:hidden'}
+          icon={windowIcon}
+          title={'Resume'}
+        >
+          <ResumeContent />
+        </MobileTab>
+
+        {/* Socials */}
+        <MobileTab
+          className={'mt-1 sm:z-10 sm:-mt-2'}
           icon={terminalIcon}
           title={'Socials'}
         >

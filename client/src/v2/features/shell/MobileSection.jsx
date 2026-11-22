@@ -4,7 +4,7 @@ const MobileSection = ({ id, icon, title, children }) => {
   return (
     <section id={id} className="flex scroll-mt-4 flex-col items-center">
       <MobileTab
-        className={'ml-5 mr-1 z-50 -mb-3 w-fit self-start text-start sm:mx-5'}
+        className={'ml-5 mr-1 z-50 -mb-1.5 w-fit self-start text-start sm:mx-5'}
         icon={icon}
         title={title}
       >

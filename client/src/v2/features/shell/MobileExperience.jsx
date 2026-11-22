@@ -18,7 +18,7 @@ const MobileExperience = () => {
 
       {/* See More */}
       <MobileTab
-        className={'-mt-2 ml-5 z-10'}
+        className={'-mt-2 ml-5 z-10 sm:self-end sm:mr-9'}
         icon={windowIcon}
         title={'Work History - Fortinet'}
       >

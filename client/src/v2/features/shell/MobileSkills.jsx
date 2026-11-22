@@ -8,12 +8,12 @@ import { MOBILE_SKILLS } from '../../data/skills.jsx';
 const MobileSkills = () => {
   return (
     <>
-      <div className="mt-2 flex w-fit flex-col items-center sm:grid sm:grid-cols-2 mx-1 gap-1">
+      <div className="mx-1 mt-2 flex w-fit flex-col items-center gap-1 sm:grid sm:grid-cols-2">
         {MOBILE_SKILLS.map((s, index) => (
           <MobileTab
             className={[
-              'w-full sm:mt-0 sm:h-full sm:w-full',
-              index % 2 ? 'z-10 sm:z-0 sm:mx-0' : 'self-start sm:mx-0',
+              'w-full sm:h-full',
+              index % 2 ? 'sm:translate-y-[-10%] z-10 sm:z-0 sm:mx-0' : 'self-start sm:mx-0',
             ].join(' ')}
             icon={codeIcon}
             title={s.title}
