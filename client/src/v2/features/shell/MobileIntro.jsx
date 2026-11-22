@@ -26,7 +26,7 @@ const MobileIntro = () => {
       <MobileTab
         className={'mx-5 -mt-5 '}
         icon={windowIcon}
-        title={'Hi everyone'}
+        title={''}
       >
         <IntroDescription />
       </MobileTab>

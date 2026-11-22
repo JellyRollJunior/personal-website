@@ -9,7 +9,7 @@ const MOBILE_SECTIONS = [
     {
         id: 'intro',
         label: 'intro',
-        labelFull: 'Introduction',
+        labelFull: 'Brandon Lin',
         Component: MobileIntro,
     },
     { id: 'works', label: 'works', labelFull: 'Works', Component: MobileWorks },
