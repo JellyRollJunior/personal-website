@@ -6,7 +6,7 @@ import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
 import { Tab, TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 import { skillsAndToolsGroupData } from './data/groups.js';
 import { SKILLS } from '../../data/skills.jsx';
-import { IconGrid } from '../tabs/IconGrid.jsx';
+import { IconGrid } from '../content/IconGrid.jsx';
 
 const DEFAULT_POSITIONS = [
   {

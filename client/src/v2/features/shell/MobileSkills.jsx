@@ -2,7 +2,7 @@ import codeIcon from './../../assets/icons/code.svg';
 
 import { TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 import { MobileTab } from '../tabs/Tab/MobileTab.jsx';
-import { IconGrid } from '../tabs/IconGrid.jsx';
+import { IconGrid } from '../content/IconGrid.jsx';
 import { MOBILE_SKILLS } from '../../data/skills.jsx';
 
 const MobileSkills = () => {

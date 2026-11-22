@@ -10,7 +10,7 @@ import {
   TRICKCAL_BUG_TRACKER,
 } from '../../data/projects.js';
 import { worksGroupData } from './data/groups.js';
-import { ProjectContent } from '../tabs/ProjectContent.jsx';
+import { ProjectContent } from './../content/ProjectContent.jsx';
 import { Fragment } from 'react';
 import { SeeMoreWorksContent } from '../content/SeeMoreWorksContent.jsx';
 

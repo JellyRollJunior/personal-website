@@ -10,7 +10,7 @@ import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { useTabManager } from './TabManager/useTabManager.js';
 import { useDesktopContext } from '../shell/Desktop/useDesktopContext.js';
 import { ImageCarousel } from '../../common/components/ImageCarousel.jsx';
-import { ProjectContent } from '../tabs/ProjectContent.jsx';
+import { ProjectContent } from './../content/ProjectContent.jsx';
 import { IntroDescription } from '../content/IntroDescription.jsx';
 import { IntroMainImage } from '../content/IntroMainImage.jsx';
 
