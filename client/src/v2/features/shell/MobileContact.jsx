@@ -11,35 +11,36 @@ import { TAB_STYLE } from '../tabs/Tab/Tab.jsx';
 const MobileContact = () => {
   return (
     <>
-      {/* Email */}
-      <MobileTab
-        className={''}
-        icon={terminalIcon}
-        title={'User Email'}
-        tabStyle={TAB_STYLE.BORDERLESS}
-      >
-        <EmailContent />
-      </MobileTab>
+      <div className="relative ml-1 flex flex-col justify-center sm:mr-1 sm:grid sm:grid-cols-2">
+        {/* Email */}
+        <MobileTab
+          className={'sm:z-20'}
+          icon={terminalIcon}
+          title={'User Email'}
+          tabStyle={TAB_STYLE.BORDERLESS}
+        >
+          <EmailContent />
+        </MobileTab>
+        {/* Kommy */}
+        <MobileTab
+          className={'z-10 row-span-2 -mt-2 ml-10 sm:-mt-8 sm:-ml-8'}
+          icon={TRICKCAL_BUG_TRACKER.favicon}
+          title={'Wise Words from Kommy'}
+          tabStyle={TAB_STYLE.BORDERED}
+        >
+          <img className="image-content w-full" src={kommy} />
+        </MobileTab>
 
-      {/* Kommy */}
-      <MobileTab
-        className={'z-10 -mt-2 ml-10'}
-        icon={TRICKCAL_BUG_TRACKER.favicon}
-        title={'Wise Words from Kommy'}
-        tabStyle={TAB_STYLE.BORDERED}
-      >
-        <img className="image-content w-full" src={kommy} />
-      </MobileTab>
-
-      {/* Socials */}
-      <MobileTab
-        className={'-mt-2 self-start'}
-        icon={terminalIcon}
-        title={'Socials'}
-        tabStyle={TAB_STYLE.BORDERLESS}
-      >
-        <SocialMediaContent />
-      </MobileTab>
+        {/* Socials */}
+        <MobileTab
+          className={'z-20 -mt-2 sm:mt-2 mr-3'}
+          icon={terminalIcon}
+          title={'Socials'}
+          tabStyle={TAB_STYLE.BORDERLESS}
+        >
+          <SocialMediaContent />
+        </MobileTab>
+      </div>
 
       {/* Version */}
       <MobileTab
