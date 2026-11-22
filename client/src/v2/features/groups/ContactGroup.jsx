@@ -8,6 +8,8 @@ import { useTabManager } from './TabManager/useTabManager.js';
 import { TabManagerProvider } from './TabManager/TabManagerContext.jsx';
 import { Tab, TAB_STYLE } from './../tabs/Tab/Tab.jsx';
 import { SocialMediaContent } from '../content/SocialMediaContent.jsx';
+import { VersionContent } from '../content/VersionContent.jsx';
+import { EmailContent } from '../content/EmailContent.jsx';
 
 const ContactGroup = ({ dragConstraintsRef }) => {
   return (
@@ -52,17 +54,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-static-line terminal-text-green tab-content px-5 py-3 text-base">
-          <h2>Want to chat? ٩(ˊᗜˋ*)و ♡</h2>
-          <p>
-            Click{' '}
-            <a className="underline" href="mailto:BrandonLin9716@gmail.com">
-              here
-            </a>{' '}
-            to send me an e-mail at:
-          </p>
-          <h3 className="break-all">BrandonLin9716@gmail.com</h3>
-        </div>
+        <EmailContent />
       </Tab>
 
       {/* Socials Tab */}
@@ -92,34 +84,7 @@ const ContactGroupContent = ({ dragConstraintsRef }) => {
         dispatch={dispatch}
         dragConstraintsRef={dragConstraintsRef}
       >
-        <div className="terminal terminal-static-line terminal-text-green tab-content px-5 py-3 text-xs">
-          brandonlin@Brandons-porfolio-site ~ % who am i
-          <br />
-          <span className="terminal-text-orange whitespace-pre">
-            Brandon Lin's Portfolio {'\t'} version 2.0 {'\t'} Nov 12 16:36
-            2026{' '}
-          </span>
-          <br />
-          brandonlin@Brandons-porfolio-site ~ % license
-          <br />
-          <span className="terminal-text-orange whitespace-pre">
-            Brandon Lin·2026 {'\t'} All Rights Reserved
-          </span>
-          <br />
-          brandonlin@Brandons-porfolio-site ~ %
-          <br />
-          <br />
-          brandonlin@Brandons-porfolio-site ~ % cd /easter-egg
-          <br />
-          brandonlin@Brandons-porfolio-site easter-egg % cat easter-egg.txt
-          <br />
-          <span className="terminal-text-orange whitespace-pre">
-            Want to see version 1.0? click{' '}
-            <a href="/v1" target="_blank" rel="noopener" className="underline">
-              here
-            </a>
-          </span>
-        </div>
+        <VersionContent />
       </Tab>
     </>
   );
