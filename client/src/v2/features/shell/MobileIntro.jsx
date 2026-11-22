@@ -32,7 +32,7 @@ const MobileIntro = () => {
       </MobileTab>
 
       {/* Resume & Socials */}
-      <div className='flex -mt-2 z-10'>
+      <div className='flex -mt-8 z-10'>
         <MobileTab
           className={'z-10'}
           icon={windowIcon}
@@ -41,7 +41,7 @@ const MobileIntro = () => {
           <ResumeContent />
         </MobileTab>
         <MobileTab
-          className={'mt-3 -ml-2 z-0'}
+          className={'mt-12 -ml-5 z-0'}
           icon={terminalIcon}
           title={'Socials'}
         >

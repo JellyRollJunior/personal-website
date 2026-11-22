@@ -7,7 +7,7 @@ const MobileShell = () => {
     <div className="relative flex h-full w-full flex-col pb-20">
       {/* Background picker */}
       {/* Content */}
-      <main className="mt-2 flex flex-col gap-12">
+      <main className="mt-2 flex flex-col gap-7">
         {MOBILE_SECTIONS.map(({ id, labelFull, icon, Component }) => (
           <MobileSection key={id} id={id} title={labelFull} icon={icon}>
             <Component />
