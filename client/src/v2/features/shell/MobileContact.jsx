@@ -23,7 +23,7 @@ const MobileContact = () => {
 
       {/* Kommy */}
       <MobileTab
-        className={'ml-10 z-10 -mt-2'}
+        className={'z-10 -mt-2 ml-10'}
         icon={TRICKCAL_BUG_TRACKER.favicon}
         title={'Wise Words from Kommy'}
         tabStyle={TAB_STYLE.BORDERED}
@@ -33,7 +33,7 @@ const MobileContact = () => {
 
       {/* Socials */}
       <MobileTab
-        className={'self-start -mt-2'}
+        className={'-mt-2 self-start'}
         icon={terminalIcon}
         title={'Socials'}
         tabStyle={TAB_STYLE.BORDERLESS}
@@ -42,9 +42,13 @@ const MobileContact = () => {
       </MobileTab>
 
       {/* Version */}
-      {/* <MobileTab className={''} icon={terminalIcon} title={'@version'}>
+      <MobileTab
+        className={'mt-2 w-full'}
+        icon={terminalIcon}
+        title={'@version'}
+      >
         <VersionContent />
-      </MobileTab> */}
+      </MobileTab>
     </>
   );
 };

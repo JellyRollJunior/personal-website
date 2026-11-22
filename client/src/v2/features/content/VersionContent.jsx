@@ -8,7 +8,7 @@ const VersionContent = ({ className = '' }) => {
     >
       brandonlin@Brandons-porfolio-site ~ % who am i
       <br />
-      <span className="terminal-text-orange whitespace-pre">
+      <span className="terminal-text-orange whitespace-pre-wrap">
         Brandon Lin's Portfolio {'\t'} version 2.0 {'\t'} Nov 12 16:36 2026{' '}
       </span>
       <br />
