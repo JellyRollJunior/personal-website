@@ -24,7 +24,8 @@ const POTTERY = {
     src: prefire,
 };
 
-const ABOUT_ME_IMAGES = [POTTERY, SICK_FIT, ONYX ];
+const ABOUT_ME_IMAGES = [POTTERY, SICK_FIT, ONYX];
+const ABOUT_ME_IMAGES_MOBILE = [SICK_FIT, ONYX, POTTERY];
 
 const INTERESTS = [
     'fashion',
@@ -36,4 +37,4 @@ const INTERESTS = [
     'onyx',
 ];
 
-export { ABOUT_ME_IMAGES, INTERESTS };
+export { ABOUT_ME_IMAGES, ABOUT_ME_IMAGES_MOBILE, INTERESTS };

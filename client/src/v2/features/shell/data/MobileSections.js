@@ -1,3 +1,4 @@
+import { MobileAboutMe } from "../MobileAboutMe.jsx";
 import { MobileExperience } from "../MobileExperience.jsx";
 import { MobileIntro } from "../MobileIntro.jsx";
 import { MobileSkills } from "../MobileSkills.jsx";
@@ -8,7 +9,7 @@ const MOBILE_SECTIONS = [
     { id: 'works', label: 'works', labelFull: 'Works', Component: MobileWorks },
     { id: 'experience', label: 'exp', labelFull: 'Experience', Component: MobileExperience },
     { id: 'skills', label: 'skills', labelFull: 'Skills', Component: MobileSkills },
-    // { id: 'about', label: 'about' },
+    { id: 'about', label: 'about', labelFull: 'About Me', Component: MobileAboutMe },
     // { id: 'contact', label: 'contact' },
 ];
 
