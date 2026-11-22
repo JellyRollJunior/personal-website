@@ -19,7 +19,9 @@ const MobileWorks = () => {
       {projects.map((p, index) => (
         <Fragment key={p.id}>
           <MobileTab
-            className={['mt-2 mx-1 z-10', index % 2 ? 'mr-7' : 'ml-7'].join(' ')}
+            className={['z-10 mx-1 mt-2', index % 2 ? 'mr-7' : 'ml-7'].join(
+              ' '
+            )}
             icon={p.favicon}
             title={p.title + ' - Details'}
             tabStyle={TAB_STYLE.BORDERLESS}
