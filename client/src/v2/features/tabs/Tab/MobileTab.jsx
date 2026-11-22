@@ -29,7 +29,7 @@ const MobileTab = ({
       {/* Content */}
       <div
         className={[
-          '',
+          'h-full',
           tabStyle === TAB_STYLE.BORDERED && 'tab-bordered-content',
         ].join(' ')}
       >

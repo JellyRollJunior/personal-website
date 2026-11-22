@@ -107,4 +107,14 @@ const SKILLS = Object.freeze([
   DATA,
 ]);
 
-export { SKILLS };
+const MOBILE_SKILLS = Object.freeze([
+  LANGUAGES,
+  FRONTEND,
+  BACKEND,
+  DATA,
+  TESTING,
+  DEPLOY,
+  TOOLS,
+]);
+
+export { SKILLS, MOBILE_SKILLS };
