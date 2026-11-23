@@ -10,9 +10,7 @@ const MobileTab = ({
   children,
 }) => {
   return (
-    <article
-      className={['tab h-fit', className ? className : ''].join(' ')}
-    >
+    <article className={['tab h-fit', className ? className : ''].join(' ')}>
       {/* Title bar */}
       <header className="tab-header-gradient tab-header flex items-center gap-1.5 px-3 pt-2 pb-1.5">
         {icon && <img className="size-5" src={icon} aria-hidden={true} />}
@@ -30,7 +28,7 @@ const MobileTab = ({
       <div
         className={[
           'h-full',
-          tabStyle === TAB_STYLE.BORDERED && 'tab-bordered-content',
+          tabStyle === TAB_STYLE.BORDERED ? 'tab-bordered-content' : '',
         ].join(' ')}
       >
         {children}

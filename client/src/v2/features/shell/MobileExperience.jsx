@@ -2,7 +2,6 @@ import windowIcon from './../../assets/icons/window.svg';
 
 import { MobileTab } from '../tabs/Tab/MobileTab.jsx';
 import { FortinetExperienceContent } from '../content/FortinetExperienceContent.jsx';
-import { SeeMoreExperienceContent } from '../content/SeeMoreExperienceContent.jsx';
 
 const MobileExperience = () => {
   return (
@@ -14,15 +13,6 @@ const MobileExperience = () => {
         title={'Work History - Fortinet'}
       >
         <FortinetExperienceContent />
-      </MobileTab>
-
-      {/* See More */}
-      <MobileTab
-        className={'-mt-2 ml-5 z-10 sm:self-end sm:mr-9'}
-        icon={windowIcon}
-        title={'Work History - Fortinet'}
-      >
-        <SeeMoreExperienceContent />
       </MobileTab>
     </>
   );

@@ -15,7 +15,7 @@ const MobileIntro = () => {
       <div className="flex flex-col sm:grid sm:grid-cols-2">
         {/* Image */}
         <MobileTab
-          className={'mx-2 sm:row-span-2 sm:mr-0'}
+          className={'mx-2 w-fit sm:row-span-2 sm:mr-0'}
           icon={imageIcon}
           title={'me.jpg'}
           tabStyle={TAB_STYLE.BORDERED}
@@ -60,7 +60,36 @@ const MobileIntro = () => {
         >
           <SocialMediaContent />
         </MobileTab>
+
+        <MobileTab
+          className={'mt-3 ml-3 hidden max-w-2xs sm:block'}
+          icon={terminalIcon}
+          title={'Hint'}
+        >
+          <div
+            className={[
+              'terminal terminal-static-line terminal-text-green tab-content px-5 py-3 text-xs',
+            ].join(' ')}
+          >
+            tip: open on desktop for the full OS experience
+            <div className="ml-auto w-fit">(＾• ω •＾)</div>
+          </div>
+        </MobileTab>
       </div>
+      <MobileTab
+        className={'sm:hidden -mt-2 -z-10 mx-3'}
+        icon={terminalIcon}
+        title={'Hint'}
+      >
+        <div
+          className={[
+            'terminal terminal-static-line terminal-text-green tab-content px-5 py-3 text-xs',
+          ].join(' ')}
+        >
+          tip: open on desktop for the full OS experience
+          <div className="ml-auto w-fit">(＾• ω •＾)</div>
+        </div>
+      </MobileTab>
     </>
   );
 };
