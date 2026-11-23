@@ -1,11 +1,3 @@
-## Todo
-
-- background picker top
-- style mobile nav
-
-
-## Bugs
-
-- tab scroll on mouse
-
 ## Improvements
+
+- white on tab gradient is too pronounced

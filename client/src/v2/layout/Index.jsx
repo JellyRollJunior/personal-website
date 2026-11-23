@@ -15,7 +15,7 @@ const Index = () => {
       </div>
     </div>
   ) : (
-    <div className="v2-base relative min-h-dvh w-dvw overflow-y-auto scroll-smooth">
+    <div className="v2-base relative min-h-dvh w-dvw overflow-y-auto">
       <MobileShell />
       <FixedBackground />
     </div>
