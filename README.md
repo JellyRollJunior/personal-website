@@ -2,7 +2,7 @@
 <p align="center">
     <img align="center" width="700px" src="./client/public/v2_intro.png" >
 </p>
-<h3 align="start">
+<h3 align="center">
  Up to date as of November 23rd 2026
  <br/>
  Click <a href='https://brandonlin.netlify.app/' target="_blank">here</a> to check it out.
