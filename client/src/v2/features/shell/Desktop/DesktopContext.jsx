@@ -1,4 +1,11 @@
-import { createContext, useCallback, useMemo, useRef, useState } from 'react';
+import {
+  createContext,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from 'react';
 import { introGroupData } from '../../groups/data/groups.js';
 import { BACKGROUNDS } from '../../../data/backgrounds.js';
 
@@ -18,6 +25,13 @@ const DesktopContextProvider = ({ children }) => {
       return BACKGROUNDS[0].id;
     }
   });
+
+  useEffect(() => {
+    BACKGROUNDS.forEach((bg) => {
+      const img = new Image();
+      img.src = bg.src;
+    });
+  }, []);
 
   const changeBackground = useCallback((id) => {
     setBackgroundId(id);
