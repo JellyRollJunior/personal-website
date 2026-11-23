@@ -18,9 +18,8 @@ const MobileAboutMe = () => {
       </MobileTab>
       <div className="z-10 -mt-1 grid grid-cols-2 gap-y-2 sm:grid-cols-3">
         {ABOUT_ME_IMAGES_MOBILE.map(({ id, icon, title, src }, index) => (
-          <div className="relative">
+          <div key={id} className="relative">
             <MobileTab
-              key={id}
               className={[
                 'self-end',
                 index > 0 ? 'sm:-ml-4' : '',

@@ -11,9 +11,12 @@ const MobileSkills = () => {
       <div className="mx-1 mt-2 flex w-fit flex-col items-center gap-1 sm:grid sm:grid-cols-2">
         {MOBILE_SKILLS.map((s, index) => (
           <MobileTab
+            key={s.id}
             className={[
-              'sm:h-full w-full sm:w-auto',
-              index == MOBILE_SKILLS.length - 1 ? 'w-fit sm:col-span-2  mx-auto' : '',
+              'w-full sm:h-full sm:w-auto',
+              index == MOBILE_SKILLS.length - 1
+                ? 'mx-auto w-fit sm:col-span-2'
+                : '',
             ].join(' ')}
             icon={codeIcon}
             title={s.title}

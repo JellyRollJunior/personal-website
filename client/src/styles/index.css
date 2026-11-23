@@ -137,7 +137,7 @@ html {
 }
 
 @utility tab {
-  @apply overflow-clip rounded-lg border;
+  @apply overflow-clip rounded-lg border-2;
   border-color: var(--tab-border);
   box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.16);
   background-color: var(--tab-gradient-end);
@@ -155,7 +155,7 @@ html {
   background: linear-gradient(
     to bottom,
     var(--tab-gradient-start),
-    var(--tab-gradient-end) 13%
+    var(--tab-gradient-end) 5%
   );
 }
 
