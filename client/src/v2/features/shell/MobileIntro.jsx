@@ -15,7 +15,7 @@ const MobileIntro = () => {
       <div className="flex flex-col sm:grid sm:grid-cols-2">
         {/* Image */}
         <MobileTab
-          className={'mx-2 w-fit sm:row-span-2 sm:mr-0'}
+          className={'mx-2 w-fit -mt-18 sm:-mt-1 sm:row-span-2 sm:mr-0'}
           icon={imageIcon}
           title={'me.jpg'}
           tabStyle={TAB_STYLE.BORDERED}
@@ -34,7 +34,7 @@ const MobileIntro = () => {
 
         {/* Resume */}
         <MobileTab
-          className={'z-10 mx-1 -mt-2 hidden w-fit sm:mt-2 sm:-ml-7 sm:block'}
+          className={'z-10 mx-1 -mt-2 hidden w-fit sm:-mt-6 sm:-ml-7 sm:block'}
           icon={windowIcon}
           title={'Resume'}
         >
@@ -45,7 +45,7 @@ const MobileIntro = () => {
       <div className="flex w-full flex-row justify-center">
         {/* Resume */}
         <MobileTab
-          className={'z-10 -mt-2 -mr-6 w-fit sm:hidden'}
+          className={'z-10 -mt-8 -mr-6 w-fit sm:hidden'}
           icon={windowIcon}
           title={'Resume'}
         >
