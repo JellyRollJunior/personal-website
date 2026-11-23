@@ -12,7 +12,7 @@ const MobileSkills = () => {
         {MOBILE_SKILLS.map((s, index) => (
           <MobileTab
             className={[
-              'sm:h-full',
+              'sm:h-full w-full sm:w-auto',
               index == MOBILE_SKILLS.length - 1 ? 'w-fit sm:col-span-2  mx-auto' : '',
             ].join(' ')}
             icon={codeIcon}
