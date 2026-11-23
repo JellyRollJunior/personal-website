@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 @import './v2-fonts.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   /* Colors */
   --white: #fcfcfc;
@@ -73,9 +77,8 @@
   color: var(--text-primary);
   font-family: var(--font-primary), arial;
 
-  scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--gray) transparent;
+  scrollbar-color: var(--gray) red;
 }
 
 @utility v2-text-secondary {
