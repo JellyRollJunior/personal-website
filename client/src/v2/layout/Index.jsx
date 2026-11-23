@@ -11,7 +11,7 @@ const Index = () => {
 
   return (
     <>
-        <LoadingMask visible={true} />
+      <LoadingMask />
       {isDesktop ? (
         <div className="v2-base flex h-dvh w-dvw flex-col overflow-y-hidden bg-black px-4 pt-4 xl:px-8 xl:pt-8">
           <div className="min-h-0 flex-1">
