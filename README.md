@@ -3,7 +3,7 @@
     <img align="center" width="700px" src="./client/public/v2_intro.png" >
 </p>
 <h3 align="center">
- Up to date as of November 23rd 2026
+ Up to date as of November 25rd 2026
  <br/>
  Click <a href='https://brandonlin.netlify.app/' target="_blank">here</a> to check it out.
 </h3>
@@ -37,7 +37,3 @@ npm install
 npm run build
 npm run preview
 ```
-
-### Improvements
-- rearrage tabs for laptop screen
-- make navigator on top by default

@@ -18,16 +18,16 @@ const AboutMeGroup = ({ dragConstraintsRef }) => {
 
 const DEFAULT_IMAGE_POSITIONS = [
   {
-    x: '53%',
-    y: '15%',
+    x: '58%',
+    y: '0%',
   },
   {
-    x: '30%',
-    y: '5%',
+    x: '24%',
+    y: '3%',
   },
   {
     x: '55%',
-    y: '0%',
+    y: '35%',
   },
 ];
 
@@ -62,7 +62,7 @@ const AboutMeContent = ({ dragConstraintsRef }) => {
         icon={terminalIcon}
         title={'Interests'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: '1%', y: '40%' }}
+        defaultPosition={{ x: '1%', y: '45%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
