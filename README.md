@@ -37,3 +37,7 @@ npm install
 npm run build
 npm run preview
 ```
+
+### Improvements
+- rearrage tabs for laptop screen
+- make navigator on top by default

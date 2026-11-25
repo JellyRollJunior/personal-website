@@ -13,6 +13,7 @@ import { ImageCarousel } from '../../common/components/ImageCarousel.jsx';
 import { ProjectContent } from './../content/ProjectContent.jsx';
 import { IntroDescription } from '../content/IntroDescription.jsx';
 import { IntroMainImage } from '../content/IntroMainImage.jsx';
+import { ResumeContent } from '../content/ResumeContent.jsx';
 
 const IntroGroup = ({ dragConstraintsRef }) => {
   return (
@@ -76,7 +77,7 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         icon={TRICKCAL_BUG_TRACKER.favicon}
         title={'Latest Work - Details'}
         tabStyle={TAB_STYLE.BORDERLESS}
-        defaultPosition={{ x: '4%', y: '60%' }}
+        defaultPosition={{ x: '38%', y: '58%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -91,13 +92,13 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         />
       </Tab>
 
-      {/* Image */}
+      {/* Selfie */}
       <Tab
         id={'home:me'}
         icon={imageIcon}
         title={'me.jpg'}
         tabStyle={TAB_STYLE.BORDERED}
-        defaultPosition={{ x: '30%', y: '12%' }}
+        defaultPosition={{ x: '30%', y: '6%' }}
         isInActiveGroup={isActiveGroup}
         state={state}
         dispatch={dispatch}
@@ -119,6 +120,21 @@ const IntroGroupContent = ({ dragConstraintsRef }) => {
         dragConstraintsRef={dragConstraintsRef}
       >
         <IntroDescription />
+      </Tab>
+
+      {/* Resume */}
+      <Tab
+        id={'home:resume'}
+        icon={windowIcon}
+        title={'Resume'}
+        tabStyle={TAB_STYLE.BORDERLESS}
+        defaultPosition={{ x: '58%', y: '34%' }}
+        isInActiveGroup={isActiveGroup}
+        state={state}
+        dispatch={dispatch}
+        dragConstraintsRef={dragConstraintsRef}
+      >
+        <ResumeContent />
       </Tab>
     </>
   );
